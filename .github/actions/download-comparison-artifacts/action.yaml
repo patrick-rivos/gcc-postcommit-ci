@@ -1,0 +1,45 @@
+name: "Download Comparison Artifacts"
+description: "Downloads artifacts needed for run comparison"
+inputs:
+  report-artifact-name:
+    required: true
+  binary-artifact-name:
+    required: true
+  github-token:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Download report from this workflow
+      if: ${{ !cancelled() }}
+      uses: actions/download-artifact@v3
+      with:
+        name: ${{ inputs.report-artifact-name }}
+        path: ./riscv-gnu-toolchain/current_logs
+      continue-on-error: true
+
+    - name: Download report from another workflow
+      if: ${{ !cancelled() && hashFiles(format('./current_logs/{0}', inputs.report-artifact-name)) == '' }}
+      shell: bash
+      run: |
+        pip install pygithub requests
+        cd riscv-gnu-toolchain
+        python ./scripts/download_artifact.py -name ${{ inputs.report-artifact-name }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir current_logs
+      continue-on-error: true
+
+    - name: Download rv32 non-multilib binary
+      if: ${{ !cancelled() && hashFiles(format('./current_logs/{0}', inputs.report-artifact-name)) == '' }}
+      uses: actions/download-artifact@v3
+      with:
+        name: ${{ inputs.binary-artifact-name }}
+        path: ./riscv-gnu-toolchain/temp
+      continue-on-error: true
+
+    - name: Download binary from another workflow
+      if: ${{ !cancelled() && hashFiles(format('./current_logs/{0}', inputs.report-artifact-name)) == '' && hashFiles(format('./temp/{0}', inputs.binary-artifact-name)) == '' }}
+      shell: bash
+      run: |
+        cd riscv-gnu-toolchain
+        python ./scripts/download_artifact.py -name ${{ inputs.binary-artifact-name }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir temp
+      continue-on-error: true

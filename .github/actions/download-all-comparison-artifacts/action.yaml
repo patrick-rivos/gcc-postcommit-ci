@@ -1,0 +1,127 @@
+name: "Download All Target Comparison Artifacts"
+description: "Downloads all the artifacts for all targets needed for run comparison"
+inputs:
+  gcchash:
+    required: true
+  token:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    # Download linux
+
+    - name: Download linux rv32 vector non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv32gcv-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv32gcv-ilp32d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux rv64 vector non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv64gcv-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv64gcv-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux rv32 bitmanip non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux rv64 bitmanip non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux rv32 vector crypto non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-ilp32d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux rv64 vector crypto non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux RVA64U64 profile non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    # Newlib
+
+    - name: Download newlib rv32 vector non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv32gcv-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv32gcv-ilp32d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv64 vector non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv64gcv-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv64gcv-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv32 bitmanip non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv64 bitmanip non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv32 vector crypto non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-ilp32d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv64 vector crypto non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib RVA64U64 profile non-multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d-${{ inputs.gcchash }}-non-multilib
+        github-token: ${{ inputs.token }}
+
+    # Multilib
+    - name: Download linux rv32 multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-linux-rv64gc-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: gcc-linux-rv64gc-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv64 multilib
+      uses: ./.github/actions/download-comparison-artifacts
+      with:
+        report-artifact-name: gcc-newlib-rv64gc-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv64gc-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}

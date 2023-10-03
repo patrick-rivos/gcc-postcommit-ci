@@ -1,0 +1,448 @@
+name: Generate-Summary
+
+# Generate a github issue summarizing the testsuite results for a given hash.
+# Searches for the most recent successful build/test artifacts to use as a
+# comparison baseline.
+
+on:
+  workflow_call:
+    inputs:
+      gcchash:
+        required: true
+        type: string
+      issue_num:
+        required: false
+        type: string
+  workflow_dispatch:
+    branches:
+      - main
+    inputs:
+      gcchash:
+        description: 'GCC Hash'
+        required: true
+      issue_num:
+        description: 'Bisection Issue Number (Optional)'
+        required: false
+
+jobs:
+  compare-artifacts:
+    if: always() # ensure comparison always runs even on error
+    runs-on: ubuntu-20.04
+    environment: production
+    defaults:
+      run:
+        working-directory: riscv-gnu-toolchain
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Initialize riscv-gnu-toolchain
+        working-directory: ./
+        run: |
+          git submodule update --init riscv-gnu-toolchain
+          cd riscv-gnu-toolchain && git checkout build-frequent
+
+      - name: Retrieve cache
+        id: retrieve-cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            riscv-gnu-toolchain/.git
+            riscv-gnu-toolchain/binutils
+            riscv-gnu-toolchain/dejagnu
+            riscv-gnu-toolchain/gcc
+            riscv-gnu-toolchain/gdb
+            riscv-gnu-toolchain/glibc
+            riscv-gnu-toolchain/newlib
+            riscv-gnu-toolchain/qemu
+          key: submodules-archive-5 # Numbered archive to allow for easy transition when bumping submodules
+
+      - name: Initalize gcc
+        if: steps.retrieve-cache.outputs.cache-hit != 'true'
+        run: |
+          rm -rf gcc
+          git clone git://gcc.gnu.org/git/gcc.git
+
+      - name: Pull gcc
+        id: gcc-hash
+        run: |
+          cd gcc
+          git checkout master
+          git pull
+
+      - name: Create directories
+        run: |
+          mkdir current_logs
+          mkdir previous_logs
+          mkdir temp
+          mkdir summaries
+
+      - name: Bump pyopenssl and crypto
+        run: |
+          sudo apt remove python3-pip
+          wget https://bootstrap.pypa.io/get-pip.py
+          sudo python3 get-pip.py
+          pip install -U pyopenssl cryptography
+
+      # Download all workload artifacts
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Download All targets
+        uses: ./.github/actions/download-all-comparison-artifacts
+        with:
+          gcchash: ${{ inputs.gcchash }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Extract artifacts
+        run: |
+          ls ./temp/
+          mkdir -p current_logs
+          unzip ./temp/*report.log.zip -d ./current_logs || true
+          ls current_logs
+
+      - name: Download artifacts
+        run: |
+          pip install pygithub requests
+          python ./scripts/download_artifacts.py -hash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }}
+          ls previous_logs
+
+      - name: Compare artifacts
+        run: |
+          python ./scripts/compare_all_artifacts.py -hash ${{ inputs.gcchash }}
+
+      - name: Make artifact zips
+        run: |
+          zip -r summaries.zip summaries
+          zip -r current_logs.zip current_logs
+          zip -r previous_logs.zip previous_logs
+
+      - name: Upload compare summaries
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ inputs.gcchash }}-summaries
+          path: |
+            riscv-gnu-toolchain/summaries.zip
+          retention-days: 90
+
+      - name: Upload current log failures
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ inputs.gcchash }}-current-logs
+          path: |
+            riscv-gnu-toolchain/current_logs.zip
+          retention-days: 90
+
+      - name: Upload previous log failures
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ inputs.gcchash }}-previous-logs
+          path: |
+            riscv-gnu-toolchain/previous_logs.zip
+          retention-days: 90
+
+    outputs:
+      gcchash: ${{ inputs.gcchash }}
+
+  generate-issues:
+    if: always() # ensure generate issues always runs even on error
+    needs: [compare-artifacts]
+    runs-on: ubuntu-20.04
+    permissions:
+      issues: write
+    defaults:
+      run:
+        working-directory: riscv-gnu-toolchain
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Initialize riscv-gnu-toolchain
+        working-directory: ./
+        run: |
+          git submodule update --init riscv-gnu-toolchain
+          cd riscv-gnu-toolchain && git checkout build-frequent
+
+      - name: Download summaries artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ needs.compare-artifacts.outputs.gcchash }}-summaries
+          path: ./riscv-gnu-toolchain
+
+      - name: Download current logs artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
+          path: ./riscv-gnu-toolchain
+
+      - name: Download previous logs artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
+          path: ./riscv-gnu-toolchain
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Aggregate information
+        run: |
+          unzip summaries.zip
+          unzip current_logs.zip
+          unzip previous_logs.zip
+          python ./scripts/aggregate.py \
+            -chash ${{ needs.compare-artifacts.outputs.gcchash }} \
+            -o issue.md
+          cat issue.md
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Trim issue length # reduce the number of lines in final issue so github always creates issue
+        run: |
+          head -c 65000 issue.md > trimmed_issue.md
+          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then echo "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue." >> trimmed_issue.md; fi
+          run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
+          cat trimmed_issue.md
+
+      - name: Create or update summary issue
+        uses: JasonEtco/create-an-issue@v2
+        id: create-issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: riscv-gnu-toolchain/trimmed_issue.md
+          update_existing: true
+
+    outputs:
+      new_issue_num: ${{ steps.create-issue.outputs.number }}
+
+
+  regenerate-issues:
+    runs-on: ubuntu-22.04
+    permissions:
+      issues: write
+    defaults:
+      run:
+        working-directory: riscv-gnu-toolchain
+    needs: [generate-issues, compare-artifacts]
+    if: ${{ inputs.issue_num != '' }} # Only run if has bisection hash
+    steps:
+      - name: Add Bisect Label to New Issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: ${{ needs.generate-issues.outputs.new_issue_num }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['bisect']
+            })
+
+      - name: Link New Issue to Bisection Issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: ${{ needs.generate-issues.outputs.new_issue_num }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Bisection of #${{ inputs.issue_num }}'
+            })
+
+      - name: Link to Bisection Issue to New Issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: ${{ inputs.issue_num }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Bisecting with #${{ needs.generate-issues.outputs.new_issue_num }}'
+            })
+
+      - name: Initialize riscv-gnu-toolchain
+        working-directory: ./
+        run: |
+          git clone https://github.com/patrick-rivos/riscv-gnu-toolchain.git
+          cd riscv-gnu-toolchain && git checkout ${{ inputs.riscv_gnu_toolchain_hash }}
+
+      - name: Retrieve cache
+        id: retrieve-cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            riscv-gnu-toolchain/.git
+            riscv-gnu-toolchain/binutils
+            riscv-gnu-toolchain/dejagnu
+            riscv-gnu-toolchain/gcc
+            riscv-gnu-toolchain/gdb
+            riscv-gnu-toolchain/glibc
+            riscv-gnu-toolchain/newlib
+            riscv-gnu-toolchain/qemu
+          key: submodules-archive-5 # Numbered archive to allow for easy transition when bumping submodules
+
+      - name: Initalize gcc
+        if: steps.retrieve-cache.outputs.cache-hit != 'true'
+        run: |
+          rm -rf gcc
+          git clone git://gcc.gnu.org/git/gcc.git
+
+      - name: Pull gcc
+        id: gcc-hash
+        run: |
+          cd gcc
+          git checkout master
+          git pull
+
+      - name: Initialize Bisection Hash
+        id: bisection-hash
+        run: |
+          sudo apt remove python3-pip
+          wget https://bootstrap.pypa.io/get-pip.py
+          sudo python3 get-pip.py
+          pip install pygithub requests
+          export ORIG_GCCHASH=$(python ./scripts/scrape_issue_info.py -num ${{ inputs.issue_num }} -token ${{ secrets.GITHUB_TOKEN }})
+          echo $ORIG_GCCHASH
+          echo "orig_gcchash=$ORIG_GCCHASH" >> "$GITHUB_OUTPUT"
+
+      - name: Download current logs artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
+          path: riscv-gnu-toolchain
+
+      - name: Download previous logs artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
+          path: riscv-gnu-toolchain
+
+      - name: Unzip previous logs
+        run: |
+          unzip current_logs.zip
+          unzip previous_logs.zip
+          mv current_logs/* previous_logs
+
+      - name: Create directories
+        run: |
+          mkdir -p current_logs
+          mkdir -p previous_logs
+          mkdir -p temp
+          mkdir summaries
+
+      # Download all workload artifacts
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Download All targets
+        uses: ./.github/actions/download-all-comparison-artifacts
+        with:
+          gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Extract artifacts
+        run: |
+          ls ./temp/
+          mkdir -p current_logs
+          unzip ./temp/*report.log.zip -d ./current_logs || true
+          ls current_logs
+
+      - name: Download artifacts
+        run: |
+          pip install pygithub requests
+          python ./scripts/download_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} -phash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }}
+          ls previous_logs
+
+      - name: Compare artifacts
+        run: |
+          python ./scripts/compare_all_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }}
+
+      - name: Make artifact zips
+        run: |
+          zip -r summaries.zip summaries
+          zip -r current_logs.zip current_logs
+          zip -r previous_logs.zip previous_logs
+
+      - name: Upload compare summaries
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-summaries
+          path: |
+            riscv-gnu-toolchain/summaries.zip
+          retention-days: 90
+
+      - name: Upload current log failures
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-current-logs
+          path: |
+            riscv-gnu-toolchain/current_logs.zip
+          retention-days: 90
+
+      - name: Upload previous log failures
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-previous-logs
+          path: |
+            riscv-gnu-toolchain/previous_logs.zip
+          retention-days: 90
+
+      - name: Aggregate information
+        run: |
+          python ./scripts/aggregate.py \
+            -chash ${{ steps.bisection-hash.outputs.orig_gcchash }} \
+            -o issue.md
+          cat issue.md
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Trim issue length # reduce the number of lines in final issue so github always creates issue
+        run: |
+          head -c 65000 issue.md > trimmed_issue.md
+          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then echo "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue." >> trimmed_issue.md; fi
+          run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
+          cat trimmed_issue.md
+
+      - name: Create or update summary issue
+        uses: JasonEtco/create-an-issue@v2
+        id: create-issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: riscv-gnu-toolchain/trimmed_issue.md
+          update_existing: true

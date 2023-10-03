@@ -1,4 +1,4 @@
-name: Build-Weekly
+name: Run-Weekly
 
 # Performs expensive workloads that we only want to run once a week
 

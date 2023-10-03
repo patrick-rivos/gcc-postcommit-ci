@@ -1,4 +1,6 @@
-name: "Build with rtl checking"
+name: "Build with all checking"
+
+# Performs builds with --enable-gcc-checking=all
 
 on:
   workflow_call:
