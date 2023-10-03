@@ -1,0 +1,41 @@
+name: Build-Weekly
+
+# Performs expensive workloads that we only want to run once a week
+
+# Current compute time estimate:
+# 6 * 3.5 hours = ~21 hours
+
+on:
+  schedule:
+    # Run at 10:32am on Saturdays
+    - cron: 32 10 * * 6
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  init-submodules:
+    uses: ./.github/workflows/init-submodules.yaml
+
+  # ~3.5 hours
+  build-with-checking:
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [linux]
+        target: [
+          rv32gc-ilp32d,
+          rv64gc-lp64d,
+          rv32gcv-ilp32d, # rv32 vector
+          rv64gcv-lp64d, # rv64 vector
+          rv32gc_zba_zbb_zbc_zbs-ilp32d, # rv32 bitmanip
+          rv64gc_zba_zbb_zbc_zbs-lp64d, # rv64 bitmanip
+        ]
+    uses: ./.github/workflows/build-with-checking.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}

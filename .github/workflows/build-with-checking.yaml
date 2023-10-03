@@ -1,0 +1,110 @@
+name: "Build with rtl checking"
+
+on:
+  workflow_call:
+    inputs:
+      mode:
+        required: true
+        type: string
+      target:
+        required: true
+        type: string
+      gcchash:
+        required: true
+        type: string
+      riscv_gnu_toolchain_hash:
+        required: true
+        type: string
+      multitarget:
+        required: false
+        type: string
+
+jobs:
+  check:
+    runs-on: ubuntu-20.04
+    environment: production
+    steps:
+      - name: Early exit
+        if: ${{ inputs.multitarget != '' && !contains(inputs.multitarget, format('{0}:{1}', inputs.mode, inputs.target)) }}
+        id: early-exit
+        run: |
+          export EARLY_EXIT="exit"
+          echo "early_exit=$EARLY_EXIT" >> "$GITHUB_OUTPUT"
+
+    outputs:
+      early_exit: ${{ steps.early-exit.outputs.early_exit }}
+
+
+  build-with-checking:
+    runs-on: ubuntu-20.04
+    environment: production
+    # container: ubuntu:22.04 # This adds too much overhead and causes the builds to timeout
+    defaults:
+      run:
+        working-directory: riscv-gnu-toolchain
+    needs: [check]
+    if: ${{ needs.check.outputs.early_exit != 'exit' }}
+    steps:
+      - name: Remove unneeded frameworks to recover disk space
+        working-directory: ./
+        run: |
+          echo "-- Before --"
+          df -h
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          echo "-- After --"
+          df -h
+
+      - name: Initialize riscv-gnu-toolchain
+        working-directory: ./
+        run: |
+          git clone https://github.com/patrick-rivos/riscv-gnu-toolchain.git
+          cd riscv-gnu-toolchain && git checkout ${{ inputs.riscv_gnu_toolchain_hash }}
+
+      - name: Restore submodules from cache
+        uses: actions/download-artifact@v3
+        with:
+          name: gcc-sources-${{ inputs.gcchash }}
+          path: riscv-gnu-toolchain
+
+      - name: Restore submodules
+        run: |
+          rm -rf .git binutils dejagnu gcc gdb glibc newlib qemu
+          unzip cache.zip
+          rm -rf cache.zip
+
+      - name: Print gcc hash
+        run: |
+          cd gcc
+          git rev-parse HEAD
+
+      - name: Install dependencies
+        run: sudo ./.github/setup-apt.sh
+
+      - name: Configure
+        run: |
+          mkdir build
+          cd build
+          TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
+          ../configure --prefix=$(pwd) --with-arch=${TARGET_TUPLE[0]} --with-abi=${TARGET_TUPLE[1]} --enable-gcc-checking=all
+
+      - name: Make gcc
+        run: |
+          cd build
+          make -j $(nproc) ${{ inputs.mode }}
+
+      - name: Remove sources to reclaim disk space
+        run: |
+          rm -rf .git binutils dejagnu gcc gdb glibc newlib qemu
+
+      - name: Zip binaries
+        run: |
+          zip -r gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-rtl-checking.zip build/bin
+
+      - name: Upload binary artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-rtl-checking
+          path: |
+            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-rtl-checking.zip
+          retention-days: 5
