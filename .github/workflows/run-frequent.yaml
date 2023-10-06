@@ -10,7 +10,7 @@ name: Run-Frequent
 on:
   schedule:
     # Run 2 times a day
-    - cron: 0 6,18 * * *
+    - cron: 0 0,6,12,18 * * *
   workflow_dispatch:
     branches:
       - main
