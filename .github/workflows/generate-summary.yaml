@@ -120,7 +120,7 @@ jobs:
 
       - name: Compare artifacts
         run: |
-          python ./scripts/compare_all_artifacts.py -hash ${{ inputs.gcchash }}
+          python ./scripts/compare_all_artifacts.py -hash ${{ inputs.gcchash }} --current-hash-committed
 
       - name: Make artifact zips
         run: |
@@ -385,7 +385,7 @@ jobs:
 
       - name: Compare artifacts
         run: |
-          python ./scripts/compare_all_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }}
+          python ./scripts/compare_all_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} --current-hash-committed
 
       - name: Make artifact zips
         run: |
