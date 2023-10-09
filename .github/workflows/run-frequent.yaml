@@ -37,10 +37,30 @@ jobs:
         mode: [newlib, linux]
         target:
           [
-            rv32gcv-ilp32d, # rv32 vector
-            rv64gcv-lp64d, # rv64 vector
             rv32gc_zba_zbb_zbc_zbs-ilp32d, # rv32 bitmanip
             rv64gc_zba_zbb_zbc_zbs-lp64d, # rv64 bitmanip
+          ]
+        multilib: [non-multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
+      run_on_self_hosted: false
+
+  creg-sh: # Check Regressions Self Hosted. Short name so I can see the matrix string in github
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [newlib, linux]
+        target:
+          [
+            rv32gcv-ilp32d, # rv32 vector
+            rv64gcv-lp64d, # rv64 vector
             rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-ilp32d, # rv32 vector crypto
             rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d, # rv64 vector crypto
             rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
@@ -54,7 +74,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
-      run_on_self_hosted: false
+      run_on_self_hosted: true
 
   cmreg: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
