@@ -9,8 +9,8 @@ name: Run-Frequent
 
 on:
   schedule:
-    # Run 2 times a day
-    - cron: 0 0,6,12,18 * * *
+    # Run 3 times a day
+    - cron: 0 0,8,16 * * *
   workflow_dispatch:
     branches:
       - main
@@ -51,56 +51,19 @@ jobs:
       riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
       run_on_self_hosted: false
 
-  creg-sh: # Check Regressions Self Hosted. Short name so I can see the matrix string in github
-    needs: [init-submodules]
-    strategy:
-      fail-fast: false
-      matrix:
-        mode: [newlib, linux]
-        target:
-          [
-            rv32gcv-ilp32d, # rv32 vector
-            rv64gcv-lp64d, # rv64 vector
-            rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-ilp32d, # rv32 vector crypto
-            rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d, # rv64 vector crypto
-            rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
-          ]
-        multilib: [non-multilib]
-    uses: ./.github/workflows/build-test.yaml
-    with:
-      mode: ${{ matrix.mode }}
-      target: ${{ matrix.target }}
-      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
-      multilib: ${{ matrix.multilib }}
-      multitarget: ${{ github.event.inputs.multi_target }}
-      riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
-      run_on_self_hosted: true
-
-  cmreg: # Check Multilib Regressions. Short name so I can see the matrix string in github
-    needs: [init-submodules]
-    strategy:
-      fail-fast: false
-      matrix:
-        mode: [newlib]
-        target: [rv64gc-lp64d] # Dummy placeholder. Actually runs rv32/rv64 multilib
-        multilib: [multilib]
-    uses: ./.github/workflows/build-test.yaml
-    with:
-      mode: ${{ matrix.mode }}
-      target: ${{ matrix.target }}
-      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
-      multilib: ${{ matrix.multilib }}
-      multitarget: ${{ github.event.inputs.multi_target }}
-      riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
-      run_on_self_hosted: false
-
   cmreg-self-hosted: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
     strategy:
       fail-fast: false
       matrix:
-        mode: [linux]
-        target: [rv64gc-lp64d] # Dummy placeholder. Actually runs rv32/rv64 multilib
+        mode: [newlib, linux]
+        target: [rv64gc-lp64d] # Dummy placeholder.
+        # Actually runs rv32/rv64 multilib
+        # rv32gcv-ilp32d, # rv32 vector
+        # rv64gcv-lp64d, # rv64 vector
+        # rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-ilp32d, # rv32 vector crypto
+        # rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d, # rv64 vector crypto
+        # rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
         multilib: [multilib]
     uses: ./.github/workflows/build-test.yaml
     with:
