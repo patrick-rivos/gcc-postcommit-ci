@@ -76,7 +76,7 @@ jobs:
 
   summarize:
     if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
-    needs: [init-submodules, creg, cmreg, cmreg-self-hosted]
+    needs: [init-submodules, creg, cmreg-self-hosted]
     permissions:
       issues: write
     uses: ./.github/workflows/generate-summary.yaml
