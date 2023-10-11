@@ -441,8 +441,6 @@ jobs:
           sudo apt install python3 -y
           sudo apt install python-is-python3 -y
 
-      # rv32gc
-      # rv64gc
       # rv32gcv-ilp32d, # rv32 vector
       # rv64gcv-lp64d, # rv64 vector
       # rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d, # rv64 vector crypto
@@ -452,7 +450,7 @@ jobs:
           mkdir build
           cd build
           if [ "${{ inputs.multilib }}" == "multilib" ]; then
-            ../configure --prefix=$(pwd) --with-multilib-generator="rv64gc-lp64d--;rv32gc-ilp32d--;rv32gcv-ilp32d--;rv64gcv-lp64d--;rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d--;rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d--"
+            ../configure --prefix=$(pwd) --with-multilib-generator="rv32gcv-ilp32d--;rv64gcv-lp64d--;rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d--;rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d--"
           else
             TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
             ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
