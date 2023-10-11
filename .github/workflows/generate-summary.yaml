@@ -39,7 +39,6 @@ jobs:
         working-directory: ./
         run: |
           git submodule update --init riscv-gnu-toolchain
-          cd riscv-gnu-toolchain && git checkout build-frequent
 
       - name: Retrieve cache
         id: retrieve-cache
