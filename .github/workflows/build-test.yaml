@@ -15,9 +15,6 @@ on:
       gcchash:
         required: true
         type: string
-      riscv_gnu_toolchain_hash:
-        required: true
-        type: string
       multilib:
         required: true
         type: string
@@ -52,21 +49,12 @@ jobs:
     needs: [check]
     if: ${{ needs.check.outputs.early_exit != 'exit' && inputs.run_on_self_hosted != 'true' }}
     steps:
-      - name: Remove unneeded frameworks to recover disk space
-        working-directory: ./
-        run: |
-          echo "-- Before --"
-          df -h
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /usr/local/lib/android
-          echo "-- After --"
-          df -h
+      - uses: actions/checkout@v3
 
-      - name: Initialize riscv-gnu-toolchain
-        working-directory: ./
-        run: |
-          git clone https://github.com/patrick-rivos/riscv-gnu-toolchain.git
-          cd riscv-gnu-toolchain && git checkout ${{ inputs.riscv_gnu_toolchain_hash }}
+      - name: Setup env
+        uses: ./.github/actions/setup-env
+        with:
+          free_up_space: true
 
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
@@ -153,21 +141,12 @@ jobs:
     # Skip linux multilib
     if: ${{ needs.check.outputs.early_exit != 'exit' && inputs.run_on_self_hosted != 'true' }}
     steps:
-      - name: Remove unneeded frameworks to recover disk space
-        working-directory: ./
-        run: |
-          echo "-- Before --"
-          df -h
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /usr/local/lib/android
-          echo "-- After --"
-          df -h
+      - uses: actions/checkout@v3
 
-      - name: Initialize riscv-gnu-toolchain
-        working-directory: ./
-        run: |
-          git clone https://github.com/patrick-rivos/riscv-gnu-toolchain.git
-          cd riscv-gnu-toolchain && git checkout ${{ inputs.riscv_gnu_toolchain_hash }}
+      - name: Setup env
+        uses: ./.github/actions/setup-env
+        with:
+          free_up_space: true
 
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
@@ -304,16 +283,12 @@ jobs:
     if: ${{ failure() && needs.build.outputs.build_success == 'success' && inputs.run_on_self_hosted != 'true' }}
     timeout-minutes: 1440 # 24 hours
     steps:
-      - name: Remove riscv-gnu-toolchain
-        working-directory: ./
-        run: |
-          rm -rf riscv-gnu-toolchain
+      - uses: actions/checkout@v3
 
-      - name: Initialize riscv-gnu-toolchain
-        working-directory: ./
-        run: |
-          git clone https://github.com/patrick-rivos/riscv-gnu-toolchain.git
-          cd riscv-gnu-toolchain && git checkout ${{ inputs.riscv_gnu_toolchain_hash }}
+      - name: Setup env
+        uses: ./.github/actions/setup-env
+        with:
+          free_up_space: false
 
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
@@ -406,16 +381,12 @@ jobs:
     if: ${{ needs.check.outputs.early_exit != 'exit' && inputs.run_on_self_hosted == 'true' }}
     timeout-minutes: 1440 # 24 hours
     steps:
-      - name: Remove riscv-gnu-toolchain
-        working-directory: ./
-        run: |
-          rm -rf riscv-gnu-toolchain
+      - uses: actions/checkout@v3
 
-      - name: Initialize riscv-gnu-toolchain
-        working-directory: ./
-        run: |
-          git clone https://github.com/patrick-rivos/riscv-gnu-toolchain.git
-          cd riscv-gnu-toolchain && git checkout ${{ inputs.riscv_gnu_toolchain_hash }}
+      - name: Setup env
+        uses: ./.github/actions/setup-env
+        with:
+          free_up_space: false
 
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3

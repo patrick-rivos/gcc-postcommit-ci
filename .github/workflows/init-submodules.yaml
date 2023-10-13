@@ -8,8 +8,6 @@ on:
     outputs:
         gcchash:
           value: ${{ jobs.init-submodules.outputs.gcchash }}
-        riscv_gnu_toolchain_hash:
-          value: ${{ jobs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
 
 jobs:
   init-submodules:
@@ -21,20 +19,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Get riscv-gnu-toolchain hash
-        working-directory: ./
-        id: riscv_gnu_toolchain_hash
-        run: |
-          export HASH=$(git rev-parse HEAD:riscv-gnu-toolchain)
-          echo $HASH
-          echo "riscv_gnu_toolchain_hash=$HASH" >> "$GITHUB_OUTPUT"
-
-      - name: Clone riscv-gnu-toolchain
-        working-directory: ./
-        run: |
-          git clone https://github.com/patrick-rivos/riscv-gnu-toolchain.git
-          cd riscv-gnu-toolchain
-          git checkout ${{ steps.riscv_gnu_toolchain_hash.outputs.riscv_gnu_toolchain_hash }}
+      - name: Setup env
+        uses: ./.github/actions/setup-env
+        with:
+          free_up_space: false
 
       - name: Retrieve cache
         id: retrieve-cache
@@ -109,4 +97,3 @@ jobs:
 
     outputs:
       gcchash: ${{ steps.gcc-hash.outputs.gcchash }}
-      riscv_gnu_toolchain_hash: ${{ steps.riscv_gnu_toolchain_hash.outputs.riscv_gnu_toolchain_hash }}
