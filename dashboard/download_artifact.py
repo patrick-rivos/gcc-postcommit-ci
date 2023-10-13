@@ -1,0 +1,1 @@
+../riscv-gnu-toolchain/scripts/download_artifact.py
