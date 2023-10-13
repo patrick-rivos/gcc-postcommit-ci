@@ -50,7 +50,6 @@ jobs:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
-      riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
       run_on_self_hosted: false
 
   cmreg-self-hosted: # Check Multilib Regressions. Short name so I can see the matrix string in github
@@ -73,7 +72,6 @@ jobs:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
-      riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
       run_on_self_hosted: true
 
   summarize:

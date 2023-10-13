@@ -38,4 +38,3 @@ jobs:
       target: ${{ matrix.target }}
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       multitarget: ${{ github.event.inputs.multi_target }}
-      riscv_gnu_toolchain_hash: ${{ needs.init-submodules.outputs.riscv_gnu_toolchain_hash }}
