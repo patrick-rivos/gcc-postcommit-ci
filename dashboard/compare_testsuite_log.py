@@ -1,0 +1,1 @@
+../riscv-gnu-toolchain/scripts/compare_testsuite_log.py
