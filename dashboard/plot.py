@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import plotly.express as px
 
@@ -59,4 +60,6 @@ if __name__ == "__main__":
 
     print(state_data)
 
-    plot_cumulative_state(state_data, "index.html")
+    os.makedirs(f"site", exist_ok=True)
+
+    plot_cumulative_state(state_data, "site/index.html")
