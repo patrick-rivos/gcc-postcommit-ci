@@ -20,13 +20,12 @@ def clean(old_df: pd.DataFrame):
 
     df['hash_timestamp'] = pd.to_datetime(df['hash_timestamp'], utc=True)
 
-    df.sort_values(by='libc-target', inplace=True)
     df.sort_values(by='hash_timestamp', inplace=True)
 
     return df
 
 
-def plot_cumulative_state(df: pd.DataFrame, outfile: str):
+def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
     print(df['libc-libname-tool'].to_list())
 
     fig = px.line(
@@ -39,8 +38,11 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str):
         },
         text="url",
         hover_data=["gcc_hash","libname"],
+        category_orders={
+            'libc-target': sorted(list(set(df["libc-target"].to_list()))),
+                         },
         facet_col='libc-target',
-        facet_col_wrap=3,
+        facet_col_wrap=wrap,
         facet_row_spacing=0.04, # default is 0.07 when facet_col_wrap is used
         facet_col_spacing=0, # default is 0.03
         # height=600, width=800,
@@ -63,3 +65,16 @@ if __name__ == "__main__":
     os.makedirs(f"site", exist_ok=True)
 
     plot_cumulative_state(state_data, "site/index.html")
+
+    linux_data = pd.read_csv('linux.csv')
+    newlib_data = pd.read_csv('newlib.csv')
+    linux_data.update(newlib_data)
+    df = clean(linux_data)
+
+    df = df[df["libc-target"].str.contains("gcv")]
+
+    print(df)
+
+    os.makedirs(f"site", exist_ok=True)
+
+    plot_cumulative_state(df, "site/gcv.html", wrap=2)
