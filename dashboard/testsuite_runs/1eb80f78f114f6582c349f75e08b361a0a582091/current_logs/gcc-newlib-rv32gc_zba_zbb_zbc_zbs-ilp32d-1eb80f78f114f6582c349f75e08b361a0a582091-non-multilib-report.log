@@ -1,0 +1,187 @@
+		=== g++: Unexpected fails for rv32gc_zba_zbb_zbc_zbs ilp32d medlow ===
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+XPASS: g++.dg/warn/Wstringop-overflow-4.C  -std=gnu++98 pr106120 (test for bogus messages, line 144)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++14 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++17 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2a (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2b (test for excess errors)
+		=== gcc: Unexpected fails for rv32gc_zba_zbb_zbc_zbs ilp32d medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 26)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 40)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 55)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 59)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 67)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 71)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 91)
+FAIL: gcc.dg/analyzer/fd-4.c (test for excess errors)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 31 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 45 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 28 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 32 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 42 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 46 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.target/riscv/rv32e_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test1
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test3
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O0   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O1   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -g   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -Os   check-function-bodies bar
+FAIL: gcc.target/riscv/zbb-strlen.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not jr
+FAIL: gcc.target/riscv/zbb-strlen.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not jr
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -Os  (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv32gc_zba_zbb_zbc_zbs/ ilp32d/ medlow |   81 /    18 |   99 /    13 |      - |
