@@ -31,6 +31,9 @@ jobs:
 
       - name: Get new data
         run: |
+          sudo apt remove python3-pip
+          wget https://bootstrap.pypa.io/get-pip.py
+          sudo python3 get-pip.py
           pip install pygithub requests
           cd dashboard
           python getdata.py -token ${{ secrets.GITHUB_TOKEN }}
