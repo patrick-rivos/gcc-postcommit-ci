@@ -52,6 +52,8 @@ jobs:
 
       - name: Commit new data/site
         uses: EndBug/add-and-commit@v9
+        with:
+          message: 'CI: Update dashboard with latest runs'
 
 
   # Single deploy job since we're just deploying

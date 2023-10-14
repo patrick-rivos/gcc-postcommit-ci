@@ -2,6 +2,14 @@
 
 This repo runs the GCC testsuite on a variety of risc-v targets.
 
+# Dashboards
+- [All](https://patrick-rivos.github.io/gcc-postcommit-ci/)
+- [gcv](https://patrick-rivos.github.io/gcc-postcommit-ci/gcv)
+- [gc](https://patrick-rivos.github.io/gcc-postcommit-ci/gc)
+- [Bitmanip](https://patrick-rivos.github.io/gcc-postcommit-ci/bitmanip)
+- [RVA23](https://patrick-rivos.github.io/gcc-postcommit-ci/rva23)
+- [Vector Crypto](https://patrick-rivos.github.io/gcc-postcommit-ci/vector_crypto)
+
 ## Current targets
 
 ### Non-multilib github runners
