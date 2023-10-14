@@ -29,11 +29,15 @@ jobs:
         with:
           free_up_space: false
 
-      - name: Get new data
+      - name: Bump pyopenssl and crypto
         run: |
           sudo apt remove python3-pip
           wget https://bootstrap.pypa.io/get-pip.py
           sudo python3 get-pip.py
+          pip install -U pyopenssl cryptography
+
+      - name: Get new data
+        run: |
           pip install pygithub requests
           cd dashboard
           python getdata.py -token ${{ secrets.GITHUB_TOKEN }}
