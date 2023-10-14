@@ -44,20 +44,6 @@ def get_issue_hashes(token: str, repo: str):
         if "pull_request" not in issue:
             hashes.append(issue["title"].split(" ")[-1])
 
-    issue_url = f"https://api.github.com/repos/{repo}/issues?page=2&q=is%3Aissue+-label%3Abisect+-label%3Abuild-failure+-label%3Atestsuite-failure&state=all"
-    params = {
-        "Accept": "application/vnd.github+json",
-        "Authorization": f"token {token}",
-        "X-Github-Api-Version": "2022-11-28",
-    }
-    r = requests.get(issue_url, headers=params)
-    response = json.loads(r.text)
-    print(response)
-
-    for issue in response:
-        if "pull_request" not in issue:
-            hashes.append(issue["title"].split(" ")[-1])
-
     return hashes
 
 
