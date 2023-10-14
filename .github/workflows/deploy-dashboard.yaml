@@ -44,6 +44,7 @@ jobs:
 
       - name: Build site
         run: |
+          pip install pandas
           cd dashboard
           python plot.py
 
