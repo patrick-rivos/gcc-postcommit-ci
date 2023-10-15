@@ -57,41 +57,29 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
 if __name__ == "__main__":
     linux_data = pd.read_csv('linux.csv')
     newlib_data = pd.read_csv('newlib.csv')
-    linux_data.update(newlib_data)
-    state_data = clean(linux_data)
-
-    print(state_data)
+    raw_data = pd.concat([newlib_data, linux_data])
+    all_data = clean(raw_data)
 
     os.makedirs(f"site", exist_ok=True)
 
-    plot_cumulative_state(state_data, "site/index.html")
-
-    linux_data = pd.read_csv('linux.csv')
-    newlib_data = pd.read_csv('newlib.csv')
-    linux_data.update(newlib_data)
-    all_data = clean(linux_data)
+    plot_cumulative_state(all_data, "site/index.html")
 
     gcv = all_data[all_data["libc-target"].str.contains("gcv")]
     print(gcv)
-    os.makedirs(f"site", exist_ok=True)
     plot_cumulative_state(gcv, "site/gcv.html", wrap=2)
 
     bitmanip = all_data[all_data["libc-target"].str.contains("Bitmanip")]
     print(bitmanip)
-    os.makedirs(f"site", exist_ok=True)
     plot_cumulative_state(bitmanip, "site/bitmanip.html", wrap=2)
 
     rva23 = all_data[all_data["libc-target"].str.contains("RVA")]
     print(rva23)
-    os.makedirs(f"site", exist_ok=True)
     plot_cumulative_state(rva23, "site/rva23.html", wrap=2)
 
     vc = all_data[all_data["libc-target"].str.contains("Vector Crypto")]
     print(vc)
-    os.makedirs(f"site", exist_ok=True)
     plot_cumulative_state(vc, "site/vector_crypto.html", wrap=2)
 
     gc = all_data[all_data["libc-target"].str.contains("gc ")]
     print(gc)
-    os.makedirs(f"site", exist_ok=True)
     plot_cumulative_state(gc, "site/gc.html", wrap=2)
