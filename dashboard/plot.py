@@ -17,8 +17,6 @@ def clean(old_df: pd.DataFrame):
 
     df['libc-target'] = df['libc'] + "-" + df["target"]
 
-    df['url'] = ''
-
     df['hash_timestamp'] = pd.to_datetime(df['hash_timestamp'], utc=True)
 
     df.sort_values(by='hash_timestamp', inplace=True)
@@ -41,7 +39,7 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
             "hash_timestamp": "hash_timestamp_utc",
             "unique_fails": "unique_fails",
         },
-        text="url",
+        markers=True,
         hover_data=["gcc_hash","libname"],
         category_orders={
             'libc-target': sorted(list(set(df["libc-target"].to_list()))),
@@ -52,6 +50,7 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
         facet_col_spacing=0, # default is 0.03
         # height=600, width=800,
         color='tool',
+        symbol='tool',
         title=f"Unique/total failures per hash<br><sup>Data sourced from <a href=\"https://github.com/patrick-rivos/gcc-postcommit-ci\">gcc-postcommit-ci</a> and older data from <a href=\"https://github.com/patrick-rivos/riscv-gnu-toolchain\">riscv-gnu-toolchain</a></sup>",
         range_x=[range_min, range_max],
         range_y=[-5, max(df[df['hash_timestamp'] > range_min]['total_fails']) + 5],
