@@ -53,6 +53,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'CI: Update dashboard with latest runs'
+          add: 'dashboard'
 
       # Deploy
       - name: Setup Pages
