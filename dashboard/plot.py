@@ -1,3 +1,4 @@
+import datetime
 import os
 import pandas as pd
 import plotly.express as px
@@ -28,6 +29,10 @@ def clean(old_df: pd.DataFrame):
 def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
     print(df['libc-libname-tool'].to_list())
 
+    range_max = max(df['hash_timestamp']) + datetime.timedelta(hours=6)
+
+    range_min = max(df['hash_timestamp']) - datetime.timedelta(days=14)
+
     fig = px.line(
         df,
         x="hash_timestamp",
@@ -48,7 +53,8 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
         # height=600, width=800,
         color='tool',
         title=f"Unique/total failures per hash<br><sup>Data sourced from <a href=\"https://github.com/patrick-rivos/gcc-postcommit-ci\">gcc-postcommit-ci</a> and older data from <a href=\"https://github.com/patrick-rivos/riscv-gnu-toolchain\">riscv-gnu-toolchain</a></sup>",
-
+        range_x=[range_min, range_max],
+        range_y=[-5, max(df[df['hash_timestamp'] > range_min]['total_fails']) + 5],
     )
 
     fig.write_html(outfile, include_plotlyjs='cdn')
