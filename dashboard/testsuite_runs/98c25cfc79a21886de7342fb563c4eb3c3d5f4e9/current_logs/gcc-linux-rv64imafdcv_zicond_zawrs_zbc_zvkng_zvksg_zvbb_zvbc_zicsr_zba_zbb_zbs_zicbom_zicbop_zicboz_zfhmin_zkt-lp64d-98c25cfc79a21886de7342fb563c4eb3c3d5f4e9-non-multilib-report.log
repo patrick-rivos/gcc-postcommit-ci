@@ -1,0 +1,498 @@
+		=== g++: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: g++.dg/coroutines/torture/co-await-24-for-init.C   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: g++.dg/coroutines/torture/co-await-24-for-init.C   -O3 -g  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+		=== gfortran: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: gfortran.dg/assumed_rank_bounds_3.f90   -O2  execution test
+FAIL: gfortran.dg/assumed_rank_bounds_3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/assumed_rank_bounds_3.f90   -O3 -g  execution test
+FAIL: gfortran.dg/char_result_3.f90   -O3 -g  execution test
+FAIL: gfortran.dg/inline_sum_2.f90   -O2  execution test
+FAIL: gfortran.dg/inline_sum_2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/inline_sum_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/intrinsic_pack_6.f90   -O2  execution test
+FAIL: gfortran.dg/matmul_20.f90   -O2  execution test
+FAIL: gfortran.dg/matmul_6.f90   -O2  execution test
+FAIL: gfortran.dg/optional_absent_4.f90   -O3 -g  execution test
+FAIL: gfortran.dg/realloc_on_assign_23.f90   -O3 -g  execution test
+FAIL: gfortran.dg/realloc_on_assign_28.f90   -O3 -g  execution test
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/zero_sized_3.f90   -O2  execution test
+FAIL: gfortran.dg/zero_sized_3.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.fortran-torture/execute/intrinsic_count.f90 execution,  -O2
+FAIL: gfortran.fortran-torture/execute/intrinsic_count.f90 execution,  -O2 -fbounds-check
+FAIL: gfortran.fortran-torture/execute/intrinsic_count.f90 execution,  -O2 -fomit-frame-pointer -finline-functions
+FAIL: gfortran.fortran-torture/execute/intrinsic_sum.f90 execution,  -O3 -g
+FAIL: gfortran.fortran-torture/execute/list_read_1.f90 execution,  -O2
+FAIL: gfortran.fortran-torture/execute/list_read_1.f90 execution,  -O2 -fomit-frame-pointer -finline-functions
+FAIL: gfortran.fortran-torture/execute/list_read_1.f90 execution,  -O2 -fomit-frame-pointer -finline-functions -funroll-loops
+		=== gcc: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: gcc.c-torture/execute/pr28982a.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr28982a.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr28982a.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr28982a.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr28982b.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr28982b.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr28982b.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr28982b.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+FAIL: gcc.dg/Wstringop-overflow-70.c  (test for warnings, line 22)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/pr104992.c scan-tree-dump-times optimized " % " 9
+FAIL: gcc.dg/pr92301.c execution test
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/torture/pr96513.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr96513.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.dg/torture/pr96513.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr96513.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/tree-prof/val-prof-1.c scan-tree-dump optimized "if \\(n_[0-9]* != 257\\)"
+FAIL: gcc.dg/tree-prof/val-prof-3.c scan-tree-dump optimized "if \\(_[0-9]* \\< n_[0-9]*"
+FAIL: gcc.dg/tree-prof/val-prof-4.c scan-tree-dump optimized "if \\(n_[0-9]* \\>"
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-11b.c scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/tree-ssa/gen-vect-11c.c scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/tree-ssa/gen-vect-26.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/tree-ssa/gen-vect-28.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/pr84969.c execution test
+FAIL: gcc.dg/tree-ssa/pr96239.c scan-tree-dump optimized " r>> 8;"
+FAIL: gcc.dg/tree-ssa/predcom-2.c scan-tree-dump-times pcom "Unrolling 2 times." 2
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable half-diamond" 1
+XPASS: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-7.c -O3 -ftree-vectorize --param riscv-autovec-lmul=dynamic (test for excess errors)
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-4.c -O3 -ftree-vectorize --param riscv-autovec-lmul=dynamic (test for excess errors)
+FAIL: gcc.dg/vect/bb-slp-33.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "vectorizing stmts using SLP" 2
+FAIL: gcc.dg/vect/bb-slp-33.c scan-tree-dump-times slp2 "vectorizing stmts using SLP" 2
+XPASS: gcc.dg/vect/bb-slp-subgroups-3.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "optimized: basic block" 2
+XPASS: gcc.dg/vect/bb-slp-subgroups-3.c scan-tree-dump-times slp2 "optimized: basic block" 2
+XPASS: gcc.dg/vect/no-scevccp-outer-16.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-17.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-19.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-21.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+FAIL: gcc.dg/vect/no-scevccp-outer-7.c scan-tree-dump-times vect "vect_recog_widen_mult_pattern: detected" 1
+FAIL: gcc.dg/vect/no-scevccp-vect-iv-3.c scan-tree-dump-times vect "vect_recog_widen_sum_pattern: detected" 1
+FAIL: gcc.dg/vect/pr57705.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loop" 2
+FAIL: gcc.dg/vect/pr57705.c scan-tree-dump-times vect "vectorized 1 loop" 2
+FAIL: gcc.dg/vect/pr59591-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr59591-1.c (test for excess errors)
+FAIL: gcc.dg/vect/pr59591-1.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr59591-1.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/pr65518.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 0 loops in function" 2
+FAIL: gcc.dg/vect/pr65518.c scan-tree-dump-times vect "vectorized 0 loops in function" 2
+FAIL: gcc.dg/vect/slp-12a.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-12a.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/slp-reduc-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/slp-reduc-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-4.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-reduc-4.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-reduc-7.c -flto -ffat-lto-objects execution test
+FAIL: gcc.dg/vect/slp-reduc-7.c execution test
+FAIL: gcc.dg/vect/vect-126.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-126.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-126.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-126.c -flto -ffat-lto-objects (test for excess errors)
+XPASS: gcc.dg/vect/vect-24.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 3 loops" 1
+XPASS: gcc.dg/vect/vect-24.c scan-tree-dump-times vect "vectorized 3 loops" 1
+FAIL: gcc.dg/vect/vect-alias-check-4.c  (test for warnings, line 34)
+FAIL: gcc.dg/vect/vect-alias-check-4.c  at line 19 (test for warnings, line 17)
+FAIL: gcc.dg/vect/vect-alias-check-4.c  at line 27 (test for warnings, line 25)
+FAIL: gcc.dg/vect/vect-alias-check-4.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  (test for warnings, line 34)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  at line 19 (test for warnings, line 17)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  at line 27 (test for warnings, line 25)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-multitypes-11.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-multitypes-11.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.target/riscv/rv32e_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test1
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test3
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O0   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O1   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -g   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -Os   check-function-bodies bar
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_arith_run-8.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_arith_run-8.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_arith_run-8.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_arith_run-8.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv32-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault signal terminated program cc1)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/single_rgroup-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-15.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect_run-9.c (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect_run-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv32gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vmv-imm-fixed-rv32.c -O3 -ftree-vectorize (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vmv-imm-rv32.c -O3 -ftree-vectorize (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt/  lp64d/ medlow |  435 /    94 |   19 /     6 |   36 /    16 |

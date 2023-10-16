@@ -1,0 +1,445 @@
+		=== g++: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+XPASS: g++.dg/warn/Wstringop-overflow-4.C  -std=gnu++98 pr106120 (test for bogus messages, line 144)
+FAIL: g++.dg/modules/xtreme-header-2_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2a (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++98 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== g++: Unexpected fails for rv64gc lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr102788.cc  -std=c++98 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== gfortran: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/vect/pr107254.f90   -O0  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O1  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O2  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -Os  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O0  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O1  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O2  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -Os  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O0  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O1  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O2  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -Os  (test for excess errors)
+		=== gfortran: Unexpected fails for rv64gc lp64d medlow ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/vect/pr107254.f90   -O0  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O1  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O2  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/vect/pr107254.f90   -Os  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O0  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O1  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O2  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/vect/pr85853.f90   -Os  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O0  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O1  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O2  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/vect/vect-alias-check-1.F90   -Os  (test for excess errors)
+		=== gcc: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/bb-slp-33.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "vectorizing stmts using SLP" 2
+FAIL: gcc.dg/vect/bb-slp-33.c scan-tree-dump-times slp2 "vectorizing stmts using SLP" 2
+XPASS: gcc.dg/vect/no-scevccp-outer-16.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-17.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-19.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-21.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+FAIL: gcc.dg/vect/no-scevccp-outer-7.c scan-tree-dump-times vect "vect_recog_widen_mult_pattern: detected" 1
+FAIL: gcc.dg/vect/no-scevccp-vect-iv-3.c scan-tree-dump-times vect "vect_recog_widen_sum_pattern: detected" 1
+FAIL: gcc.dg/vect/no-section-anchors-vect-31.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/no-section-anchors-vect-64.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/no-vfa-vect-101.c scan-tree-dump-times vect "can't determine dependence" 1
+FAIL: gcc.dg/vect/no-vfa-vect-102.c scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/no-vfa-vect-102a.c scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/no-vfa-vect-37.c scan-tree-dump-times vect "can't determine dependence" 2
+FAIL: gcc.dg/vect/pr57705.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loop" 2
+FAIL: gcc.dg/vect/pr57705.c scan-tree-dump-times vect "vectorized 1 loop" 2
+FAIL: gcc.dg/vect/pr59591-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr59591-1.c (test for excess errors)
+FAIL: gcc.dg/vect/pr59591-1.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr59591-1.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65518.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 0 loops in function" 2
+FAIL: gcc.dg/vect/pr65518.c scan-tree-dump-times vect "vectorized 0 loops in function" 2
+FAIL: gcc.dg/vect/pr68445.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr68445.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr97835.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr97835.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-12a.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-12a.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-2.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+FAIL: gcc.dg/vect/slp-2.c scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+FAIL: gcc.dg/vect/slp-25.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/slp-25.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/slp-26.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/vect/slp-26.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 0
+FAIL: gcc.dg/vect/slp-26.c scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/vect/slp-26.c scan-tree-dump-times vect "vectorizing stmts using SLP" 0
+FAIL: gcc.dg/vect/slp-28.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/slp-28.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-28.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/slp-28.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 3 loops" 1
+FAIL: gcc.dg/vect/slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 3
+FAIL: gcc.dg/vect/slp-3.c scan-tree-dump-times vect "vectorized 3 loops" 1
+FAIL: gcc.dg/vect/slp-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 3
+FAIL: gcc.dg/vect/slp-42.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-42.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-49.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-49.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/slp-reduc-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-4.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-4.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-7.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-7.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/trapv-vect-reduc-4.c scan-tree-dump-times vect "Detected reduction\\." 3
+FAIL: gcc.dg/vect/vect-104.c -flto -ffat-lto-objects  scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/vect-104.c scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/vect-109.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-109.c scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-126.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-126.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-126.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-126.c -flto -ffat-lto-objects (test for excess errors)
+XPASS: gcc.dg/vect/vect-24.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 3 loops" 1
+XPASS: gcc.dg/vect/vect-24.c scan-tree-dump-times vect "vectorized 3 loops" 1
+FAIL: gcc.dg/vect/vect-26.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-26.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-27.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-27.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-29.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-29.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-33.c -flto -ffat-lto-objects  scan-tree-dump vect "Vectorizing an unaligned access"
+FAIL: gcc.dg/vect/vect-33.c scan-tree-dump vect "Vectorizing an unaligned access"
+FAIL: gcc.dg/vect/vect-72.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-72.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75-big-array.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75-big-array.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-alignchecks.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-alignchecks.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-global.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-global.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-alignchecks.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-alignchecks.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-global.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-global.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-89-big-array.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-89-big-array.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-89.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-89.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-96.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-96.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-alias-check-4.c  (test for warnings, line 34)
+FAIL: gcc.dg/vect/vect-alias-check-4.c  at line 19 (test for warnings, line 17)
+FAIL: gcc.dg/vect/vect-alias-check-4.c  at line 27 (test for warnings, line 25)
+FAIL: gcc.dg/vect/vect-alias-check-4.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  (test for warnings, line 34)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  at line 19 (test for warnings, line 17)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  at line 27 (test for warnings, line 25)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-alias-check-5.c -flto -ffat-lto-objects  scan-tree-dump-times vect "improved number of alias checks from 1 to 0" 1
+FAIL: gcc.dg/vect/vect-alias-check-5.c scan-tree-dump-times vect "improved number of alias checks from 1 to 0" 1
+FAIL: gcc.dg/vect/vect-bic-bitmask-12.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-12.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-23.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-23.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-cost-model-6.c -flto -ffat-lto-objects  scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-cost-model-6.c scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-cselim-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-cselim-1.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-multitypes-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/vect-multitypes-1.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/vect-multitypes-11.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-multitypes-11.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-multitypes-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-multitypes-3.c scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-multitypes-4.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 4
+FAIL: gcc.dg/vect/vect-multitypes-4.c scan-tree-dump-times vect "Vectorizing an unaligned access" 4
+FAIL: gcc.dg/vect/vect-multitypes-6.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 6
+FAIL: gcc.dg/vect/vect-multitypes-6.c scan-tree-dump-times vect "Vectorizing an unaligned access" 6
+FAIL: gcc.dg/vect/vect-outer-slp-1.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/vect-outer-slp-1.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/vect-peel-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-1.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-peel-3.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-3.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-peel-4.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-peel-4.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.target/riscv/rv32e_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test1
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test3
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O0   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O1   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -g   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -Os   check-function-bodies bar
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -Os  (test for excess errors)
+		=== gcc: Unexpected fails for rv64gc lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/bb-slp-33.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "vectorizing stmts using SLP" 2
+FAIL: gcc.dg/vect/bb-slp-33.c scan-tree-dump-times slp2 "vectorizing stmts using SLP" 2
+XPASS: gcc.dg/vect/no-scevccp-outer-16.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-17.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-19.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+XPASS: gcc.dg/vect/no-scevccp-outer-21.c scan-tree-dump-times vect "OUTER LOOP VECTORIZED." 1
+FAIL: gcc.dg/vect/no-scevccp-outer-7.c scan-tree-dump-times vect "vect_recog_widen_mult_pattern: detected" 1
+FAIL: gcc.dg/vect/no-scevccp-vect-iv-3.c scan-tree-dump-times vect "vect_recog_widen_sum_pattern: detected" 1
+FAIL: gcc.dg/vect/no-section-anchors-vect-31.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/no-section-anchors-vect-64.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/no-vfa-vect-101.c scan-tree-dump-times vect "can't determine dependence" 1
+FAIL: gcc.dg/vect/no-vfa-vect-102.c scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/no-vfa-vect-102a.c scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/no-vfa-vect-37.c scan-tree-dump-times vect "can't determine dependence" 2
+FAIL: gcc.dg/vect/pr57705.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loop" 2
+FAIL: gcc.dg/vect/pr57705.c scan-tree-dump-times vect "vectorized 1 loop" 2
+FAIL: gcc.dg/vect/pr59591-1.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr59591-1.c (test for excess errors)
+FAIL: gcc.dg/vect/pr59591-1.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr59591-1.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65518.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 0 loops in function" 2
+FAIL: gcc.dg/vect/pr65518.c scan-tree-dump-times vect "vectorized 0 loops in function" 2
+FAIL: gcc.dg/vect/pr68445.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr68445.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr97835.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr97835.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-12a.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-12a.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-2.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+FAIL: gcc.dg/vect/slp-2.c scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+FAIL: gcc.dg/vect/slp-25.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/slp-25.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/slp-26.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/vect/slp-26.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 0
+FAIL: gcc.dg/vect/slp-26.c scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/vect/slp-26.c scan-tree-dump-times vect "vectorizing stmts using SLP" 0
+FAIL: gcc.dg/vect/slp-28.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/slp-28.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-28.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/slp-28.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 3 loops" 1
+FAIL: gcc.dg/vect/slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 3
+FAIL: gcc.dg/vect/slp-3.c scan-tree-dump-times vect "vectorized 3 loops" 1
+FAIL: gcc.dg/vect/slp-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 3
+FAIL: gcc.dg/vect/slp-42.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-42.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-49.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-49.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/slp-reduc-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-4.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-4.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-7.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-7.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/trapv-vect-reduc-4.c scan-tree-dump-times vect "Detected reduction\\." 3
+FAIL: gcc.dg/vect/vect-104.c -flto -ffat-lto-objects  scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/vect-104.c scan-tree-dump-times vect "possible dependence between data-refs" 1
+FAIL: gcc.dg/vect/vect-109.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-109.c scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-126.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-126.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-126.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-126.c -flto -ffat-lto-objects (test for excess errors)
+XPASS: gcc.dg/vect/vect-24.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 3 loops" 1
+XPASS: gcc.dg/vect/vect-24.c scan-tree-dump-times vect "vectorized 3 loops" 1
+FAIL: gcc.dg/vect/vect-26.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-26.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-27.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-27.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-29.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-29.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-33.c -flto -ffat-lto-objects  scan-tree-dump vect "Vectorizing an unaligned access"
+FAIL: gcc.dg/vect/vect-33.c scan-tree-dump vect "Vectorizing an unaligned access"
+FAIL: gcc.dg/vect/vect-72.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-72.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75-big-array.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75-big-array.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-75.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-alignchecks.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-alignchecks.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-global.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-77-global.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-alignchecks.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-alignchecks.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-global.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-78-global.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-89-big-array.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-89-big-array.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-89.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-89.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-96.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-96.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-alias-check-4.c  (test for warnings, line 34)
+FAIL: gcc.dg/vect/vect-alias-check-4.c  at line 19 (test for warnings, line 17)
+FAIL: gcc.dg/vect/vect-alias-check-4.c  at line 27 (test for warnings, line 25)
+FAIL: gcc.dg/vect/vect-alias-check-4.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  (test for warnings, line 34)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  at line 19 (test for warnings, line 17)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects  at line 27 (test for warnings, line 25)
+FAIL: gcc.dg/vect/vect-alias-check-4.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-alias-check-5.c -flto -ffat-lto-objects  scan-tree-dump-times vect "improved number of alias checks from 1 to 0" 1
+FAIL: gcc.dg/vect/vect-alias-check-5.c scan-tree-dump-times vect "improved number of alias checks from 1 to 0" 1
+FAIL: gcc.dg/vect/vect-bic-bitmask-12.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-12.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-23.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-23.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-cost-model-6.c -flto -ffat-lto-objects  scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-cost-model-6.c scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-cselim-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-cselim-1.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-multitypes-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/vect-multitypes-1.c scan-tree-dump-times vect "Alignment of access forced using peeling" 2
+FAIL: gcc.dg/vect/vect-multitypes-11.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-multitypes-11.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/vect-multitypes-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-multitypes-3.c scan-tree-dump-times vect "Vectorizing an unaligned access" 3
+FAIL: gcc.dg/vect/vect-multitypes-4.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 4
+FAIL: gcc.dg/vect/vect-multitypes-4.c scan-tree-dump-times vect "Vectorizing an unaligned access" 4
+FAIL: gcc.dg/vect/vect-multitypes-6.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 6
+FAIL: gcc.dg/vect/vect-multitypes-6.c scan-tree-dump-times vect "Vectorizing an unaligned access" 6
+FAIL: gcc.dg/vect/vect-outer-slp-1.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/vect-outer-slp-1.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/vect-peel-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-1.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-peel-3.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/vect/vect-peel-3.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-peel-4.c -flto -ffat-lto-objects  scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.dg/vect/vect-peel-4.c scan-tree-dump-times vect "Vectorizing an unaligned access" 1
+FAIL: gcc.target/riscv/rv32e_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test1
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test3
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O0   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O1   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -g   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -Os   check-function-bodies bar
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv32gc/ ilp32d/ medlow |  171 /    77 |   21 /     8 |   30 /     5 |
+     rv64gc/  lp64d/ medlow |  164 /    77 |   17 /     5 |   30 /     5 |

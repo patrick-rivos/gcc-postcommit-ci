@@ -29,7 +29,7 @@ def parse_arguments():
 
 
 def get_issue_hashes(token: str, repo: str):
-    issue_url = f"https://api.github.com/repos/{repo}/issues?page=1&q=is%3Aissue+-label%3Abisect+-label%3Abuild-failure+-label%3Atestsuite-failure&state=all"
+    issue_url = f"https://api.github.com/repos/{repo}/issues?page=1&q=is%3Aissue&state=all"
     params = {
         "Accept": "application/vnd.github+json",
         "Authorization": f"token {token}",
@@ -59,7 +59,7 @@ def download_logs(token: str, repo: str, existing_hashes: Set[str]):
     os.mkdir("temp")
     hashes = [gcc_hash for gcc_hash in hashes if gcc_hash not in existing_hashes]
 
-    build_failure_hashes: Set[str] = set()
+    failure_hashes: Set[str] = set()
 
     for gcc_hash in hashes:
         artifact_name = f"{gcc_hash}-current-logs"
@@ -68,23 +68,27 @@ def download_logs(token: str, repo: str, existing_hashes: Set[str]):
         extract_artifact("current_logs.zip", artifact_zip, outdir=f"testsuite_runs/{gcc_hash}")
         with ZipFile(f"./testsuite_runs/{gcc_hash}/current_logs.zip", "r") as zf:
             zf.extractall(path=f"./testsuite_runs/{gcc_hash}")
+        if os.path.isfile(f"./testsuite_runs/{gcc_hash}/current_logs/failed_testsuite.txt"):
+            # Failed build, drop this hash
+            print(f"Testsuite(s) failed for {gcc_hash}, dropping failing testsuite runs from testsuite_runs")
+            failure_hashes.add(gcc_hash)
+            os.remove(f"./testsuite_runs/{gcc_hash}/current_logs/failed_testsuite.txt")
         if os.path.isfile(f"./testsuite_runs/{gcc_hash}/current_logs/failed_build.txt"):
             # Failed build, drop this hash
-            print(f"Build failed for {gcc_hash}, dropping hash from testsuite_runs")
-            build_failure_hashes.add(gcc_hash)
-            shutil.rmtree(f"./testsuite_runs/{gcc_hash}")
-        else:
-            os.remove(f"./testsuite_runs/{gcc_hash}/current_logs.zip")
+            print(f"Build(s) failed for {gcc_hash}, dropping failing builds from testsuite_runs")
+            failure_hashes.add(gcc_hash)
+            os.remove(f"./testsuite_runs/{gcc_hash}/current_logs/failed_build.txt")
+        os.remove(f"./testsuite_runs/{gcc_hash}/current_logs.zip")
     shutil.rmtree("./temp")
 
-    hashes = [gcc_hash for gcc_hash in hashes if gcc_hash not in build_failure_hashes]
+    hashes = [gcc_hash for gcc_hash in hashes if gcc_hash not in failure_hashes]
 
     return hashes
 
 
 def get_gcc_hash_timestamp(gcc_hash: str):
     return os.popen(
-                f"cd ../riscv-gnu-toolchain/gcc && git checkout master --quiet && git pull --quiet && git show -s --format='%ci' {gcc_hash}"
+                f"cd ../riscv-gnu-toolchain/gcc && git show -s --format='%ci' {gcc_hash}"
             ).read().strip()
 
 
@@ -142,6 +146,9 @@ def main():
         hashes = new_hashes
 
     print(hashes)
+
+    # Get GCC ready for timestamp-getting
+    os.popen('cd ../riscv-gnu-toolchain && git submodule update --init gcc && cd gcc && git checkout master && git pull')
 
     for gcc_hash in hashes:
         aggregate_logs(f"./testsuite_runs/{gcc_hash}/current_logs/", gcc_hash)

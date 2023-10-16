@@ -1,0 +1,519 @@
+		=== g++: Unexpected fails for rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/opt/vrp3.C  -std=gnu++14 execution test
+FAIL: g++.dg/opt/vrp3.C  -std=gnu++17 execution test
+FAIL: g++.dg/opt/vrp3.C  -std=gnu++20 execution test
+FAIL: g++.dg/opt/vrp3.C  -std=gnu++98 execution test
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/warn/Wstringop-overflow-4.C  -std=gnu++98 pr106120 (test for bogus messages, line 144)
+FAIL: g++.dg/modules/xtreme-header-2_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2a (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/torture/pr86763.C   -O2  execution test
+FAIL: g++.dg/torture/pr86763.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: g++.dg/torture/pr86763.C   -O3 -g  execution test
+FAIL: g++.dg/torture/vshuf-v2di.C   -Os  execution test
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in as_a, at machmode.h:381)
+FAIL: g++.dg/torture/vshuf-v4df.C   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v4di.C   -Os  execution test
+FAIL: g++.target/riscv/rvv/base/bug-14.C (test for excess errors)
+FAIL: g++.target/riscv/rvv/base/bug-9.C (test for excess errors)
+		=== gfortran: Unexpected fails for rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt ilp32d medlow ===
+FAIL: gfortran.dg/allocate_with_source_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/assumed_rank_bounds_3.f90   -O2  execution test
+FAIL: gfortran.dg/assumed_rank_bounds_3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/assumed_rank_bounds_3.f90   -O3 -g  execution test
+FAIL: gfortran.dg/char_result_3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/char_result_3.f90   -O3 -g  execution test
+FAIL: gfortran.dg/class_67.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O0  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O1  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O2  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/default_format_2.f90   -Os  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O0  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O1  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O2  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -Os  execution test
+FAIL: gfortran.dg/inline_sum_2.f90   -O2  execution test
+FAIL: gfortran.dg/inline_sum_2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/inline_sum_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/intrinsic_pack_6.f90   -O2  execution test
+FAIL: gfortran.dg/intrinsic_pack_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/large_real_kind_2.F90   -O0  execution test
+FAIL: gfortran.dg/matmul_3.f90   -O2  execution test
+FAIL: gfortran.dg/matmul_6.f90   -O2  execution test
+FAIL: gfortran.dg/optional_absent_4.f90   -O3 -g  execution test
+FAIL: gfortran.dg/read_5.f90   -O0  execution test
+FAIL: gfortran.dg/read_5.f90   -O1  execution test
+FAIL: gfortran.dg/read_5.f90   -O2  execution test
+FAIL: gfortran.dg/read_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/read_5.f90   -O3 -g  execution test
+FAIL: gfortran.dg/read_5.f90   -Os  execution test
+FAIL: gfortran.dg/ret_pointer_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/round_4.f90   -O0  execution test
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/select_type_26.f03   -O2  execution test
+FAIL: gfortran.dg/select_type_26.f03   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/select_type_26.f03   -O3 -g  execution test
+FAIL: gfortran.dg/zero_sized_3.f90   -O2  execution test
+FAIL: gfortran.dg/zero_sized_3.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/dec_math_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/dec_math_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/dec_math_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/dec_math_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/dec_math_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/dec_math_1.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/large_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/large_2.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/large_2.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/large_2.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/large_2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/large_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/large_2.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.fortran-torture/execute/intrinsic_count.f90 execution,  -O2
+FAIL: gfortran.fortran-torture/execute/intrinsic_count.f90 execution,  -O2 -fbounds-check
+FAIL: gfortran.fortran-torture/execute/intrinsic_count.f90 execution,  -O2 -fomit-frame-pointer -finline-functions
+FAIL: gfortran.fortran-torture/execute/intrinsic_count.f90 execution,  -O2 -fomit-frame-pointer -finline-functions -funroll-loops
+FAIL: gfortran.fortran-torture/execute/intrinsic_matmul.f90 execution,  -O2
+FAIL: gfortran.fortran-torture/execute/intrinsic_matmul.f90 execution,  -O2 -fbounds-check
+FAIL: gfortran.fortran-torture/execute/intrinsic_matmul.f90 execution,  -O2 -fomit-frame-pointer -finline-functions
+FAIL: gfortran.fortran-torture/execute/intrinsic_matmul.f90 execution,  -O2 -fomit-frame-pointer -finline-functions -funroll-loops
+FAIL: gfortran.fortran-torture/execute/intrinsic_matmul.f90 execution,  -O3 -g
+FAIL: gfortran.fortran-torture/execute/intrinsic_sum.f90 execution,  -O3 -g
+		=== gcc: Unexpected fails for rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+FAIL: gcc.dg/Wstringop-overflow-70.c  (test for warnings, line 22)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/nextafter-2.c execution test
+FAIL: gcc.dg/pr104992.c scan-tree-dump-times optimized " % " 9
+FAIL: gcc.dg/pr92301.c execution test
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/vshift-5.c execution test
+FAIL: gcc.dg/torture/pr61346.c   -O2  execution test
+FAIL: gcc.dg/torture/pr61346.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr61346.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr61346.c   -O3 -g  execution test
+FAIL: gcc.dg/tree-prof/val-prof-1.c scan-tree-dump optimized "if \\(n_[0-9]* != 257\\)"
+FAIL: gcc.dg/tree-prof/val-prof-3.c scan-tree-dump optimized "if \\(_[0-9]* \\< n_[0-9]*"
+FAIL: gcc.dg/tree-prof/val-prof-4.c scan-tree-dump optimized "if \\(n_[0-9]* \\>"
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-11b.c scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/tree-ssa/gen-vect-11c.c scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/tree-ssa/gen-vect-26.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/tree-ssa/gen-vect-28.c scan-tree-dump-times vect "Alignment of access forced using peeling" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/pr84969.c execution test
+FAIL: gcc.dg/tree-ssa/predcom-2.c scan-tree-dump-times pcom "Unrolling 2 times." 2
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-7.c -O3 -ftree-vectorize --param riscv-autovec-lmul=dynamic (test for excess errors)
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-4.c -O3 -ftree-vectorize --param riscv-autovec-lmul=dynamic (test for excess errors)
+FAIL: gcc.target/riscv/rv32e_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test1
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test2_step1_0_size
+FAIL: gcc.target/riscv/rv32i_zcmp.c   -Os   check-function-bodies test3
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O0   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O1   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -O3 -g   check-function-bodies bar
+FAIL: gcc.target/riscv/stack_save_restore_2.c   -Os   check-function-bodies bar
+FAIL: gcc.target/riscv/zbb-strlen.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not jr
+FAIL: gcc.target/riscv/zbb-strlen.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not jr
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-scalar-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_float2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2float-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_convert_int2int-rv64-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_narrow_shift_run-3.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_sqrt_run-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-3.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-4.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-5.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-6.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-7.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_unary-8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_store_run-2.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp-9.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/pr111232.c -O3 -ftree-vectorize (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect_run-9.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/abs-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vneg-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/vnot-rv64gcv.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/full-vec-move1.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/perm-1.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/perm-2.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/perm-3.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/perm-4.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/perm-5.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/perm-6.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/perm-7.c -std=c99 -O3 -ftree-vectorize --param riscv-autovec-preference=fixed-vlmax (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/floating-point-max-5.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/floating-point-min-5.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/floating-point-sgnjx-2.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/misalign-1.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/perm-1.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/perm-2.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/perm-3.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/perm-4.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/perm-5.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/perm-6.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls/perm-7.c -O3 -ftree-vectorize --param riscv-autovec-preference=scalable (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vmv-imm-fixed-rv64.c -O3 -ftree-vectorize (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vmv-imm-rv64.c -O3 -ftree-vectorize (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen_reduc_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen_reduc_run-1.c execution test
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-1-fixed-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-1-fixed-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-1-save-restore.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-1-zcmp.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-2-save-restore.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-2-zcmp.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/abi-callee-saved-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/pr110119-2.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/pr110943.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/base/vlmul_ext-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111234.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111234.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111234.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111234.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111234.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111234.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111234.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/pr111255.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/rvv/vsetvl/wredsum_vlmax.c   -Os  (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt/ ilp32d/ medlow |  401 /   112 |   32 /    14 |   78 /    26 |
