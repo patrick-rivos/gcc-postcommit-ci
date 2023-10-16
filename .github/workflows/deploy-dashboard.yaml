@@ -1,3 +1,5 @@
+name: Deploy-Dashboard
+
 on:
   push:
     branches: ["main"]
