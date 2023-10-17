@@ -7,8 +7,6 @@ jobs:
   rvv-intrinsic-testing:
     runs-on: ubuntu-20.04
     environment: production
-    needs: [check]
-    if: ${{ needs.check.outputs.early_exit != 'exit' }}
     steps:
       - uses: actions/checkout@v3
 
