@@ -41,4 +41,4 @@ jobs:
 
   rvv-intrinsic-testing:
     needs: [init-submodules]
-    uses: ./.github/workflows/rvv-intrinisic-test.yaml
+    uses: ./.github/workflows/rvv-intrinsic-test.yaml
