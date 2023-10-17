@@ -38,3 +38,7 @@ jobs:
       target: ${{ matrix.target }}
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       multitarget: ${{ github.event.inputs.multi_target }}
+
+  rvv-intrinsic-testing:
+    needs: [init-submodules]
+    uses: ./.github/workflows/build-with-checking.yaml

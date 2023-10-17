@@ -1,3 +1,6 @@
 [submodule "riscv-gnu-toolchain"]
 	path = riscv-gnu-toolchain
 	url = https://github.com/patrick-rivos/riscv-gnu-toolchain.git
+[submodule "rvv-intrinsic-doc"]
+	path = rvv-intrinsic-doc
+	url = https://github.com/riscv-non-isa/rvv-intrinsic-doc.git
