@@ -2,6 +2,10 @@ name: "Test RVV Intrinsics"
 
 on:
   workflow_call:
+    inputs:
+      gcchash:
+        required: true
+        type: string
 
 jobs:
   rvv-intrinsic-testing:

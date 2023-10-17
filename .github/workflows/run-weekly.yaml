@@ -42,3 +42,5 @@ jobs:
   rvv-intrinsic-testing:
     needs: [init-submodules]
     uses: ./.github/workflows/rvv-intrinsic-test.yaml
+    with:
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
