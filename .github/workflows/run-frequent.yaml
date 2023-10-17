@@ -83,12 +83,3 @@ jobs:
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       issue_num: ${{ github.event.inputs.issue_num }}
-
-  update-dashboard:
-    if: "!cancelled()"
-    needs: [summarize]
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    uses: ./.github/workflows/deploy-dashboard.yaml
