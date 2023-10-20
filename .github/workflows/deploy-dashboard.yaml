@@ -51,16 +51,7 @@ jobs:
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
         run: |
           cd riscv-gnu-toolchain
-          rm -rf gcc
-          git clone git://gcc.gnu.org/git/gcc.git
-
-      - name: Pull gcc
-        id: gcc-hash
-        run: |
-          cd riscv-gnu-toolchain
-          cd gcc
-          git checkout master
-          git pull
+          git submodule update --init gcc
 
       - name: Bump pyopenssl and crypto
         run: |
