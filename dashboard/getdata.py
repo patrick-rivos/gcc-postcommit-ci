@@ -148,7 +148,7 @@ def main():
     print(hashes)
 
     # Get GCC ready for timestamp-getting
-    os.popen('cd ../riscv-gnu-toolchain && git submodule update --init gcc && cd gcc && git checkout master && git pull')
+    os.popen('cd ../riscv-gnu-toolchain && git submodule update --init gcc && cd gcc && git fetch')
 
     for gcc_hash in hashes:
         aggregate_logs(f"./testsuite_runs/{gcc_hash}/current_logs/", gcc_hash)

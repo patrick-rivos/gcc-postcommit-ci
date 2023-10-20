@@ -36,6 +36,8 @@ jobs:
         run: |
           cd riscv-gnu-toolchain
           git submodule update --init gcc
+          cd gcc
+          git fetch
 
       - name: Bump pyopenssl and crypto
         run: |
