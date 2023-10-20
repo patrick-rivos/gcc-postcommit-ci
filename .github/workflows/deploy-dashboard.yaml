@@ -32,23 +32,7 @@ jobs:
         with:
           free_up_space: false
 
-      - name: Retrieve cache
-        id: retrieve-cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            riscv-gnu-toolchain/.git
-            riscv-gnu-toolchain/binutils
-            riscv-gnu-toolchain/dejagnu
-            riscv-gnu-toolchain/gcc
-            riscv-gnu-toolchain/gdb
-            riscv-gnu-toolchain/glibc
-            riscv-gnu-toolchain/newlib
-            riscv-gnu-toolchain/qemu
-          key: submodules-archive-5 # Numbered archive to allow for easy transition when bumping submodules
-
       - name: Initalize gcc
-        if: steps.retrieve-cache.outputs.cache-hit != 'true'
         run: |
           cd riscv-gnu-toolchain
           git submodule update --init gcc
