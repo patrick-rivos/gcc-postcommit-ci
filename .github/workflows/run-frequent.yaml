@@ -9,8 +9,8 @@ name: Run-Frequent
 
 on:
   schedule:
-    # Run 3 times a day
-    - cron: 0 0,8,16 * * *
+    # Run 4 times a day
+    - cron: 0 0,6,12,18 * * *
   workflow_dispatch:
     branches:
       - main
