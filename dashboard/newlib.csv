@@ -1895,3 +1895,11 @@ df252e0f254638c44034f1879db34286c88a92c2,2023-10-20 00:35:17 -0300,newlib-rv32gc
 df252e0f254638c44034f1879db34286c88a92c2,2023-10-20 00:35:17 -0300,newlib-rv64gcv lp64d medlow multilib-gcc,newlib,rv64gcv lp64d medlow multilib,gcc,59,225
 df252e0f254638c44034f1879db34286c88a92c2,2023-10-20 00:35:17 -0300,newlib-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib-gcc,newlib,rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib,gcc,59,225
 df252e0f254638c44034f1879db34286c88a92c2,2023-10-20 00:35:17 -0300,newlib-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib-gcc,newlib,rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib,gcc,65,266
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv64gc lp64d medlow-g++,newlib,rv64gc lp64d medlow,g++,10,79
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv64gc lp64d medlow-gcc,newlib,rv64gc lp64d medlow,gcc,21,74
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv64gc_zba_zbb_zbc_zbs lp64d medlow-g++,newlib,rv64gc_zba_zbb_zbc_zbs lp64d medlow,g++,10,79
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv64gc_zba_zbb_zbc_zbs lp64d medlow-gcc,newlib,rv64gc_zba_zbb_zbc_zbs lp64d medlow,gcc,21,74
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv32gc ilp32d medlow-g++,newlib,rv32gc ilp32d medlow,g++,15,107
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv32gc ilp32d medlow-gcc,newlib,rv32gc ilp32d medlow,gcc,22,81
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow-g++,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow,g++,15,107
+be34a8b538c0f04b11a428bd1a9340eb19dec13f,2023-10-21 11:54:00 +0100,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow-gcc,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow,gcc,22,81
