@@ -9,7 +9,7 @@ on:
 
 jobs:
   rvv-intrinsic-testing:
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     environment: production
     steps:
       - uses: actions/checkout@v3
@@ -62,7 +62,7 @@ jobs:
       - name: Check gcc result
         run: |
           tail -n 17 riscv-gnu-toolchain/build-gcc-newlib-stage2/gcc/testsuite/gcc/gcc.log
-  
+
       - name: Check g++ result
         run: |
           tail -n 27 riscv-gnu-toolchain/build-gcc-newlib-stage2/gcc/testsuite/g++/g++.log
