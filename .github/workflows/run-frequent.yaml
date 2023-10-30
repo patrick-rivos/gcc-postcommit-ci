@@ -63,7 +63,7 @@ jobs:
         # rv32gcv-ilp32d, # rv32 vector
         # rv64gcv-lp64d, # rv64 vector
         # rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d, # rv64 vector crypto
-        # rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
+        # rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt_zfh_zfa_zihintpause-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
         multilib: [multilib]
     uses: ./.github/workflows/build-test.yaml
     with:
