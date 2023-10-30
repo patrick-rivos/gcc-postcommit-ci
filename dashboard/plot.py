@@ -29,7 +29,7 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
 
     range_max = max(df['hash_timestamp']) + datetime.timedelta(hours=6)
 
-    range_min = max(df['hash_timestamp']) - datetime.timedelta(days=14)
+    range_min = max(df['hash_timestamp']) - datetime.timedelta(days=9)
 
     fig = px.line(
         df,
