@@ -12,12 +12,20 @@ jobs:
     runs-on: self-hosted
     environment: production
     steps:
+      - name: 'Cleanup build folder'
+        working-directory: ./
+        run: |
+          ls -la ./
+          rm -rf ./* || true
+          rm -rf ./.??* || true
+          ls -la ./
+
       - uses: actions/checkout@v3
 
       - name: Setup env
         uses: ./.github/actions/setup-env
         with:
-          free_up_space: true
+          free_up_space: false
 
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
