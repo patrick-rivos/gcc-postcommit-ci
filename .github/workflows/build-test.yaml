@@ -213,7 +213,7 @@ jobs:
           touch -d "+2 days" build-glibc-linux-rv64gcv-lp64d
           touch -d "+2 days" build-glibc-linux-rv64gc_zba_zbb_zbc_zbs-lp64d
           touch -d "+2 days" build-glibc-linux-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d
-          touch -d "+2 days" build-glibc-linux-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d
+          touch -d "+2 days" build-glibc-linux-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt_zfh_zfa_zihintpause-lp64d
           touch -d "+2 days" build-newlib-nano
           touch -d "+2 days" build-${{ inputs.mode }}
           touch -d "+2 days" merge-newlib-nano
@@ -431,13 +431,13 @@ jobs:
       # rv32gcv-ilp32d, # rv32 vector
       # rv64gcv-lp64d, # rv64 vector
       # rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d, # rv64 vector crypto
-      # rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
+      # rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt_zfh_zfa_zihintpause-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
       - name: Configure
         run: |
           mkdir build
           cd build
           if [ "${{ inputs.multilib }}" == "multilib" ]; then
-            ../configure --prefix=$(pwd) --with-multilib-generator="rv32gcv-ilp32d--;rv64gcv-lp64d--;rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d--;rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d--"
+            ../configure --prefix=$(pwd) --with-multilib-generator="rv32gcv-ilp32d--;rv64gcv-lp64d--;rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d--;rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt_zfh_zfa_zihintpause-lp64d--"
           else
             TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
             ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
