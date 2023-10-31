@@ -9,7 +9,6 @@ def clean(old_df: pd.DataFrame):
     df.replace("rv32gc_zba_zbb_zbc_zbs ilp32d medlow", "rv32 Bitmanip", regex=True, inplace=True)
     df.replace("rv64gc_zba_zbb_zbc_zbs lp64d medlow", "rv64 Bitmanip", regex=True, inplace=True)
     df.replace("rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow", "rv64 RVA", regex=True, inplace=True)
-    df.replace("rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt_zfh_zfa_zihintpause lp64d medlow", "rv64 RVA", regex=True, inplace=True)
     df.replace("rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow", "rv64 Vector Crypto", regex=True, inplace=True)
     df.replace("rv32gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt ilp32d medlow", "rv32 Vector Crypto", regex=True, inplace=True)
     df.replace(" medlow", "", regex=True, inplace=True)
