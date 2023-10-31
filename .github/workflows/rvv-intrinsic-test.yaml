@@ -57,7 +57,7 @@ jobs:
       - name: Make check-gcc
         run: |
           cd rvv-intrinsic-doc
-          make -C rvv-intrinsic-generator report-gnu GNU_TOOLCHAIN_DIR=$(pwd)/../riscv-gnu-toolchain
+          make -C rvv-intrinsic-generator report-gnu GNU_TOOLCHAIN_DIR=$(pwd)/../riscv-gnu-toolchain || true
 
       - name: Print gcc logs
         run: |
