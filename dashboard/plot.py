@@ -21,6 +21,9 @@ def clean(old_df: pd.DataFrame):
 
     df.sort_values(by='hash_timestamp', inplace=True)
 
+    # Ignore hash where we tried to update the rva23 profile and failed.
+    df = df.drop(df[df["gcc_hash"] == '0f1727e25f4440bce00271b1e9cf7e7f9125acf0'].index)
+
     return df
 
 
