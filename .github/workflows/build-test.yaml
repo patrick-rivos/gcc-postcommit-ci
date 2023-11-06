@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Setup env
-        uses: ./.github/actions/setup-env
+        uses: ./.github/actions/common/setup-env
         with:
           free_up_space: true
 
@@ -144,7 +144,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Setup env
-        uses: ./.github/actions/setup-env
+        uses: ./.github/actions/common/setup-env
         with:
           free_up_space: true
 
@@ -294,7 +294,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Setup env
-        uses: ./.github/actions/setup-env
+        uses: ./.github/actions/common/setup-env
         with:
           free_up_space: false
 
@@ -400,7 +400,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Setup env
-        uses: ./.github/actions/setup-env
+        uses: ./.github/actions/common/setup-env
         with:
           free_up_space: false
 
