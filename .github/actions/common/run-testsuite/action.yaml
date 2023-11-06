@@ -1,0 +1,68 @@
+name: "Run testsuite"
+description: "Runs testsuite"
+inputs:
+  mode:
+    description: 'libc'
+    required: true
+  target:
+    description: 'target arch-abi'
+    required: true
+    type: string
+  gcchash:
+    description: 'gcchash'
+    required: true
+    type: string
+  multilib:
+    description: 'is multilib'
+    required: true
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+      - name: Run testsuite
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          cd build
+          make -j $(nproc) report-${{ inputs.mode }} || true
+
+      - name: Build debug log zip
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          if [ "${{ inputs.mode }}" == "newlib" ]; then
+            cat `find build/build-gcc-newlib-stage2/gcc/testsuite/ -name g*.log` > gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
+          else
+            cat `find build/build-gcc-linux-stage2/gcc/testsuite/ -name g*.log` > gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
+          fi
+          zip -r gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.zip gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
+
+      - name: Upload debug artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
+          path: |
+            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
+          retention-days: 90
+
+      - name: Save results
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          set +o pipefail
+          if [ "${{ inputs.mode }}" == "newlib" ]; then
+            PARSE_EXISTING_REPORT="./scripts/testsuite-filter gcc newlib test/allowlist `find build/build-gcc-newlib-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`"
+          else
+            PARSE_EXISTING_REPORT="./scripts/testsuite-filter gcc glibc test/allowlist `find build/build-gcc-linux-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`"
+          fi
+          $PARSE_EXISTING_REPORT | tee gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
+
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
+          path: |
+            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
+          retention-days: 90
+
