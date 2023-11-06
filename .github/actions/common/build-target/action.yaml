@@ -1,0 +1,105 @@
+name: "Build target"
+description: "Builds GCC targets"
+inputs:
+  multilib_target_string:
+    description: 'Multilib build string'
+    required: true
+  build_log_name:
+    description: 'Build error log name'
+    required: true
+  upload_stage2_artifacts:
+    description: 'Upload stage 2 artifacts'
+    required: true
+  mode:
+    description: 'libc'
+    required: true
+  target:
+    description: 'target arch-abi'
+    required: true
+    type: string
+  gcchash:
+    description: 'gcchash'
+    required: true
+    type: string
+  multilib:
+    description: 'is multilib'
+    required: true
+    type: string
+outputs:
+  build_status:
+    description: 'Build success or failure'
+    value: ${{ steps.build-outcome.outputs.build_status }}
+
+runs:
+  using: "composite"
+  steps:
+      - name: Install dependencies
+        shell: bash
+        run: | 
+          sudo ./.github/setup-apt.sh
+          sudo apt install python3 -y
+          sudo apt install python-is-python3 -y
+
+      - name: Configure
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          mkdir build
+          cd build
+          if [ "${{ inputs.multilib }}" == "multilib" ]; then
+            ../configure --prefix=$(pwd) --with-multilib-generator='${{ inputs.multilib_target_string}}'
+          else
+            TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
+            ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
+          fi
+
+      - name: Make gcc
+        id: build-gcc
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          cd build
+          set -o pipefail
+          make -j $(nproc) ${{ inputs.mode }} 2>&1 | tee ${{ inputs.build_log_name }}.txt
+          set +o pipefail
+
+      - name: Zip binaries
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          zip -r gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip build/bin
+
+      - name: Upload binary artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}
+          path: |
+            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip
+          retention-days: 5
+
+      # Running testsuite (stamps/check-gcc-*) only uses stage2 & assorted folders
+      - name: Zip stage2
+        if: ${{ inputs.upload_stage2_artifacts == 'true' }}
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          zip --symlinks -r stage2.zip build
+
+      - name: Upload stage2 artifact
+        if: ${{ inputs.upload_stage2_artifacts == 'true' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
+          path: |
+            riscv-gnu-toolchain/stage2.zip
+          retention-days: 5
+
+      - name: Output success
+        id: build-outcome
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          export BUILD_STATUS="${{ steps.build-gcc.outcome }}"
+          echo $BUILD_STATUS
+          echo "build_status=$BUILD_STATUS" >> "$GITHUB_OUTPUT"
+
