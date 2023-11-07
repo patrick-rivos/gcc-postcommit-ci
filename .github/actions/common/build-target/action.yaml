@@ -68,15 +68,15 @@ runs:
         shell: bash
         working-directory: riscv-gnu-toolchain
         run: |
-          zip ${{ steps.build-log.outputs.build_log_name }}.zip build/${{ steps.build-log.outputs.build_log_name }}.txt
+          zip ${{ inputs.build_log_name }}.zip build/${{ inputs.build_log_name }}.txt
 
       - name: Upload build log
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.build-log.outputs.build_log_name }}
+          name: ${{ inputs.build_log_name }}
           path: |
-            riscv-gnu-toolchain/${{ steps.build-log.outputs.build_log_name }}.zip
+            riscv-gnu-toolchain/${{ inputs.build_log_name }}.zip
           retention-days: 90
 
       - name: Zip binaries
