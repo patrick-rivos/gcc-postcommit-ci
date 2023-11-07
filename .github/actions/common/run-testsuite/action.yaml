@@ -46,6 +46,26 @@ runs:
             riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
           retention-days: 90
 
+      - name: Build sum files zip
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          mkdir sum_files
+          if [ "${{ inputs.mode }}" == "newlib" ]; then
+            for file in `find build/build-gcc-newlib-stage2/gcc/testsuite/ -name g*.sum`; do cp $file sum_files; done
+          else
+            for file in `find build/build-gcc-linux-stage2/gcc/testsuite/ -name g*.sum`; do cp $file sum_files; done
+          fi
+          zip -r gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files.zip sum_files
+
+      - name: Upload sum file artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files
+          path: |
+            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files.zip
+          retention-days: 90
+
       - name: Save results
         shell: bash
         working-directory: riscv-gnu-toolchain
