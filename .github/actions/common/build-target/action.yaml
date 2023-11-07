@@ -35,7 +35,7 @@ runs:
   steps:
       - name: Install dependencies
         shell: bash
-        run: | 
+        run: |
           sudo ./.github/setup-apt.sh
           sudo apt install python3 -y
           sudo apt install python-is-python3 -y
@@ -62,6 +62,22 @@ runs:
           set -o pipefail
           make -j $(nproc) ${{ inputs.mode }} 2>&1 | tee ${{ inputs.build_log_name }}.txt
           set +o pipefail
+
+      - name: Zip build log
+        if: ${{ always() }}
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          zip ${{ steps.build-log.outputs.build_log_name }}.zip build/${{ steps.build-log.outputs.build_log_name }}.txt
+
+      - name: Upload build log
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ steps.build-log.outputs.build_log_name }}
+          path: |
+            riscv-gnu-toolchain/${{ steps.build-log.outputs.build_log_name }}.zip
+          retention-days: 90
 
       - name: Zip binaries
         shell: bash
