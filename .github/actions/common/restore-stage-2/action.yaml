@@ -7,15 +7,12 @@ inputs:
   target:
     description: 'target arch-abi'
     required: true
-    type: string
   gcchash:
     description: 'gcchash'
     required: true
-    type: string
   multilib:
     description: 'is multilib'
     required: true
-    type: string
 
 runs:
   using: "composite"

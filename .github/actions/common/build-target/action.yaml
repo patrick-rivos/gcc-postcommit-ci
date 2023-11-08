@@ -16,15 +16,12 @@ inputs:
   target:
     description: 'target arch-abi'
     required: true
-    type: string
   gcchash:
     description: 'gcchash'
     required: true
-    type: string
   multilib:
     description: 'is multilib'
     required: true
-    type: string
 outputs:
   build_status:
     description: 'Build success or failure'
@@ -35,6 +32,7 @@ runs:
   steps:
       - name: Install dependencies
         shell: bash
+        working-directory: riscv-gnu-toolchain
         run: |
           sudo ./.github/setup-apt.sh
           sudo apt install python3 -y
@@ -47,7 +45,7 @@ runs:
           mkdir build
           cd build
           if [ "${{ inputs.multilib }}" == "multilib" ]; then
-            ../configure --prefix=$(pwd) --with-multilib-generator='${{ inputs.multilib_target_string}}'
+            ../configure --prefix=$(pwd) --with-multilib-generator='${{ inputs.multilib_target_string }}'
           else
             TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
             ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
@@ -118,4 +116,3 @@ runs:
           export BUILD_STATUS="${{ steps.build-gcc.outcome }}"
           echo $BUILD_STATUS
           echo "build_status=$BUILD_STATUS" >> "$GITHUB_OUTPUT"
-
