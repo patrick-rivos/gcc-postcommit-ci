@@ -7,15 +7,12 @@ inputs:
   target:
     description: 'target arch-abi'
     required: true
-    type: string
   gcchash:
     description: 'gcchash'
     required: true
-    type: string
   multilib:
     description: 'is multilib'
     required: true
-    type: string
 
 runs:
   using: "composite"
@@ -70,7 +67,6 @@ runs:
         shell: bash
         working-directory: riscv-gnu-toolchain
         run: |
-          set +o pipefail
           if [ "${{ inputs.mode }}" == "newlib" ]; then
             PARSE_EXISTING_REPORT="./scripts/testsuite-filter gcc newlib test/allowlist `find build/build-gcc-newlib-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`"
           else
@@ -85,4 +81,3 @@ runs:
           path: |
             riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
           retention-days: 90
-
