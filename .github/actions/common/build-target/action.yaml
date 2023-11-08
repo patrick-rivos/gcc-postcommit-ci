@@ -51,6 +51,7 @@ runs:
             ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
           fi
 
+      # http://ruslanledesma.com/2016/03/08/protip-redirect-stdout-stderr-separate-files.html
       - name: Make gcc
         id: build-gcc
         shell: bash
@@ -58,7 +59,7 @@ runs:
         run: |
           cd build
           set -o pipefail
-          make -j $(nproc) ${{ inputs.mode }} 2>&1 | tee ${{ inputs.build_log_name }}.txt
+          (make -j $(nproc) ${{ inputs.mode }}) 2> >(tee ${{ inputs.build_log_name }}-stderr.log) > ${{ inputs.build_log_name }}-stdout.log | tee ${{ inputs.build_log_name }}.log
           set +o pipefail
 
       - name: Zip build log
@@ -66,7 +67,7 @@ runs:
         shell: bash
         working-directory: riscv-gnu-toolchain
         run: |
-          zip ${{ inputs.build_log_name }}.zip build/${{ inputs.build_log_name }}.txt
+          zip ${{ inputs.build_log_name }}.zip build/${{ inputs.build_log_name }}.log build/${{ inputs.build_log_name }}-stdout.log build/${{ inputs.build_log_name }}-stderr.log
 
       - name: Upload build log
         if: ${{ always() }}
