@@ -59,7 +59,7 @@ runs:
         run: |
           cd build
           set -o pipefail
-          (make -j $(nproc) ${{ inputs.mode }}) 2> >(tee ${{ inputs.build_log_name }}-stderr.log) > ${{ inputs.build_log_name }}-stdout.log | tee ${{ inputs.build_log_name }}.log
+          (make -j $(nproc) ${{ inputs.mode }}) 2> >(tee ${{ inputs.build_log_name }}-stderr.log) > >(tee ${{ inputs.build_log_name }}-stdout.log) | tee ${{ inputs.build_log_name }}.log
           set +o pipefail
 
       - name: Zip build log
