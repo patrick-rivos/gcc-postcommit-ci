@@ -76,7 +76,7 @@ jobs:
       - name: Make log name
         id: build-log
         run: |
-          export BUILD_LOG_NAME=${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.multilib }}-build-log
+          export BUILD_LOG_NAME=${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log
           echo "build_log_name=$BUILD_LOG_NAME" >> $GITHUB_OUTPUT
 
       - name: Build gcc
@@ -284,7 +284,7 @@ jobs:
       - name: Make log name
         id: build-log
         run: |
-          export BUILD_LOG_NAME=${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.multilib }}-build-log
+          export BUILD_LOG_NAME=${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log
           echo "build_log_name=$BUILD_LOG_NAME" >> $GITHUB_OUTPUT
 
       # Don't upload stage 2 artifacts on self-hosted runners
