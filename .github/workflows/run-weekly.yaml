@@ -44,3 +44,26 @@ jobs:
     uses: ./.github/workflows/rvv-intrinsic-test.yaml
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+
+  # TODO: Generate summary issue for misc weekly run results
+
+  # Will take a long time to complete (6 targets)
+  # zvl 128 256 512 1024 2048 4096
+  zvl-variants-self-hosted:
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [linux]
+        target: [rv64gcv_zvl-lp64d]
+        multilib: [multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: true
+
+  # TODO: Generate a summary issue with no baseline
