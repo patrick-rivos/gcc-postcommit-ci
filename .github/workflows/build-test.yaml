@@ -296,7 +296,7 @@ jobs:
         run: |
           if [ "${{ inputs.target }}" == "rv64gcv_zvl-lp64d" ];
           then
-            export MULTILIB_STRING="rv64gcv_zvl128b-lp64d--;rv64gcv_zvl256b-lp64d--;rv64gcv_zvl512b-lp64d--;rv64gcv_zvl1024b-lp64d--;rv64gcv_zvl2048b-lp64d--;rv64gcv_zvl4096b-lp64d--"
+            export MULTILIB_STRING="rv64gcv_zvl128b-lp64d--;rv64gcv_zvl256b-lp64d--;rv64gcv_zvl512b-lp64d--;rv64gcv_zvl1024b-lp64d--"
           else
             export MULTILIB_STRING="rv32gcv-ilp32d--;rv64gcv-lp64d--;rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d--;rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d--"
           fi
