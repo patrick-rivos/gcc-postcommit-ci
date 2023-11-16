@@ -47,8 +47,8 @@ jobs:
 
   # TODO: Generate summary issue for misc weekly run results
 
-  # Will take a long time to complete (6 targets)
-  # zvl 128 256 512 1024 2048 4096
+  # Will take a long time to complete (4 targets)
+  # zvl 128 256 512 1024
   zvl-variants-self-hosted:
     needs: [init-submodules]
     strategy:
