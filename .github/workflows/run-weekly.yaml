@@ -48,15 +48,19 @@ jobs:
   # TODO: Generate summary issue for misc weekly run results
 
   # Will take a long time to complete (4 targets)
-  # zvl 128 256 512 1024
   zvl-variants-self-hosted:
     needs: [init-submodules]
     strategy:
       fail-fast: false
       matrix:
         mode: [linux]
-        target: [rv64gcv_zvl-lp64d]
-        multilib: [multilib]
+        target: [
+          rv64gcv_zvl128b-lp64d,
+          rv64gcv_zvl256b-lp64d,
+          rv64gcv_zvl512b-lp64d,
+          rv64gcv_zvl1024b-lp64d,
+        ]
+        multilib: [non-multilib]
     uses: ./.github/workflows/build-test.yaml
     with:
       mode: ${{ matrix.mode }}
