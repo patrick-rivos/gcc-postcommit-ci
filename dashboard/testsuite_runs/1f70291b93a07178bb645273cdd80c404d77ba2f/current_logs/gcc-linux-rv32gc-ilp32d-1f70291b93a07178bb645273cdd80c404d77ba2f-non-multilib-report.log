@@ -1,0 +1,161 @@
+		=== gcc: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wnonnull-4.c (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/profile-generate-3.c (test for excess errors)
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/vla-1.c scan-tree-dump-times optimized " s=> i" 2
+FAIL: gcc.dg/lto/pr69188 c_lto_pr69188_0.o-c_lto_pr69188_1.o link,  -flto -O0 -fprofile-generate
+FAIL: gcc.dg/tree-prof/20041218-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/20050826-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/bb-reorg.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/cmpsf-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/cold_partition_label.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/comp-goto-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indir-call-topn-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indir-call-topn-1a.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indir-call-topn-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indircall-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indircall-1a.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/ic-misattribution-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/ic-misattribution-1a.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof-malloc.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof-topn.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/init-array.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/inliner-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/loop-split-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/loop-split-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/loop-split-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/merge_block.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/peel-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/peel-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr108000.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr111559.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr34999.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr44777.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr45354.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr47187.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr49299-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr49299-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr50907.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr52027.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr52150.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr59003.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr59521-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr77698.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr79587.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr96394.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr97461.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/prof-robust-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/section-attr-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/section-attr-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/section-attr-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/stringop-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/stringop-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/switch-case-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/switch-case-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/time-profiler-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/tracer-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/unroll-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/update-cunroll-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/update-loopch.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/update-tailcall.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/va-arg-pack-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-4.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-5.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-6.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-8.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-9.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/wcoverage-mismatch.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+XPASS: gcc.dg/tree-ssa/scev-3.c scan-tree-dump-times ivopts "&a" 1
+XPASS: gcc.dg/tree-ssa/scev-4.c scan-tree-dump-times ivopts "&a" 1
+XPASS: gcc.dg/tree-ssa/scev-5.c scan-tree-dump-times ivopts "&a" 1
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-bic-bitmask-12.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-12.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-23.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-bic-bitmask-23.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+		=== gfortran: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/prof/dynamic_dispatch_6.f03 compilation,  -fprofile-generate -D_PROFILE_GENERATE
+		=== g++: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/other/pr55650.C  -std=gnu++14 (test for excess errors)
+FAIL: g++.dg/other/pr55650.C  -std=gnu++17 (test for excess errors)
+FAIL: g++.dg/other/pr55650.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/other/pr55650.C  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2a (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/tree-prof/indir-call-prof-2.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/indir-call-prof.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/indir-call-recursive-inlining.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/inline_mismatch_args.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/morefunc.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/partition1.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/partition2.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/partition3.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr35545.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr51719.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr53460.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr57451.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr59255.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr63581.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr79259.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/reorder.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv32gc/ ilp32d/ medlow |  101 /    86 |   39 /    26 |   13 /     3 |
