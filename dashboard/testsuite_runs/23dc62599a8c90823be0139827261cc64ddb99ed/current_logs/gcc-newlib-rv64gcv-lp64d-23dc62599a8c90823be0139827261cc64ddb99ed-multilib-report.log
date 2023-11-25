@@ -1,0 +1,727 @@
+		=== g++: Unexpected fails for rv32gcv ilp32d medlow ===
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++14 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++17 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2a (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v2di.C   -Os  execution test
+FAIL: g++.dg/torture/vshuf-v4di.C   -Os  execution test
+		=== g++: Unexpected fails for rv64gcv lp64d medlow ===
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++14 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++17 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+		=== g++: Unexpected fails for rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow ===
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++14 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++17 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+		=== g++: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/fileno-1.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 1211)
+XPASS: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for bogus messages, line 888)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98  (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-with-call-summaries.c  -std=c++98 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++14 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++17 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++20 (test for excess errors)
+XPASS: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  (test for bogus messages, line 889)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98  at line 882 (test for warnings, line 881)
+FAIL: c-c++-common/analyzer/flex-without-call-summaries.c  -std=c++98 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 19)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 26)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 34)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  (test for warnings, line 35)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/placement-new-size.C  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/contracts/contracts-tmpl-spec2.C   output pattern test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++14 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++17 (test for excess errors)
+FAIL: g++.dg/warn/Wstringop-overflow-6.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+		=== gcc: Unexpected fails for rv32gcv ilp32d medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 26)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 40)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 55)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 59)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 67)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 71)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 91)
+FAIL: gcc.dg/analyzer/fd-4.c (test for excess errors)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 31 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 45 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 28 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 32 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 42 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 46 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+FAIL: gcc.dg/Wnonnull-4.c (test for excess errors)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/vla-1.c scan-tree-dump-times optimized " s=> i" 2
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+XPASS: gcc.dg/tree-ssa/scev-3.c scan-tree-dump-times ivopts "&a" 1
+XPASS: gcc.dg/tree-ssa/scev-4.c scan-tree-dump-times ivopts "&a" 1
+XPASS: gcc.dg/tree-ssa/scev-5.c scan-tree-dump-times ivopts "&a" 1
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+XPASS: gcc.dg/vect/slp-reduc-11.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-11.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/vect-live-slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+XPASS: gcc.dg/vect/vect-live-slp-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+FAIL: compiler driver --help=c option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=c++ option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=fortran option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=warnings option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: gcc.target/riscv/rvv/autovec/binop/copysign-run.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/copysign-run.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/narrow_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/narrow_run-1.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-18.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-19.c (test for excess errors)
+		=== gcc: Unexpected fails for rv64gcv lp64d medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 26)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 40)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 55)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 59)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 67)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 71)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 91)
+FAIL: gcc.dg/analyzer/fd-4.c (test for excess errors)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 31 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 45 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 28 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 32 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 42 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 46 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 44)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/vla-1.c scan-tree-dump-times optimized " s=> i" 2
+FAIL: gcc.dg/torture/vshuf-v16si.c   -O2  (test for excess errors)
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable half-diamond" 1
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: compiler driver --help=c option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=c++ option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=fortran option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=warnings option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+		=== gcc: Unexpected fails for rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 26)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 40)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 55)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 59)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 67)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 71)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 91)
+FAIL: gcc.dg/analyzer/fd-4.c (test for excess errors)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 31 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 45 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 28 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 32 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 42 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 46 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 44)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/vla-1.c scan-tree-dump-times optimized " s=> i" 2
+FAIL: gcc.dg/torture/vshuf-v16si.c   -O2  (test for excess errors)
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable half-diamond" 1
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: compiler driver --help=c option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=c++ option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=fortran option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=warnings option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+		=== gcc: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 26)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 40)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 55)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 59)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 67)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 71)
+FAIL: gcc.dg/analyzer/fd-4.c  (test for warnings, line 91)
+FAIL: gcc.dg/analyzer/fd-4.c (test for excess errors)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event1 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 31 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event1 at line 45 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 28 (test for warnings, line 27)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 32 (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 42 (test for warnings, line 41)
+FAIL: gcc.dg/analyzer/fd-4.c event2 at line 46 (test for warnings, line 44)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 30)
+FAIL: gcc.dg/analyzer/fd-4.c warning (test for warnings, line 44)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+XPASS: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/vla-1.c scan-tree-dump-times optimized " s=> i" 2
+FAIL: gcc.dg/torture/vshuf-v16si.c   -O2  (test for excess errors)
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/pr96239.c scan-tree-dump optimized " r>> 8;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable half-diamond" 1
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: compiler driver --help=c option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=c++ option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=fortran option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: compiler driver --help=warnings option(s): "^ +-.*[^:.]$" absent from output: "  -Wopenmp                    Warn about suspicious OpenMP code"
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+    rv32gcv/ ilp32d/ medlow |   99 /    42 |  115 /    20 |      - |
+    rv64gcv/  lp64d/ medlow |   79 /    32 |   86 /    14 |      - |
+ rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt/  lp64d/ medlow |   79 /    32 |   86 /    14 |      - |
+ rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt/  lp64d/ medlow |   81 /    34 |   86 /    14 |      - |
