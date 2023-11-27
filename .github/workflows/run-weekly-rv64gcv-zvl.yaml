@@ -1,0 +1,40 @@
+name: Run-Weekly
+
+# rv64gcv_zvl variants
+
+on:
+  schedule:
+    # Run at 4:00pm on Sundays
+    - cron: 0 16 * * 0
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  init-submodules:
+    uses: ./.github/workflows/init-submodules.yaml
+
+  # Will take a long time to complete (4 targets)
+  zvl-variants-self-hosted:
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [linux]
+        target: [
+          rv64gcv_zvl128b-lp64d,
+          rv64gcv_zvl256b-lp64d,
+          rv64gcv_zvl512b-lp64d,
+          rv64gcv_zvl1024b-lp64d,
+        ]
+        multilib: [non-multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: true
+
+  # TODO: Generate a summary issue with no baseline
