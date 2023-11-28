@@ -14,7 +14,10 @@ inputs:
     description: 'libc'
     required: true
   target:
-    description: 'target arch-abi'
+    description: 'target arch-abi & opts'
+    required: true
+  sanitized_target:
+    description: 'target arch-abi & opts with no :'
     required: true
   gcchash:
     description: 'gcchash'
@@ -82,14 +85,14 @@ runs:
         shell: bash
         working-directory: riscv-gnu-toolchain
         run: |
-          zip -r gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip build/bin
+          zip -r gcc-${{ inputs.mode }}-${{ inputs.sanitized_target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip build/bin
 
       - name: Upload binary artifact
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}
+          name: gcc-${{ inputs.mode }}-${{ inputs.sanitized_target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}
           path: |
-            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip
+            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.sanitized_target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip
           retention-days: 5
 
       # Running testsuite (stamps/check-gcc-*) only uses stage2 & assorted folders
@@ -104,7 +107,7 @@ runs:
         if: ${{ inputs.upload_stage2_artifacts == 'true' }}
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
+          name: gcc-${{ inputs.mode }}-${{ inputs.sanitized_target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
           path: |
             riscv-gnu-toolchain/stage2.zip
           retention-days: 5
