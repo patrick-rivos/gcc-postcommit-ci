@@ -75,7 +75,7 @@ runs:
           else
             PARSE_EXISTING_REPORT="./scripts/testsuite-filter gcc glibc test/allowlist `find build/build-gcc-linux-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`"
           fi
-          $PARSE_EXISTING_REPORT | tee gcc-${{ inputs.mode }}-${{ inputs.tarsanitized_targetget }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log || true
+          $PARSE_EXISTING_REPORT | tee gcc-${{ inputs.mode }}-${{ inputs.sanitized_target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log || true
 
       - name: Upload results artifact
         uses: actions/upload-artifact@v3

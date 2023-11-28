@@ -73,10 +73,16 @@ jobs:
           cd gcc
           git rev-parse HEAD
 
+      - name: Make sanitized target name
+        id: sanitized-target
+        run: |
+          export SANITIZED_TARGET_NAME=$(echo ${{ inputs.target }} | tr : _)
+          echo "sanitized_target=$SANITIZED_TARGET_NAME" >> $GITHUB_OUTPUT
+
       - name: Make log name
         id: build-log
         run: |
-          export BUILD_LOG_NAME=$(echo ${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log | tr : _)
+          export BUILD_LOG_NAME=${{ inputs.mode }}-${{ steps.sanitized-target.outputs.sanitized_target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log
           echo "build_log_name=$BUILD_LOG_NAME" >> $GITHUB_OUTPUT
 
       - name: Build gcc
@@ -89,7 +95,7 @@ jobs:
           upload_stage2_artifacts: 'true'
           mode: ${{ inputs.mode }}
           target: ${{ inputs.target }}
-          sanitized_target: $(echo ${{ inputs.target }} | tr : _)
+          sanitized_target: ${{ steps.sanitized-target.outputs.sanitized_target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
 
@@ -152,6 +158,12 @@ jobs:
           target: ${{ inputs.target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
+
+      - name: Make sanitized target name
+        id: sanitized-target
+        run: |
+          export SANITIZED_TARGET_NAME=$(echo ${{ inputs.target }} | tr : _)
+          echo "sanitized_target=$SANITIZED_TARGET_NAME" >> $GITHUB_OUTPUT
 
       - name: Run Testsuite
         uses: ./.github/actions/common/run-testsuite
@@ -231,12 +243,18 @@ jobs:
           cd build
           make ${{ inputs.mode }} -j $(nproc)
 
+      - name: Make sanitized target name
+        id: sanitized-target
+        run: |
+          export SANITIZED_TARGET_NAME=$(echo ${{ inputs.target }} | tr : _)
+          echo "sanitized_target=$SANITIZED_TARGET_NAME" >> $GITHUB_OUTPUT
+
       - name: Run Testsuite
         uses: ./.github/actions/common/run-testsuite
         with:
           mode: ${{ inputs.mode }}
           target: ${{ inputs.target }}
-          sanitized_target: $(echo ${{ inputs.target }} | tr : _)
+          sanitized_target: ${{ steps.sanitized-target.outputs.sanitized_target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
 
@@ -287,10 +305,16 @@ jobs:
           git fetch
           git checkout ${{ inputs.gcchash }}
 
+      - name: Make sanitized target name
+        id: sanitized-target
+        run: |
+          export SANITIZED_TARGET_NAME=$(echo ${{ inputs.target }} | tr : _)
+          echo "sanitized_target=$SANITIZED_TARGET_NAME" >> $GITHUB_OUTPUT
+
       - name: Make log name
         id: build-log
         run: |
-          export BUILD_LOG_NAME=${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log
+          export BUILD_LOG_NAME=${{ inputs.mode }}-${{ steps.sanitized-target.outputs.sanitized_target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log
           echo "build_log_name=$BUILD_LOG_NAME" >> $GITHUB_OUTPUT
 
       # run-frequent uses rv64gcv, run-weekly uses rv64gcv_zvl
@@ -321,7 +345,7 @@ jobs:
           upload_stage2_artifacts: 'false'
           mode: ${{ inputs.mode }}
           target: ${{ inputs.target }}
-          sanitized_target: $(echo ${{ inputs.target }} | tr : _)
+          sanitized_target: ${{ steps.sanitized-target.outputs.sanitized_target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
 
@@ -330,6 +354,6 @@ jobs:
         with:
           mode: ${{ inputs.mode }}
           target: ${{ inputs.target }}
-          sanitized_target: $(echo ${{ inputs.target }} | tr : _)
+          sanitized_target: ${{ steps.sanitized-target.outputs.sanitized_target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
