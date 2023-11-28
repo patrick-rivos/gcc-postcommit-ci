@@ -1,0 +1,454 @@
+		=== g++: Unexpected fails for rv32gcv ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/other/pr55650.C  -std=gnu++14 (test for excess errors)
+FAIL: g++.dg/other/pr55650.C  -std=gnu++17 (test for excess errors)
+FAIL: g++.dg/other/pr55650.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/other/pr55650.C  -std=gnu++98 (test for excess errors)
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2a (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/torture/vshuf-v2di.C   -Os  execution test
+FAIL: g++.dg/torture/vshuf-v4di.C   -Os  execution test
+FAIL: g++.dg/tree-prof/indir-call-prof-2.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/indir-call-prof.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/indir-call-recursive-inlining.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/inline_mismatch_args.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/morefunc.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/partition1.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/partition2.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/partition3.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr35545.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr51719.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr53460.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr57451.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr59255.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr63581.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/pr79259.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: g++.dg/tree-prof/reorder.C compilation,  -fprofile-generate -D_PROFILE_GENERATE
+		=== g++: Unexpected fails for rv64gcv lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+		=== g++: Unexpected fails for rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+		=== g++: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++14  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++20  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+FAIL: g++.dg/cpp23/ext-floating14.C  -std=gnu++23 execution test
+FAIL: g++.dg/cpp23/ext-floating14.C  -std=gnu++26 execution test
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++14  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++20  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-4_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header-5_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (internal compiler error: tree check: expected class 'type', have 'declaration' (template_decl) in get_originating_module_decl, at cp/module.cc:18659)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+		=== gfortran: Unexpected fails for rv32gcv ilp32d medlow ===
+FAIL: gfortran.dg/class_67.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/dec_io_1.f90   -O2  execution test
+FAIL: gfortran.dg/dec_io_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/dec_io_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/prof/dynamic_dispatch_6.f03 compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gfortran.dg/vect/pr83232.f90   -O   scan-tree-dump-times slp1 "vectorizing stmts using SLP" 3
+FAIL: gfortran.dg/vect/vect-8.f90   -O   scan-tree-dump-times vect "vectorized 2[234] loops" 1
+		=== gfortran: Unexpected fails for rv64gcv lp64d medlow ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/vect/pr83232.f90   -O   scan-tree-dump-times slp1 "vectorizing stmts using SLP" 3
+FAIL: gfortran.dg/vect/vect-8.f90   -O   scan-tree-dump-times vect "vectorized 2[234] loops" 1
+		=== gfortran: Unexpected fails for rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/vect/pr83232.f90   -O   scan-tree-dump-times slp1 "vectorizing stmts using SLP" 3
+FAIL: gfortran.dg/vect/vect-8.f90   -O   scan-tree-dump-times vect "vectorized 2[234] loops" 1
+		=== gfortran: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/vect/pr83232.f90   -O   scan-tree-dump-times slp1 "vectorizing stmts using SLP" 3
+FAIL: gfortran.dg/vect/vect-8.f90   -O   scan-tree-dump-times vect "vectorized 2[234] loops" 1
+		=== gcc: Unexpected fails for rv32gcv ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+FAIL: gcc.dg/Wnonnull-4.c (test for excess errors)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/profile-generate-3.c (test for excess errors)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/lto/pr69188 c_lto_pr69188_0.o-c_lto_pr69188_1.o link,  -flto -O0 -fprofile-generate
+FAIL: gcc.dg/tree-prof/20041218-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/20050826-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/bb-reorg.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/cmpsf-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/cold_partition_label.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/comp-goto-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indir-call-topn-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indir-call-topn-1a.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indir-call-topn-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indircall-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/crossmodule-indircall-1a.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/ic-misattribution-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/ic-misattribution-1a.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof-malloc.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof-topn.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/indir-call-prof.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/init-array.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/inliner-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/loop-split-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/loop-split-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/loop-split-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/merge_block.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/peel-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/peel-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr108000.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr111559.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr34999.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr44777.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr45354.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr47187.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr49299-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr49299-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr50907.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr52027.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr52150.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr59003.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr59521-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr77698.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr79587.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr96394.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/pr97461.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/prof-robust-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/section-attr-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/section-attr-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/section-attr-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/stringop-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/stringop-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/switch-case-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/switch-case-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/time-profiler-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/tracer-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/unroll-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/update-cunroll-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/update-loopch.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/update-tailcall.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/va-arg-pack-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-1.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-2.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-3.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-4.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-5.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-6.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-8.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/val-prof-9.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-prof/wcoverage-mismatch.c compilation,  -fprofile-generate -D_PROFILE_GENERATE
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+XPASS: gcc.dg/tree-ssa/scev-3.c scan-tree-dump-times ivopts "&a" 1
+XPASS: gcc.dg/tree-ssa/scev-4.c scan-tree-dump-times ivopts "&a" 1
+XPASS: gcc.dg/tree-ssa/scev-5.c scan-tree-dump-times ivopts "&a" 1
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/pr103116-1.c -flto -ffat-lto-objects  scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-1.c scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-2.c -flto -ffat-lto-objects  scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr103116-2.c scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr111754.c -flto -ffat-lto-objects  scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+FAIL: gcc.dg/vect/pr111754.c scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+XPASS: gcc.dg/vect/slp-reduc-11.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-11.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/vect-live-slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+XPASS: gcc.dg/vect/vect-live-slp-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+FAIL: gcc.target/riscv/predef-13.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -Os  (test for excess errors)
+		=== gcc: Unexpected fails for rv64gcv lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/tree-prof/time-profiler-3.c scan-ipa-dump-times profile "Read tp_first_run: 0" 1
+FAIL: gcc.dg/tree-prof/time-profiler-3.c scan-ipa-dump-times profile "Read tp_first_run: 2" 1
+FAIL: gcc.dg/tree-prof/val-prof-1.c scan-tree-dump optimized "if \\(n_[0-9]* != 257\\)"
+FAIL: gcc.dg/tree-prof/val-prof-3.c scan-tree-dump optimized "if \\(_[0-9]* \\< n_[0-9]*"
+FAIL: gcc.dg/tree-prof/val-prof-4.c scan-tree-dump optimized "if \\(n_[0-9]* \\>"
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable half-diamond" 1
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/pr103116-1.c -flto -ffat-lto-objects  scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-1.c scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-2.c -flto -ffat-lto-objects  scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr103116-2.c scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr111754.c -flto -ffat-lto-objects  scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+FAIL: gcc.dg/vect/pr111754.c scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+FAIL: gcc.target/riscv/predef-13.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -Os  (test for excess errors)
+		=== gcc: Unexpected fails for rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/tree-prof/time-profiler-3.c scan-ipa-dump-times profile "Read tp_first_run: 0" 1
+FAIL: gcc.dg/tree-prof/time-profiler-3.c scan-ipa-dump-times profile "Read tp_first_run: 2" 1
+FAIL: gcc.dg/tree-prof/val-prof-1.c scan-tree-dump optimized "if \\(n_[0-9]* != 257\\)"
+FAIL: gcc.dg/tree-prof/val-prof-3.c scan-tree-dump optimized "if \\(_[0-9]* \\< n_[0-9]*"
+FAIL: gcc.dg/tree-prof/val-prof-4.c scan-tree-dump optimized "if \\(n_[0-9]* \\>"
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable half-diamond" 1
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/pr103116-1.c -flto -ffat-lto-objects  scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-1.c scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-2.c -flto -ffat-lto-objects  scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr103116-2.c scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr111754.c -flto -ffat-lto-objects  scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+FAIL: gcc.dg/vect/pr111754.c scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+FAIL: gcc.target/riscv/predef-13.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -Os  (test for excess errors)
+		=== gcc: Unexpected fails for rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/signbit-5.c execution test
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/tree-prof/time-profiler-3.c scan-ipa-dump-times profile "Read tp_first_run: 0" 1
+FAIL: gcc.dg/tree-prof/time-profiler-3.c scan-ipa-dump-times profile "Read tp_first_run: 2" 1
+FAIL: gcc.dg/tree-prof/val-prof-1.c scan-tree-dump optimized "if \\(n_[0-9]* != 257\\)"
+FAIL: gcc.dg/tree-prof/val-prof-3.c scan-tree-dump optimized "if \\(_[0-9]* \\< n_[0-9]*"
+FAIL: gcc.dg/tree-prof/val-prof-4.c scan-tree-dump optimized "if \\(n_[0-9]* \\>"
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+XPASS: gcc.dg/tree-ssa/pr84512.c scan-tree-dump optimized "return 285;"
+FAIL: gcc.dg/tree-ssa/pr96239.c scan-tree-dump optimized " r>> 8;"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/reassoc-46.c scan-tree-dump-times optimized "(?:vect_)?sum_[\\d._]+ = (?:(?:vect_)?_[\\d._]+ \\+ (?:vect_)?sum_[\\d._]+|(?:vect_)?sum_[\\d._]+ \\+ (?:vect_)?_[\\d._]+)" 1
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable half-diamond" 1
+XPASS: gcc.dg/tree-ssa/ssa-fre-3.c scan-tree-dump fre1 "Replaced \\(int\\) aa_.*with a_"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/pr103116-1.c -flto -ffat-lto-objects  scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-1.c scan-tree-dump vect "Data access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/pr103116-2.c -flto -ffat-lto-objects  scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr103116-2.c scan-tree-dump vect "peeling for gaps insufficient for access"
+FAIL: gcc.dg/vect/pr111754.c -flto -ffat-lto-objects  scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+FAIL: gcc.dg/vect/pr111754.c scan-tree-dump optimized "return { 0.0, 9.0e\\+0, 0.0, 0.0 }"
+FAIL: gcc.target/riscv/predef-13.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/predef-13.c   -Os  (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+    rv32gcv/ ilp32d/ medlow |  119 /   100 |   44 /    28 |   19 /     7 |
+    rv64gcv/  lp64d/ medlow |   50 /    32 |   19 /     7 |   14 /     4 |
+ rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt/  lp64d/ medlow |   50 /    32 |   19 /     7 |   14 /     4 |
+ rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt/  lp64d/ medlow |   51 /    33 |   21 /     8 |   14 /     4 |
