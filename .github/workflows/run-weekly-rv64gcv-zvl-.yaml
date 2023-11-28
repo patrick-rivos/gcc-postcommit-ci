@@ -1,0 +1,15 @@
+name: Run-Weekly-rv64-zvl-lmul2
+
+# rv64gcv_zvl variants
+
+on:
+  schedule:
+    # Run at 4:00pm on Tuesdays
+    - cron: 0 16 * * 2
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  init-submodules:
+    uses: ./.github/workflows/init-submodules.yaml
