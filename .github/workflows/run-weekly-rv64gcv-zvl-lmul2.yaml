@@ -23,10 +23,10 @@ jobs:
       matrix:
         mode: [linux]
         target: [
-          rv64gcv_zvl128b-lp64d:--param=riscv-autovec-lmul=m2,
-          rv64gcv_zvl256b-lp64d:--param=riscv-autovec-lmul=m2,
-          rv64gcv_zvl512b-lp64d:--param=riscv-autovec-lmul=m2,
-          rv64gcv_zvl1024b-lp64d:--param=riscv-autovec-lmul=m2,
+          "rv64gcv_zvl128b-lp64d:--param=riscv-autovec-lmul=m2",
+          "rv64gcv_zvl256b-lp64d:--param=riscv-autovec-lmul=m2",
+          "rv64gcv_zvl512b-lp64d:--param=riscv-autovec-lmul=m2",
+          "rv64gcv_zvl1024b-lp64d:--param=riscv-autovec-lmul=m2",
         ]
         multilib: [non-multilib]
     uses: ./.github/workflows/build-test.yaml
