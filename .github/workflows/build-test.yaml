@@ -170,7 +170,7 @@ jobs:
         with:
           mode: ${{ inputs.mode }}
           target: ${{ inputs.target }}
-          sanitized_target: $(echo ${{ inputs.target }} | tr : _)
+          sanitized_target: ${{ steps.sanitized-target.outputs.sanitized_target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
 
