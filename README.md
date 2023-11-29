@@ -10,6 +10,14 @@ This repo runs the GCC testsuite on a variety of risc-v targets.
 - [RVA23](https://patrick-rivos.github.io/gcc-postcommit-ci/rva23)
 - [Vector Crypto](https://patrick-rivos.github.io/gcc-postcommit-ci/vector_crypto)
 
+## GCV Weekly runs:
+- [gcv_zvl](https://patrick-rivos.github.io/gcc-postcommit-ci/gcv_zvl)
+- gcv_zve TODO
+- lmul 2 TODO
+- lmul 4 TODO
+- lmul 8 TODO
+- lmul dynamic TODO
+
 ## Current targets
 
 ### Non-multilib github runners
