@@ -28,8 +28,6 @@ def clean(old_df: pd.DataFrame):
 
 
 def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
-    print(df['libc-libname-tool'].to_list())
-
     range_max = max(df['hash_timestamp']) + datetime.timedelta(hours=6)
 
     range_min = max(df['hash_timestamp']) - datetime.timedelta(days=9)
@@ -74,7 +72,7 @@ if __name__ == "__main__":
     os.makedirs(f"site", exist_ok=True)
     main_dashboard_data = all_data[~all_data["libc-target"].str.contains("gcv_zvl")]
     main_dashboard_data = main_dashboard_data[~main_dashboard_data["libc-target"].str.contains("gcv_zve")]
-    plot_cumulative_state(all_data, "site/index.html")
+    plot_cumulative_state(main_dashboard_data, "site/index.html")
 
     gcv = all_data[all_data["libc-target"].str.contains("gcv")]
     gcv = gcv[~gcv["libc-target"].str.contains("gcv_zvl")]
