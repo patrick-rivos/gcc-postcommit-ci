@@ -37,7 +37,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-5 # Numbered archive to allow for easy transition when bumping submodules
+          key: submodules-archive-6 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initalize submodules cache
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
@@ -50,6 +50,12 @@ jobs:
           git submodule update --init --recursive --depth 1 qemu
           rm -rf gcc
           git clone git://gcc.gnu.org/git/gcc.git
+
+      - name: Apply newlib fixups
+        if: steps.retrieve-cache.outputs.cache-hit != 'true'
+        run: |
+          cd newlib
+          git am ../fixups/newlib/*.patch
 
       - name: Get GCC hash
         working-directory: riscv-gnu-toolchain/gcc
@@ -78,7 +84,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-5
+          key: submodules-archive-6
 
       - name: Make cache zip
         run: |
