@@ -69,17 +69,26 @@ if __name__ == "__main__":
     all_data = clean(raw_data)
 
     os.makedirs(f"site", exist_ok=True)
+    plot_cumulative_state(all_data, "site/all.html")
 
+    os.makedirs(f"site", exist_ok=True)
+    main_dashboard_data = all_data[~all_data["libc-target"].str.contains("gcv_zvl")]
+    main_dashboard_data = main_dashboard_data[~main_dashboard_data["libc-target"].str.contains("gcv_zve")]
     plot_cumulative_state(all_data, "site/index.html")
 
     gcv = all_data[all_data["libc-target"].str.contains("gcv")]
     gcv = gcv[~gcv["libc-target"].str.contains("gcv_zvl")]
+    gcv = gcv[~gcv["libc-target"].str.contains("gcv_zve")]
     print(gcv)
     plot_cumulative_state(gcv, "site/gcv.html", wrap=2)
 
     gcv = all_data[all_data["libc-target"].str.contains("gcv_zvl")]
     print(gcv)
     plot_cumulative_state(gcv, "site/gcv_zvl.html", wrap=2)
+
+    gcv = all_data[all_data["libc-target"].str.contains("gcv_zve")]
+    print(gcv)
+    plot_cumulative_state(gcv, "site/gcv_zve.html", wrap=2)
 
     bitmanip = all_data[all_data["libc-target"].str.contains("Bitmanip")]
     print(bitmanip)

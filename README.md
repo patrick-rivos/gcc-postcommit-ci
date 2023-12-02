@@ -3,7 +3,8 @@
 This repo runs the GCC testsuite on a variety of risc-v targets.
 
 # Dashboards
-- [All](https://patrick-rivos.github.io/gcc-postcommit-ci/)
+- [Main](https://patrick-rivos.github.io/gcc-postcommit-ci/)
+- [All](https://patrick-rivos.github.io/gcc-postcommit-ci/all)
 - [gcv](https://patrick-rivos.github.io/gcc-postcommit-ci/gcv)
 - [gc](https://patrick-rivos.github.io/gcc-postcommit-ci/gc)
 - [Bitmanip](https://patrick-rivos.github.io/gcc-postcommit-ci/bitmanip)
@@ -12,7 +13,7 @@ This repo runs the GCC testsuite on a variety of risc-v targets.
 
 ## GCV Weekly runs:
 - [gcv_zvl](https://patrick-rivos.github.io/gcc-postcommit-ci/gcv_zvl)
-- gcv_zve TODO
+- [gcv_zve](https://patrick-rivos.github.io/gcc-postcommit-ci/gcv_zve)
 - lmul 2 TODO
 - lmul 4 TODO
 - lmul 8 TODO
