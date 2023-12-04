@@ -109,7 +109,7 @@ def aggregate_logs(logs_dir: str, gcc_hash: str):
 
         hash_timestamp = get_gcc_hash_timestamp(gcc_hash)
 
-        with open(f"linux.csv", "a") as csv:
+        with open("linux.csv", "a") as csv:
             csv.write(f"{gcc_hash},{hash_timestamp},linux-{target.libname}-{target.tool},linux,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n")
 
     for target, fails in all_newlib_failures.items():
@@ -117,7 +117,7 @@ def aggregate_logs(logs_dir: str, gcc_hash: str):
 
         hash_timestamp = get_gcc_hash_timestamp(gcc_hash)
 
-        with open(f"newlib.csv", "a") as csv:
+        with open("newlib.csv", "a") as csv:
             csv.write(f"{gcc_hash},{hash_timestamp},newlib-{target.libname}-{target.tool},newlib,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n")
 
 
@@ -135,10 +135,10 @@ def main():
         download_logs(args.token, "patrick-rivos/riscv-gnu-toolchain", existing_hashes)
         download_logs(args.token, "patrick-rivos/gcc-postcommit-ci", existing_hashes)
         hashes = sorted(os.listdir('testsuite_runs'))
-        with open(f"linux.csv", "a") as csv:
-            csv.write(f"gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n")
-        with open(f"newlib.csv", "a") as csv:
-            csv.write(f"gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n")
+        with open("linux.csv", "a") as csv:
+            csv.write("gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n")
+        with open("newlib.csv", "a") as csv:
+            csv.write("gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n")
     else:
         existing_hashes = set(os.listdir('testsuite_runs'))
         download_logs(args.token, "patrick-rivos/gcc-postcommit-ci", existing_hashes)
