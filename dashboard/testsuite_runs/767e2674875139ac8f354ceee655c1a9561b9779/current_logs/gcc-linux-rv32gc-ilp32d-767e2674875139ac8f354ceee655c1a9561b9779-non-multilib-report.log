@@ -1,0 +1,76 @@
+		=== gcc: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: gcc.dg/debug/btf/btf-datasec-3.c scan-assembler-times bts_type 3
+FAIL: gcc.dg/debug/btf/btf-datasec-3.c scan-assembler-times bts_type: \\(BTF_KIND_VAR 'test_bss2'\\) 1
+FAIL: gcc.dg/debug/btf/btf-datasec-3.c scan-assembler-times bts_type: \\(BTF_KIND_VAR 'test_data2'\\) 1
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-1.c scan-assembler \\tvand
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-1.c scan-assembler \\tvand
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-1.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-1.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-1.c scan-tree-dump-times optimized ".VEC_PERM" 1
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-1.c scan-tree-dump-times optimized ".VEC_PERM" 1
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-16.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-16.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-16.c scan-tree-dump-times optimized ".VEC_PERM" 1
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-16.c scan-tree-dump-times optimized ".VEC_PERM" 1
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-3.c scan-tree-dump-times optimized ".VEC_PERM" 1
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-3.c scan-tree-dump-times optimized ".VEC_PERM" 1
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-5.c scan-tree-dump-times optimized ".VEC_PERM" 1
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-5.c scan-tree-dump-times optimized ".VEC_PERM" 1
+FAIL: gcc.target/riscv/rvv/base/cpymem-1.c check-function-bodies f3
+FAIL: gcc.target/riscv/rvv/base/cpymem-2.c check-function-bodies f2
+FAIL: gcc.target/riscv/rvv/base/cpymem-2.c check-function-bodies f3
+		=== gfortran: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+		=== g++: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-2_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2a (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header-5_c.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/modules/xtreme-header_b.C -std=c++2b (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv32gc/ ilp32d/ medlow |   43 /    17 |   13 /     6 |   12 /     2 |
