@@ -13,6 +13,9 @@ on:
       issue_num:
         required: false
         type: string
+      issue_hash_prefix:
+        required: true
+        type: string
   workflow_dispatch:
     branches:
       - main
@@ -23,6 +26,9 @@ on:
       issue_num:
         description: 'Bisection Issue Number (Optional)'
         required: false
+      issue_hash_prefix:
+        description: 'Issue title'
+        default: 'Testsuite Status'
 
 jobs:
   compare-artifacts:
@@ -151,9 +157,6 @@ jobs:
             riscv-gnu-toolchain/previous_logs.zip
           retention-days: 90
 
-    outputs:
-      gcchash: ${{ inputs.gcchash }}
-
   generate-issues:
     if: always() # ensure generate issues always runs even on error
     needs: [compare-artifacts]
@@ -174,19 +177,19 @@ jobs:
       - name: Download summaries artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.compare-artifacts.outputs.gcchash }}-summaries
+          name: ${{ inputs.gcchash }}-summaries
           path: ./riscv-gnu-toolchain
 
       - name: Download current logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
+          name: ${{ inputs.gcchash }}-current-logs
           path: ./riscv-gnu-toolchain
 
       - name: Download previous logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
+          name: ${{ inputs.gcchash }}-previous-logs
           path: ./riscv-gnu-toolchain
 
       - name: Print API usage info
@@ -202,8 +205,9 @@ jobs:
           unzip current_logs.zip
           unzip previous_logs.zip
           python ./scripts/aggregate.py \
-            -chash ${{ needs.compare-artifacts.outputs.gcchash }} \
-            -o issue.md
+            -chash ${{ inputs.gcchash }} \
+            -o issue.md \
+            -title "${{ inputs.issue_hash_prefix }}"
           cat issue.md
 
       - name: Print API usage info
@@ -419,8 +423,9 @@ jobs:
       - name: Aggregate information
         run: |
           python ./scripts/aggregate.py \
-            -chash ${{ steps.bisection-hash.outputs.orig_gcchash }} \
-            -o issue.md
+            -chash ${{ inputs.gcchash }} \
+            -o issue.md \
+            -title "${{ inputs.issue_hash_prefix }}"
           cat issue.md
 
       - name: Print API usage info
