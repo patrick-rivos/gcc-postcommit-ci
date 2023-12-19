@@ -22,7 +22,7 @@ runs:
         working-directory: riscv-gnu-toolchain
         run: |
           cd build
-          make -j $(nproc) report-${{ inputs.mode }} || true
+          make -j20 report-${{ inputs.mode }} || true
 
       - name: Build debug log zip
         shell: bash
