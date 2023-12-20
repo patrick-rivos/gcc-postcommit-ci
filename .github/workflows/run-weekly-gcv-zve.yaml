@@ -4,8 +4,8 @@ name: Run-Weekly-gcv-zve
 
 on:
   schedule:
-    # Run at 4:00pm on Thursdays
-    - cron: 0 16 * * 4
+    # Run at 4:00pm
+    - cron: 0 16 * * *
   workflow_dispatch:
     branches:
       - main
