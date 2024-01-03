@@ -5789,3 +5789,19 @@ d1eacedc6d9ba9f5522f2c8d49ccfdf7939ad72d,2023-12-29 08:38:03 +0800,newlib-rv32gc
 3a7dd24eadeb918f9990db7adcb3e63e76bd63fb,2024-01-01 00:18:40 +0000,newlib-rv64gc lp64d medlow-g++,newlib,rv64gc lp64d medlow,g++,12,62
 3a7dd24eadeb918f9990db7adcb3e63e76bd63fb,2024-01-01 00:18:40 +0000,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow-gcc,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow,gcc,18,63
 3a7dd24eadeb918f9990db7adcb3e63e76bd63fb,2024-01-01 00:18:40 +0000,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow-g++,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow,g++,18,91
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gc_zba_zbb_zbc_zbs lp64d medlow-gcc,newlib,rv64gc_zba_zbb_zbc_zbs lp64d medlow,gcc,15,49
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gc_zba_zbb_zbc_zbs lp64d medlow-g++,newlib,rv64gc_zba_zbb_zbc_zbs lp64d medlow,g++,12,62
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gc lp64d medlow-gcc,newlib,rv64gc lp64d medlow,gcc,15,49
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gc lp64d medlow-g++,newlib,rv64gc lp64d medlow,g++,12,62
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv32gcv ilp32d medlow multilib-g++,newlib,rv32gcv ilp32d medlow multilib,g++,19,95
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gcv lp64d medlow multilib-g++,newlib,rv64gcv lp64d medlow multilib,g++,13,66
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib-g++,newlib,rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib,g++,13,66
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib-g++,newlib,rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib,g++,13,66
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv32gcv ilp32d medlow multilib-gcc,newlib,rv32gcv ilp32d medlow multilib,gcc,44,95
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gcv lp64d medlow multilib-gcc,newlib,rv64gcv lp64d medlow multilib,gcc,41,81
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib-gcc,newlib,rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib,gcc,42,83
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib-gcc,newlib,rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib,gcc,40,80
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow-gcc,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow,gcc,18,63
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow-g++,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow,g++,18,91
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv32gc ilp32d medlow-gcc,newlib,rv32gc ilp32d medlow,gcc,18,63
+9a29b00365a07745c4ba2ed2af374e7c732aaeb3,2024-01-02 08:22:58 +0800,newlib-rv32gc ilp32d medlow-g++,newlib,rv32gc ilp32d medlow,g++,18,91
