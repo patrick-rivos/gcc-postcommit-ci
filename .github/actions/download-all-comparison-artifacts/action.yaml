@@ -28,15 +28,15 @@ runs:
     - name: Download linux rv32 bitmanip non-multilib
       uses: ./.github/actions/common/download-comparison-artifacts
       with:
-        report-artifact-name: gcc-linux-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: gcc-linux-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: gcc-linux-rv32gc_zba_zbb_zbc_zbs_zfa-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv32gc_zba_zbb_zbc_zbs_zfa-ilp32d-${{ inputs.gcchash }}-non-multilib
         github-token: ${{ inputs.token }}
 
     - name: Download linux rv64 bitmanip non-multilib
       uses: ./.github/actions/common/download-comparison-artifacts
       with:
-        report-artifact-name: gcc-linux-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: gcc-linux-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: gcc-linux-rv64gc_zba_zbb_zbc_zbs_zfa-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-linux-rv64gc_zba_zbb_zbc_zbs_zfa-lp64d-${{ inputs.gcchash }}-non-multilib
         github-token: ${{ inputs.token }}
 
     # Newlib
@@ -58,15 +58,14 @@ runs:
     - name: Download newlib rv32 bitmanip non-multilib
       uses: ./.github/actions/common/download-comparison-artifacts
       with:
-        report-artifact-name: gcc-newlib-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: gcc-newlib-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: gcc-newlib-rv32gc_zba_zbb_zbc_zbs_zfa-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv32gc_zba_zbb_zbc_zbs_zfa-ilp32d-${{ inputs.gcchash }}-non-multilib
         github-token: ${{ inputs.token }}
 
-    - name: Download newlib rv64 bitmanip non-multilib
       uses: ./.github/actions/common/download-comparison-artifacts
       with:
-        report-artifact-name: gcc-newlib-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: gcc-newlib-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: gcc-newlib-rv64gc_zba_zbb_zbc_zbs_zfa-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
+        binary-artifact-name: gcc-newlib-rv64gc_zba_zbb_zbc_zbs_zfa-lp64d-${{ inputs.gcchash }}-non-multilib
         github-token: ${{ inputs.token }}
 
     # Multilib

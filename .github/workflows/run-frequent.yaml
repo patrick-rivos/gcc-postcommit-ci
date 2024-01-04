@@ -39,8 +39,8 @@ jobs:
           [
             rv32gc-ilp32d,
             rv64gc-lp64d,
-            rv32gc_zba_zbb_zbc_zbs-ilp32d, # rv32 bitmanip
-            rv64gc_zba_zbb_zbc_zbs-lp64d, # rv64 bitmanip
+            rv32gc_zba_zbb_zbc_zbs_zfa-ilp32d, # rv32 bitmanip
+            rv64gc_zba_zbb_zbc_zbs_zfa-lp64d, # rv64 bitmanip
           ]
         multilib: [non-multilib]
     uses: ./.github/workflows/build-test.yaml
