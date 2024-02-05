@@ -13,14 +13,19 @@ runs:
   steps:
     - name: Download report from this workflow
       if: ${{ !cancelled() }}
+      id: same-workflow-report
       uses: actions/download-artifact@v3
       with:
         name: ${{ inputs.report-artifact-name }}
         path: ./riscv-gnu-toolchain/current_logs
       continue-on-error: true
 
+    # If an artifact from the same workflow is not found, the conclusion
+    # will be success but the outcome will be failure. 
+    # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
     - name: Download report from another workflow
-      if: ${{ !cancelled() && hashFiles(format('./current_logs/{0}', inputs.report-artifact-name)) == '' }}
+      if: ${{ !cancelled() && steps.same-workflow-report.outcome == 'failure' }}
+      id: other-workflow-report
       shell: bash
       run: |
         pip install pygithub requests
@@ -28,16 +33,25 @@ runs:
         python ./scripts/download_artifact.py -name ${{ inputs.report-artifact-name }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir current_logs
       continue-on-error: true
 
+    - name: Failed download report
+      if: ${{ !cancelled() && steps.same-workflow-report.outcome == 'failure' && steps.other-workflow-report.outcome == 'failure' }}
+      id: report-download
+      shell: bash
+      run: |
+        echo "report_download=failure" >> $GITHUB_OUTPUT
+
     - name: Download rv32 non-multilib binary
-      if: ${{ !cancelled() && hashFiles(format('./current_logs/{0}', inputs.report-artifact-name)) == '' }}
+      if: ${{ !cancelled() && steps.report-download.outputs.report_download == 'failure'}}
+      id: same-workflow-binary
       uses: actions/download-artifact@v3
       with:
         name: ${{ inputs.binary-artifact-name }}
         path: ./riscv-gnu-toolchain/temp
       continue-on-error: true
 
+
     - name: Download binary from another workflow
-      if: ${{ !cancelled() && hashFiles(format('./current_logs/{0}', inputs.report-artifact-name)) == '' && hashFiles(format('./temp/{0}', inputs.binary-artifact-name)) == '' }}
+      if: ${{ !cancelled() && steps.report-download.outputs.report_download == 'falure' && steps.same-workflow-binary.outcome == 'failure' }}
       shell: bash
       run: |
         cd riscv-gnu-toolchain
