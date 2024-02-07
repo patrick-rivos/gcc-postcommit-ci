@@ -40,7 +40,7 @@ runs:
       run: |
         echo "report_download=failure" >> $GITHUB_OUTPUT
 
-    - name: Download rv32 non-multilib binary
+    - name: Download binary artifact from this workflow
       if: ${{ !cancelled() && steps.report-download.outputs.report_download == 'failure'}}
       id: same-workflow-binary
       uses: actions/download-artifact@v3
