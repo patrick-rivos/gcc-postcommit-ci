@@ -33,7 +33,7 @@ runs:
         python ./scripts/download_artifact.py -name ${{ inputs.report-artifact-name }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir current_logs
       continue-on-error: true
 
-    - name: Failed download report
+    - name: Report failed download
       if: ${{ !cancelled() && steps.same-workflow-report.outcome == 'failure' && steps.other-workflow-report.outcome == 'failure' }}
       id: report-download
       shell: bash
