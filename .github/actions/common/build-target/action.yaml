@@ -44,12 +44,7 @@ runs:
         run: |
           mkdir build
           cd build
-          if [ "${{ inputs.multilib }}" == "multilib" ]; then
-            ../configure --prefix=$(pwd) --with-multilib-generator='${{ inputs.multilib_target_string }}'
-          else
-            TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
-            ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
-          fi
+          ../../configure-scripts/${{ inputs.multilib_target_string }}
 
       # http://ruslanledesma.com/2016/03/08/protip-redirect-stdout-stderr-separate-files.html
       - name: Make gcc

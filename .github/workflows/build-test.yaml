@@ -84,7 +84,7 @@ jobs:
         uses: ./.github/actions/common/build-target
         with:
           # Only 32/64gc multilibs run on github-hosted runners
-          multilib_target_string: 'rv64gc-lp64d--;rv32gc-ilp32d--'
+          multilib_target_string: ${{ inputs.target }}
           build_log_name: ${{ steps.build-log.outputs.build_log_name }}
           upload_stage2_artifacts: 'true'
           mode: ${{ inputs.mode }}
@@ -137,12 +137,8 @@ jobs:
         run: |
           mkdir build
           cd build
-          if [ "${{ inputs.multilib }}" == "multilib" ]; then
-            ../configure --prefix=$(pwd) --with-multilib-generator="rv64gc-lp64d--;rv32gc-ilp32d--"
-          else
-            TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
-            ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
-          fi
+          TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
+          ../../configure-scripts/${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}
 
       - name: Restore Stage2 Artifacts
         uses: ./.github/actions/common/restore-stage-2
@@ -217,12 +213,8 @@ jobs:
         run: |
           mkdir build
           cd build
-          if [ "${{ inputs.multilib }}" == "multilib" ]; then
-            ../configure --prefix=$(pwd) --with-multilib-generator="rv64gc-lp64d--;rv32gc-ilp32d--"
-          else
-            TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
-            ../configure --prefix=$(pwd) --with-multilib-generator="${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}--"
-          fi
+          TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
+          ../../configure-scripts/${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}
 
       - name: Build
         run: |
@@ -296,9 +288,9 @@ jobs:
         run: |
           if [ "${{ inputs.target }}" == "rv64gcv_zvl-lp64d" ];
           then
-            export MULTILIB_STRING="rv64gcv_zvl128b-lp64d--;rv64gcv_zvl256b-lp64d--;rv64gcv_zvl512b-lp64d--;rv64gcv_zvl1024b-lp64d--"
+            export MULTILIB_STRING="rv64gcv_zvl-lp64d"
           else
-            export MULTILIB_STRING="rv32gcv-ilp32d--;rv64gcv-lp64d--;rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d--;rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d--"
+            export MULTILIB_STRING="rv64gcv-lp64d"
           fi
           echo "multilib_string=$MULTILIB_STRING" >> $GITHUB_OUTPUT
 
