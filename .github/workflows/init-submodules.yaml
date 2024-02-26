@@ -71,6 +71,7 @@ jobs:
             export GCCHASH=${{ github.event.inputs.gcchash }}
           fi
           echo $GCCHASH
+          git checkout $GCCHASH
           echo "gcchash=$GCCHASH" >> "$GITHUB_OUTPUT"
 
       - name: Cache submodules

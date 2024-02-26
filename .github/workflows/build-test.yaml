@@ -282,7 +282,7 @@ jobs:
         run: |
           cd gcc
           git fetch
-          git checkout ${{ inputs.gcchash }}
+          echo "using hash $(git rev-parse HEAD)"
 
       - name: Make log name
         id: build-log
