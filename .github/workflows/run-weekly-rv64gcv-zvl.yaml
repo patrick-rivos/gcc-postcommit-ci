@@ -48,4 +48,4 @@ jobs:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       issue_num: ${{ github.event.inputs.issue_num }}
       issue_hash_prefix: Testsuite rv64gcv-zvl Status
-      weekly_run: 'rv64-zvl'
+      prefix: 'rv64-zvl_'

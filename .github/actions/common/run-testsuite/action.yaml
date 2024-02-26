@@ -13,6 +13,10 @@ inputs:
   multilib:
     description: 'is multilib'
     required: true
+  prefix:
+    description: 'prefix'
+    required: true
+
 
 runs:
   using: "composite"
@@ -38,7 +42,7 @@ runs:
       - name: Upload debug artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
+          name: ${{ inputs.prefix}}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
           path: |
             riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
           retention-days: 90
@@ -58,7 +62,7 @@ runs:
       - name: Upload sum file artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files
+          name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files
           path: |
             riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files.zip
           retention-days: 90
@@ -77,7 +81,7 @@ runs:
       - name: Upload results artifact
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
+          name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
           path: |
             riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
           retention-days: 90

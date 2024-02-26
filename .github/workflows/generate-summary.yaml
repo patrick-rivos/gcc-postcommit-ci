@@ -16,7 +16,7 @@ on:
       issue_hash_prefix:
         required: true
         type: string
-      weekly_run:
+      prefix:
         required: false
         type: string
   workflow_dispatch:
@@ -32,9 +32,9 @@ on:
       issue_hash_prefix:
         description: 'Issue title'
         default: 'Testsuite Status'
-      weekly_run:
+      prefix:
         required: false
-        type: 'weekly run (Optional)'
+        description: 'weekly run (Optional)'
 
 jobs:
   compare-artifacts:
@@ -105,18 +105,18 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.weekly_run == '' }}
+        if: ${{ inputs.prefix == '' }}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.weekly_run != '' }}
+        if: ${{ inputs.prefix != '' }}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          weekly_run: ${{ inputs.weekly_run }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Print API usage info
         run: |
@@ -248,16 +248,23 @@ jobs:
           filename: riscv-gnu-toolchain/trimmed_issue.md
           update_existing: true
 
-      - name: Add Weekly Run Label to New Issue
+      - name: Get prefix label name
+        if: ${{ inputs.prefix != '' }}
+        id: prefix-label
+        run: |
+          LABEL=$(echo ${{ inputs.prefix }} | cut -d '_' -f 1)
+          echo "label=$LABEL" >> $GITHUB_OUTPUT
+
+      - name: Add Prefix Label to New Issue
         uses: actions/github-script@v6
-        if: ${{ inputs.weekly_run != '' }}
+        if: ${{ inputs.prefix != '' }}
         with:
           script: |
             github.rest.issues.addLabels({
               issue_number: ${{ steps.create-issue.outputs.number }},
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ['${{ inputs.weekly_run }}']
+              labels: ['${{ steps.prefix-label.outputs.label }}']
             })
 
     outputs:
@@ -389,18 +396,18 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.weekly_run == '' }}
+        if: ${{ inputs.prefix == '' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.weekly_run != '' }}
+        if: ${{ inputs.prefix != '' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          weekly_run: ${{ inputs.weekly_run }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Print API usage info
         run: |

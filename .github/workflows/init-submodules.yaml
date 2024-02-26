@@ -8,6 +8,11 @@ on:
     outputs:
         gcchash:
           value: ${{ jobs.init-submodules.outputs.gcchash }}
+    inputs:
+      prefix:
+        description: 'uploaded file prefix'
+        required: true
+        type: string
 
 jobs:
   init-submodules:
@@ -99,7 +104,7 @@ jobs:
       - name: Upload git cache
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-sources-${{ steps.gcc-hash.outputs.gcchash }}
+          name: ${{ inputs.prefix }}gcc-sources-${{ steps.gcc-hash.outputs.gcchash }}
           path: |
             riscv-gnu-toolchain/cache.zip
           retention-days: 5

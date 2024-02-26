@@ -28,6 +28,8 @@ on:
 jobs:
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
+    with:
+      prefix: ''
 
   creg: # Check Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -51,6 +53,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: false
+      prefix: ''
 
   cmreg-self-hosted: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -73,6 +76,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
+      prefix: ''
 
   summarize:
     if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
@@ -84,3 +88,4 @@ jobs:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       issue_num: ${{ github.event.inputs.issue_num }}
       issue_hash_prefix: Testsuite Status
+      prefix: ''
