@@ -1,0 +1,260 @@
+		=== gcc: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: gcc.dg/debug/btf/btf-datasec-3.c scan-assembler-times bts_type 3
+FAIL: gcc.dg/debug/btf/btf-datasec-3.c scan-assembler-times bts_type: \\(BTF_KIND_VAR 'test_bss2'\\) 1
+FAIL: gcc.dg/debug/btf/btf-datasec-3.c scan-assembler-times bts_type: \\(BTF_KIND_VAR 'test_data2'\\) 1
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/torture/pr113026-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   (test for bogus messages, line 10)
+FAIL: gcc.dg/tree-ssa/andnot-2.c scan-tree-dump-not forwprop3 "_expr"
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Conditional combines static and invariant" 1
+FAIL: gcc.dg/tree-ssa/copy-headers-8.c scan-tree-dump-times ch2 "Will duplicate bb" 2
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-6.c scan-assembler-times csrr 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-8.c scan-assembler-times csrr 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/rvv/base/pr108185-1.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-1.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-1.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-1.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-1.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-1.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-2.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-2.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-2.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-2.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-2.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-2.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-3.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-3.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-3.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-3.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-3.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-3.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-4.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-4.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-4.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-4.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-4.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-4.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-5.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-5.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-5.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-5.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-5.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-5.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-6.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-6.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-6.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-6.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-6.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-6.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-7.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-7.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-7.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-7.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*m8,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-7.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/pr108185-7.c scan-assembler-times vsetvli\\s+[a-x][0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*ta,\\s*ma 1
+FAIL: gcc.target/riscv/rvv/base/vcreate.c scan-assembler-times vmv1r.v\\s+v[0-9]+,\\s*v[0-9]+ 24
+FAIL: gcc.target/riscv/rvv/base/vcreate.c scan-assembler-times vmv2r.v\\s+v[0-9]+,\\s*v[0-9]+ 12
+FAIL: gcc.target/riscv/rvv/base/vcreate.c scan-assembler-times vmv4r.v\\s+v[0-9]+,\\s*v[0-9]+ 16
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-30.c   -O2   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-30.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-30.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-30.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-30.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-30.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-31.c   -O2   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-31.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-31.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-31.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-31.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-31.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*m4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-17.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O3 -g   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_single_block-18.c   -O3 -g   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e8,\\s*mf4,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-10.c   -O2   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-10.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e16,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-10.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e16,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-10.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e16,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-11.c   -O2   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-11.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-11.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-12.c   -O2   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-12.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-12.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 9
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-4.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e16,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-4.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-5.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e16,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-5.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-6.c   -O2   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-6.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-6.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-6.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-6.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-6.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-7.c   -O2   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-7.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-7.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-7.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-7.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-7.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-8.c   -O2   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-8.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-8.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-8.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-8.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-8.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-9.c   -O2   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-9.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-9.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-9.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-9.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 7
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_switch_vtype-9.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+		=== g++: Unexpected fails for rv32gc ilp32d medlow ===
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 46-61
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++14  (test for warnings, line 11)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++14  (test for warnings, line 12)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++14  (test for warnings, line 21)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++14  (test for warnings, line 22)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++17  (test for warnings, line 11)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++17  (test for warnings, line 12)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++17  (test for warnings, line 21)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++17  (test for warnings, line 22)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++20  (test for warnings, line 11)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++20  (test for warnings, line 12)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++20  (test for warnings, line 21)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++20  (test for warnings, line 22)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++98  (test for warnings, line 11)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++98  (test for warnings, line 12)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++98  (test for warnings, line 21)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++98  (test for warnings, line 22)
+FAIL: c-c++-common/analyzer/strndup-1.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv32gc/ ilp32d/ medlow |  195 /    45 |   58 /     7 |      - |

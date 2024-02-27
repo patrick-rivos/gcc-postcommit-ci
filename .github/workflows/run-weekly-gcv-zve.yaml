@@ -38,3 +38,15 @@ jobs:
       run_on_self_hosted: true
 
   # TODO: Generate a summary issue with no baseline
+
+  summarize:
+    if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
+    needs: [init-submodules, zvl-variants-self-hosted]
+    permissions:
+      issues: write
+    uses: ./.github/workflows/generate-summary.yaml
+    with:
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      issue_num: ${{ github.event.inputs.issue_num }}
+      issue_hash_prefix: Testsuite zve Status
+      weekly_run: 'zve'
