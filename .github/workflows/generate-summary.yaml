@@ -109,6 +109,7 @@ jobs:
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
@@ -151,7 +152,7 @@ jobs:
       - name: Upload compare summaries
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-summaries
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-summaries
           path: |
             riscv-gnu-toolchain/summaries.zip
           retention-days: 90
@@ -159,7 +160,7 @@ jobs:
       - name: Upload current log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-current-logs
           path: |
             riscv-gnu-toolchain/current_logs.zip
           retention-days: 90
@@ -167,7 +168,7 @@ jobs:
       - name: Upload previous log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-previous-logs
           path: |
             riscv-gnu-toolchain/previous_logs.zip
           retention-days: 90
@@ -192,19 +193,19 @@ jobs:
       - name: Download summaries artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-summaries
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-summaries
           path: ./riscv-gnu-toolchain
 
       - name: Download current logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-current-logs
           path: ./riscv-gnu-toolchain
 
       - name: Download previous logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-previous-logs
           path: ./riscv-gnu-toolchain
 
       - name: Print API usage info
@@ -363,13 +364,13 @@ jobs:
       - name: Download current logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
           path: riscv-gnu-toolchain
 
       - name: Download previous logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
           path: riscv-gnu-toolchain
 
       - name: Unzip previous logs
@@ -400,6 +401,7 @@ jobs:
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
@@ -442,7 +444,7 @@ jobs:
       - name: Upload compare summaries
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-summaries
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-summaries
           path: |
             riscv-gnu-toolchain/summaries.zip
           retention-days: 90
@@ -450,7 +452,7 @@ jobs:
       - name: Upload current log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-current-logs
           path: |
             riscv-gnu-toolchain/current_logs.zip
           retention-days: 90
@@ -458,7 +460,7 @@ jobs:
       - name: Upload previous log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-previous-logs
           path: |
             riscv-gnu-toolchain/previous_logs.zip
           retention-days: 90

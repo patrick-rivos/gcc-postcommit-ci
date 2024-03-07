@@ -24,7 +24,7 @@ inputs:
     required: true
   prefix:
     description: 'prefix determining the config script'
-    required: true
+    required: false
 outputs:
   build_status:
     description: 'Build success or failure'

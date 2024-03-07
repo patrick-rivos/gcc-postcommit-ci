@@ -11,7 +11,7 @@ on:
     inputs:
       prefix:
         description: 'uploaded file prefix'
-        required: true
+        required: false
         type: string
 
 jobs:
