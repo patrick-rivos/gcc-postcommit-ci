@@ -13,6 +13,8 @@ on:
 jobs:
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
+    with:
+      prefix: 'zve_'
 
   # Will take a long time to complete (4 targets)
   zvl-variants-self-hosted:
@@ -36,6 +38,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
+      prefix: 'zve_'
 
   # TODO: Generate a summary issue with no baseline
 
@@ -49,4 +52,4 @@ jobs:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       issue_num: ${{ github.event.inputs.issue_num }}
       issue_hash_prefix: Testsuite zve Status
-      weekly_run: 'zve'
+      prefix: 'zve_'

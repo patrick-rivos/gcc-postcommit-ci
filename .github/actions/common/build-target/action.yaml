@@ -22,6 +22,9 @@ inputs:
   multilib:
     description: 'is multilib'
     required: true
+  prefix:
+    description: 'prefix determining the config script'
+    required: false
 outputs:
   build_status:
     description: 'Build success or failure'
@@ -44,7 +47,8 @@ runs:
         run: |
           mkdir build
           cd build
-          ../../configure-scripts/${{ inputs.multilib_target_string }}
+          ../../configure-scripts/${{ inputs.prefix }}${{ inputs.multilib_target_string }}
+          head config.log
 
       # http://ruslanledesma.com/2016/03/08/protip-redirect-stdout-stderr-separate-files.html
       - name: Make gcc
@@ -68,7 +72,7 @@ runs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.build_log_name }}
+          name: ${{ inputs.prefix }}${{ inputs.build_log_name }}
           path: |
             riscv-gnu-toolchain/${{ inputs.build_log_name }}.zip
           retention-days: 90
@@ -82,7 +86,7 @@ runs:
       - name: Upload binary artifact
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}
+          name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}
           path: |
             riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip
           retention-days: 5
@@ -99,7 +103,7 @@ runs:
         if: ${{ inputs.upload_stage2_artifacts == 'true' }}
         uses: actions/upload-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
+          name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
           path: |
             riscv-gnu-toolchain/stage2.zip
           retention-days: 5

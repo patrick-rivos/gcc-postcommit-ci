@@ -24,6 +24,9 @@ on:
       run_on_self_hosted:
         required: true
         type: string
+      prefix:
+        required: false
+        type: string
 
 jobs:
   check:
@@ -59,7 +62,7 @@ jobs:
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
         with:
-          name: gcc-sources-${{ inputs.gcchash }}
+          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
 
       - name: Restore submodules
@@ -91,6 +94,7 @@ jobs:
           target: ${{ inputs.target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
+          prefix: ${{ inputs.prefix }}
 
     outputs:
       build_success: ${{ steps.build-status.outputs.build_success }}
@@ -138,7 +142,7 @@ jobs:
           mkdir build
           cd build
           TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
-          ../../configure-scripts/${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}
+          ../../configure-scripts/${{ inputs.prefix }}${TARGET_TUPLE[0]}-${TARGET_TUPLE[1]}
 
       - name: Restore Stage2 Artifacts
         uses: ./.github/actions/common/restore-stage-2
@@ -147,6 +151,7 @@ jobs:
           target: ${{ inputs.target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Run Testsuite
         uses: ./.github/actions/common/run-testsuite
@@ -312,6 +317,7 @@ jobs:
           target: ${{ inputs.target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Run Testsuite
         uses: ./.github/actions/common/run-testsuite
@@ -320,3 +326,4 @@ jobs:
           target: ${{ inputs.target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
+          prefix: ${{ inputs.prefix }}

@@ -13,6 +13,9 @@ inputs:
   multilib:
     description: 'is multilib'
     required: true
+  prefix:
+    description: 'prefix'
+    required: false
 
 runs:
   using: "composite"
@@ -20,7 +23,7 @@ runs:
       - name: Restore stage2
         uses: actions/download-artifact@v3
         with:
-          name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
+          name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
           path: ./riscv-gnu-toolchain
 
       - name: Unzip artifacts

@@ -16,7 +16,7 @@ on:
       issue_hash_prefix:
         required: true
         type: string
-      weekly_run:
+      prefix:
         required: false
         type: string
   workflow_dispatch:
@@ -32,9 +32,9 @@ on:
       issue_hash_prefix:
         description: 'Issue title'
         default: 'Testsuite Status'
-      weekly_run:
+      prefix:
         required: false
-        type: 'weekly run (Optional)'
+        description: 'weekly run (Optional)'
 
 jobs:
   compare-artifacts:
@@ -105,18 +105,19 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.weekly_run == '' }}
+        if: ${{ inputs.prefix == '' }}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.weekly_run != '' }}
+        if: ${{ inputs.prefix != '' }}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          weekly_run: ${{ inputs.weekly_run }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Print API usage info
         run: |
@@ -151,7 +152,7 @@ jobs:
       - name: Upload compare summaries
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-summaries
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-summaries
           path: |
             riscv-gnu-toolchain/summaries.zip
           retention-days: 90
@@ -159,7 +160,7 @@ jobs:
       - name: Upload current log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-current-logs
           path: |
             riscv-gnu-toolchain/current_logs.zip
           retention-days: 90
@@ -167,7 +168,7 @@ jobs:
       - name: Upload previous log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-previous-logs
           path: |
             riscv-gnu-toolchain/previous_logs.zip
           retention-days: 90
@@ -192,19 +193,19 @@ jobs:
       - name: Download summaries artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-summaries
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-summaries
           path: ./riscv-gnu-toolchain
 
       - name: Download current logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-current-logs
           path: ./riscv-gnu-toolchain
 
       - name: Download previous logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ inputs.gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-previous-logs
           path: ./riscv-gnu-toolchain
 
       - name: Print API usage info
@@ -248,16 +249,23 @@ jobs:
           filename: riscv-gnu-toolchain/trimmed_issue.md
           update_existing: true
 
-      - name: Add Weekly Run Label to New Issue
+      - name: Get prefix label name
+        if: ${{ inputs.prefix != '' }}
+        id: prefix-label
+        run: |
+          LABEL=$(echo ${{ inputs.prefix }} | cut -d '_' -f 1)
+          echo "label=$LABEL" >> $GITHUB_OUTPUT
+
+      - name: Add Prefix Label to New Issue
         uses: actions/github-script@v6
-        if: ${{ inputs.weekly_run != '' }}
+        if: ${{ inputs.prefix != '' }}
         with:
           script: |
             github.rest.issues.addLabels({
               issue_number: ${{ steps.create-issue.outputs.number }},
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ['${{ inputs.weekly_run }}']
+              labels: ['${{ steps.prefix-label.outputs.label }}']
             })
 
     outputs:
@@ -356,13 +364,13 @@ jobs:
       - name: Download current logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
           path: riscv-gnu-toolchain
 
       - name: Download previous logs artifact
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
           path: riscv-gnu-toolchain
 
       - name: Unzip previous logs
@@ -389,18 +397,19 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.weekly_run == '' }}
+        if: ${{ inputs.prefix == '' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.weekly_run != '' }}
+        if: ${{ inputs.prefix != '' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          weekly_run: ${{ inputs.weekly_run }}
+          prefix: ${{ inputs.prefix }}
 
       - name: Print API usage info
         run: |
@@ -435,7 +444,7 @@ jobs:
       - name: Upload compare summaries
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-summaries
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-summaries
           path: |
             riscv-gnu-toolchain/summaries.zip
           retention-days: 90
@@ -443,7 +452,7 @@ jobs:
       - name: Upload current log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-current-logs
           path: |
             riscv-gnu-toolchain/current_logs.zip
           retention-days: 90
@@ -451,7 +460,7 @@ jobs:
       - name: Upload previous log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.bisection-hash.outputs.orig_gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-previous-logs
           path: |
             riscv-gnu-toolchain/previous_logs.zip
           retention-days: 90

@@ -13,3 +13,5 @@ on:
 jobs:
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
+    with:
+      prefix: 'rv64_zvl_lmul2_'
