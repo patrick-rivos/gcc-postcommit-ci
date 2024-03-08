@@ -89,7 +89,7 @@ runs:
           name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}
           path: |
             riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip
-          retention-days: 5
+          retention-days: 8
 
       # Running testsuite (stamps/check-gcc-*) only uses stage2 & assorted folders
       - name: Zip stage2
