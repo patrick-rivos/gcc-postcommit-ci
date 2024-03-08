@@ -24,12 +24,12 @@ jobs:
       matrix:
         mode: [linux]
         target: [
-          rv32gcv_zvl128b-ilp32d,
-          rv32gcv_zvl256b-ilp32d,
-          rv32gcv_zvl512b-ilp32d,
+          # rv32gcv_zvl128b-ilp32d,
+          # rv32gcv_zvl256b-ilp32d,
+          # rv32gcv_zvl512b-ilp32d,
           rv32gcv_zvl1024b-ilp32d,
         ]
-        multilib: [non-multilib]
+        multilib: [multilib]
     uses: ./.github/workflows/build-test.yaml
     with:
       mode: ${{ matrix.mode }}

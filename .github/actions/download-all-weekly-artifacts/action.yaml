@@ -13,102 +13,36 @@ runs:
   steps:
     # Download linux
 
-    - name: Download linux rv32 zve32f
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'zve_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zve32f-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zve32f-ilp32d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
-    - name: Download linux rv64 zve32f
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'zve_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zve32f-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zve32f-lp64d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
     - name: Download linux rv32 zve64d
       uses: ./.github/actions/common/download-comparison-artifacts
       if: ${{ inputs.prefix == 'zve_' }}
       with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zve64d-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zve64d-ilp32d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zve64d-ilp32d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zve64d-ilp32d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
-    - name: Download linux rv64 zve32f
+    - name: Download linux rv64 zve64d
       uses: ./.github/actions/common/download-comparison-artifacts
       if: ${{ inputs.prefix == 'zve_' }}
       with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zve64d-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zve64d-lp64d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
-
-    - name: Download linux rv64-128b
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv64_zvl_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl128b-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl128b-lp64d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
-    - name: Download linux rv64-256b
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv64_zvl_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl256b-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl256b-lp64d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
-    - name: Download linux rv64-512b
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv64_zvl_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl512b-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl512b-lp64d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zve64d-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zve64d-lp64d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
     - name: Download linux rv64-1024b
       uses: ./.github/actions/common/download-comparison-artifacts
       if: ${{ inputs.prefix == 'rv64_zvl_' }}
       with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
-
-    - name: Download linux rv32-128b
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv32_zvl_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl128b-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl128b-ilp32d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
-    - name: Download linux rv32-256b
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv32_zvl_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl256b-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl256b-ilp32d-${{ inputs.gcchash }}-non-multilib
-        github-token: ${{ inputs.token }}
-
-    - name: Download linux rv32-512b
-      uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv32_zvl_' }}
-      with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl512b-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl512b-ilp32d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
     - name: Download linux rv32-1024b
       uses: ./.github/actions/common/download-comparison-artifacts
       if: ${{ inputs.prefix == 'rv32_zvl_' }}
       with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl1024b-ilp32d-${{ inputs.gcchash }}-non-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl1024b-ilp32d-${{ inputs.gcchash }}-non-multilib
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl1024b-ilp32d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl1024b-ilp32d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
 

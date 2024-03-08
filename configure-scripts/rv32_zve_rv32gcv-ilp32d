@@ -1,0 +1,2 @@
+#!/bin/bash
+../configure --prefix=$(pwd) --with-multilib-generator="rv32gcv_zve32f-ilp32d--;rv32gcv_zve64d-ilp32d--"
