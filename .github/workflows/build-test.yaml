@@ -119,7 +119,7 @@ jobs:
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
         with:
-          name: gcc-sources-${{ inputs.gcchash }}
+          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
 
       - name: Restore submodules
@@ -193,7 +193,7 @@ jobs:
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
         with:
-          name: gcc-sources-${{ inputs.gcchash }}
+          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
 
       - name: Restore submodules
@@ -266,7 +266,7 @@ jobs:
       - name: Restore submodules from cache
         uses: actions/download-artifact@v3
         with:
-          name: gcc-sources-${{ inputs.gcchash }}
+          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
 
       - name: Restore submodules
