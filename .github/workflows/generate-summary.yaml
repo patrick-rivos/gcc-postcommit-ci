@@ -65,7 +65,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-9 # Numbered archive to allow for easy transition when bumping submodules
+          key: submodules-archive-8 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initalize gcc
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
@@ -335,7 +335,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-9 # Numbered archive to allow for easy transition when bumping submodules
+          key: submodules-archive-8 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initalize gcc
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
