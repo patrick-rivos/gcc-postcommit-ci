@@ -14,6 +14,7 @@ jobs:
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
     with:
+      # Add new prefixes to /dashboard/getdata.py in download_summaries()s
       prefix: 'rv64_zvl_'
 
   # Will take a long time to complete (4 targets)

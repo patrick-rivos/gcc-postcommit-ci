@@ -48,7 +48,12 @@ def get_issue_hashes(token: str, repo: str):
 
 
 def download_summaries(artifact_name: str, token: str, repo: str):
-    artifact_id = search_for_artifact(artifact_name, repo, token, None)
+    artifact_id = None
+    # Try all prefixes
+    for prefix in ["", "zve_", "rv32_zvl_", "rv64_zvl_lmul2_", "rv64_zvl_"]:
+        artifact_id = search_for_artifact(prefix + artifact_name, repo, token, None)
+        if artifact_id is not None:
+            break
     assert artifact_id is not None
     artifact_path = download_artifact(artifact_name, artifact_id, token, repo)
     return artifact_path
