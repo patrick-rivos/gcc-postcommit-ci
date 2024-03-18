@@ -45,4 +45,10 @@ runs:
         binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl1024b-ilp32d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
-
+    - name: Download linux rv64-1024b lmul2
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'rv64_zvl_lmul2_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}

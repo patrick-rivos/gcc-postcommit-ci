@@ -16,3 +16,40 @@ jobs:
     with:
       # Add new prefixes to /dashboard/getdata.py in download_summaries()
       prefix: 'rv64_zvl_lmul2_'
+
+  # Will take a long time to complete (4 targets)
+  zvl-variants-self-hosted:
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [linux]
+        target: [
+          # rv64gcv_zvl128b-lp64d,
+          # rv64gcv_zvl256b-lp64d,
+          # rv64gcv_zvl512b-lp64d,
+          rv64gcv_zvl1024b-lp64d,
+        ]
+        multilib: [multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: true
+      prefix: 'rv64_zvl_lmul2_'
+
+  # TODO: Generate a summary issue with no baseline
+  summarize:
+    if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
+    needs: [init-submodules, zvl-variants-self-hosted]
+    permissions:
+      issues: write
+    uses: ./.github/workflows/generate-summary.yaml
+    with:
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      issue_num: ${{ github.event.inputs.issue_num }}
+      issue_hash_prefix: Testsuite rv64gcv-zvl lmul2 Status
+      prefix: 'rv64_zvl_lmul2_'
