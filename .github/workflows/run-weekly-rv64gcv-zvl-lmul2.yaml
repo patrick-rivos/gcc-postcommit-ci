@@ -25,9 +25,9 @@ jobs:
       matrix:
         mode: [linux]
         target: [
-          # rv64gcv_zvl128b-lp64d,
-          # rv64gcv_zvl256b-lp64d,
-          # rv64gcv_zvl512b-lp64d,
+          rv64gcv_zvl128b-lp64d,
+          rv64gcv_zvl256b-lp64d,
+          rv64gcv_zvl512b-lp64d,
           rv64gcv_zvl1024b-lp64d,
         ]
         multilib: [multilib]
