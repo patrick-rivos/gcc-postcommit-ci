@@ -287,18 +287,17 @@ jobs:
           export BUILD_LOG_NAME=${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log
           echo "build_log_name=$BUILD_LOG_NAME" >> $GITHUB_OUTPUT
 
-      # run-frequent uses rv64gcv, run-weekly uses rv64gcv_zvl
+      # run-frequent uses rv64gcv, run-weekly uses target
       - name: Set multilib target string
         id: multilib-target
         run: |
-          # if statement specifically for rv32gcv_zvl and rv32gcv_zve
-          # prefix will be added in the build-target action so
-          # leave these as generic
-          if [[ ${{ inputs.target }} = rv32* ]];
+          if [[ "${{ inputs.prefix }}" == "" ]];
           then
-            export MULTILIB_STRING="rv32gcv-ilp32d"
-          else
+            # This is a run-frequent build
             export MULTILIB_STRING="rv64gcv-lp64d"
+          else
+            # This is a run-weekly build
+            export MULTILIB_STRING="${{ inputs.target }}"
           fi
           echo "multilib_string=$MULTILIB_STRING" >> $GITHUB_OUTPUT
 

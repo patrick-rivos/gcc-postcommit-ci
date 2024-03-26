@@ -29,13 +29,42 @@ runs:
         binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zve64d-lp64d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
+    # Download rv64 zvl builds.
+
     - name: Download linux rv64-1024b
       uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv64_zvl_' }}
+      if: ${{ inputs.prefix == 'rv64_zvl_' || inputs.prefix == 'rv64_zvl_lmul2_' }}
       with:
         report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib-report.log
         binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
+
+    - name: Download linux rv64-512b
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'rv64_zvl_' || inputs.prefix == 'rv64_zvl_lmul2_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl512b-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl512b-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux rv64-256b
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'rv64_zvl_' || inputs.prefix == 'rv64_zvl_lmul2_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl256b-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl256b-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    # only have 128b for lmul2 runs
+    - name: Download linux rv64-128b
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'rv64_zvl_lmul2_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl128b-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl128b-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    # Download rv32 zvl builds.
 
     - name: Download linux rv32-1024b
       uses: ./.github/actions/common/download-comparison-artifacts
@@ -45,10 +74,19 @@ runs:
         binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl1024b-ilp32d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
-    - name: Download linux rv64-1024b lmul2
+    - name: Download linux rv32-512b
       uses: ./.github/actions/common/download-comparison-artifacts
-      if: ${{ inputs.prefix == 'rv64_zvl_lmul2_' }}
+      if: ${{ inputs.prefix == 'rv32_zvl_' }}
       with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zvl1024b-lp64d-${{ inputs.gcchash }}-multilib
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl512b-ilp32d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl512b-ilp32d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
+
+    - name: Download linux rv32-256b
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'rv32_zvl_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl256b-ilp32d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gcv_zvl256b-ilp32d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
