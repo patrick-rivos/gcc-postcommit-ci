@@ -136,7 +136,7 @@ jobs:
       - name: Download artifacts
         run: |
           pip install pygithub requests
-          python ./scripts/download_artifacts.py -hash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }}
+          python ./scripts/download_artifacts.py -hash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}"
           ls previous_logs
 
       - name: Compare artifacts
@@ -428,7 +428,7 @@ jobs:
       - name: Download artifacts
         run: |
           pip install pygithub requests
-          python ./scripts/download_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} -phash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }}
+          python ./scripts/download_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} -phash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}"
           ls previous_logs
 
       - name: Compare artifacts
