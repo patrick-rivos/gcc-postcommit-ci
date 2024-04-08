@@ -222,9 +222,17 @@ jobs:
           unzip previous_logs.zip
           python ./scripts/aggregate.py \
             -chash ${{ inputs.gcchash }} \
-            -o issue.md \
+            -o temp_issue.md \
             -title "${{ inputs.issue_hash_prefix }}"
+          cat temp_issue.md
+          tail -n+5 temp_issue.md > issue.md
           cat issue.md
+          
+      - name: Get labels
+        id: issue-labels
+        run: |
+          ISSUE_LABELS=$(cat labels.txt)
+          echo "issue_labels=$ISSUE_LABELS" >> $GITHUB_OUTPUTS
 
       - name: Print API usage info
         run: |
@@ -241,13 +249,14 @@ jobs:
           cat trimmed_issue.md
 
       - name: Create or update summary issue
-        uses: JasonEtco/create-an-issue@v2
+        uses: peter-evans/create-issue-from-file@v4
         id: create-issue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          filename: riscv-gnu-toolchain/trimmed_issue.md
-          update_existing: true
+          content-filepath: riscv-gnu-toolchain/trimmed_issue.md
+          title: 'Testsuite Status ${{ inputs.gcchash }}'
+          labels: ${{ steps.issue-labels.outputs.issue_labels }}
 
       - name: Get prefix label name
         if: ${{ inputs.prefix != '' }}
@@ -262,14 +271,14 @@ jobs:
         with:
           script: |
             github.rest.issues.addLabels({
-              issue_number: ${{ steps.create-issue.outputs.number }},
+              issue_number: ${{ steps.create-issue.outputs.issue-number }},
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: ['${{ steps.prefix-label.outputs.label }}']
             })
 
     outputs:
-      new_issue_num: ${{ steps.create-issue.outputs.number }}
+      new_issue_num: ${{ steps.create-issue.outputs.issue-number }}
 
 
   regenerate-issues:
@@ -487,6 +496,12 @@ jobs:
           run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
           cat trimmed_issue.md
 
+      # Leave this for now since peter-evans doesn't have a good way
+      # of updating the original issue comment since all the create
+      # an issue outputs is the issue number and not the issue comment
+      # id https://github.com/peter-evans/create-issue-from-file?tab=readme-ov-file#outputs. 
+      # Therefore will need toquery for issue comment id and then use that 
+      # with peter-evans/create-or-update-comment.
       - name: Create or update summary issue
         uses: JasonEtco/create-an-issue@v2
         id: create-issue
