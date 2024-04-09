@@ -232,7 +232,7 @@ jobs:
         id: issue-labels
         run: |
           ISSUE_LABELS=$(cat labels.txt)
-          echo "issue_labels=$ISSUE_LABELS" >> $GITHUB_OUTPUTS
+          echo "issue_labels=$ISSUE_LABELS" >> $GITHUB_OUTPUT
 
       - name: Print API usage info
         run: |
