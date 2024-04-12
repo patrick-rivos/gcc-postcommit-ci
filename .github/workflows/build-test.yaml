@@ -287,18 +287,10 @@ jobs:
           export BUILD_LOG_NAME=${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-build-log
           echo "build_log_name=$BUILD_LOG_NAME" >> $GITHUB_OUTPUT
 
-      # run-frequent uses rv64gcv, run-weekly uses target
       - name: Set multilib target string
         id: multilib-target
         run: |
-          if [[ "${{ inputs.prefix }}" == "" ]];
-          then
-            # This is a run-frequent build
-            export MULTILIB_STRING="rv64gcv-lp64d"
-          else
-            # This is a run-weekly build
-            export MULTILIB_STRING="${{ inputs.target }}"
-          fi
+          export MULTILIB_STRING="${{ inputs.target }}"
           echo "multilib_string=$MULTILIB_STRING" >> $GITHUB_OUTPUT
 
       # Don't upload stage 2 artifacts on self-hosted runners
