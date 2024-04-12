@@ -1,0 +1,676 @@
+		=== gcc: Unexpected fails for rv64gc lp64d medlow ===
+FAIL: gcc.c-torture/compile/930623-1.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/compile/930623-1.c   -O0  (test for excess errors)
+FAIL: gcc.c-torture/compile/930623-1.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/compile/930623-1.c   -O1  (test for excess errors)
+FAIL: gcc.c-torture/compile/930623-1.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/compile/930623-1.c   -O2  (test for excess errors)
+FAIL: gcc.c-torture/compile/930623-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/compile/930623-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.c-torture/compile/930623-1.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/compile/930623-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/compile/930623-1.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/compile/930623-1.c   -Os  (test for excess errors)
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr47237.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/execute/pr47237.c   -O0  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr47237.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/execute/pr47237.c   -O1  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr47237.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/execute/pr47237.c   -O2  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr47237.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/execute/pr47237.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr47237.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/execute/pr47237.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr47237.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/execute/pr47237.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr47237.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.c-torture/execute/pr47237.c   -Os  (test for excess errors)
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/strub-apply1.c  -Wc++-compat  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/strub-apply1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/builtin-apply1.c (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/builtin-apply1.c (test for excess errors)
+FAIL: gcc.dg/builtin-apply3.c (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/builtin-apply3.c (test for excess errors)
+FAIL: gcc.dg/builtin-apply4.c (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/builtin-apply4.c (test for excess errors)
+FAIL: gcc.dg/builtin-return-1.c (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/builtin-return-1.c (test for excess errors)
+FAIL: gcc.dg/pr38338.c (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/pr38338.c (test for excess errors)
+FAIL: gcc.dg/stack-usage-2.c  (test for warnings, line 21)
+FAIL: gcc.dg/stack-usage-2.c  (test for warnings, line 30)
+FAIL: gcc.dg/stack-usage-2.c (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/stack-usage-2.c (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O0   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O1   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O3 -g   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -Os   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/pr41993.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/pr41993.c   -O0  (test for excess errors)
+FAIL: gcc.dg/torture/pr41993.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/pr41993.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/pr41993.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/pr41993.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/pr41993.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/pr41993.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/pr41993.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/pr41993.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/pr41993.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/pr41993.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O0  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O0 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O0 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O1 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O1 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O2 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O3 -g -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -O3 -g -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -Os -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-1.c   -Os -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O0  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O0 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O0 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O1 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O1 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O2 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O3 -g -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -O3 -g -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -Os -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-3.c   -Os -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O0  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O0 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O0 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O1 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O1 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O2 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O3 -g -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -O3 -g -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -Os -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-apply-4.c   -Os -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O0  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O0 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O0 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O1 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O1 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O2 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O3 -g -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -O3 -g -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -Os -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-1.c   -Os -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O0  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O0 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O0 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O1 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O1 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O2 -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O3 -g -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -O3 -g -fpic (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -Os -fpic (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/torture/stackalign/builtin-return-2.c   -Os -fpic (test for excess errors)
+FAIL: gcc.dg/tree-ssa/pr92930.c (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: gcc.dg/tree-ssa/pr92930.c (test for excess errors)
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+		=== g++: Unexpected fails for rv64gc lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++14 (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++17 (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++20 (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++98 (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/strub-apply1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-always.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O0   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O1   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O3 -g   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -Os   scan-tree-dump-times hardcfr "__hardcfr_check" 5
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-except.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-never.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-no-xthrow.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noopt.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-noret.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-nothrow.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret-retcl.c   -Os  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O0   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O0  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O0  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O1   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O1  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O3 -g   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O3 -g  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -Os   scan-tree-dump-times hardcfr "__builtin_trap" 1
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -Os  (internal compiler error: in emit_move_multi_word, at expr.cc:4466)
+FAIL: c-c++-common/torture/harden-cfr-bret.c   -Os  (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv64gc/  lp64d/ medlow |  443 /    41 |  226 /    14 |      - |
