@@ -85,3 +85,17 @@ runs:
         report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64gcv-lp64d-${{ inputs.gcchash }}-multilib-report.log
         binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64gcv-lp64d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
+
+    - name: Download newlib uc multilib
+      uses: ./.github/actions/common/download-comparison-artifacts
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64imc-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64imc-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib uc bitmanip multilib
+      uses: ./.github/actions/common/download-comparison-artifacts
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64imc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64imc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
