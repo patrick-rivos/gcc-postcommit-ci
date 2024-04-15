@@ -255,7 +255,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           content-filepath: riscv-gnu-toolchain/trimmed_issue.md
-          title: 'Testsuite Status ${{ inputs.gcchash }}'
+          title: '${{ inputs.issue_hash_prefix }} ${{ inputs.gcchash }}'
           labels: ${{ steps.issue-labels.outputs.issue_labels }}
 
       - name: Get prefix label name
