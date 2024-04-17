@@ -81,14 +81,14 @@ runs:
         shell: bash
         working-directory: riscv-gnu-toolchain
         run: |
-          zip -r gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip build/bin
+          zip -r ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip build/bin
 
       - name: Upload binary artifact
         uses: actions/upload-artifact@v3
         with:
           name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}
           path: |
-            riscv-gnu-toolchain/gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip
+            riscv-gnu-toolchain/${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}.zip
           retention-days: 8
 
       # Running testsuite (stamps/check-gcc-*) only uses stage2 & assorted folders
