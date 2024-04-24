@@ -67,18 +67,19 @@ jobs:
             riscv-gnu-toolchain/qemu
           key: submodules-archive-9 # Numbered archive to allow for easy transition when bumping submodules
 
-      - name: Initalize gcc
+      - name: Initialize gcc
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
-        run: |
-          rm -rf gcc
-          git clone git://gcc.gnu.org/git/gcc.git
+        id: gcc-cache
+        uses: ./.github/actions/common/init-and-pull-gcc
+        with:
+          init: true
 
-      - name: Pull gcc
-        id: gcc-hash
-        run: |
-          cd gcc
-          git checkout master
-          git pull
+        # Does not remove and reclone gcc if we hit cache
+      - name: Checkout GCC
+        if: steps.gcc-cache.outcome == 'skipped'
+        uses: ./.github/actions/common/init-and-pull-gcc
+        with:
+          init: false
 
       - name: Create directories
         run: |
@@ -346,18 +347,19 @@ jobs:
             riscv-gnu-toolchain/qemu
           key: submodules-archive-9 # Numbered archive to allow for easy transition when bumping submodules
 
-      - name: Initalize gcc
+      - name: Initialize gcc
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
-        run: |
-          rm -rf gcc
-          git clone git://gcc.gnu.org/git/gcc.git
+        id: gcc-cache
+        uses: ./.github/actions/common/init-and-pull-gcc
+        with:
+          init: true
 
-      - name: Pull gcc
-        id: gcc-hash
-        run: |
-          cd gcc
-          git checkout master
-          git pull
+        # Does not remove and reclone gcc if we hit cache
+      - name: Checkout GCC
+        if: steps.gcc-cache.outcome == 'skipped'
+        uses: ./.github/actions/common/init-and-pull-gcc
+        with:
+          init: false
 
       - name: Initialize Bisection Hash
         id: bisection-hash

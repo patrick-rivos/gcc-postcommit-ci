@@ -1,0 +1,51 @@
+name: "Init and setup gcc"
+description: "Initializes and pull gcc with retries"
+inputs:
+  init:
+    description: 'Do (or do not) remove and reclone gcc. Defaults to false'
+    required: false
+    default: 'false'
+
+runs:
+  using: "composite"
+  steps:
+      - name: Initialize gcc
+        shell: bash
+        working-directory: ./riscv-gnu-toolchain
+        id: init
+        if: ${{ inputs.init == 'true' }}
+        run: |
+          rm -rf gcc
+          git clone git://gcc.gnu.org/git/gcc.git
+        continue-on-error: true
+
+      - name: Sleep and retry
+        shell: bash
+        working-directory: ./riscv-gnu-toolchain
+        if: ${{ steps.init.outcome == 'failure' }}
+        run: |
+          echo "Failed to clone gcc. Retrying in 1 min"
+          sleep 60
+          git clone git://gcc.gnu.org/git/gcc.git
+
+      - name: Checkout master
+        shell: bash
+        working-directory: ./riscv-gnu-toolchain
+        id: pull
+        run: |
+          cd gcc
+          git checkout master
+          git pull
+        continue-on-error: true
+
+      - name: Sleep and retry
+        shell: bash
+        working-directory: ./riscv-gnu-toolchain
+        if: ${{ steps.pull.outcome == 'failure' }}
+        run: |
+          echo "Failed to checkout and pull gcc. Retrying in 1 min"
+          sleep 60
+          cd gcc
+          git checkout master
+          git pull
+

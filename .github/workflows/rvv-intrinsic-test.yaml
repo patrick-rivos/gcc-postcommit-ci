@@ -51,7 +51,16 @@ jobs:
         run: sudo ./.github/setup-apt.sh
 
       - name: Clone rvv-intrinsic-doc
+        id: update-intrinsic
         run: |
+          git submodule update --init rvv-intrinsic-doc
+        continue-on-error: true
+
+      - name: Clone rvv-intrinsic-doc
+        if: ${{ steps.update-intrinsice.outcome == 'failure' }}
+        run: |
+          echo "Failed to update intrinsic doc. Retrying in 1 min"
+          sleep 60
           git submodule update --init rvv-intrinsic-doc
 
       - name: Make check-gcc

@@ -33,7 +33,19 @@ jobs:
           free_up_space: false
 
       - name: Initalize gcc
+        id: init
         run: |
+          cd riscv-gnu-toolchain
+          git submodule update --init gcc
+          cd gcc
+          git fetch
+        continue-on-error: true
+
+      - name: Initalize gcc
+        if: ${{ steps.init.outcome == 'failure' }}
+        run: |
+          echo "Failed to initialize gcc. Retrying in 1 min"
+          sleep 60
           cd riscv-gnu-toolchain
           git submodule update --init gcc
           cd gcc

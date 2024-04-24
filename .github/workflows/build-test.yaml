@@ -278,7 +278,6 @@ jobs:
       - name: Checkout gcc hash
         run: |
           cd gcc
-          git fetch
           echo "using hash $(git rev-parse HEAD)"
 
       - name: Make log name

@@ -10,9 +10,20 @@ runs:
   using: "composite"
   steps:
       - name: Initialize riscv-gnu-toolchain
+        id: init-toolchain
         shell: bash
         working-directory: ./
         run: |
+          git submodule update --init riscv-gnu-toolchain
+        continue-on-error: true
+
+      - name: Initialize riscv-gnu-toolchain
+        if: steps.init-toolchain.outcome == 'failure'
+        shell: bash
+        working-directory: ./
+        run: |
+          echo "Failed to initialize toolchain. Retrying in 1 min"
+          sleep 60
           git submodule update --init riscv-gnu-toolchain
 
       - name: Remove unneeded frameworks to recover disk space
