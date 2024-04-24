@@ -1,3 +1,3 @@
 #!/bin/bash
-../configure --prefix=$(pwd) --with-multilib-generator="rv32imac_zba_zbb_zbc-ilp32--;rv64imac_zba_zbb_zbc-lp64--;rv32imc_zba_zbb_zbc-ilp32--;rv64imc_zba_zbb_zbc-lp64--;rv32imc_zba_zbb_zbc_zicsr_zifencei-ilp32--;rv64imc_zba_zbb_zbc_zicsr_zifencei-lp64--;rv32imc_zba_zbb_zbc_zbs-ilp32--;rv64imc_zba_zbb_zbc_zbs-lp64--;rv32imc_zba_zbb_zbc_zbs_zicsr_zifencei-ilp32--;rv64imc_zba_zbb_zbc_zbs_zicsr_zifencei-lp64--"
+../configure --prefix=$(pwd) --with-multilib-generator="rv64imac_zba_zbb_zbc-lp64--;rv64imc_zba_zbb_zbc-lp64--;rv64imc_zba_zbb_zbc_zicsr_zifencei-lp64--;rv64imc_zba_zbb_zbc_zbs_zicsr_zifencei-lp64--"
 
