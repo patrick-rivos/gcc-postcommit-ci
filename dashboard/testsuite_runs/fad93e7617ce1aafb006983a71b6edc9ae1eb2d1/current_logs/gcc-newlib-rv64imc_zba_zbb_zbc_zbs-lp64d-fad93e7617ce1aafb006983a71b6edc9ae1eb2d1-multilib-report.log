@@ -1,0 +1,1202 @@
+		=== g++: Unexpected fails for rv32imac_zba_zbb_zbc_zbs ilp32 medlow ===
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== g++: Unexpected fails for rv32imc_zba_zbb_zbc_zbs ilp32 medlow ===
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== g++: Unexpected fails for rv32imc_zba_zbb_zbc_zbs_zicsr_zifencei ilp32 medlow ===
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98  expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++14 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++17 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++20 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98  expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c  -std=c++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== g++: Unexpected fails for rv64imac_zba_zbb_zbc_zbs lp64 medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== g++: Unexpected fails for rv64imc_zba_zbb_zbc_zbs lp64 medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== g++: Unexpected fails for rv64imc_zba_zbb_zbc_zbs_zicsr_zifencei lp64 medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== gcc: Unexpected fails for rv32imac_zba_zbb_zbc_zbs ilp32 medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/torture/pr113026-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   (test for bogus messages, line 10)
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/pr113095.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+		=== gcc: Unexpected fails for rv32imc_zba_zbb_zbc_zbs ilp32 medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/torture/pr113026-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   (test for bogus messages, line 10)
+FAIL: gcc.dg/torture/pr113026-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   (test for bogus messages, line 10)
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/pr113095.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+		=== gcc: Unexpected fails for rv32imc_zba_zbb_zbc_zbs_zicsr_zifencei ilp32 medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-11.c expected multiline pattern lines 49-64
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c (test for excess errors)
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c 2 blank line(s) in output
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: c-c++-common/analyzer/out-of-bounds-diagram-8.c expected multiline pattern lines 19-34
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c (test for excess errors)
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c 2 blank line(s) in output
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: gcc.dg/analyzer/out-of-bounds-diagram-10.c expected multiline pattern lines 13-28
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/torture/pr113026-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   (test for bogus messages, line 10)
+FAIL: gcc.dg/torture/pr113026-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   (test for bogus messages, line 10)
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/pr113095.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O0  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O1  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -O3 -g  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/pr113095.c   -Os  (test for excess errors)
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+		=== gcc: Unexpected fails for rv64imac_zba_zbb_zbc_zbs lp64 medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+		=== gcc: Unexpected fails for rv64imc_zba_zbb_zbc_zbs lp64 medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+		=== gcc: Unexpected fails for rv64imc_zba_zbb_zbc_zbs_zicsr_zifencei lp64 medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/pr110279-1.c scan-tree-dump-times widening_mul "Generated FMA" 3
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv32imac_zba_zbb_zbc_zbs/  ilp32/ medlow |  100 /    22 |   38 /     6 |      - |
+ rv32imc_zba_zbb_zbc_zbs/  ilp32/ medlow |  200 /    22 |   76 /     6 |      - |
+ rv32imc_zba_zbb_zbc_zbs_zicsr_zifencei/  ilp32/ medlow |  200 /    22 |   76 /     6 |      - |
+ rv64imac_zba_zbb_zbc_zbs/   lp64/ medlow |   84 /    18 |   14 /     4 |      - |
+ rv64imc_zba_zbb_zbc_zbs/   lp64/ medlow |  168 /    18 |   28 /     4 |      - |
+ rv64imc_zba_zbb_zbc_zbs_zicsr_zifencei/   lp64/ medlow |  168 /    18 |   28 /     4 |      - |
