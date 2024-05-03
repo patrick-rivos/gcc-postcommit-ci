@@ -1,0 +1,108 @@
+		=== g++: Unexpected fails for rv64gc_zba_zbb_zbc_zbs lp64d medlow ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++14 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++14 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/cpp0x/udlit-namespace.C  -std=c++20 (test for excess errors)
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++14 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++17 execution test
+FAIL: g++.dg/cpp2a/decomp2.C  -std=gnu++20 execution test
+FAIL: g++.dg/modules/tpl-friend-4_b.C -std=c++17  (test for errors, line 16)
+FAIL: g++.dg/modules/tpl-friend-4_b.C -std=c++17  (test for errors, line 19)
+FAIL: g++.dg/modules/tpl-friend-4_b.C -std=c++17 (internal compiler error: in set_originating_module, at cp/module.cc:19263)
+FAIL: g++.dg/modules/tpl-friend-4_b.C -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++14 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++17 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++20 (test for excess errors)
+FAIL: g++.dg/vect/pr95401.cc  -std=c++98 (test for excess errors)
+		=== gcc: Unexpected fails for rv64gc_zba_zbb_zbc_zbs lp64d medlow ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+FAIL: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for short (test for warnings, line 51)
+XPASS: gcc.dg/attr-alloc_size-11.c missing range info for signed char (test for warnings, line 50)
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O1   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -O3 -g   scan-assembler-times \\mfcvt.w.s 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times ,rtz 6
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.d.l 45
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.l.d 10
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.s.w 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.d 5
+FAIL: gcc.target/riscv/round_64.c   -Os   scan-assembler-times \\mfcvt.w.s 10
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv64gc_zba_zbb_zbc_zbs/  lp64d/ medlow |   83 /    17 |   18 /     5 |      - |
