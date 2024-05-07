@@ -127,6 +127,11 @@ jobs:
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/rate_limit
 
+      - name: Install jq for easier parsing
+        run: |
+          sudo apt update
+          sudo apt install jq
+
       - name: Generate testsuite filtered results
         id: report-logs
         run: |
@@ -151,6 +156,7 @@ jobs:
             else
               PARSE_EXISTING_REPORT="./scripts/testsuite-filter gcc newlib test/allowlist `find sum_files -name *.sum |paste -sd "," -`"
             fi
+            # prefix info is encoded in file var
             ZIP_NAME=${file##*/}
             FILE_NAME=${ZIP_NAME%%-multilib*}
             echo $FILE_NAME
@@ -158,11 +164,26 @@ jobs:
             rm -rf sum_files
           done
           ls current_logs
+          REPORT_LOGS=$(ls current_logs | jq -R -s -c 'split("\n")[:-1]')
+          echo $REPORT_LOGS
+          echo "report_logs=$REPORT_LOGS" >> $GITHUB_OUTPUT
 
           # ls ./temp/
           # mkdir -p current_logs
           # unzip ./temp/*report.log.zip -d ./current_logs || true
           # ls current_logs
+
+      - name: Upload report logs
+        uses: actions/upload-artifacts@v3
+        strategy:
+          fail-fast: false
+          matrix:
+            log_name: ${{ fromJSON(steps.report-logs.outputs.report_logs) }}
+        with:
+          name: ${{ matrix.log_name }}
+          path: |
+            riscv-gnu-toolchain/current_logs/${{ matrix.log_name }}
+        retention-days: 90
 
       - name: Download artifacts
         run: |

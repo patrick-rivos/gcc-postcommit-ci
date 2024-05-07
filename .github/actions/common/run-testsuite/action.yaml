@@ -78,10 +78,10 @@ runs:
           fi
           $PARSE_EXISTING_REPORT | tee ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log || true
 
-      - name: Upload results artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
-          path: |
-            riscv-gnu-toolchain/${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
-          retention-days: 90
+      # - name: Upload results artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
+      #     path: |
+      #       riscv-gnu-toolchain/${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
+      #     retention-days: 90
