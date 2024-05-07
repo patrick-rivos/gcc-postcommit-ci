@@ -183,7 +183,7 @@ jobs:
           name: ${{ matrix.log_name }}
           path: |
             riscv-gnu-toolchain/current_logs/${{ matrix.log_name }}
-        retention-days: 90
+          retention-days: 90
 
       - name: Download artifacts
         run: |
