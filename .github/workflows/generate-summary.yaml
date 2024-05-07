@@ -147,6 +147,8 @@ jobs:
             else
               $PARSE_EXISTING_REPORT | tee "current_logs/$FILE_NAME-multilib-report.log"
             fi
+            rm -rf sum_files
+          done
           ls current_logs
 
           # ls ./temp/
