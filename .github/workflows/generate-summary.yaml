@@ -154,11 +154,7 @@ jobs:
             ZIP_NAME=${file##*/}
             FILE_NAME=${ZIP_NAME%%-multilib*}
             echo $FILE_NAME
-            if grep -q "non-multilib" <<< $file; then
-              $PARSE_EXISTING_REPORT | tee "current_logs/$FILE_NAME-non-multilib-report.log"
-            else
-              $PARSE_EXISTING_REPORT | tee "current_logs/$FILE_NAME-multilib-report.log"
-            fi
+            $PARSE_EXISTING_REPORT | tee "current_logs/$FILE_NAME-multilib-report.log"
             rm -rf sum_files
           done
           ls current_logs
