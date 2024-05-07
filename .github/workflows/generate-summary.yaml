@@ -127,12 +127,32 @@ jobs:
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/rate_limit
 
-      - name: Extract artifacts
+      - name: Generate testsuite filtered results
+        id: report-logs
         run: |
-          ls ./temp/
+          mv current_logs current_sum_logs
           mkdir -p current_logs
-          unzip ./temp/*report.log.zip -d ./current_logs || true
+          for file in $(find current_sum_logs -name "*.zip"); do
+            unzip $file
+            if grep -q "linux" <<< $file; then
+              PARSE_EXISTING_REPORT="./scripts/testsuite-filter gcc glibc test/allowlist `find sum_files -name *.sum |paste -sd "," -`"
+            else
+              PARSE_EXISTING_REPORT="./scripts/testsuite-filter gcc newlib test/allowlist `find sum_files -name *.sum |paste -sd "," -`"
+            fi
+            ZIP_NAME=${file##*/}
+            FILE_NAME=${ZIP_NAME%%-multilib*}
+            echo $FILE_NAME
+            if grep -q "non-multilib" <<< $file; then
+              $PARSE_EXISTING_REPORT | tee "current_logs/$FILE_NAME-non-multilib-report.log"
+            else
+              $PARSE_EXISTING_REPORT | tee "current_logs/$FILE_NAME-multilib-report.log"
+            fi
           ls current_logs
+
+          # ls ./temp/
+          # mkdir -p current_logs
+          # unzip ./temp/*report.log.zip -d ./current_logs || true
+          # ls current_logs
 
       - name: Download artifacts
         run: |
