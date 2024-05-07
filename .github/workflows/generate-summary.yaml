@@ -133,8 +133,8 @@ jobs:
           mv current_logs current_sum_logs
           mkdir -p current_logs
           # Check if file was not downloaded from current workflow i.e. using generate summary workflow
-          ls current_sum_logs/*.zip
-          if [[ $? != 0 ]]; then
+          # ls current_sum_logs/*.zip || true
+          if !ls current_sum_logs/*.zip; then
             for file in $(ls current_sum_logs); do
               unzip $file
             done
