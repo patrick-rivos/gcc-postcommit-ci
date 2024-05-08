@@ -278,13 +278,6 @@ jobs:
               labels: ['${{ steps.prefix-label.outputs.label }}']
             })
 
-      - name: Get staging label name
-        if: ${{ github.workflow == 'Staging' }}
-        id: staging-label
-        run: |
-          LABEL=$(echo ${{ github.workflow }} | tr '[:upper:]' '[:lower:]')
-          echo "label=$LABEL" >> $GITHUB_OUTPUT
-
       - name: Add Staging Label to New Issue
         uses: actions/github-script@v6
         if: ${{ github.workflow == 'Staging' }}
@@ -294,16 +287,15 @@ jobs:
               issue_number: ${{ steps.create-issue.outputs.issue-number }},
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ['${{ steps.staging-label.outputs.label }}']
+              labels: ['staging']
             })
-
 
     outputs:
       new_issue_num: ${{ steps.create-issue.outputs.issue-number }}
 
 
   regenerate-issues:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     permissions:
       issues: write
     defaults:
