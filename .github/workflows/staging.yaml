@@ -8,9 +8,6 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches:
-      - create_staging_branch
 
 jobs:
   get-hash:
