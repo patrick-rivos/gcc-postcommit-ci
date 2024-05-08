@@ -53,6 +53,8 @@ jobs:
   run-workflow:
     needs: [get-hash]
     uses: ./.github/workflows/run-frequent.yaml
+    permissions:
+      issues: write
     with:
       gcchash: ${{ needs.get-hash.outputs.baseline_hash }}
       issue_num: ${{ needs.get-hash.outputs.issue_num }}
