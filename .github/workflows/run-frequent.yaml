@@ -16,9 +16,11 @@ on:
       gcchash:
         description: 'GCC Hash'
         required: true
+        type: string
       issue_num:
         description: 'Issue number of baseline'
         required: true
+        type: string
   workflow_dispatch:
     branches:
       - main
