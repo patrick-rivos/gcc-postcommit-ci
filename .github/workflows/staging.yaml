@@ -1,0 +1,57 @@
+name: Staging
+
+# Staging workflow
+# Triggered on pull requests into staging branch
+# Goal is to prevent making breaking changes to Run-Frequent workflows
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  get-hash:
+    runs-on: ubuntu-20.04
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup env
+        uses: ./.github/actions/common/setup-env
+        with:
+          free_up_space: false
+
+      - name: Bump pyopenssl and crypto
+        run: |
+          sudo apt remove python3-pip
+          wget https://bootstrap.pypa.io/get-pip.py
+          sudo python3 get-pip.py
+          pip install -U pyopenssl cryptography requests
+
+      - name: Get staging hash to run
+        id: baseline-hash
+        run: |
+          cd riscv-gnu-toolchain
+          python ./scripts/get_staging_hash.py -token ${{ secrets.GITHUB_TOKEN }} -repo patrick-rivos/gcc-postcommit-ci
+          BASELINE_HASH=$(cat issue_hash.txt)
+          echo "baseline_hash=$BASELINE_HASH" >> $GITHUB_OUTPUT
+
+      - name: Get issue number
+        id: issue-num
+        run: |
+          cd riscv-gnu-toolchain
+          ISSUE_NUM=$(cat issue_number.txt)
+          echo "issue_num=$ISSUE_NUM" >> $GITHUB_OUTPUT
+
+    outputs:
+      baseline_hash: ${{ steps.baseline-hash.outputs.baseline_hash }}
+      issue_num: ${{ steps.issue-num.outputs.issue_num }}i
+
+  run-workflow:
+    needs: [get-hash]
+    uses: ./.github/workflows/run-frequent.yaml
+    with:
+      gcchash: ${{ needs.get-hash.outputs.baseline_hash }}
+      issue_num: ${{ needs.get-hash.outputs.issue_num }}
+
+

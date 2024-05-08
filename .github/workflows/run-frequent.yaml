@@ -11,6 +11,14 @@ on:
   schedule:
     # Run 4 times a day
     - cron: 0 0,6,12,18 * * *
+  workflow_call:
+    inputs:
+      gcchash:
+        description: 'GCC Hash'
+        required: true
+      issue_num:
+        description: 'Issue number of baseline'
+        required: true
   workflow_dispatch:
     branches:
       - main
