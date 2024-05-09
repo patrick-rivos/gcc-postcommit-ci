@@ -16,6 +16,7 @@ jobs:
     with:
       # Add new prefixes to /dashboard/getdata.py in download_summaries()
       prefix: 'zve_'
+      gcchash: ''
 
   # Will take a long time to complete (4 targets)
   zvl-variants-self-hosted:
