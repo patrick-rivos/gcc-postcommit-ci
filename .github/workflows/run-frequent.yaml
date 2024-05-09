@@ -120,6 +120,6 @@ jobs:
     uses: ./.github/workflows/generate-summary.yaml
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
-      issue_num: ${{ github.event.inputs.issue_num }}
+      issue_num: ${{ inputs.issue_num }}
       issue_hash_prefix: Testsuite Status
       prefix: ''
