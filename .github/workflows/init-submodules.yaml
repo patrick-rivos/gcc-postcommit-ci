@@ -13,6 +13,10 @@ on:
         description: 'uploaded file prefix'
         required: false
         type: string
+      gcchash:
+        description: 'gcc hash to build. If blank then use tip-of-tree.'
+        required: false
+        type: string
 
 jobs:
   init-submodules:
@@ -94,10 +98,10 @@ jobs:
         working-directory: riscv-gnu-toolchain/gcc
         id: gcc-hash
         run: |
-          if [ "${{ github.event.inputs.gcchash }}" == "" ]; then
+          if [ "${{ inputs.gcchash }}" == "" ]; then
             export GCCHASH=$(git rev-parse HEAD)
           else
-            export GCCHASH=${{ github.event.inputs.gcchash }}
+            export GCCHASH=${{ inputs.gcchash }}
           fi
           echo $GCCHASH
           git checkout $GCCHASH

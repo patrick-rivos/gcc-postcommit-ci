@@ -16,6 +16,8 @@ on:
 jobs:
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
+    with:
+      gcchash: ''
 
   # ~3.5 hours
   build-with-checking:

@@ -245,7 +245,7 @@ jobs:
       - name: Trim issue length # reduce the number of lines in final issue so github always creates issue
         run: |
           head -c 65000 issue.md > trimmed_issue.md
-          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then echo "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue." >> trimmed_issue.md; fi
+          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then printf "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue." >> trimmed_issue.md; fi
           run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
           cat trimmed_issue.md
 
@@ -278,12 +278,24 @@ jobs:
               labels: ['${{ steps.prefix-label.outputs.label }}']
             })
 
+      - name: Add Staging Label to New Issue
+        uses: actions/github-script@v6
+        if: ${{ github.workflow == 'Staging' }}
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: ${{ steps.create-issue.outputs.issue-number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['staging']
+            })
+
     outputs:
       new_issue_num: ${{ steps.create-issue.outputs.issue-number }}
 
 
   regenerate-issues:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     permissions:
       issues: write
     defaults:
@@ -372,24 +384,6 @@ jobs:
           echo $ORIG_GCCHASH
           echo "orig_gcchash=$ORIG_GCCHASH" >> "$GITHUB_OUTPUT"
 
-      - name: Download current logs artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: ${{ inputs.prefix }}${{ needs.compare-artifacts.outputs.gcchash }}-current-logs
-          path: riscv-gnu-toolchain
-
-      - name: Download previous logs artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: ${{ inputs.prefix }}${{ needs.compare-artifacts.outputs.gcchash }}-previous-logs
-          path: riscv-gnu-toolchain
-
-      - name: Unzip previous logs
-        run: |
-          unzip current_logs.zip
-          unzip previous_logs.zip
-          mv current_logs/* previous_logs
-
       - name: Create directories
         run: |
           mkdir -p current_logs
@@ -439,7 +433,7 @@ jobs:
       - name: Download artifacts
         run: |
           pip install pygithub requests
-          python ./scripts/download_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} -phash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}"
+          python ./scripts/download_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}"
           ls previous_logs
 
       - name: Compare artifacts
@@ -455,7 +449,7 @@ jobs:
       - name: Upload compare summaries
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-summaries
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-regenerated-summaries
           path: |
             riscv-gnu-toolchain/summaries.zip
           retention-days: 90
@@ -463,7 +457,7 @@ jobs:
       - name: Upload current log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-current-logs
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-regenerated-current-logs
           path: |
             riscv-gnu-toolchain/current_logs.zip
           retention-days: 90
@@ -471,7 +465,7 @@ jobs:
       - name: Upload previous log failures
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-previous-logs
+          name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-regenerated-previous-logs
           path: |
             riscv-gnu-toolchain/previous_logs.zip
           retention-days: 90
@@ -494,7 +488,7 @@ jobs:
       - name: Trim issue length # reduce the number of lines in final issue so github always creates issue
         run: |
           head -c 65000 issue.md > trimmed_issue.md
-          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then echo "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue." >> trimmed_issue.md; fi
+          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then printf "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue.\n" >> trimmed_issue.md; fi
           run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
           cat trimmed_issue.md
 

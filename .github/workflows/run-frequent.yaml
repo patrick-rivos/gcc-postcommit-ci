@@ -11,6 +11,16 @@ on:
   schedule:
     # Run 4 times a day
     - cron: 0 0,6,12,18 * * *
+  workflow_call:
+    inputs:
+      gcchash:
+        description: 'GCC Hash'
+        required: true
+        type: string
+      issue_num:
+        description: 'Issue number of baseline'
+        required: true
+        type: string
   workflow_dispatch:
     branches:
       - main
@@ -30,6 +40,7 @@ jobs:
     uses: ./.github/workflows/init-submodules.yaml
     with:
       prefix: ''
+      gcchash: ${{ inputs.gcchash }}
 
   creg: # Check Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -109,6 +120,6 @@ jobs:
     uses: ./.github/workflows/generate-summary.yaml
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
-      issue_num: ${{ github.event.inputs.issue_num }}
+      issue_num: ${{ inputs.issue_num }}
       issue_hash_prefix: Testsuite Status
       prefix: ''
