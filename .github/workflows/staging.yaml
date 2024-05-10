@@ -45,7 +45,7 @@ jobs:
 
     outputs:
       baseline_hash: ${{ steps.baseline-hash.outputs.baseline_hash }}
-      issue_num: ${{ steps.issue-num.outputs.issue_num }}i
+      issue_num: ${{ steps.issue-num.outputs.issue_num }}
 
   run-workflow:
     needs: [get-hash]
