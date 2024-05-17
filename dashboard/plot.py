@@ -15,7 +15,7 @@ def clean(old_df: pd.DataFrame):
 
     df['libname'] = old_df['target'].str.replace(" multilib", "").replace(" medlow", "")
 
-    df['libc-target'] = df['libc'] + "-" + df["target"]
+    df['libc-target'] = df['libc'] + "-" + df["target"].str.strip()
 
     df['hash_timestamp'] = pd.to_datetime(df['hash_timestamp'], utc=True)
 
@@ -23,6 +23,13 @@ def clean(old_df: pd.DataFrame):
 
     # Ignore hash where we tried to update the rva23 profile and failed.
     df = df.drop(df[df["gcc_hash"] == '0f1727e25f4440bce00271b1e9cf7e7f9125acf0'].index)
+
+    # If there hasn't been a new datapoint in 3 months we've stopped testing this target.
+    # Remove it from the dashboard.
+    for libc_target in set(df["libc-target"]):
+      max_timestamp = max(df[df["libc-target"] == libc_target]['hash_timestamp'])
+      if max_timestamp.date() < datetime.date.today() - datetime.timedelta(days=3 * 365/12):
+        df = df[df["libc-target"] != libc_target]
 
     return df
 
@@ -49,7 +56,6 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
         facet_col_wrap=wrap,
         facet_row_spacing=0.04, # default is 0.07 when facet_col_wrap is used
         facet_col_spacing=0, # default is 0.03
-        # height=600, width=800,
         color='tool',
         symbol='tool',
         title=f"Unique/total failures per hash<br><sup>Data sourced from <a href=\"https://github.com/patrick-rivos/gcc-postcommit-ci\">gcc-postcommit-ci</a> and older data from <a href=\"https://github.com/patrick-rivos/riscv-gnu-toolchain\">riscv-gnu-toolchain</a></sup>",
@@ -103,3 +109,7 @@ if __name__ == "__main__":
     gc = all_data[all_data["libc-target"].str.contains("gc ")]
     print(gc)
     plot_cumulative_state(gc, "site/gc.html", wrap=2)
+
+    uc = all_data[all_data["libc-target"].str.contains("im")]
+    print(uc)
+    plot_cumulative_state(uc, "site/uc.html", wrap=2)
