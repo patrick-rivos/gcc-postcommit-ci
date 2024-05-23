@@ -40,6 +40,8 @@ runs:
           sudo ./.github/setup-apt.sh
           sudo apt install python3 -y
           sudo apt install python-is-python3 -y
+          sudo apt install zip -y
+          sudo apt install unzip -y
 
       - name: Configure
         shell: bash
