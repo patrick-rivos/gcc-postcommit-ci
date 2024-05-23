@@ -17,6 +17,11 @@ on:
         description: 'gcc hash to build. If blank then use tip-of-tree.'
         required: false
         type: string
+      branch:
+        description: 'branch to pull from'
+        required: false
+        type: string
+        default: 'master'
 
 jobs:
   init-submodules:
@@ -78,6 +83,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: true
+          branch: ${{ inputs.branch }}
 
         # Does not remove and reclone gcc if we hit cache
       - name: Checkout GCC
@@ -85,6 +91,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: false
+          branch: ${{ inputs.branch }}
 
       - name: Apply newlib fixups
         if: steps.retrieve-cache.outputs.cache-hit != 'true'

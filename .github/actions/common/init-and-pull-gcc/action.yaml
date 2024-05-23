@@ -5,6 +5,10 @@ inputs:
     description: 'Do (or do not) remove and reclone gcc. Defaults to false'
     required: false
     default: 'false'
+  branch:
+    description: 'Coordination or master branch to initialize'
+    required: false
+    default: 'master'
 
 runs:
   using: "composite"
@@ -28,10 +32,18 @@ runs:
           sleep 60
           git clone git://gcc.gnu.org/git/gcc.git
 
-      - name: Checkout master
+      - name: Detect unrecognized branches
         shell: bash
+        if: ${{ inputs.branch != 'master' && inputs.branch != 'coordination' }}
+        run: |
+          echo "inputs.branch found \"${{ inputs.branch }}\""
+          exit 1
+
+      - name: Checkout master branch
+        shell: bash
+        if: ${{ inputs.branch == 'master' }}
         working-directory: ./riscv-gnu-toolchain
-        id: pull
+        id: pull-master
         run: |
           cd gcc
           git checkout master
@@ -41,11 +53,35 @@ runs:
       - name: Sleep and retry
         shell: bash
         working-directory: ./riscv-gnu-toolchain
-        if: ${{ steps.pull.outcome == 'failure' }}
+        if: ${{ steps.pull-master.outcome == 'failure' && inputs.branch == 'master' }}
         run: |
           echo "Failed to checkout and pull gcc. Retrying in 1 min"
           sleep 60
           cd gcc
           git checkout master
           git pull
+
+      - name: Checkout coordination branch
+        shell: bash
+        if: ${{ inputs.branch == 'coordination' }}
+        working-directory: ./riscv-gnu-toolchain
+        id: pull-coordination
+        run: |
+          cd gcc
+          git config --add remote.origin.fetch "+refs/vendors/riscv/*:refs/remotes/upstream/vendors/riscv/*"
+          git fetch
+          git checkout upstream/vendors/riscv/heads/gcc-14-with-riscv-opts
+        continue-on-error: true
+
+      - name: Sleep and retry
+        shell: bash
+        working-directory: ./riscv-gnu-toolchain
+        if: ${{ steps.pull-coordination.outcome == 'failure' && inputs.branch == 'coordination' }}
+        run: |
+          echo "Failed to checkout and pull gcc. Retrying in 1 min"
+          sleep 60
+          cd gcc
+          git config --add remote.origin.fetch "+refs/vendors/riscv/*:refs/remotes/upstream/vendors/riscv/*"
+          git fetch
+          git checkout upstream/vendors/riscv/heads/gcc-14-with-riscv-opts
 
