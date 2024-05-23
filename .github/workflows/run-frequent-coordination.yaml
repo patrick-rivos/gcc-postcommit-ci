@@ -1,4 +1,4 @@
-name: Run-Frequent
+name: Run-Frequent-Coordination
 
 # Performs workloads we want to run as frequently as possible
 # Currently that is building/testing a variety of targets
@@ -39,9 +39,9 @@ jobs:
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
     with:
-      prefix: ''
+      prefix: 'coord_'
       gcchash: ${{ inputs.gcchash }}
-      branch: master
+      branch: 'coordination'
 
   creg: # Check Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -65,7 +65,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: false
-      prefix: ''
+      prefix: 'coord_'
 
   cmreg-self-hosted: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -88,7 +88,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
-      prefix: ''
+      prefix: 'coord_'
      
   cmreg-self-hosted-uc: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -111,7 +111,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
-      prefix: ''
+      prefix: 'coord_'
 
   summarize:
     if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
@@ -122,6 +122,6 @@ jobs:
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       issue_num: ${{ inputs.issue_num }}
-      issue_hash_prefix: Testsuite Status
-      prefix: ''
-      branch: master
+      issue_hash_prefix: Coordination Branch Testsuite Status
+      prefix: 'coord_'
+      branch: coordination

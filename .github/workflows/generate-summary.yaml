@@ -19,6 +19,9 @@ on:
       prefix:
         required: false
         type: string
+      branch:
+        required: false
+        type: string
   workflow_dispatch:
     branches:
       - main
@@ -68,18 +71,20 @@ jobs:
           key: submodules-archive-10 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initialize gcc
-        if: steps.retrieve-cache.outputs.cache-hit != 'true'
+        if: ${{ steps.retrieve-cache.outputs.cache-hit != 'true' }}
         id: gcc-cache
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: true
+          branch: ${{ inputs.branch }}
 
         # Does not remove and reclone gcc if we hit cache
       - name: Checkout GCC
-        if: steps.gcc-cache.outcome == 'skipped'
+        if: ${{ steps.gcc-cache.outcome == 'skipped' }}
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: false
+          branch: ${{ inputs.branch }}
 
       - name: Create directories
         run: |
@@ -106,7 +111,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.prefix == '' }}
+        if: ${{ inputs.prefix == '' || inputs.prefix == 'coord_' }}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -114,7 +119,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.prefix != '' }}
+        if: ${{ inputs.prefix != '' && inputs.prefix != 'coord_'}}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -367,18 +372,20 @@ jobs:
           key: submodules-archive-10 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initialize gcc
-        if: steps.retrieve-cache.outputs.cache-hit != 'true'
+        if: ${{ steps.retrieve-cache.outputs.cache-hit != 'true' }}
         id: gcc-cache
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: true
+          branch: ${{ inputs.branch }}
 
         # Does not remove and reclone gcc if we hit cache
       - name: Checkout GCC
-        if: steps.gcc-cache.outcome == 'skipped'
+        if: ${{ steps.gcc-cache.outcome == 'skipped' }}
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: false
+          branch: ${{ inputs.branch }}
 
       - name: Initialize Bisection Hash
         id: bisection-hash
@@ -409,7 +416,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.prefix == '' }}
+        if: ${{ inputs.prefix == '' || inputs.prefix == 'coord_' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -417,7 +424,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.prefix != '' }}
+        if: ${{ inputs.prefix != '' && inputs.prefix != 'coord_' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
