@@ -44,7 +44,7 @@ jobs:
     needs: [check]
     if: ${{ needs.check.outputs.early_exit != 'exit' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -52,7 +52,7 @@ jobs:
           free_up_space: true
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
@@ -92,7 +92,7 @@ jobs:
           zip -r gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-rtl-checking.zip build/bin
 
       - name: Upload binary artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-rtl-checking
           path: |
