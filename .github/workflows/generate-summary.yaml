@@ -384,7 +384,7 @@ jobs:
           echo "label=$LABEL" >> $GITHUB_OUTPUT
 
       - name: Add Prefix Label to New Issue
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         if: ${{ inputs.prefix != '' }}
         with:
           script: |
@@ -396,7 +396,7 @@ jobs:
             })
 
       - name: Add Staging Label to New Issue
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         if: ${{ github.workflow == 'Staging' }}
         with:
           script: |
@@ -449,7 +449,7 @@ jobs:
     if: ${{ inputs.issue_num != '' && needs.check-early-exit.outputs.early_exit != 'true' }} # Only run if has bisection hash
     steps:
       - name: Add Bisect Label to New Issue
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             github.rest.issues.addLabels({
@@ -460,7 +460,7 @@ jobs:
             })
 
       - name: Link New Issue to Bisection Issue
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             github.rest.issues.createComment({
@@ -471,7 +471,7 @@ jobs:
             })
 
       - name: Link to Bisection Issue to New Issue
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             github.rest.issues.createComment({
