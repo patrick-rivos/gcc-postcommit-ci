@@ -671,7 +671,7 @@ jobs:
       # Therefore will need toquery for issue comment id and then use that 
       # with peter-evans/create-or-update-comment.
       - name: Create or update summary issue
-        uses: JasonEtco/create-an-issue@v2
+        uses: JasonEtco/create-an-issue@v3
         id: create-issue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
