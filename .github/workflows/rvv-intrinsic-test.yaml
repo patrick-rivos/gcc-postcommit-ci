@@ -20,7 +20,7 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -28,7 +28,7 @@ jobs:
           free_up_space: false
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
@@ -92,7 +92,7 @@ jobs:
           zip -r rvv-intrinsic-testing-logs.zip logs
 
       - name: Upload logs artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rvv-intrinsic-testing-logs
           path: |

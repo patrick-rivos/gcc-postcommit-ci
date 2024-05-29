@@ -45,7 +45,7 @@ jobs:
       run:
         working-directory: riscv-gnu-toolchain
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -54,7 +54,7 @@ jobs:
 
       - name: Retrieve cache
         id: retrieve-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             riscv-gnu-toolchain/.git
@@ -151,7 +151,7 @@ jobs:
           zip -r previous_logs.zip previous_logs
 
       - name: Upload compare summaries
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-summaries
           path: |
@@ -159,7 +159,7 @@ jobs:
           retention-days: 90
 
       - name: Upload current log failures
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-current-logs
           path: |
@@ -167,7 +167,7 @@ jobs:
           retention-days: 90
 
       - name: Upload previous log failures
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-previous-logs
           path: |
@@ -184,7 +184,7 @@ jobs:
       run:
         working-directory: riscv-gnu-toolchain
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -192,19 +192,19 @@ jobs:
           free_up_space: false
 
       - name: Download summaries artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-summaries
           path: ./riscv-gnu-toolchain
 
       - name: Download current logs artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-current-logs
           path: ./riscv-gnu-toolchain
 
       - name: Download previous logs artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-previous-logs
           path: ./riscv-gnu-toolchain
@@ -250,7 +250,7 @@ jobs:
           cat trimmed_issue.md
 
       - name: Create or update summary issue
-        uses: peter-evans/create-issue-from-file@v4
+        uses: peter-evans/create-issue-from-file@v5
         id: create-issue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -337,7 +337,7 @@ jobs:
               body: 'Bisecting with #${{ needs.generate-issues.outputs.new_issue_num }}'
             })
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -353,7 +353,7 @@ jobs:
 
       - name: Retrieve cache
         id: retrieve-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             riscv-gnu-toolchain/.git
@@ -454,7 +454,7 @@ jobs:
           zip -r previous_logs.zip previous_logs
 
       - name: Upload compare summaries
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-regenerated-summaries
           path: |
@@ -462,7 +462,7 @@ jobs:
           retention-days: 90
 
       - name: Upload current log failures
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-regenerated-current-logs
           path: |
@@ -470,7 +470,7 @@ jobs:
           retention-days: 90
 
       - name: Upload previous log failures
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ steps.bisection-hash.outputs.orig_gcchash }}-regenerated-previous-logs
           path: |
