@@ -344,6 +344,13 @@ jobs:
         with:
           free_up_space: false
 
+      - name: Bump pyopenssl and crypto
+        run: |
+          sudo apt remove python3-pip
+          wget https://bootstrap.pypa.io/get-pip.py
+          sudo python3 get-pip.py
+          pip install -U pyopenssl cryptography
+
       - name: Retrieve cache
         id: retrieve-cache
         uses: actions/cache@v3
