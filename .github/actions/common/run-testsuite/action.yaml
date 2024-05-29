@@ -40,7 +40,7 @@ runs:
           zip -r ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.zip ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
 
       - name: Upload debug artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-debug-output.log
           path: |
@@ -60,7 +60,7 @@ runs:
           zip -r ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files.zip sum_files
 
       - name: Upload sum file artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files
           path: |
@@ -79,7 +79,7 @@ runs:
           $PARSE_EXISTING_REPORT | tee ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log || true
 
       - name: Upload results artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-report.log
           path: |
