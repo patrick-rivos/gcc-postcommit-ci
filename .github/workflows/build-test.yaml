@@ -160,6 +160,7 @@ jobs:
           target: ${{ inputs.target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
+          prefix: ${{ inputs.prefix }}
 
 
   # The self-hosted environment does not have the same path setup as the hosted runners
@@ -233,6 +234,7 @@ jobs:
           target: ${{ inputs.target }}
           gcchash: ${{ inputs.gcchash }}
           multilib: ${{ inputs.multilib }}
+          prefix: ${{ inputs.prefix }}
 
 
   # The self-hosted environment does not have the same path setup as the hosted runners
