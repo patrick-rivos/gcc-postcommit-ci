@@ -10,7 +10,9 @@ name: Run-Frequent-Coordination
 on:
   schedule:
     # Run 4 times a day
-    - cron: 0 0,6,12,18 * * *
+    #- cron: 0 0,6,12,18 * * *
+    # Run once a day for now while we figure out the self-hosted runner issues
+    - cron: 0 0 * * *
   workflow_call:
     inputs:
       gcchash:
