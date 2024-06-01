@@ -8,11 +8,11 @@ name: Run-Frequent-Coordination
 # There are 20 github runners, giving us a hard limit of 120 hrs every 6 hrs
 
 on:
-  schedule:
-    # Run 4 times a day
-    #- cron: 0 0,6,12,18 * * *
-    # Run once a day for now while we figure out the self-hosted runner issues
-    - cron: 0 0 * * *
+  # schedule:
+  #   # Run 4 times a day
+  #   #- cron: 0 0,6,12,18 * * *
+  #   # Run once a day for now while we figure out the self-hosted runner issues
+  #   - cron: 0 0 * * *
   workflow_call:
     inputs:
       gcchash:
