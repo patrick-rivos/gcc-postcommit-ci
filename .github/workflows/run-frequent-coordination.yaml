@@ -115,6 +115,10 @@ jobs:
       run_on_self_hosted: true
       prefix: 'coord_'
 
+  # For non run-frequent workflows, it's super important issue_hash_prefix
+  # does NOT have `Testsuite Status' in the title. It can be `Testsuite SomethingRandomHere1234 Status'
+  # but cannot be `SomethingRandomHere1234 Testsuite Status' Otherwise precommit can end
+  # up pulling that as a baseline issue
   summarize:
     if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
     needs: [init-submodules, creg, cmreg-self-hosted, cmreg-self-hosted-uc]
@@ -124,6 +128,6 @@ jobs:
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       issue_num: ${{ inputs.issue_num }}
-      issue_hash_prefix: Coordination Branch Testsuite Status
+      issue_hash_prefix: Testsuite Coordination Branch Status
       prefix: 'coord_'
       branch: coordination

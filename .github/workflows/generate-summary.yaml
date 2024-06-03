@@ -40,8 +40,29 @@ on:
         description: 'weekly run (Optional)'
 
 jobs:
+  check-issue-name:
+    if: always()
+    runs-on: ubuntu-20.04
+    environment: production
+    defaults:
+      run:
+        working-directory: riscv-gnu-toolchain
+    steps:
+      - name: Check name
+        id: stop-issue-generation
+        run: |
+          if [ '${{ inputs.prefix }}' != '' ] && [ '${{ issue_hash_prefix }}' == 'Testsuite Status' ];
+          then
+            echo "Stopping bad issue name generation. Use generate-summary workflow with title that won't be picked up by precommit"
+            echo "early_exit=true" >> $GITHUB_OUTPUT
+          fi
+
+    outputs:
+      early_exit: ${{ steps.stop-issue-generation.outputs.early_exit }}
+
   compare-artifacts:
-    if: always() # ensure comparison always runs even on error
+    if: ${{ always() && needs.check-issue-name.outputs.early_exit != 'true' }} # ensure comparison always runs even on error
+    needs: [check-issue-name]
     runs-on: ubuntu-20.04
     environment: production
     defaults:
@@ -180,8 +201,8 @@ jobs:
           retention-days: 90
 
   generate-issues:
-    if: always() # ensure generate issues always runs even on error
-    needs: [compare-artifacts]
+    if: ${{ always() && needs.check-issue-name.outputs.early_exit != 'true' }} # ensure generate issues always runs even on error
+    needs: [check-issue-name, compare-artifacts]
     runs-on: ubuntu-20.04
     permissions:
       issues: write
@@ -306,7 +327,7 @@ jobs:
     defaults:
       run:
         working-directory: riscv-gnu-toolchain
-    needs: [generate-issues, compare-artifacts]
+    needs: [generate-issues, compare-artifacts, check-issue-name]
     if: ${{ inputs.issue_num != '' }} # Only run if has bisection hash
     steps:
       - name: Add Bisect Label to New Issue
