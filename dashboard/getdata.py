@@ -50,11 +50,14 @@ def get_issue_hashes(token: str, repo: str):
 def download_summaries(artifact_name: str, token: str, repo: str):
     artifact_id = None
     # Try all prefixes
-    for prefix in ["", "zve_", "rv32_zvl_", "rv64_zvl_lmul2_", "rv64_zvl_"]:
+    for prefix in ["", "zve_", "rv32_zvl_", "rv64_zvl_lmul2_", "rv64_zvl_", "coord_"]:
         artifact_id = search_for_artifact(prefix + artifact_name, repo, token, None)
         if artifact_id is not None:
             break
     assert artifact_id is not None
+    if "coord_" in artifact_name:
+        # Ignore coordnation runs
+        return None
     artifact_path = download_artifact(artifact_name, artifact_id, token, repo)
     return artifact_path
 
@@ -69,6 +72,8 @@ def download_logs(token: str, repo: str, existing_hashes: Set[str]):
     for gcc_hash in hashes:
         artifact_name = f"{gcc_hash}-current-logs"
         artifact_zip = download_summaries(artifact_name, token, repo)
+        if artifact_zip is None:
+            continue
         os.makedirs(f"testsuite_runs/{gcc_hash}", exist_ok=True)
         extract_artifact("current_logs.zip", artifact_zip, outdir=f"testsuite_runs/{gcc_hash}")
         with ZipFile(f"./testsuite_runs/{gcc_hash}/current_logs.zip", "r") as zf:
