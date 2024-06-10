@@ -43,8 +43,8 @@ jobs:
       prefix: 'zve_'
 
   # For non run-frequent workflows, it's super important issue_hash_prefix
-  # does NOT have `Testsuite Status' in the title. It can be `Testsuite SomethingRandomHere1234 Status'
-  # but cannot be `SomethingRandomHere1234 Testsuite Status' Otherwise precommit can end
+  # does not start with `Testsuite Status'. It can be `Testsuite SomethingRandomHere1234 Status'
+  # but cannot be `Testsuite Status Something here' Otherwise precommit can end
   # up pulling that as a baseline issue
   summarize:
     if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build

@@ -328,7 +328,7 @@ jobs:
       run:
         working-directory: riscv-gnu-toolchain
     needs: [generate-issues, compare-artifacts, check-issue-name]
-    if: ${{ inputs.issue_num != '' }} # Only run if has bisection hash
+    if: ${{ inputs.issue_num != '' && needs.check-issue-name.outputs.early_exit != 'true' }} # Only run if has bisection hash
     steps:
       - name: Add Bisect Label to New Issue
         uses: actions/github-script@v6
