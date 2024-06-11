@@ -51,7 +51,7 @@ jobs:
       - name: Check name
         id: stop-issue-generation
         run: |
-          if [ '${{ inputs.prefix }}' != '' ] && [[ '${{ inputs.issue_hash_prefix }}' =~ ^Testsuite\ Status\ [0-9a-f]{40}$ ]];
+          if [ '${{ inputs.prefix }}' != '' ] && [ '${{ inputs.issue_hash_prefix }}' == 'Testsuite Status' ];
           then
             echo "Stopping bad issue name generation. Use generate-summary workflow with title that won't be picked up by precommit"
             echo "early_exit=true" >> $GITHUB_OUTPUT
