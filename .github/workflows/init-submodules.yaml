@@ -89,7 +89,6 @@ jobs:
         if: ${{ inputs.prefix == "binutils_" && steps.retrieve-cache.outputs.cache-hit != 'true' }}
         working-directory: ./riscv-gnu-toolchain
         id: binutils-cache
-        uses: ./.github/actions/common/init-and-pull-gcc
         run: |
           rm -rf binutils
           # Use the mirror since github tends to be pretty reliable for cloning.
