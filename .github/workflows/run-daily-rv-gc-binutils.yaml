@@ -20,7 +20,7 @@ jobs:
       # Add new prefixes to /dashboard/getdata.py in download_summaries()
       # ^ Ignored for now since we're testing binutils
       prefix: 'binutils_'
-      gcchash: '84c87d1f43091c2e537182d029db9739de518096' # Arbitrary fixed GCC hash
+      gcchash: 'cd0059a1976303638cea95f216de129334fc04d1' # Arbitrary fixed GCC hash
 
   binutils-self-hosted:
     needs: [init-submodules]
