@@ -86,7 +86,7 @@ jobs:
           branch: ${{ inputs.branch }}
 
       - name: Intialize binutils
-        if: inputs.prefix == "binutils_" && steps.retrieve-cache.outputs.cache-hit != 'true'
+        if: ${{ inputs.prefix == "binutils_" && steps.retrieve-cache.outputs.cache-hit != 'true' }}
         working-directory: ./riscv-gnu-toolchain
         id: binutils-cache
         uses: ./.github/actions/common/init-and-pull-gcc
