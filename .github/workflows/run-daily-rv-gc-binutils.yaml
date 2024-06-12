@@ -1,0 +1,56 @@
+name: Run-Daily-Binutils-rv-gc
+
+# rv{64/32}gc variants
+
+on:
+  schedule:
+    # Run at 5:00am
+    - cron: 0 5 * * *
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  # init-submodules sees "binutils_" and lies to us, giving us the binutils hash instead of the gcc hash.
+  # This is intended since it would be a heavy lift to make everything aware of multiple hashes.
+  # The prefix should be enough for us to always know it's a binutils hash
+  init-submodules:
+    uses: ./.github/workflows/init-submodules.yaml
+    with:
+      # Add new prefixes to /dashboard/getdata.py in download_summaries()
+      # ^ Ignored for now since we're testing binutils
+      prefix: 'binutils_'
+      gcchash: '84c87d1f43091c2e537182d029db9739de518096' # Arbitrary fixed GCC hash
+
+  binutils-self-hosted:
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [newlib, linux]
+        target: [
+          rv32gc-ilp32d,
+          rv64gc-lp64d,
+        ]
+        multilib: [multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }} # Lie and use binutils hash
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: true
+      prefix: 'binutils_'
+
+  summarize:
+    if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
+    needs: [init-submodules, binutils-self-hosted]
+    permissions:
+      issues: write
+    uses: ./.github/workflows/generate-summary.yaml
+    with:
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }} # Lie and use binutils hash
+      issue_num: ${{ github.event.inputs.issue_num }}
+      issue_hash_prefix: 'Binutils Testsuite Status'
+      prefix: 'binutils_'
