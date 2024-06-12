@@ -107,7 +107,7 @@ jobs:
           branch: ${{ inputs.branch }}
 
       - name: Initialize binutils
-        if: ${{ steps.retrieve-cache.outputs.cache-hit != 'true' }}
+        if: ${{ inputs.prefix == "binutils_" && steps.retrieve-cache.outputs.cache-hit != 'true' }}
         working-directory: ./riscv-gnu-toolchain
         run: |
           rm -rf binutils
@@ -117,7 +117,7 @@ jobs:
           git pull
 
       - name: Checkout binutils
-        if: ${{ steps.gcc-cache.outcome == 'skipped' }}
+        if: ${{ inputs.prefix == "binutils_"  && steps.gcc-cache.outcome == 'skipped' }}
         working-directory: ./riscv-gnu-toolchain
         run: |
           cd binutils
