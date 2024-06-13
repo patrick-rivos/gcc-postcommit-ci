@@ -8,11 +8,31 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    branches:
+      - main
+    inputs:
+      gcchash:
+        description: 'GCC Hash'
+        required: true
+      issue_num:
+        description: 'Bisection Issue Number (Optional)'
+        required: false
 
 jobs:
+  manually-triggered-workflow-dispatch:
+    uses: ./.github/workflows/run-frequent.yaml
+    if: ${{ inputs.gcchash != '' }}
+    permissions:
+      issues: write
+    with:
+      gcchash: ${{ inputs.gcchash }}
+      issue_num: ${{ inputs.issue_num }}
+
   get-hash:
     runs-on: ubuntu-20.04
     environment: production
+    if: ${{ inputs.gcchash == '' }}
     steps:
       - uses: actions/checkout@v3
 
@@ -50,6 +70,7 @@ jobs:
   run-workflow:
     needs: [get-hash]
     uses: ./.github/workflows/run-frequent.yaml
+    if: ${{ inputs.gcchash == '' }}
     permissions:
       issues: write
     with:
