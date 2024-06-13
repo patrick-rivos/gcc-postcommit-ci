@@ -51,7 +51,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-10 # Numbered archive to allow for easy transition when bumping submodules
+          key: ${{ inputs.prefix }}submodules-archive-11 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initalize submodules cache
         id: cache-init
@@ -147,7 +147,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-10
+          key: ${{ inputs.prefix }}submodules-archive-11
 
       - name: Make cache zip
         run: |
