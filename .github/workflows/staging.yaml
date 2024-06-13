@@ -20,7 +20,7 @@ on:
         required: false
 
 jobs:
-  run-workflow-dispatch:
+  manually-triggered-workflow-dispatch:
     uses: ./.github/workflows/run-frequent.yaml
     if: ${{ inputs.gcchash != '' }}
     permissions:
