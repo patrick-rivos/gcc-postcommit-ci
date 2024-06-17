@@ -501,11 +501,39 @@ jobs:
           unzip ./temp/*report.log.zip -d ./current_logs || true
           ls current_logs
 
+      - name: Build Log Comparison Setup
+        id: build-log-setup
+        run: |
+          echo "previous_build_logs_path=previous_build_logs" >> $GITHUB_OUTPUT
+          echo "current_build_logs_path=current_build_logs" >> $GITHUB_OUTPUT
+          echo "current_build_log_zips_path=current_build_log_zips" >> $GITHUB_OUTPUT
+          echo "new_build_warnings_path=./new_build_warnings/new_build_warnings.log" >> $GITHUB_OUTPUT
+
       - name: Download artifacts
         run: |
           pip install pygithub requests
-          python ./scripts/download_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}"
+          python ./scripts/download_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}" -build-logs -build-logs-dir ${{ steps.build-log-setup.outputs.previous_build_logs_path }}
           ls previous_logs
+          ls ${{ steps.build-log-setup.outputs.previous_build_logs_path }}
+
+      - name: Download current build log artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: *-build-log
+          merge-multiple: true
+          path: ${{ steps.build-log-setup.outputs.current_build_log_zips_path }}
+
+      - name: Unzip all build log artifacts
+        uses: ./.github/actions/common/unzip-all-zips
+        with:
+          input-dir: ${{ steps.build-log-setup.outputs.current_build_log_zips_path }}
+          output-dir: ${{ steps.build-log-setup.outputs.current_build_logs_path }}
+          include-pattern: *-stderr.log
+
+      - name: Parse New Build Warnings
+        run: |
+          python ./scripts/parse_new_build_warnings.py --old-dir ${{ steps.build-log-setup.outputs.previous_build_logs_path }} --new-dir ${{ steps.build-log-setup.outputs.current_build_logs_path }} --output ${{ steps.build-log-setup.outputs.new_build_warnings_path }}
+          cat ${{ steps.build-log-setup.outputs.new_build_warnings_path }}
 
       - name: Compare artifacts
         run: |
