@@ -1,0 +1,38 @@
+name: "Unzip all zips"
+description: "Unzip all the zip files located in a given directory"
+inputs:
+  intput_dir:
+    description: 'Directory that contains zip files'
+    required: true
+  output_dir:
+    description: 'Output directory that will contain all unzipped files'
+    required: true
+  include-pattern:
+    description: 'Remove all files that doesn't fit this pattern'
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Create Output dir
+      id: create-output-dir
+      shell: bash
+      run: |
+        mkdir ${{ inputs.output_dir }}
+
+    - name: unzip all files
+      id: unzip
+      shell: bash
+      run: |
+        for zip_file in ./${{ inputs.input_dir }}/*.zip; do
+          if [[ -e "$zip_file" ]]; then
+            unzip -o "$zip_file" -d ./${{ inputs.output_dir }}
+          fi
+        done
+
+    - name: Filter Include Pattern
+      id: filter-include-pattern
+      if: ${{ inputs.include_pattern }} != ''
+      shell: bash
+      run: |
+        find ./${{ inputs.output_dir }} -type f ! -name "${{ inputs.include_pattern }}" -exec rm {} \;
