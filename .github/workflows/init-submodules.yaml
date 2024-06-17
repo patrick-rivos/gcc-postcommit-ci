@@ -51,7 +51,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-10 # Numbered archive to allow for easy transition when bumping submodules
+          key: ${{ inputs.prefix }}submodules-archive-11 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initalize submodules cache
         id: cache-init
@@ -85,6 +85,17 @@ jobs:
           init: true
           branch: ${{ inputs.branch }}
 
+      - name: Intialize binutils
+        if: ${{ inputs.prefix == 'binutils_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
+        working-directory: ./riscv-gnu-toolchain
+        id: binutils-cache
+        run: |
+          rm -rf binutils
+          # Use the mirror since github tends to be pretty reliable for cloning.
+          git clone https://github.com/bminor/binutils-gdb.git
+          cd binutils
+          git pull
+
         # Does not remove and reclone gcc if we hit cache
       - name: Checkout GCC
         if: steps.gcc-cache.outcome == 'skipped'
@@ -101,7 +112,7 @@ jobs:
           git config --global user.name "Github Bot"
           git am ../fixups/newlib/*.patch
 
-      - name: Get GCC hash
+      - name: Get hash
         working-directory: riscv-gnu-toolchain/gcc
         id: gcc-hash
         run: |
@@ -112,6 +123,15 @@ jobs:
           fi
           echo $GCCHASH
           git checkout $GCCHASH
+
+          # If it's a binutils run, we need to lie about the hash
+          if [ "${{ inputs.prefix }}" == "binutils_" ]; then
+            cd ../binutils
+            git checkout master
+            git pull
+            export GCCHASH=$(git rev-parse HEAD)
+          fi
+
           echo "gcchash=$GCCHASH" >> "$GITHUB_OUTPUT"
 
       - name: Cache submodules
@@ -127,7 +147,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-10
+          key: ${{ inputs.prefix }}submodules-archive-11
 
       - name: Make cache zip
         run: |

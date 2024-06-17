@@ -88,7 +88,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-10 # Numbered archive to allow for easy transition when bumping submodules
+          key: ${{ inputs.prefix }}submodules-archive-11 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initialize gcc
         if: ${{ steps.retrieve-cache.outputs.cache-hit != 'true' }}
@@ -105,6 +105,23 @@ jobs:
         with:
           init: false
           branch: ${{ inputs.branch }}
+
+      - name: Initialize binutils
+        if: ${{ inputs.prefix == 'binutils_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          rm -rf binutils
+          # Use the mirror since github tends to be pretty reliable for cloning.
+          git clone https://github.com/bminor/binutils-gdb.git
+          cd binutils
+          git pull
+
+      - name: Checkout binutils
+        if: ${{ inputs.prefix == 'binutils_' && steps.gcc-cache.outcome == 'skipped' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          cd binutils
+          git pull
 
       - name: Create directories
         run: |
@@ -389,7 +406,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: submodules-archive-10 # Numbered archive to allow for easy transition when bumping submodules
+          key: ${{ inputs.prefix }}submodules-archive-11 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initialize gcc
         if: ${{ steps.retrieve-cache.outputs.cache-hit != 'true' }}
@@ -406,6 +423,23 @@ jobs:
         with:
           init: false
           branch: ${{ inputs.branch }}
+
+      - name: Initialize binutils
+        if: ${{ inputs.prefix == 'binutils_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          rm -rf binutils
+          # Use the mirror since github tends to be pretty reliable for cloning.
+          git clone https://github.com/bminor/binutils-gdb.git
+          cd binutils
+          git pull
+
+      - name: Checkout binutils
+        if: ${{ inputs.prefix == 'binutils_' && steps.gcc-cache.outcome == 'skipped' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          cd binutils
+          git pull
 
       - name: Initialize Bisection Hash
         id: bisection-hash
