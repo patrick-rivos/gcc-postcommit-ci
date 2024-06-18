@@ -38,6 +38,9 @@ on:
       prefix:
         required: false
         description: 'weekly run (Optional)'
+      branch:
+        required: false
+        description: 'branch this is running from'
 
 jobs:
   check-issue-name:
