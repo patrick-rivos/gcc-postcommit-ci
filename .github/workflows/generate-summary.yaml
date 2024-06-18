@@ -115,7 +115,7 @@ jobs:
         run: |
           rm -rf binutils
           # Use the mirror since github tends to be pretty reliable for cloning.
-          git clone https://github.com/bminor/binutils-gdb.git
+          git clone https://github.com/bminor/binutils-gdb.git binutils
           cd binutils
           git pull
 
@@ -433,7 +433,7 @@ jobs:
         run: |
           rm -rf binutils
           # Use the mirror since github tends to be pretty reliable for cloning.
-          git clone https://github.com/bminor/binutils-gdb.git
+          git clone https://github.com/bminor/binutils-gdb.git binutils
           cd binutils
           git pull
 
