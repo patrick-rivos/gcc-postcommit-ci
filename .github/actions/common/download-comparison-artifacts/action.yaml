@@ -14,7 +14,7 @@ runs:
     - name: Download report from this workflow
       if: ${{ !cancelled() }}
       id: same-workflow-report
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: ${{ inputs.report-artifact-name }}
         path: ./riscv-gnu-toolchain/current_logs
@@ -43,7 +43,7 @@ runs:
     - name: Download binary artifact from this workflow
       if: ${{ !cancelled() && steps.report-download.outputs.report_download == 'failure'}}
       id: same-workflow-binary
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: ${{ inputs.binary-artifact-name }}
         path: ./riscv-gnu-toolchain/temp

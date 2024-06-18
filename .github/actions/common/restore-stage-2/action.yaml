@@ -21,7 +21,7 @@ runs:
   using: "composite"
   steps:
       - name: Restore stage2
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-stage2
           path: ./riscv-gnu-toolchain

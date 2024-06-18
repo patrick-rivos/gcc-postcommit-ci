@@ -52,7 +52,7 @@ jobs:
     needs: [check]
     if: ${{ needs.check.outputs.early_exit != 'exit' && inputs.run_on_self_hosted != 'true' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -60,7 +60,7 @@ jobs:
           free_up_space: true
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
@@ -109,7 +109,7 @@ jobs:
     # Skip linux multilib
     if: ${{ needs.check.outputs.early_exit != 'exit' && inputs.run_on_self_hosted != 'true' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -117,7 +117,7 @@ jobs:
           free_up_space: true
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
@@ -184,7 +184,7 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -192,7 +192,7 @@ jobs:
           free_up_space: false
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain
@@ -258,7 +258,7 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
@@ -266,7 +266,7 @@ jobs:
           free_up_space: false
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
           path: riscv-gnu-toolchain

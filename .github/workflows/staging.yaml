@@ -34,7 +34,7 @@ jobs:
     environment: production
     if: ${{ inputs.gcchash == '' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup env
         uses: ./.github/actions/common/setup-env
