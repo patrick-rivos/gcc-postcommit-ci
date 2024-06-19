@@ -94,6 +94,7 @@ jobs:
           # Use the mirror since github tends to be pretty reliable for cloning.
           git clone https://github.com/bminor/binutils-gdb.git binutils
           cd binutils
+          git checkout ${{ inputs.branch }}
           git pull
 
         # Does not remove and reclone gcc if we hit cache
@@ -127,7 +128,7 @@ jobs:
           # If it's a binutils run, we need to lie about the hash
           if [ "${{ inputs.prefix }}" == "binutils_" ]; then
             cd ../binutils
-            git checkout master
+            git checkout ${{ inputs.branch }}
             git pull
             export GCCHASH=$(git rev-parse HEAD)
           fi

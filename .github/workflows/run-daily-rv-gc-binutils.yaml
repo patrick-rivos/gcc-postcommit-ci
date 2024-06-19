@@ -21,6 +21,7 @@ jobs:
       # ^ Ignored for now since we're testing binutils
       prefix: 'binutils_'
       gcchash: 'cd0059a1976303638cea95f216de129334fc04d1' # Arbitrary fixed GCC hash
+      branch: master
 
   binutils-self-hosted:
     needs: [init-submodules]
@@ -54,3 +55,4 @@ jobs:
       issue_num: ${{ github.event.inputs.issue_num }}
       issue_hash_prefix: 'Binutils Testsuite Status'
       prefix: 'binutils_'
+      branch: master
