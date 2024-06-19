@@ -58,7 +58,7 @@ def download_summaries(artifact_name: str, token: str, repo: str):
     if "coord_" in artifact_name:
         # Ignore coordnation runs
         return None
-    artifact_path = download_artifact(artifact_name, artifact_id, token, repo)
+    artifact_path = download_artifact(artifact_name, artifact_id, token, repo, "temp")
     return artifact_path
 
 
@@ -75,7 +75,7 @@ def download_logs(token: str, repo: str, existing_hashes: Set[str]):
         if artifact_zip is None:
             continue
         os.makedirs(f"testsuite_runs/{gcc_hash}", exist_ok=True)
-        extract_artifact("current_logs.zip", artifact_zip, outdir=f"testsuite_runs/{gcc_hash}")
+        extract_artifact(artifact_zip, outdir=f"testsuite_runs/{gcc_hash}")
         with ZipFile(f"./testsuite_runs/{gcc_hash}/current_logs.zip", "r") as zf:
             zf.extractall(path=f"./testsuite_runs/{gcc_hash}")
         if os.path.isfile(f"./testsuite_runs/{gcc_hash}/current_logs/failed_testsuite.txt"):
