@@ -17,6 +17,7 @@ jobs:
       # Add new prefixes to /dashboard/getdata.py in download_summaries()
       prefix: 'zve_'
       gcchash: ''
+      gcc_branch: master
 
   # Will take a long time to complete (4 targets)
   zvl-variants-self-hosted:
@@ -53,3 +54,4 @@ jobs:
       issue_num: ${{ github.event.inputs.issue_num }}
       issue_hash_prefix: Testsuite zve Status
       prefix: 'zve_'
+      gcc_branch: master

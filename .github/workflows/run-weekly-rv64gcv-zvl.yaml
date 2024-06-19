@@ -17,6 +17,7 @@ jobs:
       # Add new prefixes to /dashboard/getdata.py in download_summaries()s
       prefix: 'rv64_zvl_'
       gcchash: ''
+      gcc_branch: master
 
   # Will take a long time to complete (4 targets)
   zvl-variants-self-hosted:
@@ -52,3 +53,4 @@ jobs:
       issue_num: ${{ github.event.inputs.issue_num }}
       issue_hash_prefix: Testsuite rv64gcv-zvl Status
       prefix: 'rv64_zvl_'
+      gcc_branch: master

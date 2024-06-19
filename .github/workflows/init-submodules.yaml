@@ -17,8 +17,13 @@ on:
         description: 'gcc hash to build. If blank then use tip-of-tree.'
         required: false
         type: string
-      branch:
-        description: 'branch to pull from'
+      gcc_branch:
+        description: 'GCC branch to pull from'
+        required: false
+        type: string
+        default: 'master'
+      binutils_branch:
+        description: 'binutils branch to pull from (only used if prefix is binutils_)'
         required: false
         type: string
         default: 'master'
@@ -83,7 +88,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: true
-          branch: ${{ inputs.branch }}
+          branch: ${{ inputs.gcc_branch }}
 
       - name: Intialize binutils
         if: ${{ inputs.prefix == 'binutils_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
@@ -94,7 +99,7 @@ jobs:
           # Use the mirror since github tends to be pretty reliable for cloning.
           git clone https://github.com/bminor/binutils-gdb.git binutils
           cd binutils
-          git checkout ${{ inputs.branch }}
+          git checkout ${{ inputs.binutils_branch }}
           git pull
 
         # Does not remove and reclone gcc if we hit cache
@@ -103,7 +108,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: false
-          branch: ${{ inputs.branch }}
+          branch: ${{ inputs.gcc_branch }}
 
       - name: Apply newlib fixups
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
@@ -128,7 +133,7 @@ jobs:
           # If it's a binutils run, we need to lie about the hash
           if [ "${{ inputs.prefix }}" == "binutils_" ]; then
             cd ../binutils
-            git checkout ${{ inputs.branch }}
+            git checkout ${{ inputs.binutils_branch }}
             git pull
             export GCCHASH=$(git rev-parse HEAD)
           fi
