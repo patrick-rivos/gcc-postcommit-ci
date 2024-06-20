@@ -19,7 +19,10 @@ on:
       prefix:
         required: false
         type: string
-      branch:
+      gcc_branch:
+        required: false
+        type: string
+      binutils_branch:
         required: false
         type: string
   workflow_dispatch:
@@ -38,9 +41,12 @@ on:
       prefix:
         required: false
         description: 'weekly run (Optional)'
-      branch:
+      gcc_branch:
         required: false
         description: 'branch this is running from'
+      binutils_branch:
+        required: false
+        type: string
 
 jobs:
   check-issue-name:
@@ -99,7 +105,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: true
-          branch: ${{ inputs.branch }}
+          branch: ${{ inputs.gcc_branch }}
 
         # Does not remove and reclone gcc if we hit cache
       - name: Checkout GCC
@@ -107,7 +113,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: false
-          branch: ${{ inputs.branch }}
+          branch: ${{ inputs.gcc_branch }}
 
       - name: Initialize binutils
         if: ${{ inputs.prefix == 'binutils_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
@@ -117,6 +123,7 @@ jobs:
           # Use the mirror since github tends to be pretty reliable for cloning.
           git clone https://github.com/bminor/binutils-gdb.git binutils
           cd binutils
+          git checkout ${{ inputs.binutils_branch }}
           git pull
 
       - name: Checkout binutils
@@ -124,6 +131,7 @@ jobs:
         working-directory: ./riscv-gnu-toolchain
         run: |
           cd binutils
+          git checkout ${{ inputs.binutils_branch }}
           git pull
 
       - name: Create directories
@@ -417,7 +425,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: true
-          branch: ${{ inputs.branch }}
+          branch: ${{ inputs.gcc_branch }}
 
         # Does not remove and reclone gcc if we hit cache
       - name: Checkout GCC
@@ -425,7 +433,7 @@ jobs:
         uses: ./.github/actions/common/init-and-pull-gcc
         with:
           init: false
-          branch: ${{ inputs.branch }}
+          branch: ${{ inputs.gcc_branch }}
 
       - name: Initialize binutils
         if: ${{ inputs.prefix == 'binutils_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
@@ -435,6 +443,7 @@ jobs:
           # Use the mirror since github tends to be pretty reliable for cloning.
           git clone https://github.com/bminor/binutils-gdb.git binutils
           cd binutils
+          git checkout ${{ inputs.binutils_branch }}
           git pull
 
       - name: Checkout binutils
@@ -442,6 +451,7 @@ jobs:
         working-directory: ./riscv-gnu-toolchain
         run: |
           cd binutils
+          git checkout ${{ inputs.binutils_branch }}
           git pull
 
       - name: Initialize Bisection Hash

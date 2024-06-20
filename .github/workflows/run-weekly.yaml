@@ -18,6 +18,7 @@ jobs:
     uses: ./.github/workflows/init-submodules.yaml
     with:
       gcchash: ''
+      gcc_branch: master
 
   # ~3.5 hours
   build-with-checking:

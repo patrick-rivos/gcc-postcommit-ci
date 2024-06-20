@@ -17,6 +17,7 @@ jobs:
       # Add new prefixes to /dashboard/getdata.py in download_summaries()
       prefix: 'rv64_zvl_lmul2_'
       gcchash: ''
+      gcc_branch: master
 
   # Will take a long time to complete (4 targets)
   zvl-variants-self-hosted:
@@ -53,3 +54,4 @@ jobs:
       issue_num: ${{ github.event.inputs.issue_num }}
       issue_hash_prefix: Testsuite rv64gcv-zvl lmul2 Status
       prefix: 'rv64_zvl_lmul2_'
+      gcc_branch: master

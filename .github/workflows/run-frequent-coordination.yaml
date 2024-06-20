@@ -43,7 +43,7 @@ jobs:
     with:
       prefix: 'coord_'
       gcchash: ${{ inputs.gcchash }}
-      branch: 'coordination'
+      gcc_branch: 'coordination'
 
   creg: # Check Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -126,4 +126,4 @@ jobs:
       issue_num: ${{ inputs.issue_num }}
       issue_hash_prefix: Coordination Branch Testsuite Status
       prefix: 'coord_'
-      branch: coordination
+      gcc_branch: coordination
