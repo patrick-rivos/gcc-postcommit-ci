@@ -50,13 +50,13 @@ def get_issue_hashes(token: str, repo: str):
 def download_summaries(artifact_name: str, token: str, repo: str):
     artifact_id = None
     # Try all prefixes
-    for prefix in ["", "zve_", "rv32_zvl_", "rv64_zvl_lmul2_", "rv64_zvl_", "coord_"]:
+    for prefix in ["", "zve_", "rv32_zvl_", "rv64_zvl_lmul2_", "rv64_zvl_", "coord_", "binutils_"]:
         artifact_id = search_for_artifact(prefix + artifact_name, repo, token, None)
         if artifact_id is not None:
             break
     assert artifact_id is not None
-    if "coord_" in artifact_name:
-        # Ignore coordnation runs
+    if "coord_" in artifact_name or "binutils_" in artifact_name:
+        # Ignore coordnation/binutils runs
         return None
     artifact_path = download_artifact(artifact_name, artifact_id, token, repo, "temp")
     return artifact_path
