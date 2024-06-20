@@ -96,8 +96,8 @@ runs:
       uses: ./.github/actions/common/download-comparison-artifacts
       if: ${{ inputs.prefix == 'binutils_' }}
       with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gc-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gc-lp64d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
     - name: Download linux rv32-binutils
@@ -112,8 +112,8 @@ runs:
       uses: ./.github/actions/common/download-comparison-artifacts
       if: ${{ inputs.prefix == 'binutils_' }}
       with:
-        report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib-report.log
-        binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib
+        report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64gc-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64gc-lp64d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
     - name: Download newlib rv32-binutils
