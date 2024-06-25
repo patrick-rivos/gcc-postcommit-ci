@@ -49,28 +49,49 @@ on:
         type: string
 
 jobs:
-  check-issue-name:
+  check-early-exit:
     if: always()
     runs-on: ubuntu-20.04
     environment: production
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Check name
-        id: stop-issue-generation
+        id: check-issue-name
         run: |
           if [ '${{ inputs.prefix }}' != '' ] && [ '${{ inputs.issue_hash_prefix }}' == 'Testsuite Status' ];
           then
             echo "Stopping bad issue name generation. Use generate-summary workflow with title that won't be picked up by precommit"
-            echo "early_exit=true" >> $GITHUB_OUTPUT
+            echo "bad_name=true" >> $GITHUB_OUTPUT
           fi
 
+      - name: Check duplicate issue
+        id: check-duplicate-issue
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          ISSUE_NAME='${{ inputs.issue_hash_prefix }} ${{ inputs.gcchash }}'
+          curl -L \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/patrick-rivos/gcc-postcommit-ci/issues \
+            -o issues.txt
+          FOUND_ISSUE=$(cat issues.txt | jq 'map(select(.title == "$ISSUE_NAME"))')
+          # if no issue of that name is found, jq returns '[]'
+          echo "found_issue=$FOUND_ISSUE" >> $GITHUB_OUTPUT
+
+      - name: Check early exit
+        id: early-exit
+        if: ${{ steps.check-issue-name.outputs.bad_name == 'true' || (steps.check-duplicate-issue.outcome != 'skipped' && steps.check-duplicate-issue.outputs.found_issue != '[]') }}
+        run: |
+          echo "early_exit=true" >> $GITHUB_OUTPUT
+
     outputs:
-      early_exit: ${{ steps.stop-issue-generation.outputs.early_exit }}
+      early_exit: ${{ steps.early-exit.outputs.early_exit }}
 
   compare-artifacts:
-    if: ${{ always() && needs.check-issue-name.outputs.early_exit != 'true' }} # ensure comparison always runs even on error
-    needs: [check-issue-name]
+    if: ${{ always() && needs.check-early-exit.outputs.early_exit != 'true' }} # ensure comparison always runs even on error
+    needs: [check-early-exit]
     runs-on: ubuntu-20.04
     environment: production
     defaults:
@@ -228,8 +249,8 @@ jobs:
           retention-days: 90
 
   generate-issues:
-    if: ${{ always() && needs.check-issue-name.outputs.early_exit != 'true' }} # ensure generate issues always runs even on error
-    needs: [check-issue-name, compare-artifacts]
+    if: ${{ always() && needs.check-early-exit.outputs.early_exit != 'true' }} # ensure generate issues always runs even on error
+    needs: [check-early-exit, compare-artifacts]
     runs-on: ubuntu-20.04
     permissions:
       issues: write
@@ -354,8 +375,8 @@ jobs:
     defaults:
       run:
         working-directory: riscv-gnu-toolchain
-    needs: [generate-issues, compare-artifacts, check-issue-name]
-    if: ${{ inputs.issue_num != '' && needs.check-issue-name.outputs.early_exit != 'true' }} # Only run if has bisection hash
+    needs: [generate-issues, compare-artifacts, check-early-exit]
+    if: ${{ inputs.issue_num != '' && needs.check-early-exit.outputs.early_exit != 'true' }} # Only run if has bisection hash
     steps:
       - name: Add Bisect Label to New Issue
         uses: actions/github-script@v6
