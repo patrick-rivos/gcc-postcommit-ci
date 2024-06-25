@@ -1,0 +1,82 @@
+name: Search for Artifact
+
+on:
+  push
+
+jobs:
+  search_artifact:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
+
+      - name: Search for artifact containing substring
+        id: get-run-id
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const artifactSubstring = "cbf7245c8b305fe997a535051a4fec379a429243"
+            const { owner, repo } = context.repo;
+            const per_page = 100;
+            let page = 1;
+            let foundRunId = null;
+
+            while (true) {
+              const runs = await github.rest.actions.listWorkflowRunsForRepo({
+                owner,
+                repo,
+                per_page,
+                page,
+              });
+
+              if (runs.data.workflow_runs.length === 0) {
+                break;
+              }
+
+              for (const run of runs.data.workflow_runs) {
+                const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+                  owner,
+                  repo,
+                  run_id: run.id,
+                });
+
+                for (const artifact of artifacts.data.artifacts) {
+                  if (artifact.name.includes(artifactSubstring)) {
+                    console.log(`Run ID: ${run.id} has an artifact containing "${artifactSubstring}"`);
+                    foundRunId = run.id;
+                    break;
+                  }
+                }
+
+                if (foundRunId) {
+                  break;
+                }
+              }
+
+              if (foundRunId) {
+                break;
+              }
+
+              page += 1;
+            }
+
+            if (!foundRunId) {
+              console.log(`No run found with an artifact containing "${artifactSubstring}"`);
+            }
+
+            return foundRunId;
+
+      - name: Get result
+        run: echo "${{steps.get-run-id.outputs.result}}"
+
+      - name: Print API usage info
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/rate_limit
