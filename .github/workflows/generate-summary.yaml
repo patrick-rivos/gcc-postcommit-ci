@@ -364,6 +364,20 @@ jobs:
               labels: ['staging']
             })
 
+      # These three conditions should be equivalent, however, add them just in case
+      # we change something accidentally which breaks it
+      - name: Add Valid-Baseline Label to New Issue
+        uses: actions/github-script@v6
+        if: ${{ github.workflow == 'Run-Frequent' && inputs.prefix == '' && inputs.issue_hash_prefix == 'Testsuite Status' }}
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: ${{ steps.create-issue.outputs.issue-number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['valid-baseline']
+            })
+
     outputs:
       new_issue_num: ${{ steps.create-issue.outputs.issue-number }}
 
