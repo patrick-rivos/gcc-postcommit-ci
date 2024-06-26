@@ -216,7 +216,11 @@ jobs:
 
       - name: Compare artifacts
         run: |
-          python ./scripts/compare_all_artifacts.py -hash ${{ inputs.gcchash }} --current-hash-committed
+          if [[ "${{ inputs.prefix }}" == 'binutils_' ]]; then
+            python ./scripts/compare_all_artifacts.py -hash ${{ inputs.gcchash }} --current-hash-committed --project binutils
+          else
+            python ./scripts/compare_all_artifacts.py -hash ${{ inputs.gcchash }} --current-hash-committed
+          fi
 
       - name: Make artifact zips
         run: |
@@ -554,7 +558,11 @@ jobs:
 
       - name: Compare artifacts
         run: |
-          python ./scripts/compare_all_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} --current-hash-committed
+          if [[ "${{ inputs.prefix }}" == 'binutils_' ]]; then
+            python ./scripts/compare_all_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} --current-hash-committed --project binutils
+          else
+            python ./scripts/compare_all_artifacts.py -hash ${{ steps.bisection-hash.outputs.orig_gcchash }} --current-hash-committed
+          fi
 
       - name: Make artifact zips
         run: |
