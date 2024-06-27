@@ -312,6 +312,15 @@ jobs:
         run: |
           ISSUE_LABELS=$(cat labels.txt)
           echo "issue_labels=$ISSUE_LABELS" >> $GITHUB_OUTPUT
+          IFS=',' read -r -a labels <<< $ISSUE_LABELS
+          for label in "${labels[@]}"
+          do
+            if [[ "$label" == "build-failure" ]] || [[ "$label" == "testsuite-failure" ]];
+            then
+              echo "valid_baseline=false" >> $GITHUB_OUTPUT
+              break
+            fi
+          done
 
       - name: Print API usage info
         run: |
@@ -372,7 +381,7 @@ jobs:
       # we change something accidentally which breaks it
       - name: Add Valid-Baseline Label to New Issue
         uses: actions/github-script@v6
-        if: ${{ github.workflow == 'Run-Frequent' && inputs.prefix == '' && inputs.issue_hash_prefix == 'Testsuite Status' }}
+        if: ${{ github.workflow == 'Run-Frequent' && inputs.prefix == '' && inputs.issue_hash_prefix == 'Testsuite Status' && steps.issue-labels.outputs.valid_baseline != 'false' }}
         with:
           script: |
             github.rest.issues.addLabels({
