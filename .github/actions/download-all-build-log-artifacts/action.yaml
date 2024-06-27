@@ -3,12 +3,14 @@ description: "Downloads all the build log artifacts for a given hash. Only use t
 inputs:
   gcchash:
     required: true
+    description: 'GCC Hash of the artifact'
   github-token:
     required: true
   prefix:
     required: false
   output-dir:
     required: true
+    description: 'Path to the artifact directory'
 
 runs:
   using: "composite"
@@ -118,4 +120,5 @@ runs:
     - name: Print downloaded artifacts
       shell: bash
       run: |
-        ls riscv-gnu-toolchain/${{ inputs.output-dir }}
+        cd riscv-gnu-toolchain
+        ls ${{ inputs.output-dir }}
