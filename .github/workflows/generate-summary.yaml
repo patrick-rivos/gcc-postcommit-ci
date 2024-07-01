@@ -372,7 +372,6 @@ jobs:
         with:
           issue-number: ${{ steps.create-issue.outputs.issue-number }}
           body-path: riscv-gnu-toolchain/trimmed_comment.md
-          edit-mode: replace
 
       - name: Get prefix label name
         if: ${{ inputs.prefix != '' }}
