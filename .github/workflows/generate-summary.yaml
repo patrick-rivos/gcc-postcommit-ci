@@ -431,7 +431,7 @@ jobs:
       # Adds comment which links issue to PR
       - name: Link Staging PR
         uses: actions/github-script@v6
-        if: ${{ github.event == 'Staging' && github.event.pull_request }}
+        if: ${{ github.workflow == 'Staging' && github.event.pull_request }}
         with:
           script: |
             github.rest.issues.createComment({
