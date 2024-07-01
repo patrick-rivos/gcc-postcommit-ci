@@ -428,6 +428,19 @@ jobs:
               labels: ['staging']
             })
 
+      # Adds comment which links issue to PR
+      - name: Link Staging PR
+        uses: actions/github-script@v6
+        if: ${{ github.event == 'Staging' && github.event.pull_request }}
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: ${{ steps.create-issue.outputs.issue-number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Pull request: ${{ github.event.pull_request.html_url }}'
+            })
+
       # These three conditions should be equivalent, however, add them just in case
       # we change something accidentally which breaks it
       - name: Add Valid-Baseline Label to New Issue
