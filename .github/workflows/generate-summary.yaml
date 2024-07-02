@@ -76,7 +76,7 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/patrick-rivos/gcc-postcommit-ci/issues \
             -o issues.txt
-          FOUND_ISSUE=$(cat issues.txt | jq "map(select(.title == \"$ISSUE_NAME\"))" | tr '\n' ' ')
+          FOUND_ISSUE=$(cat issues.txt | jq "map(select(.title == \"$ISSUE_NAME\"))" | tr '\n' ' ' | tr -d [:space:])
           # if no issue of that name is found, jq returns '[]'
           echo "found_issue=$FOUND_ISSUE" >> $GITHUB_OUTPUT
 
