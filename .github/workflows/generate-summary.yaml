@@ -40,13 +40,29 @@ on:
         default: 'Testsuite Status'
       prefix:
         required: false
-        description: 'weekly run (Optional)'
+        description: 'Prefix (Optional)'
+        type: choice
+        default: ""
+        options:
+          - ""
+          - "coord_"
+          - "binutils_"
+          - "rv32_zvl_"
+          - "rv64_zvl_"
+          - "zve_"
       gcc_branch:
-        required: false
-        description: 'branch this is running from'
+        description: 'GCC branch'
+        default: 'master'
+        type: choice
+        options:
+          - 'master'
+          - 'coordination'
       binutils_branch:
-        required: false
-        type: string
+        description: 'Binutils branch'
+        default: 'master'
+        type: choice
+        options:
+          - 'master'
 
 jobs:
   check-early-exit:
