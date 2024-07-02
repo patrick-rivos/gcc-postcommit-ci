@@ -224,66 +224,11 @@ jobs:
           unzip ./temp/*report.log.zip -d ./current_logs || true
           ls current_logs
 
-      - name: Build Log Comparison Setup
-        id: build-log-setup
-        run: |
-          echo "previous_build_logs_path=$(readlink -f previous_build_logs)" >> $GITHUB_OUTPUT
-          echo "previous_build_log_zips_path=$(readlink -f previous_build_log_zips)" >> $GITHUB_OUTPUT
-          echo "current_build_logs_path=$(readlink -f current_build_logs)" >> $GITHUB_OUTPUT
-          echo "current_build_log_zips_path=$(readlink -f current_build_log_zips)" >> $GITHUB_OUTPUT
-          mkdir new_build_warnings
-          echo "new_build_warnings_path=$(readlink -f ./new_build_warnings/new_build_warnings.log)" >> $GITHUB_OUTPUT
-
       - name: Download artifacts
-        id: download-previous-artifacts
         run: |
           pip install pygithub requests
-          python ./scripts/download_artifacts.py -hash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}" -build-logs -build-logs-dir ${{ steps.build-log-setup.outputs.previous_build_log_zips_path }}
+          python ./scripts/download_artifacts.py -hash ${{ inputs.gcchash }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ secrets.GITHUB_TOKEN }} -prefix "${{ inputs.prefix }}"
           ls previous_logs
-          if [ -d "${{ steps.build-log-setup.outputs.previous_build_log_zips_path }}" ]; then
-            ls ${{ steps.build-log-setup.outputs.previous_build_log_zips_path }}
-          fi
-
-      - name: Unzip previous build log artifacts
-        id: unzip-previous-build-log-artifacts
-        uses: ./.github/actions/common/unzip-all-zips
-        with:
-          input-dir: ${{ steps.build-log-setup.outputs.previous_build_log_zips_path }}
-          output-dir: ${{ steps.build-log-setup.outputs.previous_build_logs_path }}
-          include-pattern: "*-stderr.log"
-
-      - name: Download current build log artifacts manual
-        id: download-current-build-log-artifacts-manual
-        uses: ./.github/actions/download-all-build-log-artifacts
-        with:
-          gcchash: ${{ inputs.gcchash }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          prefix: ${{ inputs.prefix }}
-          output-dir: ${{ steps.build-log-setup.outputs.current_build_log_zips_path }}
-
-      - name: Unzip current build log artifacts
-        id: unzip-current-build-log-artifacts
-        uses: ./.github/actions/common/unzip-all-zips
-        with:
-          input-dir: ${{ steps.build-log-setup.outputs.current_build_log_zips_path }}
-          output-dir: ${{ steps.build-log-setup.outputs.current_build_logs_path }}
-          include-pattern: "*-stderr.log"
-
-      - name: Parse New Build Warnings
-        run: |
-          python ./scripts/parse_new_build_warnings.py --old-dir ${{ steps.build-log-setup.outputs.previous_build_logs_path }}/build --new-dir ${{ steps.build-log-setup.outputs.current_build_logs_path }}/build --output ${{ steps.build-log-setup.outputs.new_build_warnings_path }}
-          if [ -f "${{ steps.build-log-setup.outputs.new_build_warnings_path }}" ]; then
-            cat ${{ steps.build-log-setup.outputs.new_build_warnings_path }}
-          else
-            echo "New build logs didn't exist"
-          fi
-      
-      - name: Upload New Build Warnings
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-build-warnings
-          path: ${{ steps.build-log-setup.outputs.new_build_warnings_path }}
-          retention-days: 90
 
       - name: Compare artifacts
         run: |
