@@ -1,0 +1,34 @@
+name: "Download Build Artifacts"
+description: "Downloads artifacts needed for build log comparison"
+inputs:
+  build-artifact-name:
+    required: true
+  github-token:
+    required: true
+  output-dir:
+    required: true
+    description: 'Absolute path to the output directory'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Download report from this workflow
+      if: ${{ !cancelled() }}
+      id: same-workflow
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.build-artifact-name }}
+        path: ${{ inputs.output-dir }}
+      continue-on-error: true
+
+    # If an artifact from the same workflow is not found, the conclusion
+    # will be success but the outcome will be failure. 
+    # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
+    - name: Download report from another workflow
+      if: ${{ !cancelled() && steps.same-workflow.outcome == 'failure' }}
+      shell: bash
+      run: |
+        pip install pygithub requests
+        cd riscv-gnu-toolchain
+        python ./scripts/download_artifact.py -name ${{ inputs.build-artifact-name }} -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      continue-on-error: true
