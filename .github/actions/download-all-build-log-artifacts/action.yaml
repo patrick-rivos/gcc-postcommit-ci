@@ -10,112 +10,103 @@ inputs:
     required: false
   output-dir:
     required: true
-    description: 'Path to the artifact directory'
+    description: 'Absolute Path to the artifact directory'
 
 runs:
   using: "composite"
   steps:
-    # Download linux
-
-    - name: Download linux rv32 non-multilib
+    - name: prereqs
       shell: bash
-      continue-on-error: true
       run: |
-        pip install pygithub requests
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}linux-rv32gc-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+        mkdir -p ${{ inputs.output-dir }}
+
+    # Download linux
+    - name: Download linux rv32 non-multilib
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}linux-rv32gc-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download linux rv64gc non-multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}linux-rv64gc-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
-    
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}linux-rv64gc-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
+
     - name: Download linux rv32 bitmanip non-multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}linux-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}linux-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download linux rv64 bitmanip non-multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}linux-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}linux-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     # Newlib
 
     - name: Download newlib rv32 non-multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download newlib rv64gc non-multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}newlib-rv64gc-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}newlib-rv64gc-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download newlib rv32 bitmanip non-multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}newlib-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}newlib-rv32gc_zba_zbb_zbc_zbs-ilp32d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download newlib rv64 bitmanip non-multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}newlib-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}newlib-rv64gc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-non-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     # Multilib
     - name: Download linux multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}linux-rv64gcv-lp64d-${{ inputs.gcchash }}-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}linux-rv64gcv-lp64d-${{ inputs.gcchash }}-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download newlib multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}linux-newlib-rv64gcv-lp64d-${{ inputs.gcchash }}-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}newlib-rv64gcv-lp64d-${{ inputs.gcchash }}-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download newlib uc multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}newlib-rv64imc-lp64d-${{ inputs.gcchash }}-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}newlib-rv64imc-lp64d-${{ inputs.gcchash }}-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Download newlib uc bitmanip multilib
-      shell: bash
-      continue-on-error: true
-      run: |
-        cd riscv-gnu-toolchain
-        build_artifact_name=${{ inputs.prefix }}newlib-rv64imc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-multilib-build-log
-        python ./scripts/download_artifact.py -name $build_artifact_name -repo patrick-rivos/gcc-postcommit-ci -token ${{ inputs.github-token }} -outdir ${{ inputs.output-dir }}
+      uses: ./.github/actions/common/download-build-log-artifact
+      with:
+        build-artifact-name: ${{ inputs.prefix }}newlib-rv64imc_zba_zbb_zbc_zbs-lp64d-${{ inputs.gcchash }}-multilib-build-log
+        github-token: ${{ inputs.github-token }}
+        output-dir: ${{ inputs.output-dir }}
 
     - name: Print downloaded artifacts
       shell: bash
