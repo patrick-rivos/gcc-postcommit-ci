@@ -344,7 +344,7 @@ jobs:
       - name: Trim issue length # reduce the number of lines in final issue so github always creates issue
         run: |
           head -c 65000 issue.md > trimmed_issue.md
-          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then printf "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue." >> trimmed_issue.md; fi
+          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then printf "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue.\n" >> trimmed_issue.md; fi
           run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
           cat trimmed_issue.md
 
@@ -357,6 +357,24 @@ jobs:
           content-filepath: riscv-gnu-toolchain/trimmed_issue.md
           title: '${{ inputs.issue_hash_prefix }} ${{ inputs.gcchash }}'
           labels: ${{ steps.issue-labels.outputs.issue_labels }}
+
+      - name: Trim comment length # reduce the number of lines in final comment so github always create comment
+        run: |
+          printf "## Important unresolved errors\n" > trimmed_comment.md
+          printf 'A list of all unresolved "internal compiler error", "Segmentation fault", "test for excess errors" failures present at this hash\n\n' >> trimmed_comment.md
+          printf '---\n\n' >> trimmed_comment.md
+          head -c 65000 unresolved_important_failures.md >> trimmed_comment.md
+          if [ $(cat trimmed_comment.md | wc -l) -ne $(cat unresolved_important_failures.md | wc -l) ]; then printf "\n\`\`\`\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
+          cat trimmed_comment.md
+
+      - name: Create unresolved regressions comment
+        uses: peter-evans/create-or-update-comment@v4
+        id: unresolved-comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          issue-number: ${{ steps.create-issue.outputs.issue-number }}
+          body-path: riscv-gnu-toolchain/trimmed_comment.md
 
       - name: Get prefix label name
         if: ${{ inputs.prefix != '' }}
