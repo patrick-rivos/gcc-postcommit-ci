@@ -1,2 +1,0 @@
-#!/bin/bash
-../configure --prefix=$(pwd) --with-multilib-generator="rv64gcv_zvl128b-lp64d--:--param=riscv-autovec-lmul=m2;rv64gcv_zvl256b-lp64d--:--param=riscv-autovec-lmul=m2;rv64gcv_zvl512b-lp64d--:--param=riscv-autovec-lmul=m2;rv64gcv_zvl1024b-lp64d--:--param=riscv-autovec-lmul=m2"
