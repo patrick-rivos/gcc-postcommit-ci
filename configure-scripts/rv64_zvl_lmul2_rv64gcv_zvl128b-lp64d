@@ -1,0 +1,2 @@
+#!/bin/bash
+../configure --prefix=$(pwd) --with-multilib-generator="rv64gcv_zvl128b-lp64d--:--rvv-max-lmul=m2"
