@@ -362,7 +362,7 @@ jobs:
         run: |
           printf "## Important unresolved errors\n" > trimmed_comment.md
           printf 'A list of all unresolved "internal compiler error", "Segmentation fault", "test for excess errors" failures present at this hash\n\n' >> trimmed_comment.md
-          printf '---\n\n' >> trimmed_comment.md
+          printf -- '---\n\n' >> trimmed_comment.md
           head -c 65000 unresolved_important_failures.md >> trimmed_comment.md
           if [ $(cat trimmed_comment.md | wc -l) -ne $(cat unresolved_important_failures.md | wc -l) ]; then printf "\n\`\`\`\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
           cat trimmed_comment.md
