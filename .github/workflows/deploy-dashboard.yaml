@@ -77,11 +77,11 @@ jobs:
           add: 'dashboard'
 
       # Deploy
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dashboard/site'
 
