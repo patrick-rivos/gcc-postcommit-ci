@@ -84,4 +84,3 @@ runs:
           git config --add remote.origin.fetch "+refs/vendors/riscv/*:refs/remotes/upstream/vendors/riscv/*"
           git fetch
           git checkout upstream/vendors/riscv/heads/gcc-14-with-riscv-opts
-

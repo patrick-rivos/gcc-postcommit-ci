@@ -1,4 +1,3 @@
-
 import argparse
 import contextlib
 import shutil
@@ -7,12 +6,16 @@ from typing import Dict, List, Set
 from zipfile import ZipFile
 import json
 import requests
-from compare_testsuite_log import Description, classify_by_unique_failure, parse_testsuite_failures
+from compare_testsuite_log import (
+    Description,
+    classify_by_unique_failure,
+    parse_testsuite_failures,
+)
 from download_artifact import search_for_artifact, download_artifact, extract_artifact
 
 
 def parse_arguments():
-    """ parse command line arguments """
+    """parse command line arguments"""
     parser = argparse.ArgumentParser(description="Get issue information")
     parser.add_argument(
         "-token",
@@ -29,7 +32,9 @@ def parse_arguments():
 
 
 def get_issue_hashes(token: str, repo: str):
-    issue_url = f"https://api.github.com/repos/{repo}/issues?page=1&q=is%3Aissue&state=all"
+    issue_url = (
+        f"https://api.github.com/repos/{repo}/issues?page=1&q=is%3Aissue&state=all"
+    )
     params = {
         "Accept": "application/vnd.github+json",
         "Authorization": f"token {token}",
@@ -50,7 +55,15 @@ def get_issue_hashes(token: str, repo: str):
 def download_summaries(artifact_name: str, token: str, repo: str):
     artifact_id = None
     # Try all prefixes
-    for prefix in ["", "zve_", "rv32_zvl_", "rv64_zvl_lmul2_", "rv64_zvl_", "coord_", "binutils_"]:
+    for prefix in [
+        "",
+        "zve_",
+        "rv32_zvl_",
+        "rv64_zvl_lmul2_",
+        "rv64_zvl_",
+        "coord_",
+        "binutils_",
+    ]:
         artifact_id = search_for_artifact(prefix + artifact_name, repo, token, None)
         if artifact_id is not None:
             break
@@ -78,14 +91,20 @@ def download_logs(token: str, repo: str, existing_hashes: Set[str]):
         extract_artifact(artifact_zip, outdir=f"testsuite_runs/{gcc_hash}")
         with ZipFile(f"./testsuite_runs/{gcc_hash}/current_logs.zip", "r") as zf:
             zf.extractall(path=f"./testsuite_runs/{gcc_hash}")
-        if os.path.isfile(f"./testsuite_runs/{gcc_hash}/current_logs/failed_testsuite.txt"):
+        if os.path.isfile(
+            f"./testsuite_runs/{gcc_hash}/current_logs/failed_testsuite.txt"
+        ):
             # Failed build, drop this hash
-            print(f"Testsuite(s) failed for {gcc_hash}, dropping failing testsuite runs from testsuite_runs")
+            print(
+                f"Testsuite(s) failed for {gcc_hash}, dropping failing testsuite runs from testsuite_runs"
+            )
             failure_hashes.add(gcc_hash)
             os.remove(f"./testsuite_runs/{gcc_hash}/current_logs/failed_testsuite.txt")
         if os.path.isfile(f"./testsuite_runs/{gcc_hash}/current_logs/failed_build.txt"):
             # Failed build, drop this hash
-            print(f"Build(s) failed for {gcc_hash}, dropping failing builds from testsuite_runs")
+            print(
+                f"Build(s) failed for {gcc_hash}, dropping failing builds from testsuite_runs"
+            )
             failure_hashes.add(gcc_hash)
             os.remove(f"./testsuite_runs/{gcc_hash}/current_logs/failed_build.txt")
         os.remove(f"./testsuite_runs/{gcc_hash}/current_logs.zip")
@@ -97,9 +116,13 @@ def download_logs(token: str, repo: str, existing_hashes: Set[str]):
 
 
 def get_gcc_hash_timestamp(gcc_hash: str):
-    return os.popen(
-                f"cd ../riscv-gnu-toolchain/gcc && git show -s --format='%ci' {gcc_hash}"
-            ).read().strip()
+    return (
+        os.popen(
+            f"cd ../riscv-gnu-toolchain/gcc && git show -s --format='%ci' {gcc_hash}"
+        )
+        .read()
+        .strip()
+    )
 
 
 def aggregate_logs(logs_dir: str, gcc_hash: str):
@@ -109,7 +132,7 @@ def aggregate_logs(logs_dir: str, gcc_hash: str):
     all_newlib_failures: Dict[Description, List[str]] = {}
     for file in files:
         current_failures = parse_testsuite_failures(logs_dir + file)
-        if 'linux' in file:
+        if "linux" in file:
             all_linux_failures.update(current_failures)
         else:
             all_newlib_failures.update(current_failures)
@@ -120,7 +143,9 @@ def aggregate_logs(logs_dir: str, gcc_hash: str):
         hash_timestamp = get_gcc_hash_timestamp(gcc_hash)
 
         with open("linux.csv", "a") as csv:
-            csv.write(f"{gcc_hash},{hash_timestamp},linux-{target.libname}-{target.tool},linux,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n")
+            csv.write(
+                f"{gcc_hash},{hash_timestamp},linux-{target.libname}-{target.tool},linux,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n"
+            )
 
     for target, fails in all_newlib_failures.items():
         class_fails = classify_by_unique_failure(fails)
@@ -128,7 +153,9 @@ def aggregate_logs(logs_dir: str, gcc_hash: str):
         hash_timestamp = get_gcc_hash_timestamp(gcc_hash)
 
         with open("newlib.csv", "a") as csv:
-            csv.write(f"{gcc_hash},{hash_timestamp},newlib-{target.libname}-{target.tool},newlib,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n")
+            csv.write(
+                f"{gcc_hash},{hash_timestamp},newlib-{target.libname}-{target.tool},newlib,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n"
+            )
 
 
 def main():
@@ -144,25 +171,31 @@ def main():
         existing_hashes: Set[str] = set()
         download_logs(args.token, "patrick-rivos/riscv-gnu-toolchain", existing_hashes)
         download_logs(args.token, "patrick-rivos/gcc-postcommit-ci", existing_hashes)
-        hashes = sorted(os.listdir('testsuite_runs'))
+        hashes = sorted(os.listdir("testsuite_runs"))
         with open("linux.csv", "a") as csv:
-            csv.write("gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n")
+            csv.write(
+                "gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n"
+            )
         with open("newlib.csv", "a") as csv:
-            csv.write("gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n")
+            csv.write(
+                "gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n"
+            )
     else:
-        existing_hashes = set(os.listdir('testsuite_runs'))
+        existing_hashes = set(os.listdir("testsuite_runs"))
         download_logs(args.token, "patrick-rivos/gcc-postcommit-ci", existing_hashes)
-        new_hashes = sorted(set(os.listdir('testsuite_runs')) - existing_hashes)
+        new_hashes = sorted(set(os.listdir("testsuite_runs")) - existing_hashes)
         hashes = new_hashes
 
     print(hashes)
 
     # Get GCC ready for timestamp-getting
-    os.popen('cd ../riscv-gnu-toolchain && git submodule update --init gcc && cd gcc && git fetch')
+    os.popen(
+        "cd ../riscv-gnu-toolchain && git submodule update --init gcc && cd gcc && git fetch"
+    )
 
     for gcc_hash in hashes:
         aggregate_logs(f"./testsuite_runs/{gcc_hash}/current_logs/", gcc_hash)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -38,7 +38,7 @@ runs:
           sudo rm -rf /opt/microsoft
           sudo rm -rf /opt/google
           sudo rm -rf /opt/az  # Azure
-          
+
           sudo rm -rf /opt/hostedtoolcache/CodeQL
           sudo rm -rf /opt/hostedtoolcache/Ruby
           sudo rm -rf /opt/hostedtoolcache/go
@@ -52,6 +52,6 @@ runs:
 
           # Postcommit remove dashboards
           rm -rf dashboard
-          
+
           echo "-- After --"
           df -h

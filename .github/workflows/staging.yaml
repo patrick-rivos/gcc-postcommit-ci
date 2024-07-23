@@ -76,5 +76,3 @@ jobs:
     with:
       gcchash: ${{ needs.get-hash.outputs.baseline_hash }}
       issue_num: ${{ needs.get-hash.outputs.issue_num }}
-
-
