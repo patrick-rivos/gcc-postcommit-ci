@@ -22,7 +22,7 @@ runs:
       continue-on-error: true
 
     # If an artifact from the same workflow is not found, the conclusion
-    # will be success but the outcome will be failure. 
+    # will be success but the outcome will be failure.
     # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
     - name: Download report from another workflow
       if: ${{ !cancelled() && steps.same-workflow.outcome == 'failure' }}

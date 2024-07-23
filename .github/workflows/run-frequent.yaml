@@ -89,17 +89,17 @@ jobs:
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
       prefix: ''
-     
+
   cmreg-self-hosted-uc: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
     strategy:
       fail-fast: false
       matrix:
         mode: [newlib] # linux does not support no a extension
-        target: 
+        target:
           [
             # Left as rv64 with lp64d instead of lp64 for naming
-            rv64imc-lp64d, # runs base targets 
+            rv64imc-lp64d, # runs base targets
             rv64imc_zba_zbb_zbc_zbs-lp64d, # runs base + bitmanip
           ]
         multilib: [multilib]

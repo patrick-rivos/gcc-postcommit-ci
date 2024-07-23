@@ -1,3 +1,2 @@
 #!/bin/bash
 ../configure --prefix=$(pwd) --with-multilib-generator="rv32imac-ilp32--;rv64imac-lp64--;rv32imc-ilp32--;rv64imc-lp64--;rv32imc_zicsr_zifencei-ilp32--;rv64imc_zicsr_zifencei-lp64--"
-
