@@ -236,7 +236,7 @@ jobs:
           mkdir -p current_build_log_zips
           echo "current_build_log_zips_path=$(readlink -f current_build_log_zips)" >> $GITHUB_OUTPUT
           mkdir new_build_warnings
-          echo "new_build_warnings_path=$(readlink -f ./new_build_warnings/new_build_warnings.log)" >> $GITHUB_OUTPUT
+          echo "new_build_warnings_path=$(readlink -f ./new_build_warnings/new_build_warnings.md)" >> $GITHUB_OUTPUT
 
       - name: Download artifacts
         run: |
@@ -356,6 +356,12 @@ jobs:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-previous-logs
           path: ./riscv-gnu-toolchain
 
+      - name: Download build warning artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.prefix }}${{ inputs.gcchash }}-build-warnings
+          path: ./riscv-gnu-toolchain
+
       - name: Print API usage info
         run: |
           curl \
@@ -432,6 +438,19 @@ jobs:
         with:
           issue-number: ${{ steps.create-issue.outputs.issue-number }}
           body-path: riscv-gnu-toolchain/trimmed_comment.md
+
+      - name: Trim build warnings # reduce the number of lines in final comment so github always create comment
+        run: |
+          head -c 65000 new_build_warnings.md >> trimmed_build_warnings.md
+          if [ $(cat trimmed_build_warnings.md | wc -l) -ne $(cat new_build_warnings.md | wc -l) ]; then printf "\n\`\`\`\nBuild warnings comment has been trimmed. Check artifact logs for full list.\n" >> trimmed_build_warnings.md; fi
+          cat trimmed_build_warnings.md
+
+      - name: Create build warnings comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ steps.create-issue.outputs.issue-number }}
+          body-path: riscv-gnu-toolchain/trimmed_build_warnings.md
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get prefix label name
         if: ${{ inputs.prefix != '' }}
