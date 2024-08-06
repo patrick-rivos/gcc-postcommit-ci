@@ -415,7 +415,7 @@ jobs:
           title: '${{ inputs.issue_hash_prefix }} ${{ inputs.gcchash }}'
           labels: ${{ steps.issue-labels.outputs.issue_labels }}
 
-      - name: Build additional info link
+      - name: Build testsuite summary info link
         id: issue-info
         run: |
           sleep 1
