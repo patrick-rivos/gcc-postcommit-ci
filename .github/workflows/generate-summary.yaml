@@ -358,9 +358,11 @@ jobs:
 
       - name: Download build warning artifact
         uses: actions/download-artifact@v4
+        id: download-build-warning-artifact
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-build-warnings
           path: ./riscv-gnu-toolchain
+          continue-on-error: true
 
       - name: Print API usage info
         run: |
@@ -440,6 +442,7 @@ jobs:
           body-path: riscv-gnu-toolchain/trimmed_comment.md
 
       - name: Trim build warnings # reduce the number of lines in final comment so github always create comment
+        if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
         run: |
           head -c 65000 new_build_warnings.md >> trimmed_build_warnings.md
           if [ $(cat trimmed_build_warnings.md | wc -l) -ne $(cat new_build_warnings.md | wc -l) ]; then printf "\n\`\`\`\nBuild warnings comment has been trimmed. Check artifact logs for full list.\n" >> trimmed_build_warnings.md; fi
@@ -447,6 +450,7 @@ jobs:
 
       - name: Create build warnings comment
         uses: peter-evans/create-or-update-comment@v4
+        if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
         with:
           issue-number: ${{ steps.create-issue.outputs.issue-number }}
           body-path: riscv-gnu-toolchain/trimmed_build_warnings.md
