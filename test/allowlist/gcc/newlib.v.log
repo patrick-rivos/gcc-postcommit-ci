@@ -1,0 +1,11 @@
+#
+# Flakey runtime timeout
+# "WARNING: program timed out."
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=113238
+#
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-vpv.c 
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-vtv.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s176.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s351.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s431.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1281.c

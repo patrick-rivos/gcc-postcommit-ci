@@ -1,0 +1,32 @@
+#
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=111298
+#
+FAIL: gcc.dg/tree-prof/time-profiler-2.c
+
+#
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=111428
+#
+FAIL: gfortran.dg/minval_char_1.f90
+FAIL: gfortran.dg/minval_char_2.f90
+FAIL: gfortran.dg/maxval_char_1.f90
+FAIL: gfortran.dg/maxval_char_2.f90
+
+#
+# TODO: Root cause & file bugzilla
+#
+FAIL: gcc.target/riscv/zbb-strlen.c
+
+#
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=113238
+#
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-vpv.c 
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-vtv.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s176.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s351.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s431.c
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1281.c
+
+#
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=105361
+#
+FAIL: gfortran.dg/pr105361.f90
