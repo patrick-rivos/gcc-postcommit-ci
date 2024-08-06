@@ -423,7 +423,7 @@ jobs:
           export ISSUE_BODY_COMMENT=$(cat issue_body_comment_id.txt)
           export LINK=https://github.com/patrick-rivos/gcc-postcommit-ci/issues/${{ steps.create-issue.outputs.issue-number }}#issue-$(cat issue_body_comment_id.txt)
           echo $LINK
-          echo "additional=$LINK" >> $GITHUB_OUTPUT
+          echo "base_comment_link=$LINK" >> $GITHUB_OUTPUT
           echo "comment_id=$ISSUE_BODY_COMMENT" >> $GITHUB_OUTPUT
 
       - name: Trim comment length # reduce the number of lines in final comment so github always create comment
@@ -433,7 +433,7 @@ jobs:
           printf -- '---\n\n' >> trimmed_comment.md
           head -c 65000 unresolved_important_failures.md >> trimmed_comment.md
           if [ $(cat trimmed_comment.md | wc -l) -ne $(cat unresolved_important_failures.md | wc -l) ]; then printf "\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
-          printf "\n[Additional information](${{ steps.issue-info.outputs.additional }})\n" >> trimmed_comment.md
+          printf "\n[Testsuite summary](${{ steps.issue-info.outputs.base_comment_link }})\n" >> trimmed_comment.md
           cat trimmed_comment.md
 
       - name: Create unresolved regressions comment
@@ -447,7 +447,7 @@ jobs:
 
       - name: Create updated issue body
         run: |
-          printf "\n[Unresolved comments](https://github.com/patrick-rivos/gcc-postcommit-ci/issues/${{ steps.create-issue.outputs.issue-number }}#issue-${{ steps.unresolved-comment.outputs.comment-id }})" >> trimmed_issue.md
+          printf "\n[Important unresolved regressions](https://github.com/patrick-rivos/gcc-postcommit-ci/issues/${{ steps.create-issue.outputs.issue-number }}#issue-${{ steps.unresolved-comment.outputs.comment-id }})" >> trimmed_issue.md
           cat trimmed_issue.md
 
       - name: Update original issue body
