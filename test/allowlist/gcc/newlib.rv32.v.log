@@ -1,0 +1,7 @@
+#
+# relocation truncated to fit: R_RISCV_GPREL_I against `.LANCHOR1'
+# collect2: error: ld returned 1 exit status
+# https://stackoverflow.com/questions/10486116/what-does-this-gcc-error-relocation-truncated-to-fit-mean
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=115166
+#
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-2.c

@@ -1,0 +1,4 @@
+#
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=113038
+#
+FAIL: g++.dg/modules/hello-1 -std=c++2b execute

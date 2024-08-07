@@ -67,6 +67,13 @@ runs:
             riscv-gnu-toolchain/${{ inputs.prefix }}gcc-${{ inputs.mode }}-${{ inputs.target }}-${{ inputs.gcchash }}-${{ inputs.multilib }}-sum-files.zip
           retention-days: 90
 
+      - name: Replace allowlist
+        shell: bash
+        working-directory: riscv-gnu-toolchain
+        run: |
+          rm -rf test/
+          cp -r ../test/ .
+
       - name: Save results
         shell: bash
         working-directory: riscv-gnu-toolchain
