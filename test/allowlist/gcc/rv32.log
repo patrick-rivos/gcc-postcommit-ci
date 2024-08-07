@@ -1,0 +1,5 @@
+#
+# Timeout. Appears to be 32 bit?
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=116273
+#
+FAIL: gcc.dg/long_branch.c (test for excess errors)
