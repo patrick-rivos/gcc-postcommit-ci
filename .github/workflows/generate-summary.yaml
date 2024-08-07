@@ -415,13 +415,25 @@ jobs:
           title: '${{ inputs.issue_hash_prefix }} ${{ inputs.gcchash }}'
           labels: ${{ steps.issue-labels.outputs.issue_labels }}
 
+      - name: Build testsuite summary info link
+        id: issue-info
+        run: |
+          sleep 1
+          curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Token ${{ secrets.GITHUB_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/patrick-rivos/gcc-postcommit-ci/issues/${{ steps.create-issue.outputs.issue-number }} | jq '.id' > issue_body_comment_id.txt
+          export ISSUE_BODY_COMMENT=$(cat issue_body_comment_id.txt)
+          export LINK=https://github.com/patrick-rivos/gcc-postcommit-ci/issues/${{ steps.create-issue.outputs.issue-number }}#issue-$(cat issue_body_comment_id.txt)
+          echo $LINK
+          echo "base_comment_link=$LINK" >> $GITHUB_OUTPUT
+          echo "comment_id=$ISSUE_BODY_COMMENT" >> $GITHUB_OUTPUT
+
       - name: Trim comment length # reduce the number of lines in final comment so github always create comment
         run: |
           printf "## Important unresolved errors\n" > trimmed_comment.md
           printf 'A list of all unresolved "internal compiler error", "Segmentation fault", "test for excess errors" failures present at this hash\n\n' >> trimmed_comment.md
           printf -- '---\n\n' >> trimmed_comment.md
           head -c 65000 unresolved_important_failures.md >> trimmed_comment.md
-          if [ $(cat trimmed_comment.md | wc -l) -ne $(cat unresolved_important_failures.md | wc -l) ]; then printf "\n\`\`\`\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
+          if [ $(cat trimmed_comment.md | wc -l) -ne $(cat unresolved_important_failures.md | wc -l) ]; then printf "\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
+          printf "\n[Testsuite summary](${{ steps.issue-info.outputs.base_comment_link }})\n" >> trimmed_comment.md
           cat trimmed_comment.md
 
       - name: Create unresolved regressions comment
@@ -432,6 +444,21 @@ jobs:
         with:
           issue-number: ${{ steps.create-issue.outputs.issue-number }}
           body-path: riscv-gnu-toolchain/trimmed_comment.md
+
+      - name: Create updated issue body
+        run: |
+          printf "\n[Important unresolved regressions](https://github.com/patrick-rivos/gcc-postcommit-ci/issues/${{ steps.create-issue.outputs.issue-number }}#issue-${{ steps.unresolved-comment.outputs.comment-id }})" >> trimmed_issue.md
+          cat trimmed_issue.md
+
+      - name: Update original issue body
+        uses: peter-evans/create-or-update-comment@v4
+        id: update-issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          edit-mode: replace
+          comment-id: ${{ steps.issue-info.outputs.comment_id }}
+          body-path: riscv-gnu-toolchain/trimmed_issue.md
 
       - name: Get prefix label name
         if: ${{ inputs.prefix != '' }}
