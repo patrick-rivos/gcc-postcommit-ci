@@ -458,7 +458,7 @@ jobs:
         with:
           edit-mode: replace
           comment-id: ${{ steps.issue-info.outputs.comment_id }}
-          body-path: riscv-gnu-toolchain/trimmed_comment.md
+          body-path: riscv-gnu-toolchain/trimmed_issue.md
 
       - name: Get prefix label name
         if: ${{ inputs.prefix != '' }}
