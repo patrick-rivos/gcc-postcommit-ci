@@ -1,4 +1,4 @@
 #
 # Timeout: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=116261
 #
-FAIL: gfortran.dg/sizeof_6.f90 -O1 execution test
+FAIL: gfortran.dg/sizeof_6.f90   -O1
