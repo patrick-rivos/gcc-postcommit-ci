@@ -409,9 +409,29 @@ jobs:
       - name: Trim issue length # reduce the number of lines in final issue so github always creates issue
         run: |
           head -c 65000 issue.md > trimmed_issue.md
-          if [ $(stat -c%s issue.md) -gt 65000 ]; then printf "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue.\n" >> trimmed_issue.md; fi
+          if [ $(stat -c%s issue.md) -gt 65000 ]; then
+            printf "\n\`\`\`\nIssue text has been trimmed. Please check the following Gist Link for the untrimmed issue.\n" >> trimmed_issue.md
+            FILE_SIZE=$(stat -c%s "issue.md")
+            ONE_MB_IN_BYTES=1048000
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the Gist limit. Please check logs for the untrimmed issue." > trimmed_issue_gist.md
+            fi
+            head -c $ONE_MB_IN_BYTES "issue.md" >> trimmed_issue_gist.md
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the Gist limit. Please check logs for the untrimmed issue." >> trimmed_issue_gist.md
+            fi
+          fi
           run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
           cat trimmed_issue.md
+
+      - name: Create Issue Gist
+        run: |
+          if [ -e "trimmed_issue_gist.md" ]; then
+            python3 -m pip install pygithub requests pyopenssl --upgrade
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_issue_gist.md --output issue_gist_url.txt --title ${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_issue.md
+            printf "\nGist URL: $(cat issue_gist_url.txt)" >> trimmed_issue.md
+          fi
+        continue-on-error: true
 
       - name: Create or update summary issue
         uses: peter-evans/create-issue-from-file@v5
@@ -429,8 +449,28 @@ jobs:
           printf 'A list of all unresolved "internal compiler error", "Segmentation fault", "test for excess errors" failures present at this hash\n\n' >> trimmed_comment.md
           printf -- '---\n\n' >> trimmed_comment.md
           head -c 65000 unresolved_important_failures.md >> trimmed_comment.md
-          if [ $(stat -c%s unresolved_important_failures.md) -gt 65000 ]; then printf "\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
+          if [ $(stat -c%s unresolved_important_failures.md) -gt 65000 ]; then
+            printf "\nComment text has been trimmed. Check the following Gist URL for full list.\n" >> trimmed_comment.md
+            FILE_SIZE=$(stat -c%s "unresolved_important_failures.md")
+            ONE_MB_IN_BYTES=1048000
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the gist limit. Please check logs for the untrimmed issue." > trimmed_unresolved_errors_gist.md
+            fi
+            head -c $ONE_MB_IN_BYTES "unresolved_important_failures.md" >> trimmed_unresolved_errors_gist.md
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the gist limit. Please check logs for the untrimmed issue." >> trimmed_unresolved_errors_gist.md
+            fi
+          fi
           cat trimmed_comment.md
+
+      - name: Create Unresolved Errors Comment Gist
+        run: |
+          if [ -e "trimmed_unresolved_errors_gist.md" ]; then
+            python3 -m pip install pygithub requests pyopenssl --upgrade
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_unresolved_errors_gist.md --output unresolved_import_failures_gist_url.txt --title ${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_unresolved_errors.md
+            printf "\nGist URL: $(cat unresolved_import_failures_gist_url.txt)" >> trimmed_comment.md
+          fi
+        continue-on-error: true
 
       - name: Create unresolved regressions comment
         uses: peter-evans/create-or-update-comment@v4
@@ -445,8 +485,28 @@ jobs:
         if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
         run: |
           head -c 65000 new_build_warnings.md >> trimmed_build_warnings.md
-          if [ $(stat -c%s new_build_warnings.md) -gt 65000 ]; then printf "\nBuild warnings comment has been trimmed. Check artifact logs for full list.\n" >> trimmed_build_warnings.md; fi
+          if [ $(stat -c%s new_build_warnings.md) -gt 65000 ]; then
+            printf "\nBuild warnings comment has been trimmed. Check the following Gist URL for full list.\n" >> trimmed_build_warnings.md
+            FILE_SIZE=$(stat -c%s "new_build_warnings.md")
+            ONE_MB_IN_BYTES=1048000
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the gist limit. Please check logs for the untrimmed issue." > trimmed_new_build_warnings_gist.md
+            fi
+            head -c $ONE_MB_IN_BYTES "new_build_warnings.md" >> trimmed_new_build_warnings_gist.md
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the gist limit. Please check logs for the untrimmed issue." >> trimmed_new_build_warnings_gist.md
+            fi
+          fi
           cat trimmed_build_warnings.md
+
+      - name: Create New Build Warnings Gist
+        run: |
+          if [ -e "trimmed_new_build_warnings_gist.md" ]; then
+            python3 -m pip install pygithub requests pyopenssl --upgrade
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_new_build_warnings_gist.md --output build_warning_gist_url.txt --title ${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_build_warnings.md
+            printf "Gist URL: $(cat build_warning_gist_url.txt)" >> trimmed_build_warnings.md
+          fi
+        continue-on-error: true
 
       - name: Create build warnings comment
         uses: peter-evans/create-or-update-comment@v4
