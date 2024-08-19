@@ -409,7 +409,7 @@ jobs:
       - name: Trim issue length # reduce the number of lines in final issue so github always creates issue
         run: |
           head -c 65000 issue.md > trimmed_issue.md
-          if [ $(cat trimmed_issue.md | wc -l) -ne $(cat issue.md | wc -l) ]; then printf "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue.\n" >> trimmed_issue.md; fi
+          if [ $(stat -c%s issue.md) -gt 65000 ]; then printf "\n\`\`\`\nIssue text has been trimmed. Please check logs for the untrimmed issue.\n" >> trimmed_issue.md; fi
           run_id=${{ github.run_id }} && echo "Associated run is: https://github.com/patrick-rivos/gcc-postcommit-ci/actions/runs/$run_id" >> trimmed_issue.md
           cat trimmed_issue.md
 
@@ -429,7 +429,7 @@ jobs:
           printf 'A list of all unresolved "internal compiler error", "Segmentation fault", "test for excess errors" failures present at this hash\n\n' >> trimmed_comment.md
           printf -- '---\n\n' >> trimmed_comment.md
           head -c 65000 unresolved_important_failures.md >> trimmed_comment.md
-          if [ $(cat trimmed_comment.md | wc -l) -ne $(cat unresolved_important_failures.md | wc -l) ]; then printf "\n\`\`\`\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
+          if [ $(stat -c%s unresolved_important_failures.md) -gt 65000 ]; then printf "\nComment text has been trimmed. Check artifact logs for full list.\n" >> trimmed_comment.md; fi
           cat trimmed_comment.md
 
       - name: Create unresolved regressions comment
@@ -445,7 +445,7 @@ jobs:
         if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
         run: |
           head -c 65000 new_build_warnings.md >> trimmed_build_warnings.md
-          if [ $(cat trimmed_build_warnings.md | wc -l) -ne $(cat new_build_warnings.md | wc -l) ]; then printf "\n\`\`\`\nBuild warnings comment has been trimmed. Check artifact logs for full list.\n" >> trimmed_build_warnings.md; fi
+          if [ $(stat -c%s new_build_warnings.md) -gt 65000 ]; then printf "\nBuild warnings comment has been trimmed. Check artifact logs for full list.\n" >> trimmed_build_warnings.md; fi
           cat trimmed_build_warnings.md
 
       - name: Create build warnings comment
