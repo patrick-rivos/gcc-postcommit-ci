@@ -428,7 +428,7 @@ jobs:
         run: |
           if [ -e "trimmed_issue_gist.md" ]; then
             python3 -m pip install pygithub requests pyopenssl --upgrade
-            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_issue_gist.md --output issue_gist_url.txt --title ${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_issue.md
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_issue_gist.md --output issue_gist_url.txt --title "${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_issue.md"
             printf "\nGist URL: $(cat issue_gist_url.txt)" >> trimmed_issue.md
           fi
         continue-on-error: true
@@ -467,7 +467,7 @@ jobs:
         run: |
           if [ -e "trimmed_unresolved_errors_gist.md" ]; then
             python3 -m pip install pygithub requests pyopenssl --upgrade
-            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_unresolved_errors_gist.md --output unresolved_import_failures_gist_url.txt --title ${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_unresolved_errors.md
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_unresolved_errors_gist.md --output unresolved_import_failures_gist_url.txt --title "${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_unresolved_errors.md"
             printf "\nGist URL: $(cat unresolved_import_failures_gist_url.txt)" >> trimmed_comment.md
           fi
         continue-on-error: true
@@ -503,7 +503,7 @@ jobs:
         run: |
           if [ -e "trimmed_new_build_warnings_gist.md" ]; then
             python3 -m pip install pygithub requests pyopenssl --upgrade
-            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_new_build_warnings_gist.md --output build_warning_gist_url.txt --title ${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_build_warnings.md
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_new_build_warnings_gist.md --output build_warning_gist_url.txt --title "${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_build_warnings.md"
             printf "Gist URL: $(cat build_warning_gist_url.txt)" >> trimmed_build_warnings.md
           fi
         continue-on-error: true
