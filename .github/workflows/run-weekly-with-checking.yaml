@@ -1,0 +1,54 @@
+name: Run-Weekly-with-checking
+
+# rv{64/32}gcv_zve variants
+
+on:
+  schedule:
+    # Run at 4:00pm on Saturdays
+    - cron: 0 16 * * 6
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  init-submodules:
+    uses: ./.github/workflows/init-submodules.yaml
+    with:
+      # Add new prefixes to /dashboard/getdata.py in download_summaries()
+      prefix: 'checking_'
+      gcchash: ''
+      gcc_branch: master
+
+  # Will take a long time to complete (4 targets)
+  checking-variants-self-hosted:
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [linux]
+        target: [
+          rv64gcv_zicond-lp64d,
+        ]
+        multilib: [multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: true
+      prefix: 'checking_'
+
+  summarize:
+    if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
+    needs: [init-submodules, checking-variants-self-hosted]
+    permissions:
+      issues: write
+    uses: ./.github/workflows/generate-summary.yaml
+    with:
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      issue_num: ${{ github.event.inputs.issue_num }}
+      issue_hash_prefix: Testsuite with checking Status
+      prefix: 'checking_'
+      gcc_branch: master

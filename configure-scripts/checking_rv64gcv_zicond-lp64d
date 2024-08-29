@@ -1,0 +1,2 @@
+#!/bin/bash
+../configure --prefix=$(pwd) --with-multilib-generator="rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d--" --enable-gcc-checking=all
