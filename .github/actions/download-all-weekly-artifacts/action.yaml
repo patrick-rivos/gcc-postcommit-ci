@@ -123,3 +123,13 @@ runs:
         report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib-report.log
         binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
+
+    # Download with checking builds
+
+    - name: Download linux rv64 with checking
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'checking_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zicond-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gcv_zicond-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}

@@ -45,8 +45,9 @@ on:
         default: ""
         options:
           - ""
-          - "coord_"
           - "binutils_"
+          - "checking_"
+          - "coord_"
           - "rv32_zvl_"
           - "rv64_zvl_"
           - "zve_"

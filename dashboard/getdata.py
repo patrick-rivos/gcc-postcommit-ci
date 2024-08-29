@@ -63,6 +63,7 @@ def download_summaries(artifact_name: str, token: str, repo: str):
         "rv64_zvl_",
         "coord_",
         "binutils_",
+        "checking_",
     ]:
         artifact_id = search_for_artifact(prefix + artifact_name, repo, token, None)
         if artifact_id is not None:
