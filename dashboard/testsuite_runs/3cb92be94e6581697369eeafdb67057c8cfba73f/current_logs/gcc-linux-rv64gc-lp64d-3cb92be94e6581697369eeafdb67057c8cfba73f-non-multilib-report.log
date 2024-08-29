@@ -1,0 +1,253 @@
+		=== gfortran: Unexpected fails for rv64gc lp64d medlow  ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+		=== gcc: Unexpected fails for rv64gc lp64d medlow  ===
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/pr100927.c scan-rtl-dump-times final "(?n)^[ \\t]*\\(fix:SI" 3
+ERROR: gcc.dg/ipa/ipa-icf-38.c: error executing dg-final: variable is not assigned by any conversion specifiers
+FAIL: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-8.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-9.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-9.c scan-tree-dump-times vect "Maximum lmul = 8" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c -flto -ffat-lto-objects  scan-tree-dump vect "different gather scale"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather base"
+FAIL: gcc.dg/vect/vect-gather-2.c scan-tree-dump vect "different gather scale"
+FAIL: gcc.target/riscv/reg_subreg_costs.c   -O1   scan-assembler-not \\szext.w\\s
+FAIL: gcc.target/riscv/rvv/autovec/bug-3.c -O3 -ftree-vectorize  scan-assembler-times slli\\s+[a-x0-9]+,\\s*[a-x0-9]+,\\s*33 1
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/pr112399.c -O3 -ftree-vectorize  check-function-bodies foo
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg3e64\\.v 8
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg5e64\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg7e64\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/vls/dup-1.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  check-function-bodies foo10
+FAIL: gcc.target/riscv/rvv/autovec/vls/dup-2.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  check-function-bodies foo10
+FAIL: gcc.target/riscv/rvv/autovec/vls/dup-3.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  check-function-bodies foo10
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/base/pr112431-42.c scan-assembler-not csrr
+FAIL: gcc.target/riscv/rvv/base/pr114352-3.c check-function-bodies test_1
+FAIL: gcc.target/riscv/rvv/base/pr114352-3.c check-function-bodies test_4
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-7.c   -O2   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-7.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-7.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-8.c   -O2   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-8.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-8.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-66.c   -O2   scan-assembler-times add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+ 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-66.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+ 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-66.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+ 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-86.c   -O2   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-86.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-86.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-88.c   -O2   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-88.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-88.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-90.c   -O2   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-90.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-90.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2   scan-assembler-times vsetivli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-92.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-92.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-92.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-37.c   -O2   scan-assembler-times vsetvli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-37.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-37.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-15.c   -O2   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-15.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-15.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 3
+		=== g++: Unexpected fails for rv64gc lp64d medlow  ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++26 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv64gc/  lp64d/ medlow |  230 /    42 |    3 /     1 |   12 /     2 |
