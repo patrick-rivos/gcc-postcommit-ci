@@ -1,0 +1,26 @@
+name: "Save label"
+description: "Save label to the given file"
+inputs:
+  label:
+    description: 'label to be added'
+    required: true
+  output:
+    description: 'File that includes all the aggregated labels'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Add distinction between the labels
+      shell: bash
+      run: |
+        if [[ -s "${{ inputs.output}}" ]]; then
+            echo -n "," >> "${{ inputs.output }}"
+            echo ", has been added"
+        fi
+
+    - name: Save the label
+      shell: bash
+      run: |
+        echo -n "${{ inputs.label }}" >> "${{ inputs.output }}"
+        cat "${{ inputs.output }}"
