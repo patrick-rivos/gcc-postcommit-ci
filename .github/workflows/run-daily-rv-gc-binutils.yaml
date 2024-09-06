@@ -51,6 +51,7 @@ jobs:
     permissions:
       issues: write
     uses: ./.github/workflows/generate-summary.yaml
+    secrets: inherit
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }} # Lie and use binutils hash
       issue_num: ${{ github.event.inputs.issue_num }}
