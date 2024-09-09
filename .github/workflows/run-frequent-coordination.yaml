@@ -32,7 +32,7 @@ on:
         required: true
       multi_target:
         description: 'Targets to run (libc:arch-abi;...)'
-        required: true
+        required: false
       issue_num:
         description: 'Bisection Issue Number (Optional)'
         required: false
