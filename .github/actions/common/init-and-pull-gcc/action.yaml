@@ -6,7 +6,7 @@ inputs:
     required: false
     default: 'false'
   branch:
-    description: 'Coordination or master branch to initialize'
+    description: 'Coordination, release, or master branch to initialize'
     required: false
     default: 'master'
 
@@ -34,7 +34,7 @@ runs:
 
       - name: Detect unrecognized branches
         shell: bash
-        if: ${{ inputs.branch != 'master' && inputs.branch != 'coordination' }}
+        if: ${{ inputs.branch != 'master' && inputs.branch != 'coordination' && inputs.branch != 'release-14' }}
         run: |
           echo "inputs.branch found \"${{ inputs.branch }}\""
           exit 1
@@ -84,3 +84,25 @@ runs:
           git config --add remote.origin.fetch "+refs/vendors/riscv/*:refs/remotes/upstream/vendors/riscv/*"
           git fetch
           git checkout upstream/vendors/riscv/heads/gcc-14-with-riscv-opts
+
+      - name: Checkout release-14 branch
+        shell: bash
+        if: ${{ inputs.branch == 'release-14' }}
+        working-directory: ./riscv-gnu-toolchain
+        id: pull-release-14
+        run: |
+          cd gcc
+          git fetch
+          git checkout releases/gcc-14
+        continue-on-error: true
+
+      - name: Sleep and retry
+        shell: bash
+        working-directory: ./riscv-gnu-toolchain
+        if: ${{ steps.pull-release-14.outcome == 'failure' && inputs.branch == 'release-14' }}
+        run: |
+          echo "Failed to checkout and pull gcc. Retrying in 1 min"
+          sleep 60
+          cd gcc
+          git fetch
+          git checkout releases/gcc-14

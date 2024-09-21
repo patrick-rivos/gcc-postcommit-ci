@@ -48,6 +48,7 @@ on:
           - "binutils_"
           - "checking_"
           - "coord_"
+          - "release_14_"
           - "rv32_zvl_"
           - "rv64_zvl_"
           - "zve_"
@@ -58,6 +59,7 @@ on:
         options:
           - 'master'
           - 'coordination'
+          - 'release-14'
       binutils_branch:
         description: 'Binutils branch'
         default: 'master'
@@ -197,7 +199,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.prefix == '' || inputs.prefix == 'coord_' }}
+        if: ${{ inputs.prefix == '' || inputs.prefix == 'coord_' || inputs.prefix == 'release_14_' }}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -205,7 +207,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.prefix != '' && inputs.prefix != 'coord_'}}
+        if: ${{ inputs.prefix != '' && inputs.prefix != 'coord_' && inputs.prefix != 'release_14_'}}
         with:
           gcchash: ${{ inputs.gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -749,7 +751,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-comparison-artifacts
-        if: ${{ inputs.prefix == '' || inputs.prefix == 'coord_' }}
+        if: ${{ inputs.prefix == '' || inputs.prefix == 'coord_' || inputs.prefix == 'release_14_' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -757,7 +759,7 @@ jobs:
 
       - name: Download All targets
         uses: ./.github/actions/download-all-weekly-artifacts
-        if: ${{ inputs.prefix != '' && inputs.prefix != 'coord_' }}
+        if: ${{ inputs.prefix != '' && inputs.prefix != 'coord_' && inputs.prefix != 'release_14_' }}
         with:
           gcchash: ${{ steps.bisection-hash.outputs.orig_gcchash }}
           token: ${{ secrets.GITHUB_TOKEN }}

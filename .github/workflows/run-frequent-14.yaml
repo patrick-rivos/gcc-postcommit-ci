@@ -1,10 +1,10 @@
-name: Run-Frequent-Coordination
+name: Run-Frequent-14
 
-# Checks for new commits and run regression tests on the coordination branch
+# Checks for new commits and run regression tests on the GCC 14 release branch
 
 on:
   schedule:
-    # Run once a day
+    # Run once a day.
     - cron: 0 0 * * *
   workflow_call:
     inputs:
@@ -25,7 +25,7 @@ on:
         required: true
       multi_target:
         description: 'Targets to run (libc:arch-abi;...)'
-        required: false
+        required: true
       issue_num:
         description: 'Bisection Issue Number (Optional)'
         required: false
@@ -34,9 +34,9 @@ jobs:
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
     with:
-      prefix: 'coord_'
+      prefix: 'release_14_'
       gcchash: ${{ inputs.gcchash }}
-      gcc_branch: 'coordination'
+      gcc_branch: 'release-14'
 
   creg: # Check Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -60,7 +60,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: false
-      prefix: 'coord_'
+      prefix: 'release_14_'
 
   cmreg-self-hosted: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -83,7 +83,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
-      prefix: 'coord_'
+      prefix: 'release_14_'
 
   cmreg-self-hosted-uc: # Check Multilib Regressions. Short name so I can see the matrix string in github
     needs: [init-submodules]
@@ -106,7 +106,7 @@ jobs:
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
-      prefix: 'coord_'
+      prefix: 'release_14_'
 
   summarize:
     if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
@@ -114,10 +114,9 @@ jobs:
     permissions:
       issues: write
     uses: ./.github/workflows/generate-summary.yaml
-    secrets: inherit
     with:
       gcchash: ${{ needs.init-submodules.outputs.gcchash }}
       issue_num: ${{ inputs.issue_num }}
-      issue_hash_prefix: Coordination Branch Testsuite Status
-      prefix: 'coord_'
-      gcc_branch: coordination
+      issue_hash_prefix: Release 14 Branch Testsuite Status
+      prefix: 'release_14_'
+      gcc_branch: release-14
