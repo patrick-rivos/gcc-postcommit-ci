@@ -62,6 +62,7 @@ def download_summaries(artifact_name: str, token: str, repo: str):
         "rv64_zvl_lmul2_",
         "rv64_zvl_",
         "coord_",
+        "release_14_",
         "binutils_",
         "checking_",
     ]:
@@ -69,8 +70,12 @@ def download_summaries(artifact_name: str, token: str, repo: str):
         if artifact_id is not None:
             break
     assert artifact_id is not None
-    if "coord_" in artifact_name or "binutils_" in artifact_name:
-        # Ignore coordnation/binutils runs
+    if (
+        "coord_" in artifact_name
+        or "release_14_" in artifact_name
+        or "binutils_" in artifact_name
+    ):
+        # Ignore coordnation/release/binutils runs
         return None
     artifact_path = download_artifact(artifact_name, artifact_id, token, repo, "temp")
     return artifact_path
