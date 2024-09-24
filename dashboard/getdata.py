@@ -131,12 +131,29 @@ def aggregate_logs(logs_dir: str, gcc_hash: str):
     print(logs_dir)
     all_linux_failures: Dict[Description, List[str]] = {}
     all_newlib_failures: Dict[Description, List[str]] = {}
+    all_filtered_linux_failures: Dict[Description, List[str]] = {}
+    all_filtered_newlib_failures: Dict[Description, List[str]] = {}
     for file in files:
         current_failures = parse_testsuite_failures(logs_dir + file)
+        filtered_current_failures: Dict[Description, List[str]] = {}
+        for desc, fails in current_failures.items():
+            filtered_current_failures[desc] = [
+                fail
+                for fail in fails
+                if (
+                    "internal compiler error" in fail
+                    or "Segmentation fault" in fail
+                    or "test for excess errors" in fail
+                    or "execution test" in fail
+                    or "execute" in fail.split(" ")[2:]
+                )
+            ]
         if "linux" in file:
             all_linux_failures.update(current_failures)
+            all_filtered_linux_failures.update(filtered_current_failures)
         else:
             all_newlib_failures.update(current_failures)
+            all_filtered_newlib_failures.update(filtered_current_failures)
 
     for target, fails in all_linux_failures.items():
         class_fails = classify_by_unique_failure(fails)
@@ -158,6 +175,27 @@ def aggregate_logs(logs_dir: str, gcc_hash: str):
                 f"{gcc_hash},{hash_timestamp},newlib-{target.libname}-{target.tool},newlib,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n"
             )
 
+    # Write filtered csvs
+    for target, fails in all_filtered_linux_failures.items():
+        class_fails = classify_by_unique_failure(fails)
+
+        hash_timestamp = get_gcc_hash_timestamp(gcc_hash)
+
+        with open("filtered_linux.csv", "a") as csv:
+            csv.write(
+                f"{gcc_hash},{hash_timestamp},linux-{target.libname}-{target.tool},linux,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n"
+            )
+
+    for target, fails in all_filtered_newlib_failures.items():
+        class_fails = classify_by_unique_failure(fails)
+
+        hash_timestamp = get_gcc_hash_timestamp(gcc_hash)
+
+        with open("filtered_newlib.csv", "a") as csv:
+            csv.write(
+                f"{gcc_hash},{hash_timestamp},newlib-{target.libname}-{target.tool},newlib,{target.libname},{target.tool},{len(class_fails.keys())},{len(fails)}\n"
+            )
+
 
 def main():
     args = parse_arguments()
@@ -166,21 +204,25 @@ def main():
 
     if args.bootstrap:
         shutil.rmtree("./testsuite_runs", ignore_errors=True)
+        data_files = [
+            "linux.csv",
+            "newlib.csv",
+            "filtered_linux.csv",
+            "filtered_newlib.csv",
+        ]
+
         with contextlib.suppress(FileNotFoundError):
-            os.remove("linux.csv")
-            os.remove("newlib.csv")
+            for file in data_files:
+                os.remove(file)
         existing_hashes: Set[str] = set()
         download_logs(args.token, "patrick-rivos/riscv-gnu-toolchain", existing_hashes)
         download_logs(args.token, "patrick-rivos/gcc-postcommit-ci", existing_hashes)
         hashes = sorted(os.listdir("testsuite_runs"))
-        with open("linux.csv", "a") as csv:
-            csv.write(
-                "gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n"
-            )
-        with open("newlib.csv", "a") as csv:
-            csv.write(
-                "gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n"
-            )
+        for file in data_files:
+            with open(file, "w") as csv:
+                csv.write(
+                    "gcc_hash,hash_timestamp,libc-libname-tool,libc,target,tool,unique_fails,total_fails\n"
+                )
     else:
         existing_hashes = set(os.listdir("testsuite_runs"))
         download_logs(args.token, "patrick-rivos/gcc-postcommit-ci", existing_hashes)

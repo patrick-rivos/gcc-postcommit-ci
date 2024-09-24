@@ -58,7 +58,10 @@ def clean(old_df: pd.DataFrame):
     return df
 
 
-def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
+def plot_cumulative_state(
+    df: pd.DataFrame, outfile: str, wrap: int = 3, filtered: bool = False
+):
+    suffix = " execution" if filtered else ""
     range_max = max(df["hash_timestamp"]) + datetime.timedelta(hours=6)
 
     range_min = max(df["hash_timestamp"]) - datetime.timedelta(days=9)
@@ -82,12 +85,65 @@ def plot_cumulative_state(df: pd.DataFrame, outfile: str, wrap: int = 3):
         facet_col_spacing=0,  # default is 0.03
         color="tool",
         symbol="tool",
-        title=f'Unique/total failures per hash<br><sup>Data sourced from <a href="https://github.com/patrick-rivos/gcc-postcommit-ci">gcc-postcommit-ci</a> and older data from <a href="https://github.com/patrick-rivos/riscv-gnu-toolchain">riscv-gnu-toolchain</a></sup>',
+        title=f'Unique/total{suffix} failures per hash<br><sup>Data sourced from <a href="https://github.com/patrick-rivos/gcc-postcommit-ci">gcc-postcommit-ci</a> and older data from <a href="https://github.com/patrick-rivos/riscv-gnu-toolchain">riscv-gnu-toolchain</a></sup>',
         range_x=[range_min, range_max],
         range_y=[-5, max(df[df["hash_timestamp"] > range_min]["total_fails"]) + 5],
     )
 
     fig.write_html(outfile, include_plotlyjs="cdn")
+
+
+def generate_pages(all_data: pd.DataFrame, filtered: bool = False):
+    suffix = "-filtered" if filtered else ""
+    os.makedirs(f"site", exist_ok=True)
+    plot_cumulative_state(all_data, f"site/all{suffix}.html", filtered=filtered)
+
+    os.makedirs(f"site", exist_ok=True)
+    main_dashboard_data = all_data[~all_data["libc-target"].str.contains("gcv_zvl")]
+    main_dashboard_data = main_dashboard_data[
+        ~main_dashboard_data["libc-target"].str.contains("gcv_zve")
+    ]
+    plot_cumulative_state(
+        main_dashboard_data, f"site/index{suffix}.html", filtered=filtered
+    )
+
+    gcv = all_data[all_data["libc-target"].str.contains("gcv")]
+    gcv = gcv[~gcv["libc-target"].str.contains("gcv_zvl")]
+    gcv = gcv[~gcv["libc-target"].str.contains("gcv_zve")]
+    print(gcv)
+    plot_cumulative_state(gcv, f"site/gcv{suffix}.html", wrap=2, filtered=filtered)
+
+    gcv = all_data[all_data["libc-target"].str.contains("gcv_zvl")]
+    print(gcv)
+    plot_cumulative_state(gcv, f"site/gcv_zvl{suffix}.html", wrap=2, filtered=filtered)
+
+    gcv = all_data[all_data["libc-target"].str.contains("gcv_zve")]
+    print(gcv)
+    plot_cumulative_state(gcv, f"site/gcv_zve{suffix}.html", wrap=2, filtered=filtered)
+
+    bitmanip = all_data[all_data["libc-target"].str.contains("Bitmanip")]
+    print(bitmanip)
+    plot_cumulative_state(
+        bitmanip, f"site/bitmanip{suffix}.html", wrap=2, filtered=filtered
+    )
+
+    rva23 = all_data[all_data["libc-target"].str.contains("RVA")]
+    print(rva23)
+    plot_cumulative_state(rva23, f"site/rva23{suffix}.html", wrap=2, filtered=filtered)
+
+    vc = all_data[all_data["libc-target"].str.contains("Vector Crypto")]
+    print(vc)
+    plot_cumulative_state(
+        vc, f"site/vector_crypto{suffix}.html", wrap=2, filtered=filtered
+    )
+
+    gc = all_data[all_data["libc-target"].str.contains("gc ")]
+    print(gc)
+    plot_cumulative_state(gc, f"site/gc{suffix}.html", wrap=2, filtered=filtered)
+
+    uc = all_data[all_data["libc-target"].str.contains("im")]
+    print(uc)
+    plot_cumulative_state(uc, f"site/uc{suffix}.html", wrap=2, filtered=filtered)
 
 
 if __name__ == "__main__":
@@ -96,46 +152,11 @@ if __name__ == "__main__":
     raw_data = pd.concat([newlib_data, linux_data])
     all_data = clean(raw_data)
 
-    os.makedirs(f"site", exist_ok=True)
-    plot_cumulative_state(all_data, "site/all.html")
+    generate_pages(all_data, False)
 
-    os.makedirs(f"site", exist_ok=True)
-    main_dashboard_data = all_data[~all_data["libc-target"].str.contains("gcv_zvl")]
-    main_dashboard_data = main_dashboard_data[
-        ~main_dashboard_data["libc-target"].str.contains("gcv_zve")
-    ]
-    plot_cumulative_state(main_dashboard_data, "site/index.html")
+    filtered_linux_data = pd.read_csv("filtered_linux.csv")
+    filtered_newlib_data = pd.read_csv("filtered_newlib.csv")
+    filtered_raw_data = pd.concat([filtered_newlib_data, filtered_linux_data])
+    filtered_all_data = clean(filtered_raw_data)
 
-    gcv = all_data[all_data["libc-target"].str.contains("gcv")]
-    gcv = gcv[~gcv["libc-target"].str.contains("gcv_zvl")]
-    gcv = gcv[~gcv["libc-target"].str.contains("gcv_zve")]
-    print(gcv)
-    plot_cumulative_state(gcv, "site/gcv.html", wrap=2)
-
-    gcv = all_data[all_data["libc-target"].str.contains("gcv_zvl")]
-    print(gcv)
-    plot_cumulative_state(gcv, "site/gcv_zvl.html", wrap=2)
-
-    gcv = all_data[all_data["libc-target"].str.contains("gcv_zve")]
-    print(gcv)
-    plot_cumulative_state(gcv, "site/gcv_zve.html", wrap=2)
-
-    bitmanip = all_data[all_data["libc-target"].str.contains("Bitmanip")]
-    print(bitmanip)
-    plot_cumulative_state(bitmanip, "site/bitmanip.html", wrap=2)
-
-    rva23 = all_data[all_data["libc-target"].str.contains("RVA")]
-    print(rva23)
-    plot_cumulative_state(rva23, "site/rva23.html", wrap=2)
-
-    vc = all_data[all_data["libc-target"].str.contains("Vector Crypto")]
-    print(vc)
-    plot_cumulative_state(vc, "site/vector_crypto.html", wrap=2)
-
-    gc = all_data[all_data["libc-target"].str.contains("gc ")]
-    print(gc)
-    plot_cumulative_state(gc, "site/gc.html", wrap=2)
-
-    uc = all_data[all_data["libc-target"].str.contains("im")]
-    print(uc)
-    plot_cumulative_state(uc, "site/uc.html", wrap=2)
+    generate_pages(filtered_all_data, True)
