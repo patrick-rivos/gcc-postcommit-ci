@@ -10,6 +10,12 @@ This repo runs the GCC testsuite on a variety of risc-v targets.
 - [Bitmanip](https://patrick-rivos.github.io/gcc-postcommit-ci/bitmanip)
 - [RVA23](https://patrick-rivos.github.io/gcc-postcommit-ci/rva23)
 - [Vector Crypto](https://patrick-rivos.github.io/gcc-postcommit-ci/vector_crypto)
+- [All Execution Failures](https://patrick-rivos.github.io/gcc-postcommit-ci/all-filtered)
+- [gcv Execution Failures](https://patrick-rivos.github.io/gcc-postcommit-ci/gcv-filtered)
+- [gc Execution Failures](https://patrick-rivos.github.io/gcc-postcommit-ci/gc-filtered)
+- [Bitmanip Execution Failures](https://patrick-rivos.github.io/gcc-postcommit-ci/bitmanip-filtered)
+- [RVA23 Execution Failures](https://patrick-rivos.github.io/gcc-postcommit-ci/rva23-filtered)
+- [Vector Crypto Execution Failures](https://patrick-rivos.github.io/gcc-postcommit-ci/vector_crypto-filtered)
 
 ## GCV Weekly runs:
 - [gcv_zvl](https://patrick-rivos.github.io/gcc-postcommit-ci/gcv_zvl)
