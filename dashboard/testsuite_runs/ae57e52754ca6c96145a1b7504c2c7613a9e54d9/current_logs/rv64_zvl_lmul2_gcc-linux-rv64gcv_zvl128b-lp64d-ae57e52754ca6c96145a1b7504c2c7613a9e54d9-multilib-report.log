@@ -1,0 +1,1718 @@
+		=== g++: Unexpected fails for rv64gcv_zvl128b lp64d medlow -mrvv-max-lmul=m2 ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++26 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++17  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++26  scan-tree-dump-not optimized "vector"
+FAIL: c-c++-common/vector-subscript-4.c  -std=gnu++98  scan-tree-dump-not optimized "vector"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++26  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+		=== gcc: Unexpected fails for rv64gcv_zvl128b lp64d medlow -mrvv-max-lmul=m2 ===
+FAIL: gcc.c-torture/compile/pr113759.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: in decompose, at wide-int.h:1049)
+FAIL: gcc.c-torture/compile/pr113759.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: c-c++-common/vector-subscript-4.c  -Wc++-compat   scan-tree-dump-not optimized "vector"
+FAIL: gcc.dg/pr100927.c scan-rtl-dump-times final "(?n)^[ \\t]*\\(fix:SI" 3
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "Not unrolling loop, doesn't roll"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "likely upper bound: 6"
+FAIL: gcc.dg/unroll-8.c scan-rtl-dump loop2_unroll "realistic bound: -1"
+FAIL: gcc.dg/var-expand1.c scan-rtl-dump loop2_unroll "Expanding Accumulator"
+FAIL: gcc.dg/tree-prof/val-prof-1.c scan-tree-dump optimized "if \\(n_[0-9]* != 257\\)"
+FAIL: gcc.dg/tree-prof/val-prof-3.c scan-tree-dump optimized "if \\(_[0-9]* \\< n_[0-9]*"
+FAIL: gcc.dg/tree-prof/val-prof-4.c scan-tree-dump optimized "if \\(n_[0-9]* \\>"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/ivopts-lt-2.c scan-tree-dump-times ivopts "PHI <p_" 1
+FAIL: gcc.dg/tree-ssa/ivopts-lt-2.c scan-tree-dump-times ivopts "PHI" 1
+FAIL: gcc.dg/tree-ssa/ivopts-lt-2.c scan-tree-dump-times ivopts "p_[0-9]* <" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/loop-bound-2.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-not pcom "Invalid sum"
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Combination" 1
+FAIL: gcc.dg/tree-ssa/predcom-4.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-not pcom "Invalid sum"
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Combination" 2
+FAIL: gcc.dg/tree-ssa/predcom-5.c scan-tree-dump-times pcom "Unrolling 3 times." 1
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-11.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 2
+FAIL: gcc.dg/tree-ssa/scev-12.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/scev-9.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/split-path-11.c scan-tree-dump-times split-paths "join point for if-convertable" 1
+FAIL: gcc.dg/tree-ssa/split-path-13.c scan-tree-dump split-paths "appears to be a join point for if-convertable"
+FAIL: gcc.dg/tree-ssa/update-threading.c scan-tree-dump-times optimized "Invalid sum" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul-mixed-1.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul-mixed-1.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul-mixed-1.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-1.c scan-assembler e32,m1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-1.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-1.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-2.c scan-assembler e32,m1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-2.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-2.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-3.c scan-assembler e8,m1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-3.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-3.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-4.c scan-assembler e32,m1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-4.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-4.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-5.c scan-assembler e32,m1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-5.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-5.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-6.c scan-assembler e8,m1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-6.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-6.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-7.c scan-assembler e32,m1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-7.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-1.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-1.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-1.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c scan-assembler e8,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-3.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-3.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-3.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-4.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-4.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-4.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-5.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-5.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-5.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-6.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-6.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-6.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-1.c scan-assembler e32,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-1.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-1.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-12.c scan-assembler-not e32,m8
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-12.c scan-assembler-times e32,m4 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-12.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-2.c scan-assembler e8,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-2.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-2.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-3.c scan-tree-dump-times vect "Maximum lmul = 2" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-3.c scan-tree-dump-times vect "Maximum lmul = 8" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-assembler e16,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump vect "2: type = unsigned short, start = 0, end = 34"
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump vect "start = 8, end = 10"
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump-times vect "Maximum lmul = 2" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump-times vect "Maximum lmul = 8" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-7.c scan-assembler e64,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-7.c scan-assembler-not csrr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-7.c scan-tree-dump-times vect "Maximum lmul = 8" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-7.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-11.c scan-tree-dump-times vect "Maximum lmul = 8" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-2.c scan-tree-dump-times vect "Maximum lmul = 2" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-2.c scan-tree-dump-times vect "Maximum lmul = 8" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-4.c scan-tree-dump-times vect "Maximum lmul = 8" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-9.c scan-tree-dump-times vect "Maximum lmul = 8" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-2.c scan-tree-dump-times vect "Maximum lmul = 4, At most 16 number of live V_REG" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-4.c scan-assembler e64,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-4.c scan-assembler-not e64,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-5.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vla_vs_vls-1.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vla_vs_vls-8.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vse-slp-1.c scan-tree-dump-times slp1 "vectorized using SLP" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vse-slp-2.c scan-tree-dump-times slp1 "vectorized using SLP" 0
+FAIL: gcc.dg/vect/bb-slp-cond-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "loop vectorized" 1
+FAIL: gcc.dg/vect/bb-slp-cond-1.c scan-tree-dump-times vect "loop vectorized" 1
+FAIL: gcc.dg/vect/bb-slp-pr65935.c -flto -ffat-lto-objects  scan-tree-dump-times slp1 "optimized: basic block" 10
+FAIL: gcc.dg/vect/bb-slp-pr65935.c scan-tree-dump-times slp1 "optimized: basic block" 10
+FAIL: gcc.dg/vect/bb-slp-subgroups-2.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/bb-slp-subgroups-2.c scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/bb-slp-subgroups-3.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/bb-slp-subgroups-3.c scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/pr68445.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr68445.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/pr97428.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/pr97428.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-11a.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-11a.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-19a.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 2
+FAIL: gcc.dg/vect/slp-19a.c scan-tree-dump-times vect "vectorizing stmts using SLP" 2
+FAIL: gcc.dg/vect/slp-19c.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/slp-19c.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-19c.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/vect/slp-19c.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-42.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-42.c scan-tree-dump vect "vectorizing stmts using SLP"
+FAIL: gcc.dg/vect/slp-gap-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "{_[0-9]+, (?:0|{ 0(?:, 0)+ )}" 6
+FAIL: gcc.dg/vect/slp-gap-1.c scan-tree-dump-times vect "{_[0-9]+, (?:0|{ 0(?:, 0)+ )}" 6
+XPASS: gcc.dg/vect/slp-reduc-11.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-11.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-7.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/slp-reduc-7.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-sad-2.c -flto -ffat-lto-objects  scan-tree-dump-not vect "access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/slp-reduc-sad-2.c scan-tree-dump-not vect "access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1115.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1115.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s114.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s114.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1232.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1232.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s257.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s257.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/vect-early-break_63.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vec_stmt_relevant_p: stmt live but not relevant" 1
+FAIL: gcc.dg/vect/vect-early-break_63.c scan-tree-dump-times vect "vec_stmt_relevant_p: stmt live but not relevant" 1
+XPASS: gcc.dg/vect/vect-live-slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+XPASS: gcc.dg/vect/vect-live-slp-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 4
+FAIL: gcc.dg/vect/vect-reduc-chain-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing statement: \\S+ = DOT_PROD_EXPR" 2
+FAIL: gcc.dg/vect/vect-reduc-chain-1.c scan-tree-dump-times vect "vectorizing statement: \\S+ = DOT_PROD_EXPR" 2
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing statement: \\S+ = SAD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c scan-tree-dump vect "vectorizing statement: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c scan-tree-dump vect "vectorizing statement: \\S+ = SAD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-1.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-1.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-2.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-3.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-3.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-4.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-4.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.target/riscv/reg_subreg_costs.c   -O1   scan-assembler-not \\szext.w\\s
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O0   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O0   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O1   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O1   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O3 -g   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O3 -g   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -Os   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -Os   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-run.c (internal compiler error: in compute_nregs_for_mode, at config/riscv/riscv-vector-costs.cc:457)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-run.c (internal compiler error: in compute_nregs_for_mode, at config/riscv/riscv-vector-costs.cc:457)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-run.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/shift-run.c (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-1.c check-function-bodies vec_sat_s_add_int8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-2.c check-function-bodies vec_sat_s_add_int16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-3.c check-function-bodies vec_sat_s_add_int32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_s_add-4.c check-function-bodies vec_sat_s_add_int64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-1.c check-function-bodies vec_sat_u_add_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-10.c check-function-bodies vec_sat_u_add_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-11.c check-function-bodies vec_sat_u_add_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-12.c check-function-bodies vec_sat_u_add_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-13.c check-function-bodies vec_sat_u_add_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-14.c check-function-bodies vec_sat_u_add_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-15.c check-function-bodies vec_sat_u_add_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-16.c check-function-bodies vec_sat_u_add_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-17.c check-function-bodies vec_sat_u_add_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-18.c check-function-bodies vec_sat_u_add_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-19.c check-function-bodies vec_sat_u_add_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-2.c check-function-bodies vec_sat_u_add_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-20.c check-function-bodies vec_sat_u_add_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-21.c check-function-bodies vec_sat_u_add_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-22.c check-function-bodies vec_sat_u_add_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-23.c check-function-bodies vec_sat_u_add_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-24.c check-function-bodies vec_sat_u_add_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-25.c check-function-bodies vec_sat_u_add_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-26.c check-function-bodies vec_sat_u_add_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-27.c check-function-bodies vec_sat_u_add_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-28.c check-function-bodies vec_sat_u_add_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-29.c check-function-bodies vec_sat_u_add_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-3.c check-function-bodies vec_sat_u_add_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-30.c check-function-bodies vec_sat_u_add_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-31.c check-function-bodies vec_sat_u_add_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-32.c check-function-bodies vec_sat_u_add_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-4.c check-function-bodies vec_sat_u_add_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-5.c check-function-bodies vec_sat_u_add_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-6.c check-function-bodies vec_sat_u_add_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-7.c check-function-bodies vec_sat_u_add_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-8.c check-function-bodies vec_sat_u_add_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_add-9.c check-function-bodies vec_sat_u_add_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-1.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-10.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-11.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-12.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-13.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-14.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-15.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-16.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-17.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-18.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-19.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-2.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-20.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_5
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-21.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-22.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-23.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-24.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_6
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-25.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-26.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-27.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-28.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_7
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-29.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-3.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-30.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-31.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-32.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_8
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-33.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-34.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-35.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-36.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_9
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-37.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-38.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-39.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-4.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-40.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_10
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-5.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-6.c check-function-bodies vec_sat_u_sub_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-7.c check-function-bodies vec_sat_u_sub_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-8.c check-function-bodies vec_sat_u_sub_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub-9.c check-function-bodies vec_sat_u_sub_uint8_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-1.c check-function-bodies vec_sat_u_sub_trunc_uint8_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-2.c check-function-bodies vec_sat_u_sub_trunc_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/binop/vec_sat_u_sub_trunc-3.c check-function-bodies vec_sat_u_sub_trunc_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/bug-3.c -O3 -ftree-vectorize  scan-assembler-times slli\\s+[a-x0-9]+,\\s*[a-x0-9]+,\\s*33 1
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-1.c scan-assembler-times vmsne\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-2.c scan-assembler-times vmsne\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-5.c scan-assembler-times vmseq\\.vi 16
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-6.c scan-assembler-times vmseq\\.vi 13
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsle\\.vi 7
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cmp/cmp_vi-9.c scan-assembler-times vmsleu\\.vi 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvfwmul\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmul\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-3.c scan-assembler-times \\tvwmulu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-not \\tvmul
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmul\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulsu\\.vv 12
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-4.c scan-assembler-times \\tvwmulu\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/cond/cond_widen_complicate-8.c scan-assembler-times \\tvfwmsac\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_64-12-zvbb.c scan-tree-dump-times vect "vectorized 1 loops in function" 88
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load-2.c scan-tree-dump-times optimized " .MASK_LEN_GATHER_LOAD" 33
+FAIL: gcc.target/riscv/rvv/autovec/madd-split2-1.c -O3 -ftree-vectorize  scan-assembler-times \\tvmv1r\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+FAIL: gcc.target/riscv/rvv/autovec/partial/multiple_rgroup_zbb.c scan-assembler-times vsetvli\tzero,s*[a-z0-9]+,s*e16,s*m1,s*ta,s*ma 4
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c scan-tree-dump optimized ".VEC_PERM"
+FAIL: gcc.target/riscv/rvv/autovec/poly_licm-2.c -O3 -ftree-vectorize  scan-assembler-times vid\\.v\\s+v[0-9]+\\s+vrsub\\.vx\\s+ 2
+FAIL: gcc.target/riscv/rvv/autovec/pr110950.c -O3 -ftree-vectorize  scan-assembler-times vrgather 1
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e64,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+zero,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+zero,\\s*zero,\\s*e64,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/autovec/pr111313.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e16,\\s*mf2,\\s*t[au],\\s*m[au]\\s+vmv\\.v\\.x 1
+FAIL: gcc.target/riscv/rvv/autovec/pr112399.c -O3 -ftree-vectorize  check-function-bodies foo
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-not vsetvli
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-times vsetivli\\s+zero,\\s*16,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-times vsseg4e8\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-times vsseg6e8\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-times vsseg8e8\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-10.c scan-assembler-times vlseg8e16\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-10.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+ 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-10.c scan-assembler-times vsseg8e16\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-11.c scan-assembler-times vlseg8e32\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-11.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+ 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-11.c scan-assembler-times vsseg8e32\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-12.c scan-assembler-times vlseg8e64\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-12.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+ 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-12.c scan-assembler-times vsseg8e64\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsetivli\\s+zero,\\s*8,\\s*e16,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsseg4e16\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsseg6e16\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsseg7e16\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsseg8e16\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-not vsetvli
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-times vsseg4e32\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-times vsseg6e32\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-times vsseg8e32\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-not vsetvli
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsetivli\\s+zero,\\s*2,\\s*e64,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg4e64\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg6e64\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg8e64\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-not vsetvli
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-times vsseg4e32\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-times vsseg6e32\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-times vsseg8e32\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-6.c scan-assembler-times vlseg8e8\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-6.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-6.c scan-assembler-times vsseg8e8\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-7.c scan-assembler-times vlseg8e16\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-7.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+ 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-7.c scan-assembler-times vsseg8e16\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-8.c scan-assembler-times vlseg8e32\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-8.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+ 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-8.c scan-assembler-times vsseg8e32\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-9.c scan-assembler-times vlseg8e64\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-9.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+ 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-9.c scan-assembler-times vsseg8e64\\.v 1
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/ternop/ternop_nofm-3.c scan-assembler-times \\tvmacc\\.vv 8
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-1.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-10.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-11.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-12.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-13.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-14.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-15.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-16.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-17.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-18.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_3
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-19.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-2.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-20.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-21.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-22.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-23.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-24.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_4
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-3.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-4.c check-function-bodies vec_sat_u_trunc_uint16_t_uint32_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-5.c check-function-bodies vec_sat_u_trunc_uint16_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-6.c check-function-bodies vec_sat_u_trunc_uint32_t_uint64_t_fmt_1
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-7.c check-function-bodies vec_sat_u_trunc_uint8_t_uint16_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-8.c check-function-bodies vec_sat_u_trunc_uint8_t_uint32_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/unop/vec_sat_u_trunc-9.c check-function-bodies vec_sat_u_trunc_uint8_t_uint64_t_fmt_2
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/full-vec-move1.c -std=c99 -O3 -ftree-vectorize -mrvv-vector-bits=zvl  scan-assembler-times vl[1248]re16.v 1
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-1.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times call\\s+memset 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-1.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times li\\s+a[0-1],\\s*0 9
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-1.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse64.v\\s+v[0-9],\\s*[0-9]+\\(a0\\)\\s+ret 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-1.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse8.v\\s+v[0-9],\\s*[0-9]+\\(a0\\) 74
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-2.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times call\\s+memset 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-2.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times li\\s+a[0-1],\\s*0 8
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-2.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse16.v\\s+v[0-9],\\s*[0-9]+\\(a0\\) 74
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-2.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse64.v\\s+v[0-9],\\s*[0-9]+\\(a0\\)\\s+ret 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-3.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times call\\s+memset 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-3.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times li\\s+a[0-1],\\s*0 7
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-3.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse32.v\\s+v[0-9],\\s*[0-9]+\\(a0\\) 74
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-3.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse64.v\\s+v[0-9],\\s*[0-9]+\\(a0\\)\\s+ret 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-4.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times call\\s+memset 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-4.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times li\\s+a[0-1],\\s*0 6
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-4.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse64.v\\s+v[0-9],\\s*[0-9]+\\(a0\\) 77
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-5.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times call\\s+memset 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-5.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times li\\s+a[0-1],\\s*0 8
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-5.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse16.v\\s+v[0-9],\\s*[0-9]+\\(a0\\) 74
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-5.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse64.v\\s+v[0-9],\\s*[0-9]+\\(a0\\)\\s+ret 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-6.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times call\\s+memset 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-6.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times li\\s+a[0-1],\\s*0 7
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-6.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse32.v\\s+v[0-9],\\s*[0-9]+\\(a0\\) 74
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-6.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse64.v\\s+v[0-9],\\s*[0-9]+\\(a0\\)\\s+ret 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-7.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times call\\s+memset 3
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-7.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times li\\s+a[0-1],\\s*0 6
+FAIL: gcc.target/riscv/rvv/autovec/vls/calling-convention-7.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  scan-assembler-times vse64.v\\s+v[0-9],\\s*[0-9]+\\(a0\\) 77
+FAIL: gcc.target/riscv/rvv/autovec/vls/dup-1.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  check-function-bodies foo10
+FAIL: gcc.target/riscv/rvv/autovec/vls/dup-2.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  check-function-bodies foo10
+FAIL: gcc.target/riscv/rvv/autovec/vls/dup-3.c -O3 -ftree-vectorize -mrvv-vector-bits=scalable  check-function-bodies foo10
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvfwsub\\.vv 6
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsub\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/widen/widen-complicate-2.c scan-assembler-times \\tvwsubu\\.vv 9
+FAIL: gcc.target/riscv/rvv/autovec/zve32f-1.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 2
+FAIL: gcc.target/riscv/rvv/autovec/zve32f-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 3
+FAIL: gcc.target/riscv/rvv/autovec/zve32f_zvl128b-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 5
+FAIL: gcc.target/riscv/rvv/autovec/zve32x-1.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 2
+FAIL: gcc.target/riscv/rvv/autovec/zve32x-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 2
+FAIL: gcc.target/riscv/rvv/autovec/zve32x_zvl128b-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 3
+FAIL: gcc.target/riscv/rvv/base/float-point-dynamic-frm-77.c scan-assembler-times vfadd\\.v[vf]\\s+v[0-9]+,\\s*v[0-9]+,\\s*[fav]+[0-9]+ 3
+XPASS: gcc.target/riscv/rvv/base/pr112431-42.c scan-assembler-not vmv1r
+FAIL: gcc.target/riscv/rvv/base/pr112431-42.c scan-assembler-not vmv2r
+FAIL: gcc.target/riscv/rvv/base/pr114352-1.c check-function-bodies test_2
+FAIL: gcc.target/riscv/rvv/base/pr114352-3.c check-function-bodies test_1
+FAIL: gcc.target/riscv/rvv/base/pr114352-3.c check-function-bodies test_4
+FAIL: gcc.target/riscv/rvv/base/vf_avl-2.c scan-assembler-times vsetivli\\s+zero,\\s*1,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/base/vf_avl-2.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/base/vf_avl-3.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+,\\s*e32,\\s*m1,\\s*t[au],\\s*mu 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-7.c   -O2   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-7.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-7.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-8.c   -O2   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-8.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_multiple-8.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+vsetvli\\s+zero,\\s*[a-x0-9]+,\\s*e8,\\s*mf8,\\s*t[au],\\s*m[au]
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O0   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O1   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O2   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O3 -g   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -Os   scan-assembler-times vsetivli\\tzero,\\s*1 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-66.c   -O2   scan-assembler-times add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+ 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-66.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+ 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-66.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times add\\s+\\s*[a-x0-9]+,\\s*[a-x0-9]+,\\s*[a-x0-9]+\\s+ble\\s+[a-x0-9]+,\\s*zero,\\.L[0-9]+\\s+ 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-82.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-83.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-86.c   -O2   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-86.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-86.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-88.c   -O2   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-88.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-88.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-90.c   -O2   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-90.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-90.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not vsetivli
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2   scan-assembler-times vsetivli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-91.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-92.c   -O2   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-92.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_single-92.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O1   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O0   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O1   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -g   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -Os   scan-assembler-times vsetvli\\tzero,\\s*[a-x0-9]+,\\s*e8,\\s*m8,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-37.c   -O2   scan-assembler-times vsetvli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-37.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vlmax_back_prop-37.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 2
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-15.c   -O2   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-15.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/vsetvl-15.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 3
+		=== gfortran: Unexpected fails for rv64gcv_zvl128b lp64d medlow -mrvv-max-lmul=m2 ===
+FAIL: gfortran.dg/c-interop/cf-descriptor-1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-7.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-7.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-8.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/cf-descriptor-8.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/cf-out-descriptor-4.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/cf-out-descriptor-4.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/fc-out-descriptor-7.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/fc-out-descriptor-7.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/ff-descriptor-1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/ff-descriptor-1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/section-2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/section-2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/section-2p.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/section-2p.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/section-3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/section-3.f90   -O3 -g  execution test
+FAIL: gfortran.dg/c-interop/section-3p.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/c-interop/section-3p.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/vect/pr83232.f90   -O   scan-tree-dump-times slp1 "vectorizing stmts using SLP" 3
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv64gcv_zvl128b/  lp64d/ medlow | 1663 /   264 |    9 /     3 |   37 /    15 |
+ -mrvv-max-lmul=m2
