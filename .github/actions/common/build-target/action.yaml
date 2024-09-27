@@ -62,14 +62,14 @@ runs:
           set +o pipefail
 
       - name: Zip build log
-        if: ${{ always() }}
+        if: ${{ !cancelled() }}
         shell: bash
         working-directory: riscv-gnu-toolchain
         run: |
           zip ${{ inputs.build_log_name }}.zip build/${{ inputs.build_log_name }}.log build/${{ inputs.build_log_name }}-stdout.log build/${{ inputs.build_log_name }}-stderr.log
 
       - name: Upload build log
-        if: ${{ always() }}
+        if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.build_log_name }}
