@@ -81,7 +81,7 @@ jobs:
       - name: Make gcc
         run: |
           cd build
-          make -j $(nproc) ${{ inputs.mode }}
+          make -j $(nproc) ${{ inputs.mode }}  --output-sync=target
 
       - name: Remove sources to reclaim disk space
         run: |

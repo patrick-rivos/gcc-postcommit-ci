@@ -225,7 +225,7 @@ jobs:
       - name: Build
         run: |
           cd build
-          make ${{ inputs.mode }} -j20
+          make ${{ inputs.mode }} -j20 --output-sync=target
 
       - name: Run Testsuite
         uses: ./.github/actions/common/run-testsuite
