@@ -238,8 +238,10 @@ jobs:
           echo "current_build_logs_path=$(readlink -f current_build_logs)" >> $GITHUB_OUTPUT
           mkdir -p current_build_log_zips
           echo "current_build_log_zips_path=$(readlink -f current_build_log_zips)" >> $GITHUB_OUTPUT
-          mkdir new_build_warnings
-          echo "new_build_warnings_path=$(readlink -f ./new_build_warnings/new_build_warnings.md)" >> $GITHUB_OUTPUT
+          mkdir build_warnings
+          echo "build_warnings_directory=$(readlink -f ./build_warnings/)" >> $GITHUB_OUTPUT
+          echo "new_build_warnings_path=$(readlink -f ./build_warnings/new_build_warnings.md)" >> $GITHUB_OUTPUT
+          echo "resolved_build_warnings_path=$(readlink -f ./build_warnings/resolved_build_warnings.md)" >> $GITHUB_OUTPUT
 
       - name: Download artifacts
         run: |
@@ -272,21 +274,26 @@ jobs:
           output-dir: ${{ steps.build-log-setup.outputs.current_build_logs_path }}
           include-pattern: "*-stderr.log"
 
-      - name: Parse New Build Warnings
+      - name: Parse Build Warnings
         run: |
-          python ./scripts/parse_new_build_warnings.py --old-dir ${{ steps.build-log-setup.outputs.previous_build_logs_path }}/build --new-dir ${{ steps.build-log-setup.outputs.current_build_logs_path }}/build --output ${{ steps.build-log-setup.outputs.new_build_warnings_path }} --repo post-commit
+          python ./scripts/parse_build_warnings.py --old-dir ${{ steps.build-log-setup.outputs.previous_build_logs_path }}/build --new-dir ${{ steps.build-log-setup.outputs.current_build_logs_path }}/build --new-warnings-output ${{ steps.build-log-setup.outputs.new_build_warnings_path }} --resolved-warnings-output  ${{ steps.build-log-setup.outputs.resolved_build_warnings_path }} --repo post-commit
           if [ -f "${{ steps.build-log-setup.outputs.new_build_warnings_path }}" ]; then
             cat ${{ steps.build-log-setup.outputs.new_build_warnings_path }}
           else
             echo "New build logs didn't exist"
           fi
+          if [ -f "${{ steps.build-log-setup.outputs.resolved_build_warnings_path }}" ]; then
+            cat ${{ steps.build-log-setup.outputs.resolved_build_warnings_path }}
+          else
+            echo "Resolved build logs didn't exist"
+          fi
         continue-on-error: true
 
-      - name: Upload New Build Warnings
+      - name: Upload Build Warnings
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.prefix }}${{ inputs.gcchash }}-build-warnings
-          path: ${{ steps.build-log-setup.outputs.new_build_warnings_path }}
+          path: ${{ steps.build-log-setup.outputs.build_warnings_directory }}
           retention-days: 90
         continue-on-error: true
 
@@ -492,12 +499,12 @@ jobs:
           issue-number: ${{ steps.create-issue.outputs.issue-number }}
           body-path: riscv-gnu-toolchain/trimmed_comment.md
 
-      - name: Trim build warnings # reduce the number of lines in final comment so github always create comment
+      - name: Trim new build warnings # reduce the number of lines in final comment so github always create comment
         if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
         run: |
-          head -c 65000 new_build_warnings.md >> trimmed_build_warnings.md
+          head -c 65000 new_build_warnings.md >> trimmed_new_build_warnings.md
           if [ $(stat -c%s new_build_warnings.md) -gt 65000 ]; then
-            printf "\nBuild warnings comment has been trimmed. Check the following Gist URL for full list.\n" >> trimmed_build_warnings.md
+            printf "\nBuild warnings comment has been trimmed. Check the following Gist URL for full list.\n" >> trimmed_new_build_warnings.md
             FILE_SIZE=$(stat -c%s "new_build_warnings.md")
             ONE_MB_IN_BYTES=1048000
             if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
@@ -508,13 +515,32 @@ jobs:
               printf "\nThe file was greater than 1 MB and has been trimmed to fit the gist limit. Please check logs for the untrimmed issue." >> trimmed_new_build_warnings_gist.md
             fi
           fi
-          cat trimmed_build_warnings.md
+          cat trimmed_new_build_warnings.md
+
+      - name: Trim resolved build warnings # reduce the number of lines in final comment so github always create comment
+        if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
+        run: |
+          head -c 65000 resolved_build_warnings.md >> trimmed_resolved_build_warnings.md
+          if [ $(stat -c%s resolved_build_warnings.md) -gt 65000 ]; then
+            printf "\nBuild warnings comment has been trimmed. Check the following Gist URL for full list.\n" >> trimmed_resolved_build_warnings.md
+            FILE_SIZE=$(stat -c%s "resolved_build_warnings.md")
+            ONE_MB_IN_BYTES=1048000
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the gist limit. Please check logs for the untrimmed issue." > trimmed_resolved_build_warnings_gist.md
+            fi
+            head -c $ONE_MB_IN_BYTES "resolved_build_warnings.md" >> trimmed_resolved_build_warnings_gist.md
+            if [ "$FILE_SIZE" -gt "$ONE_MB_IN_BYTES" ]; then
+              printf "\nThe file was greater than 1 MB and has been trimmed to fit the gist limit. Please check logs for the untrimmed issue." >> trimmed_resolved_build_warnings_gist.md
+            fi
+          fi
+          cat trimmed_resolved_build_warnings.md
 
       - name: Build warnings label check
         id: build-warnings-label-check
         if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
         run: |
-          if [[ $(head -c 32 new_build_warnings.md) == "New build warnings doesn't exist" ]]; then
+          if [[ $(head -c 32 new_build_warnings.md) == "New build warnings doesn't exist" && \
+            $(head -c 37 resolved_build_warnings.md) == "Resolved build warnings doesn't exist" ]]; then
             echo "build_warning_label=false" >> $GITHUB_OUTPUT
           else
             echo "build_warning_label=true" >> $GITHUB_OUTPUT
@@ -531,17 +557,34 @@ jobs:
         run: |
           if [ -e "trimmed_new_build_warnings_gist.md" ]; then
             python3 -m pip install pygithub requests pyopenssl --upgrade
-            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_new_build_warnings_gist.md --output build_warning_gist_url.txt --title "${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_build_warnings.md"
-            printf "Gist URL: $(cat build_warning_gist_url.txt)" >> trimmed_build_warnings.md
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_new_build_warnings_gist.md --output new_build_warning_gist_url.txt --title "${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_new_build_warnings.md"
+            printf "Gist URL: $(cat new_build_warning_gist_url.txt)" >> trimmed_new_build_warnings.md
           fi
         continue-on-error: true
 
-      - name: Create build warnings comment
+      - name: Create new build warnings comment
         uses: peter-evans/create-or-update-comment@v4
         if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
         with:
           issue-number: ${{ steps.create-issue.outputs.issue-number }}
-          body-path: riscv-gnu-toolchain/trimmed_build_warnings.md
+          body-path: riscv-gnu-toolchain/trimmed_new_build_warnings.md
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Resolved Build Warnings Gist
+        run: |
+          if [ -e "trimmed_resolved_build_warnings_gist.md" ]; then
+            python3 -m pip install pygithub requests pyopenssl --upgrade
+            python3 ./scripts/create_gist.py --token ${{ secrets.GIST_TOKEN }} --input trimmed_resolved_build_warnings_gist.md --output resolved_build_warning_gist_url.txt --title "${{ steps.create-issue.outputs.issue-number }}_${{ inputs.issue_hash_prefix }}_${{ inputs.gcchash }}_resolved_build_warnings.md"
+            printf "Gist URL: $(cat resolved_build_warning_gist_url.txt)" >> trimmed_resolved_build_warnings.md
+          fi
+        continue-on-error: true
+
+      - name: Create resolved build warnings comment
+        uses: peter-evans/create-or-update-comment@v4
+        if: ${{ steps.download-build-warning-artifact.outcome == 'success' }}
+        with:
+          issue-number: ${{ steps.create-issue.outputs.issue-number }}
+          body-path: riscv-gnu-toolchain/trimmed_resolved_build_warnings.md
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get prefix label name
