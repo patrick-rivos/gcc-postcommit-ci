@@ -5,3 +5,6 @@
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=115166
 #
 FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-2.c
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/strided_load_run-2.c
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/mask_scatter_store_run-1.c
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/mask_scatter_store_run-2.c
