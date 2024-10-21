@@ -14,3 +14,7 @@ FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1281.c
 # Related to https://sourceware.org/bugzilla/show_bug.cgi?id=27566
 #
 FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-11.c
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-18.c
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/gather_load_run-19.c
+FAIL: gcc.target/riscv/rvv/autovec/gather-scatter/mask_scatter_store_run-1.c
+FAIL: gcc.target/riscv/rvv/autovec/unop/vfsqrt-run.c
