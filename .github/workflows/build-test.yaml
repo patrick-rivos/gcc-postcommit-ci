@@ -30,7 +30,7 @@ on:
 
 jobs:
   check:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     environment: production
     steps:
       - name: Early exit
@@ -44,7 +44,7 @@ jobs:
       early_exit: ${{ steps.early-exit.outputs.early_exit }}
 
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     environment: production
     defaults:
       run:
@@ -100,7 +100,7 @@ jobs:
       build_success: ${{ steps.build-status.outputs.build_success }}
 
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     environment: production
     defaults:
       run:

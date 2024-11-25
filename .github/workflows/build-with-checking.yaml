@@ -20,7 +20,7 @@ on:
 
 jobs:
   check:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     environment: production
     steps:
       - name: Early exit
@@ -35,7 +35,7 @@ jobs:
 
 
   build-with-checking:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     environment: production
     # container: ubuntu:22.04 # This adds too much overhead and causes the builds to timeout
     defaults:
