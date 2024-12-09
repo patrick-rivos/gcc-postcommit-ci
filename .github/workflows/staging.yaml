@@ -30,7 +30,7 @@ jobs:
       issue_num: ${{ inputs.issue_num }}
 
   get-hash:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     environment: production
     if: ${{ inputs.gcchash == '' }}
     steps:
