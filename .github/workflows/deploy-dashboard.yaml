@@ -70,6 +70,10 @@ jobs:
           cd dashboard
           python plot.py
 
+      - name: Fetch
+        run: |
+          git fetch
+
       - name: Commit new data/site
         uses: EndBug/add-and-commit@v9
         with:
