@@ -56,15 +56,16 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: ${{ inputs.prefix }}submodules-archive-13 # Numbered archive to allow for easy transition when bumping submodules
+          key: ${{ inputs.prefix }}submodules-archive-15 # Numbered archive to allow for easy transition when bumping submodules
 
       - name: Initalize submodules cache
         id: cache-init
         if: steps.retrieve-cache.outputs.cache-hit != 'true'
         run: |
-          git submodule update --init --recursive --depth 1 binutils
+          git submodule sync
+          git submodule update --init --recursive binutils
           git submodule update --init --recursive --depth 1 dejagnu
-          git submodule update --init --recursive --depth 1 gdb
+          git submodule update --init --recursive gdb
           git submodule update --init --recursive --depth 1 glibc
           git submodule update --init --recursive --depth 1 newlib
           # qemu is a bit special since one submodule in edk2 lost its submodule hook
@@ -88,9 +89,10 @@ jobs:
         run: |
           echo "Failed to initialize cache submodules. Retrying in 1 min"
           sleep 60
-          git submodule update --init --recursive --depth 1 binutils
+          git submodule sync
+          git submodule update --init --recursive binutils
           git submodule update --init --recursive --depth 1 dejagnu
-          git submodule update --init --recursive --depth 1 gdb
+          git submodule update --init --recursive gdb
           git submodule update --init --recursive --depth 1 glibc
           git submodule update --init --recursive --depth 1 newlib
           # qemu is a bit special since one submodule in edk2 lost its submodule hook
@@ -137,14 +139,6 @@ jobs:
           init: false
           branch: ${{ inputs.gcc_branch }}
 
-      - name: Apply newlib fixups
-        if: steps.retrieve-cache.outputs.cache-hit != 'true'
-        run: |
-          cd newlib
-          git config --global user.email "github-bot@example.com"
-          git config --global user.name "Github Bot"
-          git am ../fixups/newlib/*.patch
-
       - name: Get hash
         working-directory: riscv-gnu-toolchain/gcc
         id: gcc-hash
@@ -180,7 +174,7 @@ jobs:
             riscv-gnu-toolchain/glibc
             riscv-gnu-toolchain/newlib
             riscv-gnu-toolchain/qemu
-          key: ${{ inputs.prefix }}submodules-archive-13
+          key: ${{ inputs.prefix }}submodules-archive-15
 
       - name: Make cache zip
         run: |
