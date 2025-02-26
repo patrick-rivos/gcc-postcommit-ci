@@ -124,6 +124,40 @@ runs:
         binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib
         github-token: ${{ inputs.token }}
 
+    # Download rv32/64 glibc builds.
+
+    - name: Download linux rv64-glibc
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'glibc_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gc-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv64gc-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download linux rv32-glibc
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'glibc_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-linux-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv64-glibc
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'glibc_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64gc-lp64d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv64gc-lp64d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
+    - name: Download newlib rv32-glibc
+      uses: ./.github/actions/common/download-comparison-artifacts
+      if: ${{ inputs.prefix == 'glibc_' }}
+      with:
+        report-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib-report.log
+        binary-artifact-name: ${{ inputs.prefix }}gcc-newlib-rv32gc-ilp32d-${{ inputs.gcchash }}-multilib
+        github-token: ${{ inputs.token }}
+
     # Download with checking builds
 
     - name: Download linux rv64 with checking

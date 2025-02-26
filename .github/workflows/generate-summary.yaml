@@ -25,6 +25,9 @@ on:
       binutils_branch:
         required: false
         type: string
+      glibc_branch:
+        required: false
+        type: string
   workflow_dispatch:
     branches:
       - main
@@ -48,6 +51,7 @@ on:
           - "binutils_"
           - "checking_"
           - "coord_"
+          - "glibc_"
           - "release_14_"
           - "rv32_zvl_"
           - "rv64_zvl_"
@@ -62,6 +66,12 @@ on:
           - 'release-14'
       binutils_branch:
         description: 'Binutils branch'
+        default: 'master'
+        type: choice
+        options:
+          - 'master'
+      glibc_branch:
+        description: 'Glibc branch'
         default: 'master'
         type: choice
         options:
@@ -172,6 +182,25 @@ jobs:
         run: |
           cd binutils
           git checkout ${{ inputs.binutils_branch }}
+          git pull
+
+      - name: Initialize glibc
+        if: ${{ inputs.prefix == 'glibc_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          rm -rf glibc
+          # Use the mirror since github tends to be pretty reliable for cloning.
+          git clone https://github.com/bminor/glibc.git glibc
+          cd glibc
+          git checkout ${{ inputs.glibc_branch }}
+          git pull
+
+      - name: Checkout glibc
+        if: ${{ inputs.prefix == 'glibc_' && steps.gcc-cache.outcome == 'skipped' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          cd glibc
+          git checkout ${{ inputs.glibc_branch }}
           git pull
 
       - name: Create directories
@@ -763,6 +792,25 @@ jobs:
         run: |
           cd binutils
           git checkout ${{ inputs.binutils_branch }}
+          git pull
+
+      - name: Initialize glibc
+        if: ${{ inputs.prefix == 'glibc_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          rm -rf glibc
+          # Use the mirror since github tends to be pretty reliable for cloning.
+          git clone https://github.com/bminor/glibc.git glibc
+          cd glibc
+          git checkout ${{ inputs.glibc_branch }}
+          git pull
+
+      - name: Checkout glibc
+        if: ${{ inputs.prefix == 'glibc_' && steps.gcc-cache.outcome == 'skipped' }}
+        working-directory: ./riscv-gnu-toolchain
+        run: |
+          cd glibc
+          git checkout ${{ inputs.glibc_branch }}
           git pull
 
       - name: Initialize Bisection Hash

@@ -27,6 +27,11 @@ on:
         required: false
         type: string
         default: 'master'
+      glibc_branch:
+        description: 'glibc branch to pull from (only used if prefix is glibc_)'
+        required: false
+        type: string
+        default: 'master'
 
 jobs:
   init-submodules:
@@ -129,6 +134,18 @@ jobs:
           git checkout ${{ inputs.binutils_branch }}
           git pull
 
+      - name: Intialize glibc
+        if: ${{ inputs.prefix == 'glibc_' && steps.retrieve-cache.outputs.cache-hit != 'true' }}
+        working-directory: ./riscv-gnu-toolchain
+        id: glibc-cache
+        run: |
+          rm -rf glibc
+          # Use the mirror since github tends to be pretty reliable for cloning.
+          git clone https://github.com/bminor/glibc.git glibc
+          cd binutils
+          git checkout ${{ inputs.glibc_branch }}
+          git pull
+
         # Does not remove and reclone gcc if we hit cache
       - name: Checkout GCC
         if: steps.gcc-cache.outcome == 'skipped'
@@ -153,6 +170,14 @@ jobs:
           if [ "${{ inputs.prefix }}" == "binutils_" ]; then
             cd ../binutils
             git checkout ${{ inputs.binutils_branch }}
+            git pull
+            export GCCHASH=$(git rev-parse HEAD)
+          fi
+
+          # If it's a glibc run, we need to lie about the hash
+          if [ "${{ inputs.prefix }}" == "glibc_" ]; then
+            cd ../glibc
+            git checkout ${{ inputs.glibc_branch }}
             git pull
             export GCCHASH=$(git rev-parse HEAD)
           fi
