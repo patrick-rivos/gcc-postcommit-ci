@@ -44,26 +44,26 @@ jobs:
       gcchash: ${{ inputs.gcchash }}
       issue_num: ${{ inputs.issue_num }}
 
-  manually-triggered-binutils-workflow-dispatch:
-    uses: ./.github/workflows/run-daily-rv-gc-binutils.yaml
-    if: ${{ inputs.prefix == 'binutils_' }}
-    permissions:
-      issues: write
+  # manually-triggered-binutils-workflow-dispatch:
+  #   uses: ./.github/workflows/run-daily-rv-gc-binutils.yaml
+  #   if: ${{ inputs.prefix == 'binutils_' }}
+  #   permissions:
+  #     issues: write
 
-  manually-triggered-checking-workflow-dispatch:
-    uses: ./.github/workflows/run-weekly-with-checking.yaml
-    if: ${{ inputs.prefix == 'checking_' }}
-    permissions:
-      issues: write
+  # manually-triggered-checking-workflow-dispatch:
+  #   uses: ./.github/workflows/run-weekly-with-checking.yaml
+  #   if: ${{ inputs.prefix == 'checking_' }}
+  #   permissions:
+  #     issues: write
 
-  manually-triggered-coord-workflow-dispatch:
-    uses: ./.github/workflows/run-frequent-coordination.yaml
-    if: ${{ inputs.prefix == 'coord_' }}
-    permissions:
-      issues: write
-    with:
-      gcchash: ${{ inputs.gcchash }}
-      issue_num: ${{ inputs.issue_num }}
+  # manually-triggered-coord-workflow-dispatch:
+  #   uses: ./.github/workflows/run-frequent-coordination.yaml
+  #   if: ${{ inputs.prefix == 'coord_' }}
+  #   permissions:
+  #     issues: write
+  #   with:
+  #     gcchash: ${{ inputs.gcchash }}
+  #     issue_num: ${{ inputs.issue_num }}
 
   manually-triggered-glibc-workflow-dispatch:
     uses: ./.github/workflows/run-daily-rv-gc-glibc.yaml
@@ -71,26 +71,26 @@ jobs:
     permissions:
       issues: write
 
-  manually-triggered-release-14-workflow-dispatch:
-    uses: ./.github/workflows/run-frequent-14.yaml
-    if: ${{ inputs.prefix == 'release_14_' }}
-    permissions:
-      issues: write
-    with:
-      gcchash: ${{ inputs.gcchash }}
-      issue_num: ${{ inputs.issue_num }}
+  # manually-triggered-release-14-workflow-dispatch:
+  #   uses: ./.github/workflows/run-frequent-14.yaml
+  #   if: ${{ inputs.prefix == 'release_14_' }}
+  #   permissions:
+  #     issues: write
+  #   with:
+  #     gcchash: ${{ inputs.gcchash }}
+  #     issue_num: ${{ inputs.issue_num }}
 
-  manually-triggered-rv32-zvl-workflow-dispatch:
-    uses: ./.github/workflows/run-weekly-rv32gcv-zvl.yaml
-    if: ${{ inputs.prefix == 'rv32_zvl_' }}
-    permissions:
-      issues: write
+  # manually-triggered-rv32-zvl-workflow-dispatch:
+  #   uses: ./.github/workflows/run-weekly-rv32gcv-zvl.yaml
+  #   if: ${{ inputs.prefix == 'rv32_zvl_' }}
+  #   permissions:
+  #     issues: write
 
-  manually-triggered-rv64-zvl-workflow-dispatch:
-    uses: ./.github/workflows/run-weekly-rv64gcv-zvl.yaml
-    if: ${{ inputs.prefix == 'rv64_zvl_' }}
-    permissions:
-      issues: write
+  # manually-triggered-rv64-zvl-workflow-dispatch:
+  #   uses: ./.github/workflows/run-weekly-rv64gcv-zvl.yaml
+  #   if: ${{ inputs.prefix == 'rv64_zvl_' }}
+  #   permissions:
+  #     issues: write
 
   # manually-triggered-zve-workflow-dispatch:
   #   uses: ./.github/workflows/run-weekly-gcv-zve.yaml
