@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
     branches:
       - main
+  workflow_call:
 
 jobs:
   # init-submodules sees "glibc_" and lies to us, giving us the glibc hash instead of the gcc hash.

@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
     branches:
       - main
+  workflow_call:
 
 jobs:
   # init-submodules sees "binutils_" and lies to us, giving us the binutils hash instead of the gcc hash.
