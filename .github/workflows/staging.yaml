@@ -101,7 +101,7 @@ jobs:
   get-hash:
     runs-on: ubuntu-20.04
     environment: production
-    if: ${{ inputs.gcchash == '' }}
+    if: ${{ inputs.gcchash == '' && inputs.prefix == '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -139,7 +139,7 @@ jobs:
   run-workflow:
     needs: [get-hash]
     uses: ./.github/workflows/run-frequent.yaml
-    if: ${{ inputs.gcchash == '' }}
+    if: ${{ inputs.gcchash == '' && inputs.prefix == '' }}
     permissions:
       issues: write
     secrets: inherit
