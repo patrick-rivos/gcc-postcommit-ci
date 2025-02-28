@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
     branches:
       - main
+  workflow_call:
 
 jobs:
   init-submodules:

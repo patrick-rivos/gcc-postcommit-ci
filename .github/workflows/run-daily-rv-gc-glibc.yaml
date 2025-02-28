@@ -1,36 +1,36 @@
-name: Run-Daily-Binutils-rv-gc
+name: Run-Daily-Glibc-rv-gc
 
 # rv{64/32}gc variants
 
 on:
   schedule:
-    # Run at 5:00am
-    - cron: 0 5 * * *
+    # Run at 3:00am
+    - cron: 0 3 * * *
   workflow_dispatch:
     branches:
       - main
   workflow_call:
 
 jobs:
-  # init-submodules sees "binutils_" and lies to us, giving us the binutils hash instead of the gcc hash.
+  # init-submodules sees "glibc_" and lies to us, giving us the glibc hash instead of the gcc hash.
   # This is intended since it would be a heavy lift to make everything aware of multiple hashes.
-  # The prefix should be enough for us to always know it's a binutils hash
+  # The prefix should be enough for us to always know it's a glibc hash
   init-submodules:
     uses: ./.github/workflows/init-submodules.yaml
     with:
       # Add new prefixes to /dashboard/getdata.py in download_summaries()
-      # ^ Ignored for now since we're testing binutils
-      prefix: 'binutils_'
+      # ^ Ignored for now since we're testing glibc
+      prefix: 'glibc_'
       gcchash: 'cd0059a1976303638cea95f216de129334fc04d1' # Arbitrary fixed GCC hash
       gcc_branch: master
-      binutils_branch: master
+      glibc_branch: master
 
-  binutils-self-hosted:
+  glibc-self-hosted:
     needs: [init-submodules]
     strategy:
       fail-fast: false
       matrix:
-        mode: [newlib, linux]
+        mode: [linux] # no point in running newlib builds
         target: [
           rv32gc-ilp32d,
           rv64gc-lp64d,
@@ -40,22 +40,22 @@ jobs:
     with:
       mode: ${{ matrix.mode }}
       target: ${{ matrix.target }}
-      gcchash: ${{ needs.init-submodules.outputs.gcchash }} # Lie and use binutils hash
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }} # Lie and use glibc hash
       multilib: ${{ matrix.multilib }}
       multitarget: ${{ github.event.inputs.multi_target }}
       run_on_self_hosted: true
-      prefix: 'binutils_'
+      prefix: 'glibc_'
 
   summarize:
     if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
-    needs: [init-submodules, binutils-self-hosted]
+    needs: [init-submodules, glibc-self-hosted]
     permissions:
       issues: write
     uses: ./.github/workflows/generate-summary.yaml
     secrets: inherit
     with:
-      gcchash: ${{ needs.init-submodules.outputs.gcchash }} # Lie and use binutils hash
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }} # Lie and use glibc hash
       issue_num: ${{ github.event.inputs.issue_num }}
-      issue_hash_prefix: 'Binutils Testsuite Status'
-      prefix: 'binutils_'
+      issue_hash_prefix: 'Glibc Testsuite Status'
+      prefix: 'glibc_'
       gcc_branch: master
