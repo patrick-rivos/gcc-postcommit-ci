@@ -30,7 +30,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        mode: [newlib, linux]
+        mode: [linux] # no point in running newlib builds
         target: [
           rv32gc-ilp32d,
           rv64gc-lp64d,
