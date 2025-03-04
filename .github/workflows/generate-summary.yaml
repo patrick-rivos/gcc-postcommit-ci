@@ -70,7 +70,7 @@ on:
 jobs:
   check-early-exit:
     if: always()
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     environment: production
     steps:
       - uses: actions/checkout@v3
@@ -111,7 +111,7 @@ jobs:
   compare-artifacts:
     if: ${{ always() && needs.check-early-exit.outputs.early_exit != 'true' }} # ensure comparison always runs even on error
     needs: [check-early-exit]
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     environment: production
     defaults:
       run:
@@ -334,7 +334,7 @@ jobs:
   generate-issues:
     if: ${{ always() && needs.check-early-exit.outputs.early_exit != 'true' }} # ensure generate issues always runs even on error
     needs: [check-early-exit, compare-artifacts]
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     permissions:
       issues: write
     defaults:
@@ -659,7 +659,7 @@ jobs:
 
 
   regenerate-issues:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     permissions:
       issues: write
     defaults:
