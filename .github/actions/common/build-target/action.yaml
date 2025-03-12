@@ -48,6 +48,7 @@ runs:
           mkdir build
           cd build
           ../../configure-scripts/${{ inputs.prefix }}${{ inputs.multilib_target_string }}
+          sed -i 's/ --user / --user --break-system-packages /g' Makefile
           head config.log
 
       # http://ruslanledesma.com/2016/03/08/protip-redirect-stdout-stderr-separate-files.html

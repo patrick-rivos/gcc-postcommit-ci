@@ -77,6 +77,7 @@ jobs:
           cd build
           TARGET_TUPLE=($(echo ${{ inputs.target }} | tr "-" "\n"))
           ../configure --prefix=$(pwd) --with-arch=${TARGET_TUPLE[0]} --with-abi=${TARGET_TUPLE[1]} --enable-gcc-checking=all
+          sed -i "s/ --user / --user --break-system-packages /g" Makefile
 
       - name: Make gcc
         run: |
