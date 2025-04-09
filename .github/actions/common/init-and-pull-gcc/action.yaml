@@ -93,7 +93,7 @@ runs:
         run: |
           cd gcc
           git fetch
-          git checkout releases/gcc-14
+          git checkout origin/releases/gcc-14
         continue-on-error: true
 
       - name: Sleep and retry
@@ -105,4 +105,4 @@ runs:
           sleep 60
           cd gcc
           git fetch
-          git checkout releases/gcc-14
+          git checkout origin/releases/gcc-14
