@@ -67,20 +67,7 @@ jobs:
           git submodule update --init --recursive gdb
           git submodule update --init --recursive glibc
           git submodule update --init --recursive newlib
-          # qemu is a bit special since one submodule in edk2 lost its submodule hook
-          # therefore, we need to apply the patch which updates the submodule hook
-          git submodule update --init qemu
-          cd qemu
-          git submodule update --init roms/edk2
-          cd roms/edk2
-          git fetch
-          # to avoid git am failed to apply cleanly errors
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-          git cherry-pick 95d8a1c255cfb8e063d679930d08ca6426eb5701 --strategy-option theirs
-          cd ../../../
-          # --rebase is added to rebase newly applied changes to the base submodule hash
-          git submodule update --init --recursive --rebase qemu
+          git submodule update --init --recursive qemu
         continue-on-error: true
 
       - name: Initalize submodules cache
@@ -93,20 +80,7 @@ jobs:
           git submodule update --init --recursive gdb
           git submodule update --init --recursive glibc
           git submodule update --init --recursive newlib
-          # qemu is a bit special since one submodule in edk2 lost its submodule hook
-          # therefore, we need to apply the patch which updates the submodule hook
-          git submodule update --init qemu
-          cd qemu
-          git submodule update --init roms/edk2
-          cd roms/edk2
-          git fetch
-          # to avoid git am failed to apply cleanly errors
-          # we reconfig the git user info just in case it failed before the config started
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-          git cherry-pick 95d8a1c255cfb8e063d679930d08ca6426eb5701 --strategy-option theirs
-          cd ../../../
-          # --rebase is added to rebase newly applied changes to the base submodule hash
+          git submodule update --init --recursive qemu
           git submodule update --init --recursive --rebase qemu
 
       - name: Initialize gcc
