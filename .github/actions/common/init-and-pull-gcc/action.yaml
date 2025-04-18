@@ -106,3 +106,25 @@ runs:
           cd gcc
           git fetch
           git checkout origin/releases/gcc-14
+
+      - name: Checkout release-15 branch
+        shell: bash
+        if: ${{ inputs.branch == 'release-15' }}
+        working-directory: ./riscv-gnu-toolchain
+        id: pull-release-15
+        run: |
+          cd gcc
+          git fetch
+          git checkout origin/releases/gcc-15
+        continue-on-error: true
+
+      - name: Sleep and retry
+        shell: bash
+        working-directory: ./riscv-gnu-toolchain
+        if: ${{ steps.pull-release-15.outcome == 'failure' && inputs.branch == 'release-15' }}
+        run: |
+          echo "Failed to checkout and pull gcc. Retrying in 1 min"
+          sleep 60
+          cd gcc
+          git fetch
+          git checkout origin/releases/gcc-15
