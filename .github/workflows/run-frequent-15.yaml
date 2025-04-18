@@ -1,0 +1,122 @@
+name: Run-Frequent-15
+
+# Checks for new commits and run regression tests on the GCC 15 release branch
+
+on:
+  schedule:
+    # Run once a day.
+    - cron: 0 0 * * *
+  workflow_call:
+    inputs:
+      gcchash:
+        description: 'GCC Hash'
+        required: true
+        type: string
+      issue_num:
+        description: 'Issue number of baseline'
+        required: true
+        type: string
+  workflow_dispatch:
+    branches:
+      - main
+    inputs:
+      gcchash:
+        description: 'GCC Hash'
+        required: true
+      multi_target:
+        description: 'Targets to run (libc:arch-abi;...)'
+        required: false
+      issue_num:
+        description: 'Bisection Issue Number (Optional)'
+        required: false
+
+jobs:
+  init-submodules:
+    uses: ./.github/workflows/init-submodules.yaml
+    with:
+      prefix: 'release_15_'
+      gcchash: ${{ inputs.gcchash }}
+      gcc_branch: 'release-15'
+
+  creg: # Check Regressions. Short name so I can see the matrix string in github
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [newlib, linux]
+        target:
+          [
+            rv32gc-ilp32d,
+            rv64gc-lp64d,
+            rv32gc_zba_zbb_zbc_zbs-ilp32d, # rv32 bitmanip
+            rv64gc_zba_zbb_zbc_zbs-lp64d, # rv64 bitmanip
+          ]
+        multilib: [non-multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: false
+      prefix: 'release_15_'
+
+  cmreg-self-hosted: # Check Multilib Regressions. Short name so I can see the matrix string in github
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [newlib, linux]
+        target: [rv64gcv-lp64d] # Dummy placeholder.
+        # Actually runs rv32/rv64 multilib:
+        # rv32gcv-ilp32d, # rv32 vector
+        # rv64gcv-lp64d, # rv64 vector
+        # rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt-lp64d, # rv64 vector crypto
+        # rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt-lp64d, # RVA23U64 profile with optional extensions, excluding unsupported extensions
+        multilib: [multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: true
+      prefix: 'release_15_'
+
+  cmreg-self-hosted-uc: # Check Multilib Regressions. Short name so I can see the matrix string in github
+    needs: [init-submodules]
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [newlib] # linux does not support no a extension
+        target:
+          [
+            # Left as rv64 with lp64d instead of lp64 for naming
+            rv64imc-lp64d, # runs base targets
+            rv64imc_zba_zbb_zbc_zbs-lp64d, # runs base + bitmanip
+          ]
+        multilib: [multilib]
+    uses: ./.github/workflows/build-test.yaml
+    with:
+      mode: ${{ matrix.mode }}
+      target: ${{ matrix.target }}
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      multilib: ${{ matrix.multilib }}
+      multitarget: ${{ github.event.inputs.multi_target }}
+      run_on_self_hosted: true
+      prefix: 'release_15_'
+
+  summarize:
+    if: "!cancelled()" # Generate github issues even when some (or all) targets fail to build
+    needs: [init-submodules, creg, cmreg-self-hosted, cmreg-self-hosted-uc]
+    permissions:
+      issues: write
+    uses: ./.github/workflows/generate-summary.yaml
+    with:
+      gcchash: ${{ needs.init-submodules.outputs.gcchash }}
+      issue_num: ${{ inputs.issue_num }}
+      issue_hash_prefix: Release 15 Branch Testsuite Status
+      prefix: 'release_15_'
+      gcc_branch: release-15
