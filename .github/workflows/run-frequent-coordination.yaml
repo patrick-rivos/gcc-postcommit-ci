@@ -22,7 +22,7 @@ on:
     inputs:
       gcchash:
         description: 'GCC Hash'
-        required: true
+        required: false
       multi_target:
         description: 'Targets to run (libc:arch-abi;...)'
         required: false
