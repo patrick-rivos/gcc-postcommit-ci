@@ -34,7 +34,7 @@ runs:
 
       - name: Detect unrecognized branches
         shell: bash
-        if: ${{ inputs.branch != 'master' && inputs.branch != 'coordination' && inputs.branch != 'release-14' }}
+        if: ${{ inputs.branch != 'master' && inputs.branch != 'coordination' && inputs.branch != 'release-14' && inputs.branch != 'release-15' }}
         run: |
           echo "inputs.branch found \"${{ inputs.branch }}\""
           exit 1
