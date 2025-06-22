@@ -70,6 +70,10 @@ jobs:
           cd dashboard
           python plot.py
 
+      - name: Deinit
+        run: |
+          git submodule deinit -f riscv-gnu-toolchain
+
       - name: Commit new data/site
         uses: EndBug/add-and-commit@v9
         with:
