@@ -63,10 +63,13 @@ def download_summaries(artifact_name: str, token: str, repo: str):
         "rv64_zvl_",
         "coord_",
         "release_14_",
+        "release_15_",
         "binutils_",
         "checking_",
     ]:
+        print(f"searching for {prefix + artifact_name}")
         artifact_id = search_for_artifact(prefix + artifact_name, repo, token, None)
+        print(f"found id {artifact_id}")
         if artifact_id is not None:
             break
     assert artifact_id is not None
