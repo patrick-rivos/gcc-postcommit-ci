@@ -48,12 +48,12 @@ def clean(old_df: pd.DataFrame):
 
     # If there hasn't been a new datapoint in 3 months we've stopped testing this target.
     # Remove it from the dashboard.
-    for libc_target in set(df["libc-target"]):
-        max_timestamp = max(df[df["libc-target"] == libc_target]["hash_timestamp"])
-        if max_timestamp.date() < datetime.date.today() - datetime.timedelta(
-            days=3 * 365 / 12
-        ):
-            df = df[df["libc-target"] != libc_target]
+    # for libc_target in set(df["libc-target"]):
+    #     max_timestamp = max(df[df["libc-target"] == libc_target]["hash_timestamp"])
+    #     if max_timestamp.date() < datetime.date.today() - datetime.timedelta(
+    #         days=3 * 365 / 12
+    #     ):
+    #         df = df[df["libc-target"] != libc_target]
 
     return df
 
@@ -96,6 +96,8 @@ def plot_cumulative_state(
 def generate_pages(all_data: pd.DataFrame, filtered: bool = False):
     suffix = "-filtered" if filtered else ""
     os.makedirs(f"site", exist_ok=True)
+    print("Generating all targets page")
+    print("all_data", all_data)
     plot_cumulative_state(all_data, f"site/all{suffix}.html", filtered=filtered)
 
     os.makedirs(f"site", exist_ok=True)
@@ -103,6 +105,7 @@ def generate_pages(all_data: pd.DataFrame, filtered: bool = False):
     main_dashboard_data = main_dashboard_data[
         ~main_dashboard_data["libc-target"].str.contains("gcv_zve")
     ]
+    print("Generating main dashboard page")
     plot_cumulative_state(
         main_dashboard_data, f"site/index{suffix}.html", filtered=filtered
     )
@@ -150,7 +153,9 @@ if __name__ == "__main__":
     linux_data = pd.read_csv("linux.csv")
     newlib_data = pd.read_csv("newlib.csv")
     raw_data = pd.concat([newlib_data, linux_data])
+    print("raw_data", raw_data)
     all_data = clean(raw_data)
+    print("all_data", all_data)
 
     generate_pages(all_data, False)
 
