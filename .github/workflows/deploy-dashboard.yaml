@@ -37,6 +37,8 @@ jobs:
         run: |
           cd riscv-gnu-toolchain
           git submodule update --init gcc
+          git fetch
+          git reset --hard origin/build-frequent
           cd gcc
           git fetch
         continue-on-error: true
@@ -47,6 +49,8 @@ jobs:
           echo "Failed to initialize gcc. Retrying in 1 min"
           sleep 60
           cd riscv-gnu-toolchain
+          git fetch
+          git reset --hard origin/build-frequent
           git submodule update --init gcc
           cd gcc
           git fetch
