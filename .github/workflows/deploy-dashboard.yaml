@@ -75,10 +75,10 @@ jobs:
           python plot.py
 
       - name: Commit new data/site
-        uses: EndBug/add-and-commit@v9
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
-          message: 'CI: Update dashboard with latest runs'
-          add: 'dashboard'
+          commit_message: 'CI: Update dashboard with latest runs'
+          file_pattern: 'dashboard/*'
 
       # Deploy
       - name: Configure Pages
