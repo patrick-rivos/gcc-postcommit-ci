@@ -60,13 +60,17 @@ jobs:
           free_up_space: true
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
-          path: riscv-gnu-toolchain
+        run: |
+          gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
+          pwd
+          ls
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Restore submodules
         run: |
+          pwd
+          ls
           rm -rf .git binutils dejagnu gcc gdb glibc newlib qemu
           unzip cache.zip
           rm -rf cache.zip
@@ -117,13 +121,15 @@ jobs:
           free_up_space: true
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
-          path: riscv-gnu-toolchain
+        run: |
+          gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
+          ls riscv-gnu-toolchain
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Restore submodules
         run: |
+          pwd
           rm -rf .git binutils dejagnu gcc gdb glibc newlib qemu
           unzip cache.zip
           rm -rf cache.zip
@@ -193,13 +199,15 @@ jobs:
           free_up_space: false
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
-          path: riscv-gnu-toolchain
+        run: |
+          gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
+          ls riscv-gnu-toolchain
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Restore submodules
         run: |
+          pwd
           rm -rf .git binutils dejagnu gcc gdb glibc newlib qemu
           unzip cache.zip
           rm -rf cache.zip
@@ -268,13 +276,15 @@ jobs:
           free_up_space: false
 
       - name: Restore submodules from cache
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}
-          path: riscv-gnu-toolchain
+        run: |
+          gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
+          ls riscv-gnu-toolchain
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Restore submodules
         run: |
+          pwd
           rm -rf .git binutils dejagnu gcc gdb glibc newlib qemu
           unzip cache.zip
           rm -rf cache.zip
