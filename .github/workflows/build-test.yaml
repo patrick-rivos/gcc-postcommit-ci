@@ -62,8 +62,6 @@ jobs:
       - name: Restore submodules from cache
         run: |
           gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
-          pwd
-          ls
         env:
           GH_TOKEN: ${{ github.token }}
 
@@ -123,7 +121,6 @@ jobs:
       - name: Restore submodules from cache
         run: |
           gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
-          ls riscv-gnu-toolchain
         env:
           GH_TOKEN: ${{ github.token }}
 
@@ -201,7 +198,6 @@ jobs:
       - name: Restore submodules from cache
         run: |
           gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
-          ls riscv-gnu-toolchain
         env:
           GH_TOKEN: ${{ github.token }}
 
@@ -278,7 +274,6 @@ jobs:
       - name: Restore submodules from cache
         run: |
           gh run download --repo ${{ github.repository }} "${{ github.run_id }}" --name "${{ inputs.prefix }}gcc-sources-${{ inputs.gcchash }}"
-          ls riscv-gnu-toolchain
         env:
           GH_TOKEN: ${{ github.token }}
 
