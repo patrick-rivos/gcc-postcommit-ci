@@ -74,6 +74,10 @@ jobs:
           cd dashboard
           python plot.py
 
+      - name: Deinit
+        run: |
+          git submodule deinit -f riscv-gnu-toolchain
+
       - name: Commit new data/site
         uses: stefanzweifel/git-auto-commit-action@v6
         with:
