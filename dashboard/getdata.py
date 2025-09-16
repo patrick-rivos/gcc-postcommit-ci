@@ -67,15 +67,18 @@ def download_summaries(artifact_name: str, token: str, repo: str):
         "binutils_",
         "checking_",
     ]:
+
         print(f"searching for {prefix + artifact_name}")
         artifact_id = search_for_artifact(prefix + artifact_name, repo, token, None)
         print(f"found id {artifact_id}")
         if artifact_id is not None:
+            artifact_name = prefix + artifact_name
             break
     assert artifact_id is not None
     if (
         "coord_" in artifact_name
         or "release_14_" in artifact_name
+        or "release_15_" in artifact_name
         or "binutils_" in artifact_name
     ):
         # Ignore coordnation/release/binutils runs
