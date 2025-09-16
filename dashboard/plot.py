@@ -48,12 +48,12 @@ def clean(old_df: pd.DataFrame):
 
     # If there hasn't been a new datapoint in 3 months we've stopped testing this target.
     # Remove it from the dashboard.
-    # for libc_target in set(df["libc-target"]):
-    #     max_timestamp = max(df[df["libc-target"] == libc_target]["hash_timestamp"])
-    #     if max_timestamp.date() < datetime.date.today() - datetime.timedelta(
-    #         days=3 * 365 / 12
-    #     ):
-    #         df = df[df["libc-target"] != libc_target]
+    for libc_target in set(df["libc-target"]):
+        max_timestamp = max(df[df["libc-target"] == libc_target]["hash_timestamp"])
+        if max_timestamp.date() < datetime.date.today() - datetime.timedelta(
+            days=3 * 365 / 12
+        ):
+            df = df[df["libc-target"] != libc_target]
 
     return df
 
