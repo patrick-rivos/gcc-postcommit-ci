@@ -1,0 +1,897 @@
+		=== g++: Unexpected fails for rv64gcv_zvl128b lp64d medlow -mrvv-max-lmul=m2 ===
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++14  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++14  at line 17 (test for warnings, line 10)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++14  at line 18 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++14  at line 19 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++14  at line 20 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++17  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++17  at line 18 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++17  at line 19 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-default.C  -std=c++17  at line 20 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++14  at line 13 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++14  at line 18 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++14  at line 19 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++14  at line 20 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++14  at line 21 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++17  at line 13 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++17  at line 19 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++17  at line 20 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers-no.C  -std=c++17  at line 21 (test for warnings, line 12)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers.C  -std=c++17  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers.C  -std=c++17 (test for excess errors)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers.C  -std=c++17 telltale event that we are going within a deeper frame than 'main' (test for warnings, line 9)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers.C  -std=c++26  at line 12 (test for warnings, line 11)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers.C  -std=c++26 (test for excess errors)
+FAIL: g++.dg/analyzer/fanalyzer-show-events-in-system-headers.C  -std=c++26 telltale event that we are going within a deeper frame than 'main' (test for warnings, line 9)
+FAIL: g++.dg/coroutines/torture/func-params-07.C   -O3 -g  execution test
+FAIL: g++.dg/coroutines/torture/pr103953.C   -O2  execution test
+FAIL: g++.dg/coroutines/torture/pr103953.C   -O3 -g  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++17 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++26 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/ipa/devirt-2.C  -std=gnu++17  scan-ipa-dump cp "Discovered a virtual call to a known target.*B::foo"
+FAIL: g++.dg/ipa/devirt-2.C  -std=gnu++26  scan-ipa-dump cp "Discovered a virtual call to a known target.*B::foo"
+FAIL: g++.dg/ipa/devirt-2.C  -std=gnu++98  scan-ipa-dump cp "Discovered a virtual call to a known target.*B::foo"
+XPASS: g++.dg/ipa/devirt-23.C  -std=gnu++17  scan-ipa-dump cp "Discovered a virtual call to"
+XPASS: g++.dg/ipa/devirt-23.C  -std=gnu++26  scan-ipa-dump cp "Discovered a virtual call to"
+XPASS: g++.dg/ipa/devirt-23.C  -std=gnu++98  scan-ipa-dump cp "Discovered a virtual call to"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++17  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++26  scan-tree-dump optimized "return 15;"
+XPASS: g++.dg/tree-ssa/pr83518.C  -std=gnu++98  scan-tree-dump optimized "return 15;"
+FAIL: g++-dg-lto-devirt-2-01.exe scan-wpa-ipa-dump cp "Discovered a virtual call to a known target.*foo"
+FAIL: g++.dg/lto/devirt-23 cp_lto_devirt-23_0.o-cp_lto_devirt-23_0.o execute -O3 -fno-early-inlining -fno-ipa-sra -fdump-ipa-cp -flto -fno-devirtualize-speculatively
+FAIL: c-c++-common/torture/pr116156-1.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -Os  (test for excess errors)
+FAIL: g++.dg/torture/pr58552.C   -O1  (test for excess errors)
+FAIL: g++.dg/torture/pr58552.C   -O2  (test for excess errors)
+FAIL: g++.dg/torture/pr58552.C   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: g++.dg/torture/pr58552.C   -O3 -g  (test for excess errors)
+FAIL: g++.dg/torture/pr58552.C   -Os  (test for excess errors)
+FAIL: g++.target/riscv/redundant-bitmap-2.C scan-assembler-not bclr\t
+FAIL: g++.target/riscv/redundant-bitmap-2.C scan-assembler-times bset\t 1
+		=== gfortran: Unexpected fails for rv64gcv_zvl128b lp64d medlow -mrvv-max-lmul=m2 ===
+FAIL: gfortran.dg/c_f_pointer_logical.f03   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/c_f_pointer_logical.f03   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/c_f_pointer_logical.f03   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/c_f_pointer_logical.f03   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/class_array_1.f03   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/class_array_1.f03   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/class_array_1.f03   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/class_array_1.f03   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/f2c_7.f90   -O2  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/f2c_7.f90   -O2  (test for excess errors)
+FAIL: gfortran.dg/f2c_7.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/f2c_7.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/f2c_7.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/f2c_7.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/finalizer_recursive_alloc_2.f90   -O0  output pattern test
+FAIL: gfortran.dg/finalizer_recursive_alloc_2.f90   -O1  output pattern test
+FAIL: gfortran.dg/finalizer_recursive_alloc_2.f90   -O2  output pattern test
+FAIL: gfortran.dg/finalizer_recursive_alloc_2.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  output pattern test
+FAIL: gfortran.dg/finalizer_recursive_alloc_2.f90   -O3 -g  output pattern test
+FAIL: gfortran.dg/finalizer_recursive_alloc_2.f90   -Os  output pattern test
+FAIL: gfortran.dg/inline_sum_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/inline_sum_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/inline_sum_5.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/inline_sum_5.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/intrinsic_spread_1.f90   -O2  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/intrinsic_spread_1.f90   -O2  (test for excess errors)
+FAIL: gfortran.dg/intrinsic_spread_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/intrinsic_spread_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/intrinsic_spread_1.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/intrinsic_spread_1.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/minloc_3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/minloc_3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/minloc_3.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/minloc_3.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/minlocval_3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/minlocval_3.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/minlocval_3.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/minlocval_3.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/optional_absent_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/optional_absent_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/optional_absent_5.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/optional_absent_5.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/pr43866.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/pr43866.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/pr43866.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/pr43866.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/pr56015.f90   -O  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/pr56015.f90   -O  (test for excess errors)
+FAIL: gfortran.dg/reduction.f90   -O2  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/reduction.f90   -O2  (test for excess errors)
+FAIL: gfortran.dg/reduction.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/reduction.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/reduction.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/reduction.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/select_rank_1.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/transfer_class_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/transfer_class_5.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gfortran.dg/transfer_class_5.f90   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/transfer_class_5.f90   -O3 -g  (test for excess errors)
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+FAIL: gfortran.dg/vect/no-fre-no-copy-prop-O3-pr51704.f90   -O  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/vect/no-fre-no-copy-prop-O3-pr51704.f90   -O  (test for excess errors)
+FAIL: gfortran.dg/vect/pr83232.f90   -O   scan-tree-dump-times slp1 "vectorizing stmts using SLP" 3
+FAIL: gfortran.dg/vect/pr99721.f90   -O  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/vect/pr99721.f90   -O  (test for excess errors)
+FAIL: gfortran.dg/vect/pr99825.f90   -O  (internal compiler error: Segmentation fault)
+FAIL: gfortran.dg/vect/pr99825.f90   -O  (test for excess errors)
+FAIL: gfortran.fortran-torture/execute/in-pack.f90,  -O3 -g  (internal compiler error: Segmentation fault)
+		=== gcc: Unexpected fails for rv64gcv_zvl128b lp64d medlow -mrvv-max-lmul=m2 ===
+FAIL: gcc.c-torture/compile/920723-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/compile/920723-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/compile/920723-1.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/compile/920723-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/compile/pr113322-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/compile/pr113322-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/compile/pr113322-1.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/compile/pr113322-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/20020412-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/20020412-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/20020412-1.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/20020412-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-10.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-10.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-10.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-10.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-12.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-12.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-12.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-12.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-14.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-14.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-14.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-14.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-2.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-2.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-4.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-4.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-4.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-4.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-6.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-6.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/931004-6.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/931004-6.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/950612-1.c   -O2  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/950612-1.c   -O2  (test for excess errors)
+FAIL: gcc.c-torture/execute/950612-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/950612-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.c-torture/execute/950612-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/950612-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.c-torture/execute/991216-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/991216-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/991216-2.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/991216-2.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O2  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O2  (test for excess errors)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/ffs-2.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr56837.c   -O2  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr56837.c   -O2  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr56837.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr56837.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr56837.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr56837.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr56837.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr56837.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/pr56837.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/pr56837.c   -O3 -g  (test for excess errors)
+FAIL: gcc.c-torture/execute/strct-stdarg-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/strct-stdarg-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.c-torture/execute/strct-stdarg-1.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.c-torture/execute/strct-stdarg-1.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+XPASS: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 72)
+XPASS: gcc.dg/Wstringop-overflow-47.c pr97027 (test for warnings, line 77)
+XPASS: gcc.dg/Wstringop-overflow-47.c pr97027 note (test for warnings, line 68)
+FAIL: gcc.dg/signbit-2.c scan-tree-dump optimized "\\s+>\\s+{ 0(, 0)+ }"
+FAIL: gcc.dg/signbit-2.c scan-tree-dump-not optimized "\\s+>>\\s+31"
+FAIL: c-c++-common/torture/pr116156-1.c   -O1  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O2  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -O3 -g  (test for excess errors)
+FAIL: c-c++-common/torture/pr116156-1.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/pr53366-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr53366-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.dg/torture/pr53366-1.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr53366-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/pr66357.c   -O2  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr66357.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/pr66357.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr66357.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/pr80713.c   -O2  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr80713.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/pr80713.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr80713.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/pr87665.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr87665.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  (test for excess errors)
+FAIL: gcc.dg/torture/pr87665.c   -O3 -g  (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/torture/pr87665.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/tree-prof/val-prof-1.c scan-tree-dump optimized "if \\(n_[0-9]* != 257\\)"
+FAIL: gcc.dg/tree-prof/val-prof-3.c scan-tree-dump optimized "if \\(_[0-9]* \\< n_[0-9]*"
+FAIL: gcc.dg/tree-prof/val-prof-4.c scan-tree-dump optimized "if \\(n_[0-9]* \\>"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump cunroll "optimized: loop with [0-9]+ iterations completely unrolled"
+FAIL: gcc.dg/tree-ssa/cunroll-16.c scan-tree-dump-not optimized "foo"
+FAIL: gcc.dg/tree-ssa/gen-vect-34.c scan-tree-dump-times vect "vectorized 1 loops" 1
+FAIL: gcc.dg/tree-ssa/loop-bound-1.c scan-tree-dump ivopts "bounded by 254"
+FAIL: gcc.dg/tree-ssa/pr32044.c scan-tree-dump-times optimized " / " 0
+FAIL: gcc.dg/tree-ssa/predcom-8.c scan-tree-dump-not pcom "Invalid sum"
+FAIL: gcc.dg/tree-ssa/predcom-9.c scan-tree-dump pcom "Executing predictive commoning without unrolling"
+FAIL: gcc.dg/tree-ssa/scev-10.c scan-tree-dump-times ivopts "  Type:\\tREFERENCE ADDRESS\n" 1
+FAIL: gcc.dg/tree-ssa/scev-14.c scan-tree-dump ivopts "Overflowness wrto loop niter:\tNo-overflow"
+FAIL: gcc.dg/tree-ssa/split-path-13.c scan-tree-dump split-paths "appears to be a join point for if-convertable"
+FAIL: gcc.dg/tree-ssa/split-path-2.c scan-tree-dump split-paths "appears to be a join point for if-convertable"
+XPASS: gcc.dg/tree-ssa/ssa-dom-cse-2.c scan-tree-dump optimized "return 28;"
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c scan-assembler e8,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-7.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-assembler e32,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-assembler-not jr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-assembler-times ret 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-3.c scan-tree-dump-times vect "Maximum lmul = 2" 3
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-assembler e16,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump vect "2: type = unsigned short, start = 0, end = 34"
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump vect "start = 8, end = 10"
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-6.c scan-tree-dump-times vect "Maximum lmul = 2" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-6.c scan-tree-dump-times vect "Maximum lmul = 4" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-7.c scan-assembler e64,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-7.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-8.c scan-tree-dump-times vect "Maximum lmul = 2" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-8.c scan-tree-dump-times vect "Maximum lmul = 4" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-10.c scan-tree-dump-times vect "Maximum lmul = 8" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-12.c scan-tree-dump-times vect "Maximum lmul = 2" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-12.c scan-tree-dump-times vect "Maximum lmul = 4" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-12.c scan-tree-dump-times vect "Maximum lmul = 8" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-1.c scan-assembler e32,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-1.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-3.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-3.c scan-assembler-not jr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-3.c scan-assembler-times ret 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-4.c scan-assembler e64,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-4.c scan-assembler-not e64,m2
+XPASS: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr114516.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vla_vs_vls-1.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vla_vs_vls-8.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vse-slp-1.c scan-tree-dump-times slp1 "vectorized using SLP" 0
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/vse-slp-2.c scan-tree-dump-times slp1 "vectorized using SLP" 0
+FAIL: gcc.dg/vect/bb-slp-cond-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "loop vectorized" 1
+FAIL: gcc.dg/vect/bb-slp-cond-1.c scan-tree-dump-times vect "loop vectorized" 1
+FAIL: gcc.dg/vect/bb-slp-pr65935.c -flto -ffat-lto-objects  scan-tree-dump-times slp1 "optimized: basic block" 10
+FAIL: gcc.dg/vect/bb-slp-pr65935.c scan-tree-dump-times slp1 "optimized: basic block" 10
+FAIL: gcc.dg/vect/bb-slp-subgroups-2.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/bb-slp-subgroups-2.c scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/bb-slp-subgroups-3.c -flto -ffat-lto-objects  scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/bb-slp-subgroups-3.c scan-tree-dump-times slp2 "optimized: basic block" 2
+FAIL: gcc.dg/vect/pr113902.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr113902.c (test for excess errors)
+FAIL: gcc.dg/vect/pr113902.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/pr113902.c -flto -ffat-lto-objects (test for excess errors)
+XPASS: gcc.dg/vect/pr97678.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/pr97678.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/pr97835.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/pr97835.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-49.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-49.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-11.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-11.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/slp-reduc-7.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/slp-reduc-7.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/slp-reduc-sad-2.c -flto -ffat-lto-objects  scan-tree-dump-not vect "access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/slp-reduc-sad-2.c scan-tree-dump-not vect "access with gaps requires scalar epilogue loop"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1115.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1115.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s114.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s114.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1232.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s1232.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s257.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/tsvc/vect-tsvc-s257.c scan-tree-dump vect "vectorized 1 loops"
+XPASS: gcc.dg/vect/tsvc/vect-tsvc-s293.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorized 1 loops"
+XPASS: gcc.dg/vect/tsvc/vect-tsvc-s293.c scan-tree-dump vect "vectorized 1 loops"
+FAIL: gcc.dg/vect/vect-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-1.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-105-big-array.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-105-big-array.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-127.c -flto -ffat-lto-objects  scan-tree-dump vect "loop vectorized using 16 byte vectors"
+FAIL: gcc.dg/vect/vect-127.c scan-tree-dump vect "loop vectorized using 16 byte vectors"
+FAIL: gcc.dg/vect/vect-62.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-62.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-63.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-63.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-64.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-64.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-65.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-65.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-66.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-66.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-67.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-67.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-85.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-85.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-86.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-86.c scan-tree-dump-not optimized "Invalid sum"
+FAIL: gcc.dg/vect/vect-bitfield-read-9.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-bitfield-read-9.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-bitfield-read-9.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-bitfield-read-9.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_101-pr113178.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_101-pr113178.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_101-pr113178.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_101-pr113178.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_128.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_128.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_128.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_128.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_129-pr117140.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_129-pr117140.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_129-pr117140.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_129-pr117140.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_131-pr118269.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_131-pr118269.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_131-pr118269.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_131-pr118269.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa10.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa10.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa10.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa10.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa2.c -flto -ffat-lto-objects  scan-tree-dump-not vect "Alignment of access forced using peeling"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa2.c scan-tree-dump-not vect "Alignment of access forced using peeling"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa3.c -flto -ffat-lto-objects  scan-tree-dump vect "force alignment of string"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa3.c scan-tree-dump vect "force alignment of string"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa4.c -flto -ffat-lto-objects  scan-tree-dump vect "force alignment of string"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa4.c -flto -ffat-lto-objects  scan-tree-dump-not vect "Alignment of access forced using peeling"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa4.c scan-tree-dump vect "force alignment of string"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa4.c scan-tree-dump-not vect "Alignment of access forced using peeling"
+FAIL: gcc.dg/vect/vect-early-break_133_pfa7.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa7.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa7.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa7.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa8.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa8.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa8.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa8.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa9.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa9.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa9.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_133_pfa9.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_18.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_18.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_18.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_18.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_22.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops in function" 2
+FAIL: gcc.dg/vect/vect-early-break_22.c scan-tree-dump-times vect "vectorized 1 loops in function" 2
+FAIL: gcc.dg/vect/vect-early-break_23.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_23.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_23.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_23.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_26.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_26.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_26.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_26.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_38.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_38.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_38.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_38.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_39.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_39.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_39.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops in function" 0
+FAIL: gcc.dg/vect/vect-early-break_39.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_39.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_39.c scan-tree-dump-times vect "vectorized 1 loops in function" 0
+FAIL: gcc.dg/vect/vect-early-break_43.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_43.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_43.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_43.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_44.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_44.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_44.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_44.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_49.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_49.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_49.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_49.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_56.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorized 1 loops" 2
+FAIL: gcc.dg/vect/vect-early-break_56.c scan-tree-dump-times vect "vectorized 1 loops" 2
+FAIL: gcc.dg/vect/vect-early-break_57.c -flto -ffat-lto-objects  scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-early-break_57.c -flto -ffat-lto-objects  scan-tree-dump-not vect "epilog loop required"
+FAIL: gcc.dg/vect/vect-early-break_57.c scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-early-break_57.c scan-tree-dump-not vect "epilog loop required"
+FAIL: gcc.dg/vect/vect-early-break_6.c (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_6.c (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_6.c -flto -ffat-lto-objects (internal compiler error: Segmentation fault)
+FAIL: gcc.dg/vect/vect-early-break_6.c -flto -ffat-lto-objects (test for excess errors)
+FAIL: gcc.dg/vect/vect-early-break_63.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vec_stmt_relevant_p: stmt live but not relevant" 1
+FAIL: gcc.dg/vect/vect-early-break_63.c scan-tree-dump-times vect "vec_stmt_relevant_p: stmt live but not relevant" 1
+FAIL: gcc.dg/vect/vect-early-break_81.c -flto -ffat-lto-objects  scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-early-break_81.c -flto -ffat-lto-objects  scan-tree-dump-not vect "epilog loop required"
+FAIL: gcc.dg/vect/vect-early-break_81.c scan-tree-dump-not vect "LOOP VECTORIZED"
+FAIL: gcc.dg/vect/vect-early-break_81.c scan-tree-dump-not vect "epilog loop required"
+XPASS: gcc.dg/vect/vect-outer-slp-1.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/vect-outer-slp-1.c scan-tree-dump vect "vectorizing stmts using SLP"
+XPASS: gcc.dg/vect/vect-outer-slp-2.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/vect-outer-slp-2.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/vect-outer-slp-3.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+XPASS: gcc.dg/vect/vect-outer-slp-3.c scan-tree-dump-times vect "vectorizing stmts using SLP" 1
+FAIL: gcc.dg/vect/vect-reduc-chain-1.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR" 2
+FAIL: gcc.dg/vect/vect-reduc-chain-1.c scan-tree-dump-times vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR" 2
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-2.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = SAD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-3.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = SAD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-1.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-1.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-2.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-2.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-3.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-3.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-4.c -flto -ffat-lto-objects  scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+FAIL: gcc.dg/vect/vect-reduc-chain-dot-slp-4.c scan-tree-dump vect "vectorizing SLP node starting from: \\S+ = DOT_PROD_EXPR"
+XPASS: gcc.dg/vect/vect-reduc-dot-s8b.c -flto -ffat-lto-objects  scan-tree-dump-times vect "vect_recog_dot_prod_pattern: detected(?:(?!Analysis failed).)*Analysis succeeded" 1
+XPASS: gcc.dg/vect/vect-reduc-dot-s8b.c scan-tree-dump-times vect "vect_recog_dot_prod_pattern: detected(?:(?!Analysis failed).)*Analysis succeeded" 1
+FAIL: gcc.target/riscv/czero-bext.c   -O0   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O0   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O0   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O1   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O1   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O1   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O3 -g   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O3 -g   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O3 -g   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -Os   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -Os   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -Os   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O0   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O0   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O1   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O1   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O3 -g   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -O3 -g   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -Os   scan-assembler-times \\.cfi_escape 0xf,0x9,0x72,0,0x92,0xa2,0x38,0,0x3a,0x1e,0x22 1
+FAIL: gcc.target/riscv/stack-check-cfa-3.c   -Os   scan-assembler-times \\.cfi_escape 0xf,0xa,0x72,0,0x92,0xa2,0x38,0,0x9,0xf6,0x1e,0x22 1
+FAIL: gcc.target/riscv/rvv/autovec/avg_ceil-1-i64-from-i128.c -O3 -ftree-vectorize  scan-assembler-times csrwi\\s*vxrm,\\s*0 1
+FAIL: gcc.target/riscv/rvv/autovec/avg_ceil-1-i64-from-i128.c -O3 -ftree-vectorize  scan-assembler-times vaadd.vv 1
+FAIL: gcc.target/riscv/rvv/autovec/avg_floor-1-i64-from-i128.c -O3 -ftree-vectorize  scan-assembler-times csrwi\\s*vxrm,\\s*2 1
+FAIL: gcc.target/riscv/rvv/autovec/avg_floor-1-i64-from-i128.c -O3 -ftree-vectorize  scan-assembler-times vaadd.vv 1
+FAIL: gcc.target/riscv/rvv/autovec/bug-3.c -O3 -ftree-vectorize  check-function-bodies foo
+FAIL: gcc.target/riscv/rvv/autovec/param-autovec-mode.c -O3 -ftree-vectorize  scan-tree-dump vect "Choosing epilogue vector mode RVVM1SI"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O2 -mrvv-max-lmul=dynamic  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O2 -mrvv-max-lmul=dynamic  scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O2 -mrvv-max-lmul=m4  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O2 -mrvv-max-lmul=m4  scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O2 -mrvv-max-lmul=m8  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O2 -mrvv-max-lmul=m8  scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic  scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O3 -mrvv-max-lmul=m4  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O3 -mrvv-max-lmul=m4  scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O3 -mrvv-max-lmul=m8  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-18.c -ftree-vectorize -O3 -mrvv-max-lmul=m8  scan-tree-dump-times optimized ".VEC_PERM" 2
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O2 -mrvv-max-lmul=dynamic  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O2 -mrvv-max-lmul=dynamic  scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O2 -mrvv-max-lmul=m4  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O2 -mrvv-max-lmul=m4  scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O2 -mrvv-max-lmul=m8  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O2 -mrvv-max-lmul=m8  scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic  scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O3 -mrvv-max-lmul=m4  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O3 -mrvv-max-lmul=m4  scan-tree-dump optimized ".VEC_PERM"
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O3 -mrvv-max-lmul=m8  scan-assembler \\tvid\\.v
+XPASS: gcc.target/riscv/rvv/autovec/partial/slp-19.c -ftree-vectorize -O3 -mrvv-max-lmul=m8  scan-tree-dump optimized ".VEC_PERM"
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m1 (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m1 (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m2 (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m2 (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m4 (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m4 (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m8 (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/partial/slp_run-7.c -ftree-vectorize -O3 -mrvv-max-lmul=m8 (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/poly_licm-2.c -O3 -ftree-vectorize  scan-assembler-times vid\\.v\\s+v[0-9]+\\s+vrsub\\.vx\\s+ 2
+FAIL: gcc.target/riscv/rvv/autovec/pr110950.c -O3 -ftree-vectorize  scan-assembler-times vrgather 1
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e64,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+zero,\\s*zero,\\s*e32,\\s*mf2,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/autovec/pr110989.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+zero,\\s*zero,\\s*e64,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/autovec/pr111313.c -O3 -ftree-vectorize  scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*zero,\\s*e16,\\s*mf2,\\s*t[au],\\s*m[au]\\s+vmv\\.v\\.x 1
+FAIL: gcc.target/riscv/rvv/autovec/pr111751.c -O3 -ftree-vectorize  scan-assembler-not vset
+FAIL: gcc.target/riscv/rvv/autovec/pr111751.c -O3 -ftree-vectorize  scan-assembler-times li\\s+[a-x0-9]+,0\\s+ret 2
+FAIL: gcc.target/riscv/rvv/autovec/pr112399.c -O3 -ftree-vectorize  check-function-bodies foo
+FAIL: gcc.target/riscv/rvv/autovec/pr118019-3.c -O3 -ftree-vectorize (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/pr121510.c -O3 -ftree-vectorize (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/pr121959-run-1.c -O3 -ftree-vectorize execution test
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-not vsetvli
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-times vsetivli\\s+zero,\\s*16,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-times vsseg6e8\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-1.c scan-assembler-times vsseg8e8\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsetivli\\s+zero,\\s*8,\\s*e16,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsseg6e16\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-2.c scan-assembler-times vsseg8e16\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-times vsseg6e32\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-3.c scan-assembler-times vsseg8e32\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsetivli\\s+zero,\\s*2,\\s*e64,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg6e64\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-4.c scan-assembler-times vsseg8e64\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-times vsseg6e32\\.v 4
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-5.c scan-assembler-times vsseg8e32\\.v 2
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect-6.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 14
+FAIL: gcc.target/riscv/rvv/autovec/struct/struct_vect_noseg-1.c scan-assembler-not vsetvli
+FAIL: gcc.target/riscv/rvv/autovec/unop/popcount-run-1.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/unop/popcount-run-1.c -ftree-vectorize -O3 -mrvv-max-lmul=dynamic (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/popcount-run-1.c -ftree-vectorize -O3 -mrvv-max-lmul=m4 (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/unop/popcount-run-1.c -ftree-vectorize -O3 -mrvv-max-lmul=m4 (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/unop/popcount-run-1.c -ftree-vectorize -O3 -mrvv-max-lmul=m8 (internal compiler error: Segmentation fault)
+FAIL: gcc.target/riscv/rvv/autovec/unop/popcount-run-1.c -ftree-vectorize -O3 -mrvv-max-lmul=m8 (test for excess errors)
+FAIL: gcc.target/riscv/rvv/autovec/vls-vlmax/full-vec-move1.c -std=c99 -O3 -ftree-vectorize -mrvv-vector-bits=zvl  scan-assembler-times vl[1248]re16.v 1
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-4-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-5-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsadd.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-i8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vssub.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u16.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u32.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vaaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=scalable -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=dynamic -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m1 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m2 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m4 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/vx_vf/vx-6-u8.c -ftree-vectorize -O3 -mrvv-vector-bits=zvl -mrvv-max-lmul=m8 -ffast-math  scan-assembler vsaddu.vx
+FAIL: gcc.target/riscv/rvv/autovec/zve32f-1.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 3
+FAIL: gcc.target/riscv/rvv/autovec/zve32f-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 3
+FAIL: gcc.target/riscv/rvv/autovec/zve32f_zvl128b-1.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 5
+FAIL: gcc.target/riscv/rvv/autovec/zve32f_zvl128b-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 5
+FAIL: gcc.target/riscv/rvv/autovec/zve32x-1.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 2
+FAIL: gcc.target/riscv/rvv/autovec/zve32x-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 2
+FAIL: gcc.target/riscv/rvv/autovec/zve32x_zvl128b-1.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 3
+FAIL: gcc.target/riscv/rvv/autovec/zve32x_zvl128b-2.c -O3 -ftree-vectorize  scan-tree-dump-times vect "vectorized 1 loops in function" 3
+FAIL: gcc.target/riscv/rvv/base/cpymem-1.c check-function-bodies f1
+FAIL: gcc.target/riscv/rvv/base/cpymem-1.c check-function-bodies f2
+FAIL: gcc.target/riscv/rvv/base/cpymem-1.c scan-assembler-not \\m(tail|call)\\s+memcpy(?:@plt)?\\M
+FAIL: gcc.target/riscv/rvv/base/float-point-dynamic-frm-77.c scan-assembler-times vfadd\\.v[vf]\\s+v[0-9]+,\\s*v[0-9]+,\\s*[fav]+[0-9]+ 3
+FAIL: gcc.target/riscv/rvv/base/pr112431-21.c (test for excess errors)
+XPASS: gcc.target/riscv/rvv/base/pr112431-42.c scan-assembler-not vmv1r
+FAIL: gcc.target/riscv/rvv/base/pr112431-42.c scan-assembler-not vmv2r
+FAIL: gcc.target/riscv/rvv/base/pr114352-1.c check-function-bodies test_2
+FAIL: gcc.target/riscv/rvv/base/pr90263.c scan-assembler-not memcpy
+FAIL: gcc.target/riscv/rvv/base/vf_avl-2.c scan-assembler-times vsetivli\\s+zero,\\s*1,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/base/vf_avl-2.c scan-assembler-times vsetivli\\s+zero,\\s*4,\\s*e32,\\s*m1,\\s*t[au],\\s*m[au] 1
+FAIL: gcc.target/riscv/rvv/base/vf_avl-3.c scan-assembler-times vsetvli 1
+FAIL: gcc.target/riscv/rvv/base/vf_avl-3.c scan-assembler-times vsetvli\\s+[a-x0-9]+,\\s*[a-x0-9]+,\\s*e32,\\s*m1,\\s*t[au],\\s*mu 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O0   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O1   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O2   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -O3 -g   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/avl_prop-2.c   -Os   scan-assembler-times vsetivli\\tzero,\\s*1 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O1   scan-assembler-times li\\t[a-x0-9]+,\\s*32 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O1   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O1   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2   scan-assembler-times li\\t[a-x0-9]+,\\s*32 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times li\\t[a-x0-9]+,\\s*32 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times li\\t[a-x0-9]+,\\s*32 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112929-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O0   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O0   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O0   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O1   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O1   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O1   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -g   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -g   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -O3 -g   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -Os   scan-assembler-times li\\t[a-x0-9]+,\\s*32 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -Os   scan-assembler-times vsetvli 5
+FAIL: gcc.target/riscv/rvv/vsetvl/pr112988-1.c   -Os   scan-assembler-times vsetvli\\t[a-x0-9]+,\\s*[a-x0-9]+,\\s*e8,\\s*m1,\\s*t[au],\\s*m[au] 2
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O0   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O1   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O2   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times beq\\s+[a-x0-9]+,[a-x0-9]+,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O3 -g   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -Os   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv64gcv_zvl128b/  lp64d/ medlow |  752 /   182 |   54 /    14 |   82 /    21 |
+ -mrvv-max-lmul=m2
