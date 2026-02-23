@@ -1,0 +1,1897 @@
+		=== g++: Unexpected fails for rv64gc_zba_zbb_zbc_zbs lp64d medlow  ===
+FAIL: g++.dg/coroutines/torture/func-params-07.C   -O3 -g  execution test
+FAIL: g++.dg/coroutines/torture/pr103953.C   -O2  execution test
+FAIL: g++.dg/coroutines/torture/pr103953.C   -O3 -g  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++26 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+XPASS: g++.dg/ipa/devirt-23.C  -std=gnu++20  scan-ipa-dump cp "Discovered a virtual call to"
+XPASS: g++.dg/ipa/devirt-23.C  -std=gnu++26  scan-ipa-dump cp "Discovered a virtual call to"
+XPASS: g++.dg/ipa/devirt-23.C  -std=gnu++98  scan-ipa-dump cp "Discovered a virtual call to"
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  gcov: 60 failures in line counts, 24 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 100: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 102: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 103: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 105: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 113: is #####:should be 15
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 115: is #####:should be 14
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 116: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 118: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 141: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 142: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 143: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 145: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 150: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 152: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 154: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 156: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 158: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 160: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 161: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 162: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 164: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 165: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 173: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 175: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 177: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 181: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 183: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 185: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 187: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 189: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 192: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 200: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 202: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 204: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 205: expected branch percentages not found: 45
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 206: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 207: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 208: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 210: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 212: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 214: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 215: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 254: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 257: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 260: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 261: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 262: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 266: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 269: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 271: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 272: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 273: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 275: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 276: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 279: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 33: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 41: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 55: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 58: is #####:should be 9
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 59: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 66: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 73: is #####:should be 81
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 74: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 17
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 20 0 40 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 27
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 27 50 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 30
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 32
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 7
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 9 10 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  gcov: 60 failures in line counts, 24 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 100: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 102: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 103: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 105: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 113: is #####:should be 15
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 115: is #####:should be 14
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 116: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 118: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 141: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 142: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 143: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 145: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 150: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 152: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 154: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 156: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 158: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 160: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 161: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 162: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 164: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 165: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 173: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 175: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 177: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 181: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 183: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 185: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 187: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 189: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 192: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 200: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 202: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 204: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 205: expected branch percentages not found: 45
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 206: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 207: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 208: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 210: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 212: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 214: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 215: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 254: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 257: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 260: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 261: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 262: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 266: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 269: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 271: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 272: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 273: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 275: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 276: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 279: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 33: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 41: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 55: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 58: is #####:should be 9
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 59: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 66: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 73: is #####:should be 81
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 74: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 17
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 20 0 40 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 27
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 27 50 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 30
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 32
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 7
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 9 10 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  gcov: 60 failures in line counts, 24 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 100: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 102: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 103: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 105: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 113: is #####:should be 15
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 115: is #####:should be 14
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 116: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 118: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 141: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 142: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 143: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 145: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 150: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 152: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 154: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 156: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 158: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 160: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 161: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 162: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 164: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 165: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 173: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 175: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 177: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 181: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 183: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 185: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 187: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 189: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 192: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 200: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 202: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 204: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 205: expected branch percentages not found: 45
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 206: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 207: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 208: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 210: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 212: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 214: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 215: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 254: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 257: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 260: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 261: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 262: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 266: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 269: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 271: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 272: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 273: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 275: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 276: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 279: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 33: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 41: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 55: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 58: is #####:should be 9
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 59: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 66: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 73: is #####:should be 81
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 74: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 17
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 20 0 40 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 27
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 27 50 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 30
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 32
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 7
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 9 10 11
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++20  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++20  line 8: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++26  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++26  line 8: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++98  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++98  line 8: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  gcov: 5 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 19: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 28: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 33: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 36: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  gcov: 5 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 19: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 28: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 33: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 36: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  gcov: 5 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 19: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 28: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 33: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 36: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++20  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++20  line 13: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++20  line 9: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++26  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++26  line 13: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++26  line 9: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++98  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++98  line 13: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++98  line 9: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 20: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 22: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 5: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 7: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 20: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 22: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 5: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 7: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 20: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 22: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 5: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 7: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-18.C   gcov: 0 failures in line counts, 0 in branch percentages, 77 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-18.C   line 109: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 109: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 109: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 110: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 130: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 130: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 130: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 131: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 141: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 141: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 141: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 142: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 154: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 154: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 154: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 154: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected summary - expected 3/4, got 0/4
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected summary 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 1 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: coverage summary not found; expected 3/4
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected summary - expected 3/4, got 0/4
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected summary 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 1 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: coverage summary not found; expected 3/4
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected summary - expected 2/4, got 0/4
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected summary 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 1 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 193: coverage summary not found; expected 2/4
+FAIL: g++.dg/gcov/gcov-18.C   line 194: coverage summary not found; expected 2/4
+FAIL: g++.dg/gcov/gcov-18.C   line 196: coverage summary not found; expected 2/4
+FAIL: g++.dg/gcov/gcov-18.C   line 196: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 196: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 196: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 202: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 202: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 202: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 203: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 208: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 208: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 208: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 217: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 217: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 217: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 218: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 228: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 228: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 228: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 229: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 25: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 25: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 26: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 40: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 40: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 40: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 40: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 50: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 50: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 50: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 50: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 53: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 53: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 53: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 53: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 56: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 57: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 71: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 71: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 71: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 78: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 78: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 78: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 79: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 93: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 93: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 93: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 93: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 15: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 15: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 15: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++20  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++26  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++98  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++20  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++20  line 26: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++20  line 35: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++26  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++26  line 26: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++26  line 35: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++98  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++98  line 26: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++98  line 35: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20  line 13: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20 execution test
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26  line 13: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26 execution test
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98  line 13: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98 execution test
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 17: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 26: is #####:should be 10001
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20 execution test
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 17: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 26: is #####:should be 10001
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26 execution test
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 17: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 26: is #####:should be 10001
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98 execution test
+FAIL: g++.dg/gcov/gcov-threads-1.C  -std=gnu++20  gcov failed: gcov-threads-1.gcno:cannot open notes file
+FAIL: g++.dg/gcov/gcov-threads-1.C  -std=gnu++20 (test for excess errors)
+FAIL: g++.dg/gcov/gcov-threads-1.C  -std=gnu++26  gcov failed: gcov-threads-1.gcno:cannot open notes file
+FAIL: g++.dg/gcov/gcov-threads-1.C  -std=gnu++26 (test for excess errors)
+FAIL: g++.dg/gcov/gcov-threads-1.C  -std=gnu++98  gcov failed: gcov-threads-1.gcno:cannot open notes file
+FAIL: g++.dg/gcov/gcov-threads-1.C  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 21: is #####:should be 7.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 5: is #####:should be 14.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 9: is #####:should be 21.0M
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 21: is #####:should be 7.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 5: is #####:should be 14.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 9: is #####:should be 21.0M
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 21: is #####:should be 7.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 5: is #####:should be 14.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 9: is #####:should be 21.0M
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  gcov: 12 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 21: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 37: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 43: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 48: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 53: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 58: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 63: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 68: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 73: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 78: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  gcov: 12 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 21: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 37: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 43: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 48: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 53: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 58: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 63: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 68: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 73: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 78: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  gcov: 12 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 21: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 37: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 43: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 48: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 53: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 58: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 63: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 68: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 73: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 78: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 16: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 45: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 50: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 16: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 45: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 50: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 16: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 45: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 50: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr86109.C   line 13: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   line 7: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   line 8: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   line 9: is #####:should be 1
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++20  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++20  line 8: is #####:should be 1*
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++26  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++26  line 8: is #####:should be 1*
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++98  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++98  line 8: is #####:should be 1*
+FAIL: g++.dg/lto/devirt-23 cp_lto_devirt-23_0.o-cp_lto_devirt-23_0.o execute -O3 -fno-early-inlining -fno-ipa-sra -fdump-ipa-cp -flto -fno-devirtualize-speculatively
+FAIL: g++.dg/modules/omp-4_a.C -std=c++17 (test for excess errors)
+FAIL: g++.dg/modules/omp-4_a.C -std=c++20 (test for excess errors)
+FAIL: g++.dg/modules/omp-4_a.C -std=c++26 (test for excess errors)
+FAIL: g++.dg/modules/omp-4_a.C module-cmi p1 (gcm.cache/p1.gcm)
+FAIL: g++.dg/modules/omp-4_a.C module-cmi p1 (gcm.cache/p1.gcm)
+FAIL: g++.dg/modules/omp-4_a.C module-cmi p1 (gcm.cache/p1.gcm)
+FAIL: g++.dg/modules/omp-4_b.C -std=c++17 (test for excess errors)
+FAIL: g++.dg/modules/omp-4_b.C -std=c++20 (test for excess errors)
+FAIL: g++.dg/modules/omp-4_b.C -std=c++26 (test for excess errors)
+		=== gcc: Unexpected fails for rv64gc_zba_zbb_zbc_zbs lp64d medlow  ===
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O0  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O1  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/user-printf.c   -Os  execution test
+FAIL: c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)
+FAIL: gcc.dg/fold-round-1.c scan-assembler-not link_error
+FAIL: gcc.dg/hierarchical-discriminator-loop-version.c scan-assembler \\.loc 1 (9|10) [0-9]+ is_stmt 0 discriminator [0-9]+
+FAIL: gcc.dg/hierarchical-discriminator-unroll.c scan-assembler \\.loc 1 17 7 is_stmt 0 discriminator ([1-9][0-9]*|0x[1-9a-fA-F][0-9a-fA-F]*)
+FAIL: gcc.dg/ssp-1.c (test for excess errors)
+FAIL: gcc.dg/ssp-2.c (test for excess errors)
+FAIL: gcc.dg/stackprotectexplicit1.c (test for excess errors)
+FAIL: gcc.dg/ipa/pr122458.c (test for excess errors)
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c scan-assembler e8,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-7.c scan-assembler e32,m2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-assembler e32,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-assembler-not jr
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-assembler-times ret 2
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-10.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-1.c scan-assembler e32,m4
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-1.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+XPASS: gcc.dg/vect/costmodel/riscv/rvv/pr113281-1.c scan-assembler-not vset
+XPASS: gcc.dg/vect/costmodel/riscv/rvv/pr113281-2.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-3.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113281-4.c scan-assembler-not vset
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr114516.c scan-tree-dump-times vect "Preferring smaller LMUL loop because it has unexpected spills" 1
+FAIL: gcc.dg/vect/pr53773.c -flto -ffat-lto-objects  scan-tree-dump-times optimized "\\* 10" 2
+FAIL: gcc.dg/vect/pr53773.c scan-tree-dump-times optimized "\\* 10" 2
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c -flto -ffat-lto-objects  scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump vect "can't force alignment"
+FAIL: gcc.dg/vect/pr65310.c scan-tree-dump-not vect "misalign = 0"
+FAIL: gcc.dg/vect/pr88598-1.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-1.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-2.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c -flto -ffat-lto-objects  scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: gcc.dg/vect/pr88598-3.c scan-tree-dump-not optimized "REDUC_PLUS"
+FAIL: expected covered: '{13(true) 14 17}'
+FAIL: expected covered: '{14(true) 15 18}'
+FAIL: gcc.misc-tests/gcov-1.c gcov: 3 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-1.c line 14: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-1.c line 15: is #####:should be 10
+FAIL: gcc.misc-tests/gcov-1.c line 17: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-10.c gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-10.c line 10: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-10b.c gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-10b.c line 10: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-11.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-11.c line 11: is #####:should be 10
+FAIL: gcc.misc-tests/gcov-11.c line 18: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-12.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-12.c line 14: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-12.c line 9: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-13.c gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-13.c line 16: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-13.c line 3: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-14.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-14.c line 20: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-14.c line 25: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-15.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-15.c line 19: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-15.c line 25: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-16.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-16.c line 11: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-16.c line 14: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-17.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-17.c line 34: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-17.c line 36: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-18.c gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-18.c line 10: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-18.c line 15: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-18.c line 20: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-18.c line 22: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-18.c line 25: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-18.c line 26: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-19.c gcov: 0 failures in line counts, 0 in branch percentages, 814 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-19.c line 1012: coverage summary not found; expected 1/24
+FAIL: gcc.misc-tests/gcov-19.c line 1012: unexpected summary - expected 4/24, got 0/24
+FAIL: gcc.misc-tests/gcov-19.c line 1012: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1012: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1012: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1012: unexpected uncovered term 7 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1013: coverage summary not found; expected 4/24
+FAIL: gcc.misc-tests/gcov-19.c line 101: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 101: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 101: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1029: coverage summary not found; expected 4/24
+FAIL: gcc.misc-tests/gcov-19.c line 1029: unexpected summary - expected 4/24, got 0/24
+FAIL: gcc.misc-tests/gcov-19.c line 1029: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1029: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1029: unexpected uncovered term 10 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1029: unexpected uncovered term 11 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 102: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1030: coverage summary not found; expected 4/24
+FAIL: gcc.misc-tests/gcov-19.c line 1046: coverage summary not found; expected 4/24
+FAIL: gcc.misc-tests/gcov-19.c line 1046: unexpected summary - expected 4/24, got 0/24
+FAIL: gcc.misc-tests/gcov-19.c line 1046: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1046: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1046: unexpected uncovered term 8 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1046: unexpected uncovered term 9 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1047: coverage summary not found; expected 4/24
+FAIL: gcc.misc-tests/gcov-19.c line 1065: coverage summary not found; expected 4/24
+FAIL: gcc.misc-tests/gcov-19.c line 1065: unexpected summary - expected 5/24, got 0/24
+FAIL: gcc.misc-tests/gcov-19.c line 1065: unexpected uncovered term 10 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1065: unexpected uncovered term 4 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1065: unexpected uncovered term 5 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1065: unexpected uncovered term 7 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1065: unexpected uncovered term 8 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1066: coverage summary not found; expected 5/24
+FAIL: gcc.misc-tests/gcov-19.c line 1082: coverage summary not found; expected 5/24
+FAIL: gcc.misc-tests/gcov-19.c line 1082: unexpected summary - expected 5/24, got 0/24
+FAIL: gcc.misc-tests/gcov-19.c line 1082: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1082: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1082: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1082: unexpected uncovered term 5 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1082: unexpected uncovered term 6 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1083: coverage summary not found; expected 5/24
+FAIL: gcc.misc-tests/gcov-19.c line 1100: coverage summary not found; expected 5/24
+FAIL: gcc.misc-tests/gcov-19.c line 1100: unexpected summary - expected 5/24, got 0/24
+FAIL: gcc.misc-tests/gcov-19.c line 1100: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1100: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1100: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1100: unexpected uncovered term 5 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1100: unexpected uncovered term 6 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1101: coverage summary not found; expected 5/24
+FAIL: gcc.misc-tests/gcov-19.c line 111: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 111: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 111: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 111: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1120: coverage summary not found; expected 5/24
+FAIL: gcc.misc-tests/gcov-19.c line 1120: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1120: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1120: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1121: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1130: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1130: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1130: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1130: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1131: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1144: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1144: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1144: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1144: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1145: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1155: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1155: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1155: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1155: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1156: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1171: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1171: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1171: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1171: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1172: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1182: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1182: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1182: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1182: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1183: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1197: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1197: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1197: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1197: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1198: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1209: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1209: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1209: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1209: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 120: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 120: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 120: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1210: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 121: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1227: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1227: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1227: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1228: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1230: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1253: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1253: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1254: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1256: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1284: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1284: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1285: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1288: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1288: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1288: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1289: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 128: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 128: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 128: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 128: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1291: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 130: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 130: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 130: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1310: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1310: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1311: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1314: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1314: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1314: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1315: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1319: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1319: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1319: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1320: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1322: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1346: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1346: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1346: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1347: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 1350: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 1350: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1350: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1350: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1351: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 1357: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 1357: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1357: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1358: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1362: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1362: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1362: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1363: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1365: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1386: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1386: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1387: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1389: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 138: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 138: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 138: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 138: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1396: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1396: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1397: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 140: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 140: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 140: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1410: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1410: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1410: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1410: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1410: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1410: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1411: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 1412: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 1412: unexpected summary - expected 5/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 1412: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1412: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1412: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1412: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1412: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1413: coverage summary not found; expected 5/8
+FAIL: gcc.misc-tests/gcov-19.c line 1414: coverage summary not found; expected 5/8
+FAIL: gcc.misc-tests/gcov-19.c line 1414: coverage summary not found; expected 5/8
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected summary - expected 5/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1414: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1415: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 141: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 1422: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 1422: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1422: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1422: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1422: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1423: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1424: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1424: unexpected summary - expected 6/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 1424: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1424: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1424: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1424: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1424: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1424: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: coverage summary not found; expected 6/8
+FAIL: gcc.misc-tests/gcov-19.c line 1425: coverage summary not found; expected 6/8
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected summary - expected 6/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1425: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1426: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1433: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1433: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1433: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1433: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1433: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1434: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1435: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1435: unexpected summary - expected 5/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 1435: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1435: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1435: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1435: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1435: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: coverage summary not found; expected 5/8
+FAIL: gcc.misc-tests/gcov-19.c line 1436: coverage summary not found; expected 5/8
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected summary - expected 5/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1436: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1437: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1444: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1444: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1444: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1444: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1445: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1446: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1446: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1446: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1446: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1446: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1447: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1448: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1448: unexpected summary - expected 4/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 1448: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1448: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1448: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1448: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1449: coverage summary not found; expected 4/6
+FAIL: gcc.misc-tests/gcov-19.c line 1450: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 1450: coverage summary not found; expected 4/6
+FAIL: gcc.misc-tests/gcov-19.c line 1450: coverage summary not found; expected 4/6
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected summary - expected 4/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1450: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1451: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1458: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1458: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1458: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1458: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1458: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1459: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1460: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1460: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1460: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1460: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1460: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1461: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1462: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1462: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1462: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1462: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1462: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1463: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1464: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1464: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1464: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1464: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1464: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1464: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1465: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1466: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1467: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1486: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 1486: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1486: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1487: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1495: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1495: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1495: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1496: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 14: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 14: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1500: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1500: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1500: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 1509: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1509: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 1509: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 1510: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1514: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 1514: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 1514: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 153: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 153: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 153: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 154: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 158: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 15: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 172: unexpected summary - expected 1/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 172: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 173: coverage summary not found; expected 1/6
+FAIL: gcc.misc-tests/gcov-19.c line 187: coverage summary not found; expected 1/6
+FAIL: gcc.misc-tests/gcov-19.c line 187: unexpected summary - expected 3/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 187: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 187: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 187: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 188: coverage summary not found; expected 3/8
+FAIL: gcc.misc-tests/gcov-19.c line 197: coverage summary not found; expected 3/8
+FAIL: gcc.misc-tests/gcov-19.c line 197: unexpected summary - expected 2/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 197: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 197: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 198: coverage summary not found; expected 2/8
+FAIL: gcc.misc-tests/gcov-19.c line 209: coverage summary not found; expected 2/8
+FAIL: gcc.misc-tests/gcov-19.c line 209: unexpected summary - expected 2/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 209: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 209: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 210: coverage summary not found; expected 2/8
+FAIL: gcc.misc-tests/gcov-19.c line 223: coverage summary not found; expected 2/8
+FAIL: gcc.misc-tests/gcov-19.c line 223: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 223: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 223: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 223: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 223: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 231: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 231: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 231: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 231: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 231: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 231: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 242: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 242: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 242: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 242: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 244: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 244: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 244: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 244: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 244: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 245: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 24: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 24: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 24: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 24: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 24: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 252: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 252: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 252: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 252: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 253: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 25: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 263: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 263: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 263: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 263: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 264: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 264: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 264: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 264: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 265: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 265: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 265: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 265: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 272: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 272: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 272: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 272: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 274: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 274: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 274: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 274: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 276: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 276: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 276: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 276: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 295: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 295: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 295: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 296: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 298: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 298: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 298: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 299: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 301: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 301: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 301: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 301: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 302: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 310: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 310: unexpected summary - expected 4/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 310: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 310: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 310: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 310: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 311: coverage summary not found; expected 4/8
+FAIL: gcc.misc-tests/gcov-19.c line 319: coverage summary not found; expected 4/8
+FAIL: gcc.misc-tests/gcov-19.c line 319: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 319: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 319: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 321: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 321: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 321: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 322: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 327: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 327: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 327: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 327: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 329: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 329: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 329: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 330: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 345: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 345: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 345: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 345: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 347: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 347: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 347: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 347: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 349: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 349: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 349: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 34: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 34: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 34: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 34: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 34: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 34: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 367: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 367: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 367: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 367: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 369: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 369: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 369: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 369: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 371: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 371: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 371: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 372: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 383: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 383: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 383: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 384: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 386: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 393: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 393: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 394: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 404: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 404: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 404: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 404: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 411: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 411: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 411: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 412: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 420: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 420: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 420: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 420: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 428: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected summary - expected 8/8, got 0/8
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 428: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 435: coverage summary not found; expected 8/8
+FAIL: gcc.misc-tests/gcov-19.c line 435: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 435: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 435: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 435: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 436: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 43: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 43: unexpected summary - expected 2/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 43: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 43: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 443: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 443: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 443: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 443: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 444: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 44: coverage summary not found; expected 2/6
+FAIL: gcc.misc-tests/gcov-19.c line 451: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 451: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 451: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 451: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 453: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 453: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 453: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 453: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 463: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 463: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 463: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 463: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 472: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 472: unexpected summary - expected 4/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 472: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 472: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 472: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 472: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 473: coverage summary not found; expected 4/6
+FAIL: gcc.misc-tests/gcov-19.c line 487: coverage summary not found; expected 4/6
+FAIL: gcc.misc-tests/gcov-19.c line 487: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 487: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 488: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 501: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 501: unexpected summary - expected 5/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 501: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 501: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 501: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 501: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 501: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 502: coverage summary not found; expected 5/6
+FAIL: gcc.misc-tests/gcov-19.c line 509: coverage summary not found; expected 5/6
+FAIL: gcc.misc-tests/gcov-19.c line 509: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 509: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 509: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 509: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 510: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 515: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 515: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 515: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 515: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 528: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 528: unexpected summary - expected 5/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 528: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 528: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 528: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 528: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 528: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 529: coverage summary not found; expected 5/6
+FAIL: gcc.misc-tests/gcov-19.c line 52: coverage summary not found; expected 2/6
+FAIL: gcc.misc-tests/gcov-19.c line 52: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 52: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 539: coverage summary not found; expected 5/6
+FAIL: gcc.misc-tests/gcov-19.c line 53: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected summary - expected 64/128, got 0/128
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 10 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 11 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 12 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 13 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 14 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 15 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 16 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 17 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 18 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 19 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 20 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 21 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 22 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 23 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 24 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 25 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 26 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 27 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 28 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 29 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 3 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 30 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 31 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 32 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 33 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 34 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 35 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 36 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 37 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 38 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 39 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 4 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 40 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 41 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 42 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 43 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 44 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 45 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 46 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 47 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 48 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 49 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 5 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 50 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 51 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 52 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 53 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 54 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 55 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 56 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 57 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 58 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 59 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 6 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 60 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 61 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 62 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 63 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 7 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 8 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 552: unexpected uncovered term 9 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 553: coverage summary not found; expected 64/128
+FAIL: gcc.misc-tests/gcov-19.c line 560: coverage summary not found; expected 64/128
+FAIL: gcc.misc-tests/gcov-19.c line 560: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 560: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 560: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 563: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 563: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 563: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 564: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 571: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 571: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 571: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 571: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 573: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 573: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 573: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 573: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 582: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 582: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 582: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 582: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 584: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 584: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 584: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 584: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 603: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 603: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 603: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 604: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 605: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 616: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 616: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 616: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 617: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 617: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 617: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 617: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 624: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 624: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 624: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 624: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 626: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 626: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 626: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 626: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 629: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 629: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 629: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 629: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 62: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 62: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 62: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 62: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 62: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 637: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 637: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 637: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 637: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 639: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 639: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 639: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 63: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 640: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 643: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 643: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 643: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 643: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 651: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 651: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 651: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 651: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 653: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 653: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 653: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 653: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 655: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 655: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 655: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 656: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 671: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 671: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 671: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 671: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 684: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 684: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 684: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 684: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 687: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 687: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 687: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 687: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 698: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 698: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 698: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 699: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 701: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 701: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 701: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 701: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 703: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 703: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 703: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 704: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 706: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 706: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 706: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 706: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 708: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 708: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 708: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 708: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 717: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 72: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 72: unexpected summary - expected 4/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 72: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 72: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 72: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 72: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 730: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 730: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 730: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 733: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 733: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 733: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 733: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 735: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 735: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 735: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 735: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 739: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 739: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 739: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 739: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 739: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 740: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 745: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 745: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 745: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 745: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 746: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 748: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 748: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 748: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 748: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 752: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 752: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 752: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 752: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 761: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 761: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 761: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 761: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 765: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 765: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 765: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 765: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 782: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 782: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 782: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 783: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 786: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 786: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 786: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 787: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 81: coverage summary not found; expected 4/4
+FAIL: gcc.misc-tests/gcov-19.c line 81: unexpected summary - expected 4/6, got 0/6
+FAIL: gcc.misc-tests/gcov-19.c line 81: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 81: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 81: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 81: unexpected uncovered term 2 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 825: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 825: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 825: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 825: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 82: coverage summary not found; expected 4/6
+FAIL: gcc.misc-tests/gcov-19.c line 831: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 831: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 831: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 831: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 831: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 832: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 839: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 839: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 839: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 839: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 840: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 840: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 840: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 841: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 847: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected summary - expected 7/10, got 0/10
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected uncovered term 2 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected uncovered term 3 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 847: unexpected uncovered term 4 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 848: coverage summary not found; expected 7/10
+FAIL: gcc.misc-tests/gcov-19.c line 867: coverage summary not found; expected 7/10
+FAIL: gcc.misc-tests/gcov-19.c line 877: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 877: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 878: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 880: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 880: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 880: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 881: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 892: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 892: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 892: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 892: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 895: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 895: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 895: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 895: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 897: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 897: unexpected summary - expected 3/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 897: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 897: unexpected uncovered term 1 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 897: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 898: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 909: coverage summary not found; expected 3/4
+FAIL: gcc.misc-tests/gcov-19.c line 909: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 909: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 909: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 90: coverage summary not found; expected 4/6
+FAIL: gcc.misc-tests/gcov-19.c line 90: unexpected summary - expected 2/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 90: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 90: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 912: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 912: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 912: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 913: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 917: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 917: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 917: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 918: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 91: coverage summary not found; expected 2/4
+FAIL: gcc.misc-tests/gcov-19.c line 932: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 932: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 932: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 932: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 935: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 935: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 935: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 935: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 937: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-19.c line 937: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 937: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 938: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 940: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 940: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 940: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-19.c line 941: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 950: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 950: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 950: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 952: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 952: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 952: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 953: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 957: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 957: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 957: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 958: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 966: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 966: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-19.c line 966: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 967: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 969: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-19.c line 969: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-19.c line 969: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 970: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 975: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-19.c line 995: unexpected summary - expected 1/24, got 0/24
+FAIL: gcc.misc-tests/gcov-19.c line 995: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-19.c line 996: coverage summary not found; expected 1/24
+FAIL: gcc.misc-tests/gcov-1a.c gcov: 3 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-1a.c line 14: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-1a.c line 15: is #####:should be 10
+FAIL: gcc.misc-tests/gcov-1a.c line 17: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-2.c gcov: 3 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-2.c line 14: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-2.c line 15: is #####:should be 10
+FAIL: gcc.misc-tests/gcov-2.c line 17: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-20.c gcov: 0 failures in line counts, 0 in branch percentages, 3 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-20.c line 11: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-20.c line 11: unexpected uncovered term 1 (true)
+FAIL: gcc.misc-tests/gcov-20.c line 12: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-22.c gcov: 0 failures in line counts, 0 in branch percentages, 33 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-22.c line 22: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-22.c line 22: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-22.c line 23: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 26: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 26: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-22.c line 26: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-22.c line 27: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 30: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 30: unexpected summary - expected 1/4, got 0/4
+FAIL: gcc.misc-tests/gcov-22.c line 30: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-22.c line 31: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-22.c line 41: coverage summary not found; expected 1/4
+FAIL: gcc.misc-tests/gcov-22.c line 41: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-22.c line 41: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-22.c line 42: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 45: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 45: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-22.c line 45: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-22.c line 46: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 49: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 49: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-22.c line 49: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-22.c line 50: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 53: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 53: unexpected summary - expected 1/2, got 0/2
+FAIL: gcc.misc-tests/gcov-22.c line 53: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-22.c line 54: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 70: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 71: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 82: coverage summary not found; expected 1/2
+FAIL: gcc.misc-tests/gcov-22.c line 82: unexpected summary - expected 2/2, got 0/2
+FAIL: gcc.misc-tests/gcov-22.c line 82: unexpected uncovered term 0 (false)
+FAIL: gcc.misc-tests/gcov-22.c line 82: unexpected uncovered term 0 (true)
+FAIL: gcc.misc-tests/gcov-22.c line 98: coverage summary not found; expected 2/2
+FAIL: gcc.misc-tests/gcov-24.c gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-24.c line 11: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-24.c line 13: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-24.c line 17: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-24.c line 9: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-29.c gcov: 0 failures in line counts, 0 in branch percentages, 0 in condition/decision, 13 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-29.c line 14: expected 1/1 covered paths, was 0/1
+FAIL: gcc.misc-tests/gcov-29.c line 258: expected 1/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-29.c line 277: expected 1/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-29.c line 296: expected 1/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-29.c line 315: expected 2/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-29.c line 334: expected 3/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-29.c line 481: expected 1/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-29.c line 560: expected 1/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-29.c line 58: expected 1/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-29.c line 643: expected 2/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-29.c line 724: expected 1/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-29.c line 73: expected 1/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-29.c line 90: expected 2/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-3.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-3.c line 42: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-3.c line 45: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-30.c gcov: 0 failures in line counts, 0 in branch percentages, 0 in condition/decision, 13 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-30.c line 14: expected 1/1 covered paths, was 0/1
+FAIL: gcc.misc-tests/gcov-30.c line 258: expected 1/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-30.c line 277: expected 1/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-30.c line 296: expected 1/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-30.c line 315: expected 2/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-30.c line 334: expected 3/9 covered paths, was 0/9
+FAIL: gcc.misc-tests/gcov-30.c line 481: expected 1/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-30.c line 560: expected 1/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-30.c line 58: expected 1/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-30.c line 643: expected 2/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-30.c line 724: expected 1/67 covered paths, was 0/67
+FAIL: gcc.misc-tests/gcov-30.c line 73: expected 1/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-30.c line 90: expected 2/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-33.c gcov: 0 failures in line counts, 0 in branch percentages, 0 in condition/decision, 3 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-33.c line 21: expected 1/1 covered paths, was 0/1
+FAIL: gcc.misc-tests/gcov-33.c line 8: expected 1/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-34.c gcov: 0 failures in line counts, 0 in branch percentages, 0 in condition/decision, 3 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-34.c line 23: expected 1/1 covered paths, was 0/1
+FAIL: gcc.misc-tests/gcov-34.c line 9: expected 1/2 covered paths, was 0/2
+FAIL: gcc.misc-tests/gcov-4.c gcov: 65 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-4.c line 106: is #####:should be 15
+FAIL: gcc.misc-tests/gcov-4.c line 107: is #####:should be 14
+FAIL: gcc.misc-tests/gcov-4.c line 108: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 110: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 116: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 119: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 125: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 126: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 127: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 129: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 130: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 156: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-4.c line 157: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-4.c line 158: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-4.c line 162: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 163: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 165: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 166: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-4.c line 167: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 168: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-4.c line 169: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 170: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 171: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-4.c line 178: is #####:should be 6
+FAIL: gcc.misc-tests/gcov-4.c line 179: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 180: is #####:should be 6
+FAIL: gcc.misc-tests/gcov-4.c line 182: is #####:should be 6
+FAIL: gcc.misc-tests/gcov-4.c line 183: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-4.c line 184: is #####:should be 6
+FAIL: gcc.misc-tests/gcov-4.c line 185: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 186: is #####:should be 4
+FAIL: gcc.misc-tests/gcov-4.c line 188: is #####:should be 4
+FAIL: gcc.misc-tests/gcov-4.c line 195: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-4.c line 196: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 197: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-4.c line 198: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-4.c line 199: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 200: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 201: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-4.c line 202: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-4.c line 203: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-4.c line 242: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-4.c line 244: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-4.c line 247: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 248: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 254: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-4.c line 255: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 256: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 257: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 259: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 260: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 263: is #####:should be 4
+FAIL: gcc.misc-tests/gcov-4.c line 33: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 39: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 41: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 55: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-4.c line 57: is #####:should be 9
+FAIL: gcc.misc-tests/gcov-4.c line 58: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-4.c line 65: is #####:should be 6
+FAIL: gcc.misc-tests/gcov-4.c line 69: is #####:should be 81
+FAIL: gcc.misc-tests/gcov-4.c line 70: is #####:should be 6
+FAIL: gcc.misc-tests/gcov-4.c line 95: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-4.c line 96: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 97: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4.c line 99: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-4b.c gcov: 0 failures in line counts, 24 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-4b.c line 134: expected branch percentages not found: 0
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 0
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 0
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 0
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 17
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 20
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 20
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 20 0 40 20
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 25
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 27
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 27 50 25
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 30
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 32
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 33
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 33
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 40
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 40
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 45
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 50
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 50
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 50
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 50
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 7
+FAIL: gcc.misc-tests/gcov-4b.c line n: expected branch percentages not found: 9 10 11
+FAIL: gcc.misc-tests/gcov-6.c gcov: 5 failures in line counts, 1 in branch percentages, 0 in condition/decision, 0 in prime-paths, 3 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-6.c line 17: is #####:should be 5
+FAIL: gcc.misc-tests/gcov-6.c line 20: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-6.c line 21: expected return percentages not found: 0
+FAIL: gcc.misc-tests/gcov-6.c line 22: is #####:should be 4
+FAIL: gcc.misc-tests/gcov-6.c line 31: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-6.c line 32: expected return percentages not found: 100
+FAIL: gcc.misc-tests/gcov-6.c line 35: is #####:should be 4
+FAIL: gcc.misc-tests/gcov-6.c line 36: expected return percentages not found: 75
+FAIL: gcc.misc-tests/gcov-6.c line n: expected branch percentages not found: 20
+FAIL: gcc.misc-tests/gcov-7.c gcov: 11 failures in line counts, 3 in branch percentages, 0 in condition/decision, 0 in prime-paths, 4 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-7.c line 20: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-7.c line 24: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-7.c line 28: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-7.c line 33: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-7.c line 37: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-7.c line 41: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-7.c line 42: expected return percentages not found: 50
+FAIL: gcc.misc-tests/gcov-7.c line 43: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-7.c line 44: expected return percentages not found: 100
+FAIL: gcc.misc-tests/gcov-7.c line 46: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-7.c line 78: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-7.c line 81: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-7.c line 82: expected return percentages not found: 33
+FAIL: gcc.misc-tests/gcov-7.c line 83: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-7.c line 84: expected return percentages not found: 0
+FAIL: gcc.misc-tests/gcov-7.c line n: expected branch percentages not found: 33
+FAIL: gcc.misc-tests/gcov-7.c line n: expected branch percentages not found: 33
+FAIL: gcc.misc-tests/gcov-7.c line n: expected branch percentages not found: 33
+FAIL: gcc.misc-tests/gcov-8.c gcov: 0 failures in line counts, 4 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-8.c line 20: expected branch percentages not found: 1
+FAIL: gcc.misc-tests/gcov-8.c line 28: expected branch percentages not found: 0
+FAIL: gcc.misc-tests/gcov-8.c line 30: expected branch percentages not found: 1
+FAIL: gcc.misc-tests/gcov-8.c line 47: expected branch percentages not found: 0
+FAIL: gcc.misc-tests/gcov-9.c gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-9.c line 10: is #####:should be 11
+FAIL: gcc.misc-tests/gcov-pr83813.c gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr83813.c line 13: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr83813.c line 15: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr83813.c line 16: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr83813.c line 17: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr84758.c gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr84758.c line 10: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr84758.c line 12: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr84758.c line 13: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr84758.c line 14: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85217.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr85217.c line 12: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85217.c line 14: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85332.c gcov: 3 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr85332.c line 10: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-pr85332.c line 11: is #####:should be 3
+FAIL: gcc.misc-tests/gcov-pr85332.c line 12: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85338.c gcov: 3 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr85338.c line 6: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85338.c line 7: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85338.c line 9: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85350.c gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr85350.c line 6: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85350.c line 7: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85372.c gcov: 3 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr85372.c line 15: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-pr85372.c line 18: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr85372.c line 19: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr86536.c gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 1 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: gcc.misc-tests/gcov-pr86536.c line 15: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr86536.c line 18: is #####:should be 1
+FAIL: gcc.misc-tests/gcov-pr86536.c line 19: expected return percentages not found: 200
+FAIL: gcc.misc-tests/gcov-pr86536.c line 21: is #####:should be 2
+FAIL: gcc.misc-tests/gcov-pr86536.c line 22: is #####:should be 2
+FAIL: gcc.target/riscv/czero-bext.c   -O0   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O0   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O0   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O1   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O1   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O1   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O3 -g   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -O3 -g   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -O3 -g   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -Os   scan-assembler czero.nez\t
+FAIL: gcc.target/riscv/czero-bext.c   -Os   scan-assembler sgtu\t
+FAIL: gcc.target/riscv/czero-bext.c   -Os   scan-assembler-not bgtu\t
+FAIL: gcc.target/riscv/rvv/autovec/pr113206-1.c -O3 -ftree-vectorize  scan-assembler-times vsetvli 2
+FAIL: gcc.target/riscv/rvv/autovec/pr113206-2.c -O3 -ftree-vectorize  scan-assembler-times vsetvli 1
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O0   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O1   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O2   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions   scan-assembler-times beq\\s+[a-x0-9]+,[a-x0-9]+,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -O3 -g   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+FAIL: gcc.target/riscv/rvv/vsetvl/pr117974.c   -Os   scan-assembler-times beq\\s+[a-x0-9]+,zero,.L12\\s+vsetvli 3
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv64gc_zba_zbb_zbc_zbs/  lp64d/ medlow | 1315 /    66 |  575 /    24 |      - |
