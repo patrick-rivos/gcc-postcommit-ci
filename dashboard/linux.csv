@@ -53165,3 +53165,15 @@ ac1cdcdad9d364f239d075deb7082071c49ddb6d,2026-05-04 15:29:43 -0400,linux-rv32gc_
 4e45547e66cc7bc144ccfeffabe4856175a8a699,2026-05-05 08:51:20 +0800,linux-rv32gc_zba_zbb_zbc_zbs ilp32d medlow -gfortran,linux,rv32gc_zba_zbb_zbc_zbs ilp32d medlow ,gfortran,84,94
 4e45547e66cc7bc144ccfeffabe4856175a8a699,2026-05-05 08:51:20 +0800,linux-rv32gc_zba_zbb_zbc_zbs ilp32d medlow -gcc,linux,rv32gc_zba_zbb_zbc_zbs ilp32d medlow ,gcc,49,336
 4e45547e66cc7bc144ccfeffabe4856175a8a699,2026-05-05 08:51:20 +0800,linux-rv32gc_zba_zbb_zbc_zbs ilp32d medlow -g++,linux,rv32gc_zba_zbb_zbc_zbs ilp32d medlow ,g++,5,8
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl256b lp64d medlow multilib -mrvv-max-lmul=m2-g++,linux,rv64gcv_zvl256b lp64d medlow multilib -mrvv-max-lmul=m2,g++,2,6
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl256b lp64d medlow multilib -mrvv-max-lmul=m2-gfortran,linux,rv64gcv_zvl256b lp64d medlow multilib -mrvv-max-lmul=m2,gfortran,3,13
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl256b lp64d medlow multilib -mrvv-max-lmul=m2-gcc,linux,rv64gcv_zvl256b lp64d medlow multilib -mrvv-max-lmul=m2,gcc,123,511
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl1024b lp64d medlow multilib -mrvv-max-lmul=m2-g++,linux,rv64gcv_zvl1024b lp64d medlow multilib -mrvv-max-lmul=m2,g++,2,6
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl1024b lp64d medlow multilib -mrvv-max-lmul=m2-gfortran,linux,rv64gcv_zvl1024b lp64d medlow multilib -mrvv-max-lmul=m2,gfortran,3,13
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl1024b lp64d medlow multilib -mrvv-max-lmul=m2-gcc,linux,rv64gcv_zvl1024b lp64d medlow multilib -mrvv-max-lmul=m2,gcc,125,513
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl512b lp64d medlow multilib -mrvv-max-lmul=m2-g++,linux,rv64gcv_zvl512b lp64d medlow multilib -mrvv-max-lmul=m2,g++,2,6
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl512b lp64d medlow multilib -mrvv-max-lmul=m2-gfortran,linux,rv64gcv_zvl512b lp64d medlow multilib -mrvv-max-lmul=m2,gfortran,3,13
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl512b lp64d medlow multilib -mrvv-max-lmul=m2-gcc,linux,rv64gcv_zvl512b lp64d medlow multilib -mrvv-max-lmul=m2,gcc,138,577
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl128b lp64d medlow multilib -mrvv-max-lmul=m2-g++,linux,rv64gcv_zvl128b lp64d medlow multilib -mrvv-max-lmul=m2,g++,2,6
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl128b lp64d medlow multilib -mrvv-max-lmul=m2-gfortran,linux,rv64gcv_zvl128b lp64d medlow multilib -mrvv-max-lmul=m2,gfortran,3,13
+6112538b060d8a973500a3ae5e930545b422600f,2026-05-05 11:26:16 -0400,linux-rv64gcv_zvl128b lp64d medlow multilib -mrvv-max-lmul=m2-gcc,linux,rv64gcv_zvl128b lp64d medlow multilib -mrvv-max-lmul=m2,gcc,122,508
