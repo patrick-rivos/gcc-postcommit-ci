@@ -1,0 +1,560 @@
+		=== g++: Unexpected fails for rv64gc lp64d medlow  ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++26 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/opt/shrink-wrapping-vector-1.C  -std=gnu++98  scan-rtl-dump pro_and_epilogue "Performing shrink-wrapping"
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  gcov: 60 failures in line counts, 24 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 100: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 102: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 103: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 105: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 113: is #####:should be 15
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 115: is #####:should be 14
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 116: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 118: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 141: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 142: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 143: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 145: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 150: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 152: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 154: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 156: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 158: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 160: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 161: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 162: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 164: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 165: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 173: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 175: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 177: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 181: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 183: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 185: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 187: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 189: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 192: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 200: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 202: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 204: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 205: expected branch percentages not found: 45
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 206: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 207: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 208: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 210: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 212: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 214: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 215: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 254: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 257: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 260: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 261: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 262: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 266: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 269: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 271: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 272: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 273: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 275: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 276: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 279: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 33: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 41: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 55: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 58: is #####:should be 9
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 59: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 66: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 73: is #####:should be 81
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line 74: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 17
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 20 0 40 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 27
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 27 50 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 30
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 32
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 7
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++20  line n: expected branch percentages not found: 9 10 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  gcov: 60 failures in line counts, 24 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 100: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 102: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 103: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 105: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 113: is #####:should be 15
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 115: is #####:should be 14
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 116: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 118: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 141: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 142: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 143: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 145: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 150: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 152: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 154: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 156: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 158: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 160: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 161: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 162: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 164: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 165: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 173: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 175: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 177: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 181: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 183: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 185: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 187: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 189: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 192: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 200: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 202: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 204: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 205: expected branch percentages not found: 45
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 206: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 207: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 208: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 210: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 212: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 214: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 215: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 254: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 257: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 260: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 261: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 262: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 266: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 269: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 271: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 272: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 273: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 275: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 276: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 279: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 33: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 41: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 55: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 58: is #####:should be 9
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 59: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 66: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 73: is #####:should be 81
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line 74: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 17
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 20 0 40 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 27
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 27 50 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 30
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 32
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 7
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++26  line n: expected branch percentages not found: 9 10 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  gcov: 60 failures in line counts, 24 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 100: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 102: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 103: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 105: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 113: is #####:should be 15
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 115: is #####:should be 14
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 116: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 118: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 141: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 142: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 143: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 145: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 150: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 152: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 154: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 156: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 158: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 160: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 161: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 162: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 164: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 165: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 173: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 175: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 177: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 181: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 183: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 185: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 187: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 189: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 192: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 200: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 202: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 204: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 205: expected branch percentages not found: 45
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 206: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 207: expected branch percentages not found: 40
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 208: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 210: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 212: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 214: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 215: is #####:should be 11
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 254: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 257: is #####:should be 5
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 260: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 261: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 262: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 266: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 269: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 271: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 272: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 273: is #####:should be 2
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 275: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 276: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 279: is #####:should be 4
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 33: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 41: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 55: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 58: is #####:should be 9
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 59: is #####:should be 3
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 66: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 73: is #####:should be 81
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 74: is #####:should be 6
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 0
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 17
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 20 0 40 20
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 27
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 27 50 25
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 30
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 32
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 33
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 50
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 7
+FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line n: expected branch percentages not found: 9 10 11
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++20  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++20  line 8: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++26  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++26  line 8: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++98  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-12.C  -std=gnu++98  line 8: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  gcov: 5 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 19: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 28: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 33: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++20  line 36: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  gcov: 5 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 19: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 28: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 33: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++26  line 36: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  gcov: 5 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 19: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 28: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 33: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-13.C  -std=gnu++98  line 36: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++20  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++20  line 13: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++20  line 9: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++26  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++26  line 13: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++26  line 9: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++98  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++98  line 13: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-14.C  -std=gnu++98  line 9: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 20: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 22: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 5: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++20  line 7: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 20: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 22: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 5: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++26  line 7: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 18: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 20: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 22: is =====:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 5: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-15.C  -std=gnu++98  line 7: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-18.C   gcov: 0 failures in line counts, 0 in branch percentages, 77 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-18.C   line 109: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 109: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 109: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 110: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 130: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 130: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 130: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 131: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 141: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 141: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 141: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 142: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 154: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 154: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 154: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 154: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected summary - expected 3/4, got 0/4
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected summary 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 162: unexpected uncovered term 1 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: coverage summary not found; expected 3/4
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected summary - expected 3/4, got 0/4
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected summary 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 168: unexpected uncovered term 1 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: coverage summary not found; expected 3/4
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected summary - expected 2/4, got 0/4
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected summary 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 177: unexpected uncovered term 1 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 193: coverage summary not found; expected 2/4
+FAIL: g++.dg/gcov/gcov-18.C   line 194: coverage summary not found; expected 2/4
+FAIL: g++.dg/gcov/gcov-18.C   line 196: coverage summary not found; expected 2/4
+FAIL: g++.dg/gcov/gcov-18.C   line 196: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 196: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 196: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 202: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 202: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 202: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 203: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 208: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 208: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 208: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 217: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 217: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 217: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 218: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 228: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 228: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 228: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 229: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 25: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 25: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 26: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 40: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 40: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 40: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 40: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 50: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 50: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 50: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 50: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 53: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 53: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 53: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 53: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 56: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 57: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 71: coverage summary not found; expected 2/2
+FAIL: g++.dg/gcov/gcov-18.C   line 71: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 71: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-18.C   line 78: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 78: unexpected summary - expected 1/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 78: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 79: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 93: coverage summary not found; expected 1/2
+FAIL: g++.dg/gcov/gcov-18.C   line 93: unexpected summary - expected 2/2, got 0/2
+FAIL: g++.dg/gcov/gcov-18.C   line 93: unexpected uncovered term 0 (false)
+FAIL: g++.dg/gcov/gcov-18.C   line 93: unexpected uncovered term 0 (true)
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 15: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++20  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 15: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++26  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 15: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-2.C  -std=gnu++98  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++20  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++26  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++98  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-3.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++20  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++20  line 26: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++20  line 35: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++26  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++26  line 26: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++26  line 35: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++98  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++98  line 26: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-5.C  -std=gnu++98  line 35: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20  line 13: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++20 execution test
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26  line 13: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++26 execution test
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98  gcov: 2 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98  line 10: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98  line 13: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-1.C  -std=gnu++98 execution test
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 17: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 26: is #####:should be 10001
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++20 execution test
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 17: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 26: is #####:should be 10001
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++26 execution test
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 17: is #####:should be 100
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 26: is #####:should be 10001
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98  line 29: is #####:should be 1
+FAIL: g++.dg/gcov/gcov-dump-2.C  -std=gnu++98 execution test
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 21: is #####:should be 7.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 5: is #####:should be 14.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++20  line 9: is #####:should be 21.0M
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 21: is #####:should be 7.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 5: is #####:should be 14.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++26  line 9: is #####:should be 21.0M
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 21: is #####:should be 7.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 24: is #####:should be 1
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 5: is #####:should be 14.0k
+FAIL: g++.dg/gcov/loop.C  -std=gnu++98  line 9: is #####:should be 21.0M
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  gcov: 12 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 21: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 37: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 43: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 48: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 53: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 58: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 63: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 68: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 73: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++20  line 78: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  gcov: 12 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 21: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 37: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 43: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 48: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 53: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 58: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 63: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 68: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 73: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++26  line 78: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  gcov: 12 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 14: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 21: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 37: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 43: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 48: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 53: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 58: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 63: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 68: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 73: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855-priority.C  -std=gnu++98  line 78: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 16: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 45: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++20  line 50: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 16: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 45: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++26  line 50: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  gcov: 6 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 16: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 23: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 25: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 39: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 45: is #####:should be 1
+FAIL: g++.dg/gcov/pr16855.C  -std=gnu++98  line 50: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   gcov: 4 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/pr86109.C   line 13: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   line 7: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   line 8: is #####:should be 1
+FAIL: g++.dg/gcov/pr86109.C   line 9: is #####:should be 1
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++20  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++20  line 8: is #####:should be 1*
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++26  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++26  line 8: is #####:should be 1*
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++98  gcov: 1 failures in line counts, 0 in branch percentages, 0 in condition/decision, 0 in prime-paths, 0 in return percentages, 0 in intermediate format, 0 failed in filters
+FAIL: g++.dg/gcov/ternary.C  -std=gnu++98  line 8: is #####:should be 1*
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv64gc/  lp64d/ medlow |      - |  554 /    18 |      - |

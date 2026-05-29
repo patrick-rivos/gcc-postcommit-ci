@@ -1,0 +1,110 @@
+		=== g++: Unexpected fails for rv32gc ilp32d medlow  ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++26 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/coroutines/pr110872.C  -std=c++26 (internal compiler error: in expand_expr_addr_expr_1, at expr.cc:9317)
+FAIL: g++.dg/coroutines/pr110872.C  -std=c++26 (test for excess errors)
+FAIL: g++.dg/opt/shrink-wrapping-vector-1.C  -std=gnu++98  scan-rtl-dump pro_and_epilogue "Performing shrink-wrapping"
+FAIL: g++.target/riscv/rvv/base/pr122448.C (test for excess errors)
+FAIL: g++.target/riscv/rvv/base/pr123808-2.C (test for excess errors)
+FAIL: g++.target/riscv/rvv/base/pr123808.C (test for excess errors)
+		=== gfortran: Unexpected fails for rv32gc ilp32d medlow  ===
+FAIL: gfortran.dg/coarray/alloc_comp_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/alloc_comp_10.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/alloc_comp_4.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/alloc_comp_5.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/alloc_comp_6.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/alloc_comp_7.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/alloc_comp_8.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/alloc_comp_9.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/allocate_errgmsg.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/associate_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/atomic_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/atomic_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/co_reduce_string.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/coarray_allocated.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/codimension.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/codimension_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/coindexed_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/coindexed_3.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/coindexed_5.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/collectives_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/collectives_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/collectives_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/collectives_4.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/complex_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/cosubscript_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/deallocate_sync.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/dummy_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/dummy_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/event_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/event_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/event_3.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/event_4.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/fail_image_2.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/failed_images_2.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/form_team_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/get_array.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/get_to_indexed_array_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/get_to_indirect_array.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/get_with_fn_parameter.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/get_with_scalar_fn.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/image_index_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/image_index_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/image_index_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/image_status_2.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/lib_realloc_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/lock_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/lock_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/lock_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/move_alloc_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/move_alloc_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/poly_run_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/poly_run_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/poly_run_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/pr107441-caf.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/pr125021.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/pr81265.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/pr85510.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/pr93671.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/proc_pointer_assign_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/ptr_comp_1.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/ptr_comp_2.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/ptr_comp_3.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/ptr_comp_4.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/ptr_comp_6.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/registering_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/scalar_alloc_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/scalar_alloc_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/select_type_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/select_type_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/send_array.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/send_char_array_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/sendget_array.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/sizeof_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/stopped_images_2.f08 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/submodule_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/subobject_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/substring_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/sync_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/sync_3.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt output pattern test
+FAIL: gfortran.dg/coarray/sync_team.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/this_image_1.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/coarray/this_image_2.f90 -fcoarray=lib -pthread  -O2  -lcaf_shmem -lrt execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv32gc/ ilp32d/ medlow |      - |    9 /     6 |   94 /    84 |

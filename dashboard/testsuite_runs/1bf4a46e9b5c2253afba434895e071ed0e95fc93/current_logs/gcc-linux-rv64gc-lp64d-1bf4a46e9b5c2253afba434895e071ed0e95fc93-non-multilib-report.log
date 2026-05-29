@@ -1,0 +1,23 @@
+		=== g++: Unexpected fails for rv64gc lp64d medlow  ===
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++20 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++26 (test for excess errors)
+FAIL: c-c++-common/spec-barrier-1.c  -std=gnu++98 (test for excess errors)
+FAIL: g++.dg/opt/shrink-wrapping-vector-1.C  -std=gnu++98  scan-rtl-dump pro_and_epilogue "Performing shrink-wrapping"
+		=== gfortran: Unexpected fails for rv64gc lp64d medlow  ===
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/ieee_6.f90   -Os  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O0  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O1  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O2  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -O3 -g  execution test
+FAIL: gfortran.dg/ieee/modes_1.f90   -Os  execution test
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+     rv64gc/  lp64d/ medlow |      - |    4 /     2 |   12 /     2 |
