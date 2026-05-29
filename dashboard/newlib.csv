@@ -71971,3 +71971,23 @@ d2c6e7a03408da1b68fae3abed77078b33d6c698,2026-05-28 10:56:06 +0100,newlib-rv32gc
 d2c6e7a03408da1b68fae3abed77078b33d6c698,2026-05-28 10:56:06 +0100,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow -g++,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow ,g++,21,558
 d2c6e7a03408da1b68fae3abed77078b33d6c698,2026-05-28 10:56:06 +0100,newlib-rv64gc_zba_zbb_zbc_zbs lp64d medlow -gcc,newlib,rv64gc_zba_zbb_zbc_zbs lp64d medlow ,gcc,98,1546
 d2c6e7a03408da1b68fae3abed77078b33d6c698,2026-05-28 10:56:06 +0100,newlib-rv64gc_zba_zbb_zbc_zbs lp64d medlow -g++,newlib,rv64gc_zba_zbb_zbc_zbs lp64d medlow ,g++,18,554
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64gc lp64d medlow -g++,newlib,rv64gc lp64d medlow ,g++,18,554
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32gc_zba_zbb_zbc_zbs ilp32d medlow -g++,newlib,rv32gc_zba_zbb_zbc_zbs ilp32d medlow ,g++,21,558
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32imac ilp32 medlow multilib -g++,newlib,rv32imac ilp32 medlow multilib ,g++,21,558
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32imc ilp32 medlow multilib -g++,newlib,rv32imc ilp32 medlow multilib ,g++,21,558
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32imc_zicsr_zifencei ilp32 medlow multilib -g++,newlib,rv32imc_zicsr_zifencei ilp32 medlow multilib ,g++,21,558
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64imac lp64 medlow multilib -g++,newlib,rv64imac lp64 medlow multilib ,g++,20,556
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64imc lp64 medlow multilib -g++,newlib,rv64imc lp64 medlow multilib ,g++,20,556
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64imc_zicsr_zifencei lp64 medlow multilib -g++,newlib,rv64imc_zicsr_zifencei lp64 medlow multilib ,g++,20,556
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32imac_zba_zbb_zbc_zbs ilp32 medlow multilib -g++,newlib,rv32imac_zba_zbb_zbc_zbs ilp32 medlow multilib ,g++,21,558
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32imc_zba_zbb_zbc_zbs ilp32 medlow multilib -g++,newlib,rv32imc_zba_zbb_zbc_zbs ilp32 medlow multilib ,g++,21,558
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32imc_zba_zbb_zbc_zbs_zicsr_zifencei ilp32 medlow multilib -g++,newlib,rv32imc_zba_zbb_zbc_zbs_zicsr_zifencei ilp32 medlow multilib ,g++,21,558
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64imac_zba_zbb_zbc_zbs lp64 medlow multilib -g++,newlib,rv64imac_zba_zbb_zbc_zbs lp64 medlow multilib ,g++,20,556
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64imc_zba_zbb_zbc_zbs lp64 medlow multilib -g++,newlib,rv64imc_zba_zbb_zbc_zbs lp64 medlow multilib ,g++,20,556
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64imc_zba_zbb_zbc_zbs_zicsr_zifencei lp64 medlow multilib -g++,newlib,rv64imc_zba_zbb_zbc_zbs_zicsr_zifencei lp64 medlow multilib ,g++,20,556
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64gc_zba_zbb_zbc_zbs lp64d medlow -g++,newlib,rv64gc_zba_zbb_zbc_zbs lp64d medlow ,g++,18,554
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32gcv ilp32d medlow multilib -g++,newlib,rv32gcv ilp32d medlow multilib ,g++,22,561
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64gcv lp64d medlow multilib -g++,newlib,rv64gcv lp64d medlow multilib ,g++,19,557
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib -g++,newlib,rv64gcv_zvbb_zvbc_zvkg_zvkn_zvknc_zvkned_zvkng_zvknha_zvknhb_zvks_zvksc_zvksed_zvksg_zvksh_zvkt lp64d medlow multilib ,g++,19,557
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib -g++,newlib,rv64imafdcv_zicond_zawrs_zbc_zvkng_zvksg_zvbb_zvbc_zicsr_zba_zbb_zbs_zicbom_zicbop_zicboz_zfhmin_zkt lp64d medlow multilib ,g++,19,557
+b64700dec403f9b2b605df295e43c73b3185d0f5,2026-05-28 10:41:33 -0400,newlib-rv32gc ilp32d medlow -g++,newlib,rv32gc ilp32d medlow ,g++,21,558
