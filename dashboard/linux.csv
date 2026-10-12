@@ -62380,3 +62380,15 @@ d745dfbe669d71061dbd5fbb3d5d0dce6432621c,2026-10-04 11:25:06 +0200,linux-rv64ima
 457032949147f0bccabc83db03b981c8aaf73629,2026-10-07 14:08:34 -0600,linux-rv64gcv_zvl256b lp64d medlow multilib -g++,linux,rv64gcv_zvl256b lp64d medlow multilib ,g++,12,56
 457032949147f0bccabc83db03b981c8aaf73629,2026-10-07 14:08:34 -0600,linux-rv64gcv_zvl256b lp64d medlow multilib -gfortran,linux,rv64gcv_zvl256b lp64d medlow multilib ,gfortran,3,13
 457032949147f0bccabc83db03b981c8aaf73629,2026-10-07 14:08:34 -0600,linux-rv64gcv_zvl256b lp64d medlow multilib -gcc,linux,rv64gcv_zvl256b lp64d medlow multilib ,gcc,123,472
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv64gcv_zve32f lp64d medlow multilib -g++,linux,rv64gcv_zve32f lp64d medlow multilib ,g++,7,20
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv64gcv_zve64d lp64d medlow multilib -g++,linux,rv64gcv_zve64d lp64d medlow multilib ,g++,7,20
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv64gcv_zve32f lp64d medlow multilib -gfortran,linux,rv64gcv_zve32f lp64d medlow multilib ,gfortran,2,12
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv64gcv_zve64d lp64d medlow multilib -gfortran,linux,rv64gcv_zve64d lp64d medlow multilib ,gfortran,2,12
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv64gcv_zve32f lp64d medlow multilib -gcc,linux,rv64gcv_zve32f lp64d medlow multilib ,gcc,103,378
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv64gcv_zve64d lp64d medlow multilib -gcc,linux,rv64gcv_zve64d lp64d medlow multilib ,gcc,103,378
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv32gcv_zve32f ilp32d medlow multilib -g++,linux,rv32gcv_zve32f ilp32d medlow multilib ,g++,11,27
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv32gcv_zve64d ilp32d medlow multilib -g++,linux,rv32gcv_zve64d ilp32d medlow multilib ,g++,11,27
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv32gcv_zve32f ilp32d medlow multilib -gfortran,linux,rv32gcv_zve32f ilp32d medlow multilib ,gfortran,107,117
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv32gcv_zve64d ilp32d medlow multilib -gfortran,linux,rv32gcv_zve64d ilp32d medlow multilib ,gfortran,107,117
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv32gcv_zve32f ilp32d medlow multilib -gcc,linux,rv32gcv_zve32f ilp32d medlow multilib ,gcc,110,395
+06cee27b6943fdfe6082dbee4c260b2efe22a193,2026-10-11 12:32:31 -0600,linux-rv32gcv_zve64d ilp32d medlow multilib -gcc,linux,rv32gcv_zve64d ilp32d medlow multilib ,gcc,110,395
